@@ -25,3 +25,7 @@ Configuration can be managed through environment variables or configuration file
 - Feature toggles
 
 For detailed configuration options, please refer to the respective modules in the documentation.
+
+## Frameworks
+
+- [MICRO Framework](docs/micro-framework.md) — Rhythm-based communication framework (Message · Intention · Context · Rhythm · Output)
