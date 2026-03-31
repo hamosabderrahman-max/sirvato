@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SIRVATO OS Interactive Demo — Try all 8 frameworks live in your browser." />
+  <title>SIRVATO OS — Interactive Demo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dark-mode.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-brand">
+    <span class="os-dot" aria-hidden="true"></span>
+    SIRVATO OS
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="frameworks/icdf.html">Frameworks</a></li>
+    <li><a href="interfaces/hud-minimal.html">Interfaces</a></li>
+    <li><a href="docs/quick-start.html">Docs</a></li>
+    <li><a href="demo.html" class="active">Demo</a></li>
+    <li><a href="https://github.com/hamosabderrahman-max/sirvato" target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-lang" aria-label="Switch language">IT</button>
+    <button class="btn-theme" aria-label="Toggle theme">☀</button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="frameworks/icdf.html">Frameworks</a>
+  <a href="interfaces/hud-minimal.html">Interfaces</a>
+  <a href="docs/quick-start.html">Docs</a>
+  <a href="demo.html">Demo</a>
+  <a href="https://github.com/hamosabderrahman-max/sirvato" target="_blank" rel="noopener">GitHub ↗</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="page-header-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Interactive Demo</span>
+    </nav>
+    <h1 class="page-title" data-i18n="demo_title">Interactive Demo</h1>
+    <p class="page-desc">Try all SIRVATO OS frameworks live — fill the fields, select a framework, and generate your unified prompt.</p>
+    <div class="page-meta">
+      <span class="meta-tag">⚡ Live</span>
+      <span class="meta-tag">8 Frameworks</span>
+      <span class="meta-tag">Copy-Ready Output</span>
+    </div>
+  </div>
+</header>
+
+<!-- DEMO AREA -->
+<main class="section" aria-label="Interactive demo">
+  <div class="container">
+    <div class="demo-layout">
+
+      <!-- Sidebar Controls -->
+      <aside class="demo-sidebar" aria-label="Demo controls">
+        <label for="framework-selector" style="display:block;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:0.5rem;font-family:var(--font-mono);" data-i18n="demo_framework">Select Framework</label>
+        <select id="framework-selector" class="demo-form" style="width:100%;background:var(--bg-secondary);border:1px solid var(--border-color);color:var(--text-primary);padding:0.6rem 0.75rem;border-radius:var(--radius-sm);font-size:0.875rem;margin-bottom:1.5rem;" aria-label="Framework selector"></select>
+
+        <div class="demo-form">
+          <div class="demo-field" data-field-name="target">
+            <label for="field-target" data-i18n="demo_target">Target — Immediate Goal</label>
+            <input type="text" id="field-target" data-field="target" placeholder="What do you want to achieve?" />
+          </div>
+          <div class="demo-field" data-field-name="role">
+            <label for="field-role" data-i18n="demo_role">Role (R)</label>
+            <input type="text" id="field-role" data-field="role" placeholder="AI role / persona" />
+          </div>
+          <div class="demo-field" data-field-name="message">
+            <label for="field-message" data-i18n="demo_message">Message (M)</label>
+            <input type="text" id="field-message" data-field="message" placeholder="Core message" />
+          </div>
+          <div class="demo-field" data-field-name="context">
+            <label for="field-context" data-i18n="demo_context">Context (C)</label>
+            <textarea id="field-context" data-field="context" placeholder="Scenario, audience, background"></textarea>
+          </div>
+          <div class="demo-field" data-field-name="intention">
+            <label for="field-intention" data-i18n="demo_intention">Intention (I²)</label>
+            <input type="text" id="field-intention" data-field="intention" placeholder="Desired effect" />
+          </div>
+          <div class="demo-field" data-field-name="request">
+            <label for="field-request" data-i18n="demo_request">Request (R)</label>
+            <textarea id="field-request" data-field="request" placeholder="Precise request"></textarea>
+          </div>
+          <div class="demo-field" data-field-name="rhythm">
+            <label for="field-rhythm" data-i18n="demo_rhythm">Rhythm (R)</label>
+            <input type="text" id="field-rhythm" data-field="rhythm" placeholder="Tone, energy, intensity" />
+          </div>
+          <div class="demo-field" data-field-name="examples">
+            <label for="field-examples" data-i18n="demo_examples">Examples (E)</label>
+            <textarea id="field-examples" data-field="examples" placeholder="Models, references, counter-examples"></textarea>
+          </div>
+          <div class="demo-field" data-field-name="data">
+            <label for="field-data">Data (D)</label>
+            <textarea id="field-data" data-field="data" placeholder="Source material, facts, figures"></textarea>
+          </div>
+          <div class="demo-field" data-field-name="output">
+            <label for="field-output" data-i18n="demo_output">Output Format (O)</label>
+            <input type="text" id="field-output" data-field="output" placeholder="List, schema, email, code, dashboard…" />
+          </div>
+          <div class="demo-field" data-field-name="constraints">
+            <label for="field-constraints" data-i18n="demo_constraints">Constraints (C)</label>
+            <textarea id="field-constraints" data-field="constraints" placeholder="Limits, style, exclusions"></textarea>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:0.5rem;">
+          <button id="demo-generate" class="btn btn-primary" data-i18n="demo_generate">⚡ Generate Prompt</button>
+          <button id="demo-reset" class="btn btn-secondary" data-i18n="demo_reset">↺ Reset</button>
+        </div>
+      </aside>
+
+      <!-- Output Panel -->
+      <div class="demo-output">
+        <div class="demo-toolbar">
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);">OUTPUT — SIRVATO OS</span>
+          <button id="demo-copy" class="btn btn-sm btn-outline" data-i18n="demo_copy">📋 Copy</button>
+        </div>
+        <pre id="demo-output" class="demo-content" aria-live="polite" aria-label="Generated prompt output">// SIRVATO OS ready.
+// Fill the fields and press Generate.
+// Sistema Unico · Operativo · Reattivo</pre>
+      </div>
+
+    </div>
+
+    <!-- Keyboard shortcuts -->
+    <div class="callout callout-info" style="margin-top:2rem;" role="note">
+      <strong>Keyboard shortcuts:</strong>
+      Press <code>Enter</code> in any text input to generate instantly.
+      Use <code>Tab</code> / <code>Shift+Tab</code> to navigate fields.
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-bottom" style="max-width:1200px;margin:0 auto;padding:2rem;justify-content:space-between;">
+    <span>© 2025 SIRVATO OS. Open source.</span>
+    <div class="footer-status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>All Systems Operational</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/theme.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>

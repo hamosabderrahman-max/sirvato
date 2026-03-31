@@ -1,0 +1,46 @@
+/* SIRVATO OS — Dark Mode Overrides */
+/* Default theme IS dark mode. This file adds light mode toggle support. */
+
+[data-theme="light"] {
+  --bg-primary: #f4f4f8;
+  --bg-secondary: #e8e8f0;
+  --bg-card: #ffffff;
+  --bg-hover: #ededf5;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-muted: #8080a0;
+  --border-color: #d0d0e0;
+  --border-accent: #c0c0d0;
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(244, 244, 248, 0.95);
+}
+
+[data-theme="light"] .hero-bg {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+}
+
+[data-theme="light"] .os-terminal {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+[data-theme="light"] .terminal-body {
+  color: #1a1a2e;
+}
+
+[data-theme="light"] .terminal-line.dim { color: #8080a0; }
+
+[data-theme="light"] pre {
+  background: #e8e8f0;
+  color: #1a1a2e;
+}
+
+[data-theme="light"] code {
+  background: #e0e0ee;
+}
+
+/* Dark mode active class for JS toggle */
+body.dark-mode {
+  /* Already dark by default — no changes needed */
+}
