@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interface Showcase — SIRVATO OS Documentation</title>
+  <meta name="description" content="Explore all 8 SIRVATO OS interfaces. From HUD Minimal to Fullscreen Totality — find the interface that matches your workflow.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html" class="active">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero reveal">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="../documentation/quick-start.html">Docs</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Interface Showcase</span>
+        </nav>
+        <span class="section-tag">DOCUMENTATION</span>
+        <h1 class="page-title">Interface Showcase</h1>
+        <p class="page-subtitle">8 interfaces for every workflow style</p>
+      </div>
+    </section>
+
+    <!-- Interface Cards -->
+    <section class="section reveal">
+      <div class="container">
+        <p class="section-text">
+          Every SIRVATO OS interface is designed for a distinct working style. Whether you prefer a minimal terminal aesthetic, a multi-panel OS environment, or an all-encompassing fullscreen mode, there is an interface calibrated for your workflow.
+        </p>
+
+        <div class="showcase-grid reveal-group">
+
+          <!-- HUD Minimal -->
+          <div class="showcase-card reveal">
+            <div class="showcase-header">
+              <span class="showcase-icon">📊</span>
+              <div>
+                <h3 class="showcase-title">HUD Minimal</h3>
+                <p class="showcase-desc">Minimal, distraction-free heads-up display</p>
+              </div>
+            </div>
+            <div class="ascii-block">
+<pre>┌─────────────────────────┐
+│ ⬡ SIRVATO  [HUD]   🌙 IT│
+├─────────────────────────┤
+│ I ▸ ___________________│
+│ C ▸ ___________________│
+│ D ▸ ___________________│
+│ F ▸ ___________________│
+├─────────────────────────┤
+│         [GENERATE]      │
+└─────────────────────────┘</pre>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-best">Best for: Speed, power users</span>
+              <a href="../interfaces/hud-minimal.html" class="btn-sm">View Interface →</a>
+            </div>
+          </div>
+
+          <!-- Console Live -->
+          <div class="showcase-card reveal">
+            <div class="showcase-header">
+              <span class="showcase-icon">💻</span>
+              <div>
+                <h3 class="showcase-title">Console Live</h3>
+                <p class="showcase-desc">Terminal-style streaming interface</p>
+              </div>
+            </div>
+            <div class="ascii-block">
+<pre>SIRVATO-OS v1.0 [CONSOLE]
+> framework --mode icdf
+✓ ICDF Engine loaded
+> input --field I
+I ▸ █
+> run --validate --generate
+◉ Generating...
+▌▌▌▌▌▌▌▌▌▌▌▌ 100%</pre>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-best">Best for: Developers, debugging</span>
+              <a href="../interfaces/console-live.html" class="btn-sm">View Interface →</a>
+            </div>
+          </div>
+
+          <!-- OS Window -->
+          <div class="showcase-card reveal">
+            <div class="showcase-header">
+              <span class="showcase-icon">🖥️</span>
+              <div>
+                <h3 class="showcase-title">OS Window</h3>
+                <p class="showcase-desc">Classic OS multi-pane environment</p>
+              </div>
+            </div>
+            <div class="ascii-block">
+<pre>╔══════════════════════════╗
+║ ● ● ●  SIRVATO OS        ║
+╠══════════╦═══════════════╣
+║ SIDEBAR  ║  MAIN PANEL   ║
+║ ▸ ICDF   ║  I: _________ ║
+║ ▸ MICRO  ║  C: _________ ║
+║ ▸ RCR    ║  D: _________ ║
+║ ▸ FLOW   ║  F: _________ ║
+╚══════════╩═══════════════╝</pre>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-best">Best for: Multi-tasking</span>
+              <a href="../interfaces/os-window.html" class="btn-sm">View Interface →</a>
+            </div>
+          </div>
+
+          <!-- Master Block -->
+          <div class="showcase-card reveal">
+            <div class="showcase-header">
+              <span class="showcase-icon">📋</span>
+              <div>
+                <h3 class="showcase-title">Master Block</h3>
+                <p class="showcase-desc">Block-based modular layout</p>
+              </div>
+            </div>
+            <div class="ascii-block">
+<pre>┌──────────┐ ┌──────────┐
+│ BLOCK: I │ │ BLOCK: C │
+│          │ │          │
+└──────────┘ └──────────┘
+┌──────────┐ ┌──────────┐
+│ BLOCK: D │ │ BLOCK: F │
+│          │ │          │
+└──────────┘ └──────────┘
+      [ASSEMBLE & RUN]</pre>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-best">Best for: Templates, teams</span>
+              <a href="../interfaces/master-block.html" class="btn-sm">View Interface →</a>
+            </div>
+          </div>
+
+          <!-- Windows Edition -->
+          <div class="showcase-card reveal">
+            <div class="showcase-header">
+              <span class="showcase-icon">🪟</span>
+              <div>
+                <h3 class="showcase-title">Windows Edition</h3>
+                <p class="showcase-desc">Multi-window desktop experience</p>
+              </div>
+            </div>
+            <div class="ascii-block">
+<pre>╔══════╗  ╔══════╗  ╔═══╗
+║ICDF  ║  ║MICRO ║  ║OUT║
+║      ║  ║      ║  ║PUT║
+╚══════╝  ╚══════╝  ║   ║
+   ╔══════════╗     ║   ║
+   ║  RCR-EOC ║     ╚═══╝
+   ╚══════════╝</pre>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-best">Best for: Enterprise, parallel work</span>
+              <a href="../interfaces/windows-edition.html" class="btn-sm">View Interface →</a>
+            </div>
+          </div>
+
+          <!-- Fullscreen Mode -->
+          <div class="showcase-card reveal">
+            <div class="showcase-header">
+              <span class="showcase-icon">🔲</span>
+              <div>
+                <h3 class="showcase-title">Fullscreen Mode</h3>
+                <p class="showcase-desc">Immersive full viewport experience</p>
+              </div>
+            </div>
+            <div class="ascii-block">
+<pre>████████████████████████████
+█                          █
+█  ⬡ SIRVATO FULLSCREEN   █
+█                          █
+█  I ▸ __________________ █
+█  C ▸ __________________ █
+█  D ▸ __________________ █
+█  F ▸ __________________ █
+█                          █
+████████████████████████████</pre>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-best">Best for: Deep work, long sessions</span>
+              <a href="../interfaces/fullscreen-mode.html" class="btn-sm">View Interface →</a>
+            </div>
+          </div>
+
+          <!-- Fullscreen Totality -->
+          <div class="showcase-card reveal">
+            <div class="showcase-header">
+              <span class="showcase-icon">⬛</span>
+              <div>
+                <h3 class="showcase-title">Fullscreen Totality</h3>
+                <p class="showcase-desc">All systems active — maximum output</p>
+              </div>
+            </div>
+            <div class="ascii-block">
+<pre>▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+▓  TOTALITY — ALL SYSTEMS  ▓
+▓  ICDF ◉ MICRO ◉ RCR ◉   ▓
+▓  FLOW ◉ ATP  ◉ SUPRA ◉   ▓
+▓  ─────────────────────   ▓
+▓  HOLOFIELD: 5/5 ACTIVE   ▓
+▓  OMNIMODE: ENGAGED       ▓
+▓  AUTO-TRIGGER: LIVE      ▓
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓</pre>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-best">Best for: Experts, maximum quality</span>
+              <a href="../interfaces/fullscreen-totality.html" class="btn-sm">View Interface →</a>
+            </div>
+          </div>
+
+          <!-- MICRO Sidebar -->
+          <div class="showcase-card reveal">
+            <div class="showcase-header">
+              <span class="showcase-icon">📌</span>
+              <div>
+                <h3 class="showcase-title">MICRO Sidebar</h3>
+                <p class="showcase-desc">5-panel MICRO system layout</p>
+              </div>
+            </div>
+            <div class="ascii-block">
+<pre>╠═══╦═══╦═══╦═══╦═══╦══════╣
+║ M ║ I²║ C ║ R ║ O ║      ║
+╠═══╩═══╩═══╩═══╩═══╣ OUT  ║
+║                   ║ PUT  ║
+║  ACTIVE PANEL     ║      ║
+║  [M] Message      ║      ║
+║  Frame & Tone     ║      ║
+╚═══════════════════╩══════╝</pre>
+            </div>
+            <div class="showcase-meta">
+              <span class="showcase-best">Best for: MICRO framework work</span>
+              <a href="../interfaces/micro-sidebar.html" class="btn-sm">View Interface →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interface Selection Guide -->
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">How to Choose Your Interface</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Interface</th>
+                <th>Experience Level</th>
+                <th>Screen Size</th>
+                <th>Workflow Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>HUD Minimal</strong></td>
+                <td>Intermediate – Expert</td>
+                <td>Any</td>
+                <td>Speed-focused</td>
+              </tr>
+              <tr>
+                <td><strong>Console Live</strong></td>
+                <td>Developer</td>
+                <td>Desktop+</td>
+                <td>Technical / Debugging</td>
+              </tr>
+              <tr>
+                <td><strong>OS Window</strong></td>
+                <td>Beginner – Intermediate</td>
+                <td>Desktop+</td>
+                <td>General purpose</td>
+              </tr>
+              <tr>
+                <td><strong>Master Block</strong></td>
+                <td>Team / Template users</td>
+                <td>Desktop+</td>
+                <td>Collaborative</td>
+              </tr>
+              <tr>
+                <td><strong>Windows Edition</strong></td>
+                <td>Power users</td>
+                <td>Large desktop</td>
+                <td>Parallel frameworks</td>
+              </tr>
+              <tr>
+                <td><strong>Fullscreen Mode</strong></td>
+                <td>Intermediate – Expert</td>
+                <td>Any</td>
+                <td>Focused / Deep work</td>
+              </tr>
+              <tr>
+                <td><strong>Fullscreen Totality</strong></td>
+                <td>Expert only</td>
+                <td>Large desktop</td>
+                <td>Maximum precision</td>
+              </tr>
+              <tr>
+                <td><strong>MICRO Sidebar</strong></td>
+                <td>Beginner – Expert</td>
+                <td>Mobile friendly</td>
+                <td>Communication tasks</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Docs</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/framework-comparison.html">Comparison</a></li>
+          <li><a href="../documentation/best-practices.html">Best Practices</a></li>
+          <li><a href="../documentation/api-documentation.html">API Docs</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Trigger Protocol — 5-point prompt validation and activation system. Runs precision checks before activating the final prompt to eliminate ambiguity and maximize output quality.">
+  <title>AI Trigger Protocol — SIRVATO OS Frameworks</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html" class="active">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">AI Trigger Protocol</span>
+      </nav>
+      <span class="hero-tag">FRAMEWORK</span>
+      <h1 class="hero-title">AI Trigger Protocol</h1>
+      <p class="hero-tagline">5-Point Prompt Validation and Activation System</p>
+      <p class="hero-description">A systematic validation framework that runs 5 precision checks before activating the final prompt. Eliminates ambiguity, maximizes quality, and ensures every component of a complex prompt is correctly specified before execution.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is the AI Trigger Protocol?</h2>
+      <p class="section-text">The AI Trigger Protocol is the quality assurance layer of SIRVATO OS. It doesn't generate prompts — it validates them. Before any complex prompt is executed, the AI Trigger Protocol runs a structured 5-point inspection that checks every critical dimension of the prompt: coherence, rhythm, data completeness, output specification, and constraint compliance. Only when all 5 triggers pass is the prompt considered ready for execution.</p>
+      <p class="section-text">The protocol is built on a fundamental insight: most prompt failures are not caused by using the wrong framework, but by executing a structurally correct prompt that has a critical gap in one of five specific dimensions. A prompt can be brilliantly structured but still fail if the data layer is incomplete (Trigger 3), or if the output format is ambiguous (Trigger 4), or if a constraint violation is built into the prompt structure (Trigger 5). The AI Trigger Protocol catches these failures before they happen.</p>
+      <p class="section-text">The protocol is designed to be fast — a trained SIRVATO OS practitioner can run the 5-trigger check in under 2 minutes. The time investment is consistently smaller than the time wasted on rework caused by a failed prompt that could have been caught at the validation stage.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Layer Architecture</div>
+      <h2 class="section-title">The 5 Trigger Points</h2>
+      <div class="layer-tree">
+        <div class="layer-item">
+          <span class="layer-key">T1</span>
+          <div class="layer-body">
+            <span class="layer-label">COERENZA — Coherence</span>
+            <span class="layer-desc">All components logically aligned and internally consistent. Trigger 1 checks that every component of the prompt tells the same story and points toward the same output. The Instruction must align with the Expected Output. The Context must support the Request. The Role must be appropriate for the task. Any internal contradiction — an Instruction that conflicts with a Constraint, a Role that doesn't match the Communication Style — is a Trigger 1 failure that must be resolved before execution.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T2</span>
+          <div class="layer-body">
+            <span class="layer-label">RITMO — Rhythm</span>
+            <span class="layer-desc">Tone, pace, and communication style verified and set correctly. Trigger 2 checks that the communicative quality dimensions of the prompt are explicitly specified and appropriate for the use context. Is the tone defined? Is the pace appropriate for the output length? Is the communication style consistent with the specified Role and aligned with the intended audience? Undefined or mismatched rhythm is the most common cause of technically correct but communicatively flat AI output.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T3</span>
+          <div class="layer-body">
+            <span class="layer-label">DATI — Data</span>
+            <span class="layer-desc">All required data present, complete, and accurate. Trigger 3 checks the data layer of the prompt: is all required data present? Is any data field incomplete, ambiguous, or potentially inaccurate? Are there data fields that the AI will need but that haven't been provided? Trigger 3 also checks for data quality — providing incorrect data is worse than providing no data, as it actively misleads the AI toward confident but wrong output.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T4</span>
+          <div class="layer-body">
+            <span class="layer-label">OUTPUT — Output Specification</span>
+            <span class="layer-desc">Output format, length, and structure precisely defined. Trigger 4 checks the output specification for completeness and precision. Is the format explicitly stated? Is the length or word count defined? Is the structural hierarchy clear? Are there any ambiguities in the output specification that could lead the AI to produce output in an unexpected or unusable format? An output specification that leaves any dimension to the AI's interpretation is a Trigger 4 partial failure.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T5</span>
+          <div class="layer-body">
+            <span class="layer-label">VINCOLI — Constraints</span>
+            <span class="layer-desc">All boundaries, limits, and rules confirmed. Trigger 5 checks that all applicable constraints are explicitly stated in the prompt: scope limitations, audience restrictions, compliance requirements, confidentiality rules, content exclusions, and any other boundaries the output must respect. A constraint that is known but not stated in the prompt is a constraint that the AI cannot apply. Trigger 5 ensures the full constraint set is present, not just the obvious ones.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="example">
+      <div class="section-label">Code Example</div>
+      <h2 class="section-title">AI Trigger Protocol in Practice</h2>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-title">AI Trigger Protocol — Full Validation Check</span>
+          <button class="code-copy" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('pre').textContent)">Copy</button>
+        </div>
+        <pre>AI TRIGGER PROTOCOL CHECK:
+─────────────────────────────────────────────────────
+[T1] COERENZA  : ✓ Instruction aligns with expected output
+                   Role (Senior PM) consistent with task scope
+                   Context supports the specific Request made
+                   No internal contradictions detected
+
+[T2] RITMO     : ✓ Tone = professional, pace = measured
+                   Communication style matches executive audience
+                   Rhythm set: analytical, data-first, assertive
+                   No tone ambiguity in output specification
+
+[T3] DATI      : ✓ All required data fields populated
+                   Company context: present and complete
+                   Market data: present (Q3 2024 figures)
+                   Audience profile: defined (non-technical C-suite)
+                   ⚠ WARNING: competitor pricing data not current
+
+[T4] OUTPUT    : ✓ Format = structured report, 500 words max
+                   Section structure: 3 sections with headers
+                   Depth: executive summary level
+                   Delivery: markdown-formatted for slide transfer
+
+[T5] VINCOLI   : ✓ No sensitive data included
+                   EU GDPR compliant — no personal data in prompt
+                   Scope: product line X only, not full portfolio
+                   Time horizon: Q1 2025 recommendations only
+─────────────────────────────────────────────────────
+TRIGGER STATUS:
+  T1 COERENZA  : ✅ PASS
+  T2 RITMO     : ✅ PASS
+  T3 DATI      : ⚠  PASS WITH WARNING — update competitor pricing
+  T4 OUTPUT    : ✅ PASS
+  T5 VINCOLI   : ✅ PASS
+─────────────────────────────────────────────────────
+STATUS: 4/5 TRIGGERS ACTIVE — REVIEW T3 WARNING BEFORE EXECUTING
+─────────────────────────────────────────────────────</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="how-it-works">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">5-Point Validation Process</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-body">
+            <h3 class="step-title">Assemble the Prompt First</h3>
+            <p class="step-text">Before running the Trigger Protocol, fully assemble the prompt using the appropriate SIRVATO OS framework (ICDF, RCR-EOC, MICRO, etc.). The protocol validates a complete prompt — it is not a prompt-building tool. Have the entire prompt structure in front of you before beginning the 5-trigger check.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-body">
+            <h3 class="step-title">Run T1 — Check for Internal Coherence</h3>
+            <p class="step-text">Read the entire prompt and check every component against every other component for logical alignment. Does the Instruction match the Expected Output? Does the Role have the expertise to fulfill the Request in the given Context? Are there any contradictions, tensions, or mismatches between components? Resolve any T1 failures completely before proceeding — incoherence propagates through all other triggers.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-body">
+            <h3 class="step-title">Run T2 — Verify Rhythm and Tone</h3>
+            <p class="step-text">Check that the communicative quality dimensions are explicitly specified. Is tone defined? Is communication style appropriate for the Role and Context? Is the pace specification consistent with the output length and complexity? Add explicit rhythm and tone specifications where they are absent or ambiguous.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-body">
+            <h3 class="step-title">Run T3 — Audit the Data Layer</h3>
+            <p class="step-text">Go through every data point in the prompt: is it present, complete, and accurate? For each piece of required information, verify it is actually in the prompt (presence), that it is fully specified and not partially described (completeness), and that it is factually correct (accuracy). Issue warnings for data that is present but potentially outdated or unverified.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">05</div>
+          <div class="step-body">
+            <h3 class="step-title">Run T4 — Verify Output Specification Completeness</h3>
+            <p class="step-text">Check every dimension of the output specification: format, length, structure, depth level, vocabulary register. For each dimension, confirm it is explicitly defined — not implied, not approximate, not dependent on AI inference. A complete T4 means any competent professional reading the output spec could produce output that would be accepted as correct.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">06</div>
+          <div class="step-body">
+            <h3 class="step-title">Run T5 — Confirm Full Constraint Set</h3>
+            <p class="step-text">Make a comprehensive list of all constraints that apply to this task — scope, audience, compliance, confidentiality, time horizon, resource limits, content exclusions — then verify each constraint appears explicitly in the prompt. Only when all constraints are confirmed present in the prompt does T5 pass. A constraint known only to you but not stated in the prompt will not be applied by the AI.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">07</div>
+          <div class="step-body">
+            <h3 class="step-title">Review Status and Execute</h3>
+            <p class="step-text">Review the overall trigger status. All 5 triggers must be in PASS or PASS WITH WARNING state before execution. FAIL status on any trigger means the prompt requires revision before submission. PASS WITH WARNING is acceptable for execution only if the warning is acknowledged and its implications are understood. "All triggers active" is the only unqualified green light.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="when-to-use">
+      <div class="section-label">When to Use</div>
+      <h2 class="section-title">Ideal Use Cases</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Before High-Stakes Prompt Execution</h4>
+            <p class="feature-text">Any time a prompt failure would have significant consequences — a missed client deliverable, a flawed strategy recommendation, an incorrect analysis used for a real decision. The 2-minute trigger check is always a better investment than the cost of rework on a failed high-stakes prompt.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Before Initializing AUTO-FLOW Pipelines</h4>
+            <p class="feature-text">Run the Trigger Protocol on the INIT block of any AUTO-FLOW pipeline. Errors in the INIT specification propagate through every subsequent stage — catching them before execution saves rework across the entire pipeline, not just a single step.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Quality Assurance for Team AI Usage</h4>
+            <p class="feature-text">When multiple team members are submitting prompts for shared AI workflows, the Trigger Protocol provides a standardized quality gate that ensures all prompts meet a minimum specification before execution. Eliminates the variability caused by inconsistent prompt quality across team members.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Compliance-Sensitive Environments</h4>
+            <p class="feature-text">In regulated industries or for compliance-sensitive outputs, T5 (Vincoli) provides a documented constraint verification that forms part of an auditable record of due diligence in AI workflow governance. The trigger check becomes a compliance artifact.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Building and Refining Prompt Templates</h4>
+            <p class="feature-text">Run the Trigger Protocol on every prompt template before adding it to a shared library. A template that passes all 5 triggers reliably produces consistent output. The trigger check is the quality standard that separates a production-ready template from a draft that only worked in one specific context.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Frameworks</div>
+      <h2 class="section-title">Explore the SIRVATO OS Stack</h2>
+      <div class="related-grid">
+        <a href="../frameworks/icdf.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">ICDF Engine</h4>
+          <p class="related-desc">Build the prompt with ICDF first, then validate it with the AI Trigger Protocol before execution.</p>
+        </a>
+        <a href="../frameworks/rcr-eoc.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">RCR-EOC</h4>
+          <p class="related-desc">RCR-EOC prompts are the most validated with ATP — their 6 components map directly to the 5 trigger checks.</p>
+        </a>
+        <a href="../frameworks/auto-flow-pro.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AUTO-FLOW PRO</h4>
+          <p class="related-desc">Run ATP validation before initializing any AUTO-FLOW PRO pipeline for guaranteed execution readiness.</p>
+        </a>
+        <a href="../frameworks/micro.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">MICRO Rhythm Layer</h4>
+          <p class="related-desc">T2 (Ritmo) of the Trigger Protocol directly validates the Rhythm component built with MICRO.</p>
+        </a>
+        <a href="../frameworks/unified-mode.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">Unified Mode</h4>
+          <p class="related-desc">The Trigger Protocol is the mandatory pre-flight check for any Unified Mode deployment.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

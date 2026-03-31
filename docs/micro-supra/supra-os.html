@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MICRO SUPRA-OS — Kernel-Level Operating System Integration for SIRVATO OS. MICRO Core running at process, memory, I/O, and scheduler level for total system coherence.">
+  <title>MICRO SUPRA-OS — SIRVATO OS MICRO SUPRA</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html" class="active">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">MICRO SUPRA-OS</span>
+      </nav>
+      <span class="hero-tag">MICRO SUPRA</span>
+      <h1 class="hero-title">MICRO SUPRA-OS</h1>
+      <p class="hero-tagline">Kernel-Level Operating System Integration</p>
+      <p class="hero-description">MICRO SUPRA-OS takes the MICRO Core and integrates it at the operating system level. Processes, memory, I/O — all managed through the MICRO lens for total system coherence across every prompt engineering operation.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is MICRO SUPRA-OS?</h2>
+      <p class="section-text">MICRO SUPRA-OS is the second layer of the MICRO SUPRA stack, sitting directly above the MICRO Core. If the Core defines what the five MICRO components are, SUPRA-OS defines how they are managed, scheduled, persisted, and orchestrated at a systems level. The operating system metaphor is precise: SUPRA-OS treats each MICRO component as a managed resource — allocating processing priority, maintaining state across sessions, handling input/output transformations, and scheduling multi-framework task queues.</p>
+      <p class="section-text">For practical prompt engineering, SUPRA-OS means that your MICRO context is never lost between sessions, your most computationally expensive framework operations are queued intelligently, your input parsing is framework-aware from the moment of keystroke, and your output formatting is handled by a dedicated engine that knows your delivery specifications. SUPRA-OS transforms MICRO from a prompt structure into a running process — always active, always managed, always coherent.</p>
+    </section>
+
+    <section class="section reveal" id="modules">
+      <div class="section-label">Kernel Modules</div>
+      <h2 class="section-title">The 6 SUPRA-OS Kernel Modules</h2>
+      <div class="layer-tree">
+        <div class="layer-item">
+          <span class="layer-key">KERNEL</span>
+          <div class="layer-body">
+            <span class="layer-label">Core Process Manager</span>
+            <span class="layer-desc">The central orchestration module for all MICRO component processing. The KERNEL manages the lifecycle of every M-I²-C-R-O object from creation through completion — initialising components, tracking their state, coordinating inter-component dependencies, and finalising the assembled prompt for delivery. The KERNEL is the module that makes MICRO a coherent system rather than a collection of independent fields.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">MEMORY</span>
+          <div class="layer-body">
+            <span class="layer-label">Context Persistence Engine</span>
+            <span class="layer-desc">The MEMORY module persists MICRO component state across sessions, windows, and devices. Every MICRO prompt you write is stored with full component resolution — not just as a text string but as a structured object with M, I², C, R, and O as separate, retrievable fields. The MEMORY module supports versioning (recall any previous version of a saved prompt), diffing (see what changed between versions), and semantic search (find past prompts by describing what they were for).</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">I/O</span>
+          <div class="layer-body">
+            <span class="layer-label">Input/Output Formatting Engine</span>
+            <span class="layer-desc">The I/O module handles the transformation of raw user input into structured MICRO components (input parsing) and the transformation of MICRO structures into formatted prompts (output serialisation). Input parsing uses pattern recognition to automatically detect which MICRO component is being addressed as you type. Output serialisation applies the active Output specification (the O component) to format the AI response correctly before presenting it to the user.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">SCHEDULER</span>
+          <div class="layer-body">
+            <span class="layer-label">Multi-Framework Task Queue</span>
+            <span class="layer-desc">The SCHEDULER manages the execution order of multi-framework operations. When FULLSCREEN TOTALITY activates 8 frameworks simultaneously, the SCHEDULER determines which framework computations run first, which run in parallel, and which must wait for dependencies to resolve. The SCHEDULER optimises for minimum latency on time-critical paths and maximum throughput on batch operations, using a priority queue weighted by the active Output specification's urgency settings.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">DRIVER</span>
+          <div class="layer-body">
+            <span class="layer-label">AI Model Interface Handler</span>
+            <span class="layer-desc">The DRIVER module is the abstraction layer between SIRVATO OS and the underlying AI models. It handles API authentication, request formatting, streaming response handling, error recovery, and rate limit management. The DRIVER is model-agnostic — it translates MICRO-structured prompts into the correct API format for any supported AI model, ensuring that the same MICRO prompt structure produces consistent results regardless of which model processes it.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">FILESYSTEM</span>
+          <div class="layer-body">
+            <span class="layer-label">Prompt Storage and Versioning</span>
+            <span class="layer-desc">The FILESYSTEM module provides the storage abstraction for all SIRVATO OS prompt assets: prompt templates, saved MICRO structures, block library contents, session recordings, and exported outputs. The FILESYSTEM uses a content-addressed storage model — identical prompt content is stored once regardless of how many templates reference it. A version history for every file enables rollback to any previous state and supports collaborative editing workflows.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">System Architecture</div>
+      <h2 class="section-title">SUPRA-OS Kernel Layout</h2>
+      <div class="ascii-block">
+<pre>
+┌─────────────────────────────────────────────┐
+│           SIRVATO OS — SUPRA-OS             │
+├─────────────────────────────────────────────┤
+│  ┌──────────────────────────────────────┐   │
+│  │         MICRO KERNEL                 │   │
+│  │  M·I²·C·R·O process manager         │   │
+│  └────────────┬─────────────────────────┘   │
+│               │                             │
+│  ┌────────────▼─────────────────────────┐   │
+│  │     MEMORY │ I/O │ SCHEDULER         │   │
+│  └────────────┬─────────────────────────┘   │
+│               │                             │
+│  ┌────────────▼─────────────────────────┐   │
+│  │     DRIVER │ FILESYSTEM              │   │
+│  └────────────┬─────────────────────────┘   │
+│               │                             │
+│  ┌────────────▼─────────────────────────┐   │
+│  │     AI MODEL INTERFACE LAYER         │   │
+│  └──────────────────────────────────────┘   │
+└─────────────────────────────────────────────┘
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Key Capabilities</div>
+      <h2 class="section-title">SUPRA-OS in Operation</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Cross-Session Context Persistence</h4>
+            <p class="feature-text">The MEMORY module maintains your MICRO context state across browser closes, device switches, and session interruptions. Your Context component for a long-running project is always available. Your established Rhythm calibration for a particular client persists. You never re-enter the same context twice — SUPRA-OS remembers it for you.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Intelligent Framework Scheduling</h4>
+            <p class="feature-text">When multiple frameworks are active, the SCHEDULER ensures they process in the optimal order. ICDF structure validation runs before MICRO rhythm analysis. The AI Trigger Protocol runs after all framework contributions are assembled. The SCHEDULER prevents race conditions, eliminates redundant processing, and ensures the final synthesised prompt is always coherent and internally consistent.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Model-Agnostic AI Interface</h4>
+            <p class="feature-text">The DRIVER module translates MICRO-structured prompts for any supported AI model. GPT-4, Claude, Gemini, and open-source models all receive the same underlying MICRO structure, formatted appropriately for each model's API conventions. Switch AI models without rewriting prompts — the DRIVER handles the translation automatically.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Versioned Prompt Filesystem</h4>
+            <p class="feature-text">The FILESYSTEM records every change to every prompt you create in SIRVATO OS. The full version history is always accessible — open the history panel for any prompt to see a timeline of all saved versions, with diff highlighting showing exactly what changed between each version. Restore any previous version with one click, or branch the version history to explore an alternative direction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">SUPRA-OS Kernel Interaction</h2>
+      <p class="section-text">The SUPRA-OS kernel is largely transparent during normal operation — it runs behind the interface managing processes invisibly. The SUPRA-OS dashboard surfaces kernel state for advanced users who want to inspect, configure, or debug system behaviour:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">SUPRA-OS — Kernel Status Dashboard</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>┌─────────────────────────────────────────────────────────┐
+│  SIRVATO OS │ SUPRA-OS KERNEL STATUS                    │
+├─────────────────────────────────────────────────────────┤
+│  MODULE      STATUS        LOAD    LAST ACTIVITY        │
+│  ──────────  ─────────     ──────  ─────────────────    │
+│  KERNEL      ● RUNNING     12%     14:23:47             │
+│  MEMORY      ● RUNNING     3%      14:23:01 (auto-save) │
+│  I/O         ● ACTIVE      8%      14:23:47             │
+│  SCHEDULER   ● IDLE        0%      14:22:33             │
+│  DRIVER      ● CONNECTED   5%      14:23:47             │
+│  FILESYSTEM  ● READY       1%      14:23:01             │
+├─────────────────────────────────────────────────────────┤
+│  MICRO OBJECTS IN MEMORY: 14  │  SESSION DURATION: 23m  │
+│  FRAMEWORKS ACTIVE: 2         │  PROMPTS GENERATED: 7   │
+└─────────────────────────────────────────────────────────┘</code></pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related MICRO SUPRA Layers</div>
+      <h2 class="section-title">Continue Up the MICRO SUPRA Stack</h2>
+      <div class="related-grid">
+        <a href="../micro-supra/core.html" class="related-link">
+          <span class="related-tag">MICRO SUPRA</span>
+          <h4 class="related-title">MICRO Core</h4>
+          <p class="related-desc">The M-I²-C-R-O base layer that SUPRA-OS manages and orchestrates at the system level.</p>
+        </a>
+        <a href="../micro-supra/holofield.html" class="related-link">
+          <span class="related-tag">MICRO SUPRA</span>
+          <h4 class="related-title">MICRO HOLOFIELD</h4>
+          <p class="related-desc">5-layer holographic architecture built on top of the SUPRA-OS process foundation.</p>
+        </a>
+        <a href="../micro-supra/auto-trigger.html" class="related-link">
+          <span class="related-tag">MICRO SUPRA</span>
+          <h4 class="related-title">MICRO AUTO-TRIGGER</h4>
+          <p class="related-desc">Autonomous cascade system that uses SUPRA-OS scheduler for trigger orchestration.</p>
+        </a>
+        <a href="../micro-supra/supra-totality.html" class="related-link">
+          <span class="related-tag">MICRO SUPRA</span>
+          <h4 class="related-title">MICRO SUPRA-TOTALITY</h4>
+          <p class="related-desc">The apex integration state where SUPRA-OS runs all systems simultaneously.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

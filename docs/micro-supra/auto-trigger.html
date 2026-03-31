@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MICRO AUTO-TRIGGER — Self-Activating Cascade Prompt System for SIRVATO OS. 7-trigger autonomous monitoring that self-corrects quality, context, rhythm, and data gaps without manual intervention.">
+  <title>MICRO AUTO-TRIGGER — SIRVATO OS MICRO SUPRA</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html" class="active">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">MICRO AUTO-TRIGGER</span>
+      </nav>
+      <span class="hero-tag">MICRO SUPRA</span>
+      <h1 class="hero-title">MICRO AUTO-TRIGGER</h1>
+      <p class="hero-tagline">Self-Activating Cascade Prompt System</p>
+      <p class="hero-description">AUTO-TRIGGER is the autonomous activation layer. Once initialised, it self-monitors prompt quality, automatically triggers corrections, amplifications, and adaptations without manual intervention. The system improves itself in real time.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is MICRO AUTO-TRIGGER?</h2>
+      <p class="section-text">MICRO AUTO-TRIGGER is the fifth and penultimate layer of the MICRO SUPRA stack, sitting directly below SUPRA-TOTALITY. It is the automation layer — the system that removes manual quality management from the prompt engineering workflow by replacing human monitoring with a set of intelligent, self-activating triggers. Once you activate AUTO-TRIGGER at the start of a session, it runs continuously in the background, monitoring every prompt you build against a set of quality thresholds and firing correction sequences whenever a threshold is breached.</p>
+      <p class="section-text">The cascade principle is central to AUTO-TRIGGER's design. Triggers do not operate in isolation — they form a cascade. When the INIT TRIGGER fires at session start, it initialises all other triggers. When the QUALITY TRIGGER fires, it may cascade into the CONTEXT TRIGGER if the quality failure is context-related. When the MASTER TRIGGER fires — the highest-severity trigger — it cascades through every other trigger in the system, performing a complete reset and recalibration. This cascade architecture ensures that every quality problem is addressed at the correct level of the system, with minimum disruption and maximum precision.</p>
+    </section>
+
+    <section class="section reveal" id="triggers">
+      <div class="section-label">Trigger Cascade Sequence</div>
+      <h2 class="section-title">The 7 AUTO-TRIGGERs</h2>
+      <div class="layer-tree">
+        <div class="layer-item">
+          <span class="layer-key">T0</span>
+          <div class="layer-body">
+            <span class="layer-label">INIT TRIGGER — Session Self-Initialisation</span>
+            <span class="layer-desc">The INIT TRIGGER fires automatically when you begin typing the first MICRO component of a new session. It reads the SUPRA-OS kernel state, loads persisted session context from MEMORY, activates the HOLOFIELD layers, and arms all subsequent triggers. The INIT TRIGGER also performs a compatibility check — verifying that the active frameworks, interface mode, and AI model driver are all compatible before allowing any other triggers to arm. A failed INIT requires manual resolution before the session proceeds.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T1</span>
+          <div class="layer-body">
+            <span class="layer-label">QUALITY TRIGGER — Output Quality Monitoring</span>
+            <span class="layer-desc">The QUALITY TRIGGER runs a continuous quality assessment against the assembled MICRO prompt, comparing it against the quality model for the active task profile. When the quality score drops below the configured threshold (default: 75/100), the QUALITY TRIGGER fires. The automatic response is a staged intervention: first, a non-blocking notification with specific improvement suggestions. If the quality score does not improve within 3 editing cycles, the QUALITY TRIGGER cascades into an AUTO-ADAPT sequence that applies the highest-scoring improvement suggestion automatically.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T2</span>
+          <div class="layer-body">
+            <span class="layer-label">CONTEXT TRIGGER — Context Drift Detection</span>
+            <span class="layer-desc">The CONTEXT TRIGGER monitors the C (Context) component for drift — the gradual accumulation of inconsistencies between the stated context and the other MICRO components. Context drift often occurs in long sessions where the Message or Intention components evolve but the Context is not updated to reflect the evolution. When drift is detected, the CONTEXT TRIGGER fires and presents a Context Sync panel showing the specific inconsistencies and offering targeted context update suggestions.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T3</span>
+          <div class="layer-body">
+            <span class="layer-label">RHYTHM TRIGGER — Tone Deviation Correction</span>
+            <span class="layer-desc">The RHYTHM TRIGGER monitors the R (Rhythm) component and the overall tonal consistency of the assembled prompt. It detects tone deviation — when the rhythm specification conflicts with the language used in other components. For example: if R specifies "formal, measured" but the Message uses casual contractions, the RHYTHM TRIGGER fires. The automatic correction options range from adjusting the Message language to match the Rhythm, to flagging the Rhythm specification as potentially misaligned with the task intent and suggesting a recalibration.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T4</span>
+          <div class="layer-body">
+            <span class="layer-label">DATA TRIGGER — Information Gap Detection</span>
+            <span class="layer-desc">The DATA TRIGGER analyses the MICRO structure for information gaps — places where the assembled prompt requires data that has not been provided. When an ICDF prompt references a D (Data) field that is empty, or when an MICRO Context references an audience characteristic without defining it, the DATA TRIGGER fires. The automatic response is a Data Request Panel that lists each detected gap with a specific, targeted question for the user to answer, plus an option to search the FILESYSTEM for relevant saved content that might fill the gap.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T5</span>
+          <div class="layer-body">
+            <span class="layer-label">OUTPUT TRIGGER — Delivery Specification Enforcement</span>
+            <span class="layer-desc">The OUTPUT TRIGGER enforces the O (Output) specification. When a generated AI response does not match the Output specification — wrong length, wrong format, wrong structure — the OUTPUT TRIGGER fires. It analyses the deviation: is the AI response too long? Structurally incorrect? Missing required sections? The AUTO-TRIGGER response is a reformatting instruction sent back to the AI as a follow-up prompt, automatically requesting a corrected output that meets the full Output specification. The user receives the corrected output, not the original deviation.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">T6</span>
+          <div class="layer-body">
+            <span class="layer-label">MASTER TRIGGER — Full System Reset and Recalibration</span>
+            <span class="layer-desc">The MASTER TRIGGER is the emergency override — fired when multiple triggers have failed to resolve a quality problem through their normal cascade sequences. When the MASTER TRIGGER fires, it performs a complete system reset: all MICRO components are archived to the FILESYSTEM, the SUPRA-OS kernel is cleared, and the session is reinitialised from scratch using the archived components as starting reference material. The user is presented with a structured recalibration guide — a step-by-step process for rebuilding the MICRO structure correctly from the ground up, with the original components available for reference.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Cascade Flow Architecture</div>
+      <h2 class="section-title">AUTO-TRIGGER Flow Diagram</h2>
+      <div class="ascii-block">
+<pre>
+INPUT PROMPT
+     │
+     ▼
+┌─────────────┐
+│  INIT SCAN  │──── INIT TRIGGER (T0) ────→ arms T1–T6
+└──────┬──────┘
+       │
+       ▼
+┌─────────────────────────────────────────────┐
+│  CONTINUOUS MONITORING (T1–T5 running)      │
+│                                             │
+│  T1 QUALITY  →  score check (live)          │
+│  T2 CONTEXT  →  drift detection (live)      │
+│  T3 RHYTHM   →  tone consistency (live)     │
+│  T4 DATA     →  gap detection (live)        │
+│  T5 OUTPUT   →  post-generation check       │
+└─────────────┬───────────────────────────────┘
+              │  all pass
+              ▼
+         ┌─────────┐
+         │  OUTPUT │───→ DELIVERED
+         └─────────┘
+              │  any fail
+              ▼
+         ┌─────────────┐
+         │  AUTO-ADAPT │───→ fix + retry
+         └──────┬──────┘
+                │  unresolved
+                ▼
+         ┌─────────────────┐
+         │  MASTER TRIGGER │───→ full reset
+         │  (T6)            │
+         └─────────────────┘
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Key Capabilities</div>
+      <h2 class="section-title">AUTO-TRIGGER in Practice</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Zero-Manual-Monitoring Workflow</h4>
+            <p class="feature-text">With AUTO-TRIGGER active, you never need to manually check your prompts for quality issues. The 7-trigger cascade watches every component continuously, compares against quality thresholds, and either fixes problems automatically or surfaces targeted, specific correction requests. The net result is a workflow where prompt quality management is fully automated — you focus on content, AUTO-TRIGGER manages quality.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Configurable Trigger Thresholds</h4>
+            <p class="feature-text">Every trigger has configurable thresholds. The QUALITY TRIGGER default of 75/100 can be raised to 90/100 for maximum-precision work or lowered to 60/100 for fast-iteration drafting sessions where speed matters more than perfection. The CONTEXT TRIGGER's drift sensitivity can be adjusted. The DATA TRIGGER can be set to block generation until all gaps are filled, or to allow generation with gaps and surface a post-generation gap report instead.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Cascade Transparency Log</h4>
+            <p class="feature-text">Every trigger firing, every cascade, and every automatic correction is logged in the AUTO-TRIGGER Cascade Log — a timestamped event stream accessible in the SUPRA-OS dashboard. The log shows exactly which trigger fired, what condition caused it, what automatic response was applied, and the before/after quality scores. This transparency turns the automated quality management system into a learning resource — you can study your own prompt patterns to understand where your weaknesses consistently appear.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Integration with AI Trigger Protocol</h4>
+            <p class="feature-text">AUTO-TRIGGER is distinct from but integrates with the AI Trigger Protocol framework. The AI Trigger Protocol is a pre-generation validation framework — it runs 5 checks before the prompt is sent to the AI. AUTO-TRIGGER is a continuous monitoring system that runs throughout the session. Together, they provide complete coverage: AUTO-TRIGGER monitors the prompt as it is built; the AI Trigger Protocol validates it before it is sent. No quality gap between session start and generation completion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">AUTO-TRIGGER Session Log</h2>
+      <p class="section-text">The following shows a typical AUTO-TRIGGER session log excerpt, demonstrating how triggers fire and cascade during a normal prompt engineering session. This transparency view is accessible from the SUPRA-OS dashboard at any time:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">AUTO-TRIGGER — Session Cascade Log (excerpt)</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>[14:23:01] T0 INIT TRIGGER ─── FIRED
+           → Kernel state loaded, session context restored
+           → Triggers T1–T5 ARMED
+
+[14:23:47] T1 QUALITY ──────── WARN  (score: 68/100)
+           → Issue: I² component has single-layer intent only
+           → Suggestion: Add strategic meta-intention layer
+           → Action: Notification displayed to user
+
+[14:23:52] T1 QUALITY ──────── PASS  (score: 82/100)
+           → User added I² strategic layer — quality resolved
+
+[14:24:15] T2 CONTEXT ──────── WARN  (drift score: 0.31)
+           → Issue: Message updated but Context still references
+             old audience segment
+           → Action: Context Sync Panel presented
+
+[14:24:28] T2 CONTEXT ──────── PASS  (drift score: 0.04)
+           → User updated Context — drift resolved
+
+[14:24:45] T5 OUTPUT ─────────  PASS  (post-generation)
+           → Output matches specification: ✓ length ✓ format ✓ structure
+           → Delivery confirmed</code></pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related MICRO SUPRA Layers</div>
+      <h2 class="section-title">Continue Up the MICRO SUPRA Stack</h2>
+      <div class="related-grid">
+        <a href="../micro-supra/omnimode.html" class="related-link">
+          <span class="related-tag">MICRO SUPRA</span>
+          <h4 class="related-title">MICRO OMNIMODE</h4>
+          <p class="related-desc">7-mode convergence — the OMNIMODE mode weighting feeds AUTO-TRIGGER quality thresholds.</p>
+        </a>
+        <a href="../micro-supra/supra-totality.html" class="related-link">
+          <span class="related-tag">MICRO SUPRA</span>
+          <h4 class="related-title">MICRO SUPRA-TOTALITY</h4>
+          <p class="related-desc">The apex layer where AUTO-TRIGGER runs at full cascade depth across all systems.</p>
+        </a>
+        <a href="../frameworks/ai-trigger-protocol.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AI Trigger Protocol</h4>
+          <p class="related-desc">The pre-generation validation framework that complements AUTO-TRIGGER's continuous monitoring.</p>
+        </a>
+        <a href="../micro-supra/holofield.html" class="related-link">
+          <span class="related-tag">MICRO SUPRA</span>
+          <h4 class="related-title">MICRO HOLOFIELD</h4>
+          <p class="related-desc">5-layer holographic architecture — AUTO-TRIGGER uses the DASHBOARD layer for monitoring.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ICDF Engine — The foundational structural layer of SIRVATO OS. Every prompt is decomposed into 4 precision layers: Instruction, Context, Data, Format.">
+  <title>ICDF Engine — SIRVATO OS Frameworks</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html" class="active">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">ICDF Engine</span>
+      </nav>
+      <span class="hero-tag">FRAMEWORK</span>
+      <h1 class="hero-title">ICDF Engine</h1>
+      <p class="hero-tagline">Instruction-Context-Data-Format Structural Framework</p>
+      <p class="hero-description">The foundational structural layer of SIRVATO OS. Every prompt is decomposed into 4 precision layers for maximum clarity and AI comprehension.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is the ICDF Engine?</h2>
+      <p class="section-text">The ICDF Engine is the core structural primitive of SIRVATO OS. It provides a repeatable, universal framework for decomposing any prompt into four distinct, precision-crafted layers. By separating Instruction from Context, and Data from Format, the ICDF Engine eliminates ambiguity at the source — the single greatest cause of poor AI output. Whether you are writing a one-line prompt or orchestrating a complex multi-step task, ICDF gives you a rigorous scaffold that AI systems understand and respond to with consistency.</p>
+      <p class="section-text">Every other SIRVATO OS framework is built on top of the ICDF foundation. Mastering ICDF means mastering the grammar of prompt engineering itself.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Layer Architecture</div>
+      <h2 class="section-title">The 4 Precision Layers</h2>
+      <div class="layer-tree">
+        <div class="layer-item">
+          <span class="layer-key">I</span>
+          <div class="layer-body">
+            <span class="layer-label">Instruction</span>
+            <span class="layer-desc">The precise action to perform. Be explicit. Verbs first. Ambiguous instructions produce ambiguous output — every word here must carry intent. Start with a strong action verb: write, analyze, generate, transform, extract. Define exactly what the AI must do, leaving no room for interpretation.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">C</span>
+          <div class="layer-body">
+            <span class="layer-label">Context</span>
+            <span class="layer-desc">The scenario, environment, and background. AI needs context to calibrate its response. Without context, the model defaults to generic. With rich context, it specializes. Include the domain, the audience, the situation, the constraints implied by the environment, and any background knowledge the AI needs to perform the instruction accurately.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">D</span>
+          <div class="layer-body">
+            <span class="layer-label">Data</span>
+            <span class="layer-desc">The raw material, facts, examples, or content to work with. This is the input the AI processes. It can be a text to rewrite, a dataset to analyze, a list of facts to synthesize, reference examples for style matching, or any concrete material the instruction requires. If you have no data, state that explicitly so the AI knows it must generate or infer.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">F</span>
+          <div class="layer-body">
+            <span class="layer-label">Format</span>
+            <span class="layer-desc">The exact output form: length, structure, style, tone. The Format layer is the final precision control. Specify whether you want a list, a table, a narrative, code, JSON, markdown. Set the word count or character limit. Define the heading structure. Set the tone — formal, casual, technical, persuasive. Format is what transforms a correct response into a usable one.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="example">
+      <div class="section-label">Code Example</div>
+      <h2 class="section-title">ICDF in Practice</h2>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-title">ICDF Structure — Investor Pitch</span>
+          <button class="code-copy" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('pre').textContent)">Copy</button>
+        </div>
+        <pre>ICDF STRUCTURE:
+I — Instruction : Scrivi un pitch per investitori
+C — Context     : Startup AI nel settore healthcare, round seed
+D — Data        : Team di 3 ingegneri, MVP completato, 50 beta user
+F — Format      : Email professionale, 200 parole max
+
+─────────────────────────────────────────────────────
+OUTPUT PROMPT (assembled):
+
+Scrivi un pitch per investitori per una startup AI nel settore 
+healthcare in fase seed. Il team è composto da 3 ingegneri, 
+l'MVP è stato completato e si contano 50 beta user attivi.
+Formato: email professionale, massimo 200 parole.
+─────────────────────────────────────────────────────</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="how-it-works">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">4-Step Execution Process</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-body">
+            <h3 class="step-title">Decompose the Goal</h3>
+            <p class="step-text">Start by identifying what you want to achieve. Break that goal apart into its instruction component (what to do), its context component (what setting this occurs in), its data component (what material to work with), and its format component (what the output should look like). Don't write the prompt yet — just think in layers.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-body">
+            <h3 class="step-title">Write Each Layer With Precision</h3>
+            <p class="step-text">Fill in each layer independently. Write the Instruction as a crisp command. Write the Context as a scene-setting paragraph. Collect and organize the Data. Define the Format with specifics — not "a list" but "a numbered list of 5 items, each under 20 words". Precision at the layer level creates clarity at the output level.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-body">
+            <h3 class="step-title">Combine in ICDF Order</h3>
+            <p class="step-text">Assemble the four layers into a single coherent prompt in I → C → D → F sequence. This order matches the natural processing flow of most AI systems: understand the task, calibrate to context, process the data, produce in the specified format. Deviating from the order often reduces output quality.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-body">
+            <h3 class="step-title">Iterate the Format Layer First</h3>
+            <p class="step-text">When you need variations of the same output, change the F layer only and keep I, C, D stable. This lets you generate a blog post, a slide deck outline, a tweet thread, and an executive summary from a single ICDF structure with minimal effort. Format iteration is the fastest path to multi-format content production.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="when-to-use">
+      <div class="section-label">When to Use</div>
+      <h2 class="section-title">Ideal Use Cases</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Single-Task Prompts Needing Structure</h4>
+            <p class="feature-text">Any time you need a single, well-defined output from a standalone prompt, ICDF provides the structural clarity to get it right the first time. Reduces prompt iteration cycles by up to 70%.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Documentation and Content Creation</h4>
+            <p class="feature-text">ICDF excels at content tasks where the output format is as important as the content itself. Perfect for reports, articles, emails, proposals, and any written deliverable with defined specifications.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Prompts Where Output Format Matters</h4>
+            <p class="feature-text">When the shape of the output is a critical requirement — structured data, specific markdown, code in a particular language, tables with defined columns — the Format layer ensures precision delivery every time.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Teaching AI a New Task From Scratch</h4>
+            <p class="feature-text">When introducing the AI to a domain, process, or task it hasn't encountered in your session, ICDF's layered structure ensures the model has everything it needs to understand the job before attempting it.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Foundation for Other SIRVATO Frameworks</h4>
+            <p class="feature-text">ICDF is the base layer beneath MICRO, RCR-EOC, AUTO-FLOW, and Unified Mode. Understanding ICDF deeply is the prerequisite for using all other SIRVATO OS frameworks at full effectiveness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Frameworks</div>
+      <h2 class="section-title">Explore the SIRVATO OS Stack</h2>
+      <div class="related-grid">
+        <a href="../frameworks/micro.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">MICRO Rhythm Layer</h4>
+          <p class="related-desc">Message-Intention-Context-Rhythm-Output communication framework for tone-sensitive tasks.</p>
+        </a>
+        <a href="../frameworks/rcr-eoc.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">RCR-EOC</h4>
+          <p class="related-desc">6-component professional framework separating role, request, and constraints for maximum precision.</p>
+        </a>
+        <a href="../frameworks/auto-flow.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AUTO-FLOW Sequential</h4>
+          <p class="related-desc">Chain prompts into reliable workflow pipelines with step-by-step sequential execution.</p>
+        </a>
+        <a href="../frameworks/unified-mode.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">Unified Mode</h4>
+          <p class="related-desc">The apex 11-component framework combining all SIRVATO OS systems into one structure.</p>
+        </a>
+        <a href="../frameworks/ai-trigger-protocol.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AI Trigger Protocol</h4>
+          <p class="related-desc">5-point validation system that runs precision checks before activating your final prompt.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

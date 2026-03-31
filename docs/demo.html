@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Live Demo — SIRVATO OS Interactive MICRO Prompt Builder">
+  <title>Live Demo — SIRVATO OS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="frameworks/icdf.html">Frameworks</a>
+      <a href="interfaces/hud-minimal.html">Interfaces</a>
+      <a href="micro-supra/core.html">MICRO SUPRA</a>
+      <a href="documentation/quick-start.html">Docs</a>
+      <a href="demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Live Demo</span>
+      </div>
+      <div class="page-hero-tag">INTERACTIVE</div>
+      <h1 class="page-hero-title">MICRO Prompt Builder</h1>
+      <p class="page-hero-tagline">Real-time prompt generation using SIRVATO OS frameworks</p>
+      <p class="page-hero-desc">Fill in each component, select a framework, and watch your perfectly structured prompt build in real-time.</p>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:3rem 2rem;">
+
+    <!-- Framework mode selector -->
+    <div class="overview-box mb-4 reveal">
+      <h3>Select Framework</h3>
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+        <select id="demo-mode" class="form-input" style="max-width:280px;">
+          <option value="micro">MICRO Rhythm Layer</option>
+          <option value="icdf">ICDF Engine</option>
+          <option value="rcr">RCR-EOC Framework</option>
+          <option value="unified">Unified Mode</option>
+        </select>
+        <span style="font-size:0.85rem;color:var(--text-muted);">Choose the framework to structure your prompt</span>
+      </div>
+    </div>
+
+    <div class="demo-grid">
+
+      <!-- Input Panel -->
+      <div class="demo-panel reveal">
+        <div class="demo-panel-header">
+          <span class="demo-panel-title">⬡ Input Components</span>
+          <button id="btn-clear" class="btn btn-ghost btn-sm">Clear All</button>
+        </div>
+        <div class="demo-panel-body">
+          <div class="form-group">
+            <label class="form-label" for="field-m">M — Message / Instruction</label>
+            <textarea class="form-textarea" id="field-m" placeholder="What action do you want the AI to perform?" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="field-i">I² — Intention / Data</label>
+            <textarea class="form-textarea" id="field-i" placeholder="What is the deeper goal or data to include?" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="field-c">C — Context</label>
+            <textarea class="form-textarea" id="field-c" placeholder="Describe the scenario, background, and environment" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="field-r">R — Rhythm / Constraints</label>
+            <textarea class="form-textarea" id="field-r" placeholder="Tone, pace, style, or specific constraints" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="field-o">O — Output Format</label>
+            <textarea class="form-textarea" id="field-o" placeholder="Desired output: format, length, structure" rows="2"></textarea>
+          </div>
+          <button id="btn-generate" class="btn btn-primary w-full mt-2">⬡ Generate Prompt</button>
+        </div>
+      </div>
+
+      <!-- Output Panel -->
+      <div class="demo-panel reveal delay-2">
+        <div class="demo-panel-header">
+          <span class="demo-panel-title">⬡ Generated Prompt</span>
+          <button id="btn-copy-output" class="btn btn-ghost btn-sm">Copy</button>
+        </div>
+        <div class="demo-panel-body">
+          <div id="demo-output" class="output-area"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Presets -->
+    <div class="overview-box mt-4 reveal">
+      <h3>Example Presets</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:1rem;">Try a pre-built example to see the system in action:</p>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <button data-preset="marketing" class="btn btn-secondary btn-sm">📢 Marketing Campaign</button>
+        <button data-preset="code" class="btn btn-secondary btn-sm">💻 Code Refactor</button>
+        <button data-preset="analysis" class="btn btn-secondary btn-sm">📊 Market Analysis</button>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="section-header reveal mt-4" style="text-align:left;margin-bottom:2rem;">
+      <span class="section-tag">Guide</span>
+      <h2 class="section-title" style="font-size:1.5rem;">How the Demo Works</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Select a Framework</h4>
+          <p>Choose from MICRO, ICDF, RCR-EOC, or Unified Mode to structure your prompt differently.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Fill in Components</h4>
+          <p>Each field maps to a specific layer of the chosen framework. Be as specific as possible for best results.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Generate &amp; Copy</h4>
+          <p>Click Generate to build your structured prompt, then copy it to use with any AI assistant.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Iterate</h4>
+          <p>Adjust components and regenerate until your prompt is perfectly tuned for your use case.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system. Built for precision, speed, and total AI control.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="interfaces/console-live.html">Console Live</a></li>
+          <li><a href="interfaces/os-window.html">OS Window</a></li>
+          <li><a href="interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="documentation/faq.html">FAQ</a></li>
+          <li><a href="documentation/api-documentation.html">API Docs</a></li>
+          <li><a href="demo.html">Live Demo</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="documentation/quick-start.html">Get Started</a>
+        <a href="documentation/faq.html">FAQ</a>
+        <a href="demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

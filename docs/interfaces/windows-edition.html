@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Windows Edition — Multi-Panel Windows-Inspired Interface System for SIRVATO OS. Simultaneous prompt windows, snap and tile, cross-window comparison, and enterprise-grade workflow management.">
+  <title>Windows Edition — SIRVATO OS Interfaces</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html" class="active">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Windows Edition</span>
+      </nav>
+      <span class="hero-tag">INTERFACE</span>
+      <h1 class="hero-title">Windows Edition</h1>
+      <p class="hero-tagline">Multi-Panel Windows-Inspired Interface System</p>
+      <p class="hero-description">A comprehensive multi-window desktop environment for power users who need to manage multiple prompt workflows simultaneously, with full OS-level snap, tile, and window management integration.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is Windows Edition?</h2>
+      <p class="section-text">Windows Edition is SIRVATO OS's answer to the professional multi-monitor, multi-workflow power user. Where OS Window gives you a single structured environment, Windows Edition opens the entire desktop as your working surface. Spin up as many independent prompt windows as you need. Snap two windows side by side for A/B comparison. Tile three windows to run MICRO, ICDF, and Unified Mode outputs against the same underlying task simultaneously. Each window is a complete, independent SIRVATO OS session.</p>
+      <p class="section-text">The Windows Edition is particularly powerful for enterprise prompt engineering workflows where standardisation matters. Windows can share a Context object — update the shared context once and every open window receives the updated information automatically. Cross-window prompt comparison renders outputs side by side with diff highlighting so you can see exactly where different framework choices produce different results. For teams deploying SIRVATO OS at scale, Windows Edition is the production-grade interface of choice.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Interface Visualization</div>
+      <h2 class="section-title">Windows Edition Layout</h2>
+      <div class="ascii-block">
+<pre>
+┌─────────────────────────────────────────────────────┐
+│ ⬡ SIRVATO OS — Windows Edition                     │
+├──────────────┬──────────────┬──────────────────────┤
+│  WINDOW 1    │   WINDOW 2   │     WINDOW 3          │
+│  MICRO Layer │   ICDF Engine│   Output Preview       │
+│  ──────────  │   ─────────  │   ─────────────────   │
+│  M: ...      │   I: ...     │   ≡ Generated text     │
+│  I²: ...     │   C: ...     │     starts appearing   │
+│  C: ...      │   D: ...     │     here in real       │
+│  R: ...      │   F: ...     │     time...            │
+└──────────────┴──────────────┴──────────────────────┘
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Multiple Simultaneous Prompt Windows</h4>
+            <p class="feature-text">Open any number of independent SIRVATO OS windows. Each window runs its own framework, maintains its own history, and generates its own output. Windows can be minimised, maximised, resized, or moved freely across the workspace. There is no limit to the number of concurrent windows, though system resources apply.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Window Snap and Tile Functionality</h4>
+            <p class="feature-text">Drag any window to a screen edge to snap it into a half-screen or quarter-screen tile. The snap system follows conventions established by modern desktop operating systems — drag to left edge for 50% left, top-right corner for 25% top-right, and so on. Snap layouts can be saved as named configurations and recalled with a single click or keyboard shortcut.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Shared Context Between Windows</h4>
+            <p class="feature-text">Create a Shared Context object and link multiple windows to it. When you update the shared context — changing a company name, switching the target audience, updating a data set — every linked window instantly receives the update and can regenerate its output against the new context. This eliminates copy-paste errors when running parallel framework comparisons.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Cross-Window Prompt Comparison</h4>
+            <p class="feature-text">Select two or more windows and activate Compare Mode. The interface renders all selected window outputs side by side with colour-coded diff highlighting showing exactly where the outputs differ. Differences are categorised by type — structural differences (blue), content differences (amber), tone differences (purple) — giving you a nuanced analysis of how framework choice affects output quality.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Task Switcher (Alt+Tab Style)</h4>
+            <p class="feature-text">Alt+Tab cycles through all open SIRVATO OS windows exactly as you would expect in a desktop OS. The task switcher shows a thumbnail preview of each window's current content, the active framework, and the last activity timestamp. Click any thumbnail to bring that window to focus immediately, or continue pressing Tab to cycle through all open windows.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">System Tray with Quick Actions</h4>
+            <p class="feature-text">A persistent system tray in the bottom-right corner provides quick access to the most common actions: new window, copy active output, switch framework, open block library, and session save. The tray is always visible regardless of which window has focus, making global actions accessible without navigating away from your current work.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Window State Persistence</h4>
+            <p class="feature-text">Every aspect of your Windows Edition session is saved automatically — window positions, sizes, snap configurations, active frameworks, prompt content, and output history. Close and reopen the application and your complete workspace is restored exactly as you left it. Session snapshots can be exported, shared with teammates, and loaded on a different machine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">Windows Edition in Action</h2>
+      <p class="section-text">Open Windows Edition and use the New Window button (Ctrl+N) or the system tray to spin up additional windows. Snap the first window left (MICRO framework), the second window right (ICDF framework), and activate Shared Context to link both. Type your task once in the shared context and both windows generate their framework-specific outputs simultaneously:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">Windows Edition — Side-by-Side Framework Comparison</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>╔══════════════════════════╦══════════════════════════╗
+║  WINDOW 1: MICRO         ║  WINDOW 2: ICDF           ║
+╠══════════════════════════╬══════════════════════════╣
+║  M: Announce API launch  ║  I: Write announcement    ║
+║  I²: Drive dev adoption  ║  C: Developer audience    ║
+║  C: Tech community       ║  D: [shared context] ●    ║
+║  R: Peer, energetic      ║  F: 3-paragraph post      ║
+║  O: Blog post, 400w      ║                           ║
+╠══════════════════════════╩══════════════════════════╣
+║  SHARED CONTEXT: B2B SaaS developer API, Q1 2024    ║
+╚═════════════════════════════════════════════════════╝
+
+→ Compare Mode active — diff rendering in progress...</code></pre>
+      </div>
+      <p class="section-text" style="margin-top:1.5rem;"><strong>Best for:</strong> Professional workflows requiring multiple concurrent prompt sessions, A/B framework testing, enterprise deployment, and power users who operate multiple prompt projects in parallel across a large screen or multi-monitor setup.</p>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Interfaces</div>
+      <h2 class="section-title">Explore Other Interfaces</h2>
+      <div class="related-grid">
+        <a href="../interfaces/os-window.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">OS Window</h4>
+          <p class="related-desc">Single-window OS environment — the focused version of the Windows Edition experience.</p>
+        </a>
+        <a href="../interfaces/fullscreen-totality.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Fullscreen Totality</h4>
+          <p class="related-desc">All 8 frameworks and all 8 interfaces active simultaneously in one unified viewport.</p>
+        </a>
+        <a href="../interfaces/master-block.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Master Block</h4>
+          <p class="related-desc">Block-based modular prompt composition with drag-and-drop and shared block library.</p>
+        </a>
+        <a href="../interfaces/console-live.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Console Live</h4>
+          <p class="related-desc">Terminal-style interface ideal for developers running automated prompt pipelines.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

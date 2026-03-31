@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AUTO-FLOW REACTIVE — Adaptive context-aware dynamic prompt response system that modifies the prompt chain based on AI responses, context shifts, and real-time input signals.">
+  <title>AUTO-FLOW REACTIVE — SIRVATO OS Frameworks</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html" class="active">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">AUTO-FLOW REACTIVE</span>
+      </nav>
+      <span class="hero-tag">FRAMEWORK</span>
+      <h1 class="hero-title">AUTO-FLOW REACTIVE</h1>
+      <p class="hero-tagline">Adaptive Context-Aware Dynamic Prompt Response System</p>
+      <p class="hero-description">The most advanced AUTO-FLOW variant. Dynamically adapts the prompt chain based on AI responses, context shifts, and real-time input signals for maximum flexibility on complex, evolving tasks.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is AUTO-FLOW REACTIVE?</h2>
+      <p class="section-text">AUTO-FLOW REACTIVE is the most sophisticated framework in the SIRVATO OS AUTO-FLOW family. While Sequential provides linear pipelines and PRO introduces branching and checkpoints, REACTIVE takes a fundamentally different approach: instead of pre-defining a fixed execution path, it monitors the AI's responses for contextual signals and dynamically adapts every subsequent prompt based on what it detects.</p>
+      <p class="section-text">The core insight behind REACTIVE is that in complex, open-ended tasks, the AI's output in one exchange contains critical information about how the next exchange should be structured. Uncertainty signals call for more context injection. Topic drift calls for realignment. High confidence on a particular angle calls for amplification. A REACTIVE pipeline reads these signals and responds to them in real time, creating an adaptive human-AI collaboration that compounds in quality as it progresses.</p>
+      <p class="section-text">REACTIVE introduces six operational primitives not found in any other framework: LISTEN, ADAPT, TRIGGER, INJECT, REFRAME, and AMPLIFY. Together these primitives give you systematic control over a dynamic, evolving prompt interaction — turning what would otherwise be an unpredictable back-and-forth into a structured, intentional adaptive process.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Layer Architecture</div>
+      <h2 class="section-title">The 6 REACTIVE Primitives</h2>
+      <div class="layer-tree">
+        <div class="layer-item">
+          <span class="layer-key">LISTEN</span>
+          <div class="layer-body">
+            <span class="layer-label">Signal Monitoring</span>
+            <span class="layer-desc">Monitor AI output for contextual signals that should trigger adaptation. Define what you're listening for before you start: tone signals (certainty/uncertainty), content signals (data density, topic coverage, depth), quality signals (specificity, coherence, relevance), and behavioral signals (hedging language, topic drift, over-generalization). LISTEN is the observational layer that makes everything else in REACTIVE possible.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">ADAPT</span>
+          <div class="layer-body">
+            <span class="layer-label">Dynamic Prompt Modification</span>
+            <span class="layer-desc">Modify subsequent prompts based on detected signals. ADAPT rules are IF/THEN statements that map observed signals to specific prompt modifications: if the AI is uncertain, inject more context; if the output is too verbose, trigger a compression sub-flow; if the AI is missing data, reframe with a different angle. ADAPT is the intelligence layer of REACTIVE — it's where signal observation becomes deliberate action.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">TRIGGER</span>
+          <div class="layer-body">
+            <span class="layer-label">Conditional Sub-Flow Activation</span>
+            <span class="layer-desc">Activate specific sub-flows when defined conditions are met. TRIGGER differs from BRANCH in that it activates supplementary flows rather than replacing the primary path. A TRIGGER can activate a fact-checking sub-flow when data confidence is detected, a style alignment sub-flow when tone drift is observed, or an expansion sub-flow when a particularly valuable insight is detected. Triggers can stack — multiple sub-flows can be active simultaneously.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">INJECT</span>
+          <div class="layer-body">
+            <span class="layer-label">Mid-Flow Context Insertion</span>
+            <span class="layer-desc">Insert new context, data, or constraints dynamically mid-flow. INJECT solves one of the hardest problems in complex AI work: when new information becomes available during a workflow, it needs to propagate to all subsequent steps without restarting from scratch. INJECT specifies what new data to introduce, which subsequent steps are affected, and how the new data should modify the established context framework.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">REFRAME</span>
+          <div class="layer-body">
+            <span class="layer-label">Perspective Shift</span>
+            <span class="layer-desc">Shift perspective when output quality drops or when a different angle is needed to unlock progress. REFRAME is the creative intervention primitive — it approaches the same problem from a fundamentally different angle: different role, different framing, different question structure, different metaphor, or different analytical lens. When the AI seems stuck in an unproductive pattern, REFRAME breaks the pattern and opens new solution paths.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">AMPLIFY</span>
+          <div class="layer-body">
+            <span class="layer-label">Success Pattern Intensification</span>
+            <span class="layer-desc">Intensify and expand successful patterns detected in the AI's output. AMPLIFY is the positive feedback primitive — when the AI produces an unexpectedly valuable insight, a particularly effective framing, or a notably strong analytical approach, AMPLIFY increases the "gain" on that signal by explicitly reinforcing and expanding it in subsequent prompts. This compounds the best elements of the interaction over time.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="example">
+      <div class="section-label">Code Example</div>
+      <h2 class="section-title">AUTO-FLOW REACTIVE in Practice</h2>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-title">AUTO-FLOW REACTIVE — Dynamic Research Flow</span>
+          <button class="code-copy" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('pre').textContent)">Copy</button>
+        </div>
+        <pre>AUTO-FLOW REACTIVE:
+[INIT]     Task: Deep competitive analysis for product launch
+           Monitoring: tone confidence, data density, coverage gaps
+
+[LISTEN]   Detecting signals in each response:
+           → Tone: certainty level (high/medium/low)
+           → Data: density of specific facts and figures
+           → Coverage: topic completeness vs. defined scope
+           → Behavior: hedging language, qualifications, vagueness
+
+[ADAPT]    Signal-to-action mapping:
+           IF AI uncertainty detected   → INJECT more domain context
+           IF output too long/diffuse   → TRIGGER compression flow
+           IF data gaps identified      → REFRAME from data angle
+           IF specific facts missing    → INJECT factual anchors
+           IF topic drift detected      → REALIGN to core objective
+
+[TRIGGER]  High-confidence insight detected:
+           → AMPLIFY: "Expand on [specific insight] with 3 examples"
+           → AMPLIFY: "Apply this framework to our specific context"
+
+[TRIGGER]  Quality drop detected:
+           → REFRAME: approach from customer perspective instead
+           → INJECT: add specific industry benchmark data
+
+[INJECT]   New competitor data available mid-flow:
+           → UPDATE competitor profiles in all subsequent steps
+           → NOTIFY: "Recalibrate SWOT with new competitor X data"
+
+[AMPLIFY]  Strong pattern detected in competitive weakness analysis:
+           → "This angle is highly relevant — go deeper on [X]"
+           → "Apply this same lens to the remaining competitors"
+
+[REFRAME]  IF current angle producing generic output:
+           → Shift: "Analyze this as a customer making a switch"
+           → Shift: "Approach this as an investor evaluating the space"
+─────────────────────────────────────────────────────</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="how-it-works">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">REACTIVE Execution Process</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-body">
+            <h3 class="step-title">Define Your Signal Dictionary Before Starting</h3>
+            <p class="step-text">Before executing the first prompt, define the complete signal dictionary: what signals you're listening for, what they indicate, and what action each signal should trigger. A well-defined signal dictionary is the intelligence layer of REACTIVE — without it, LISTEN has no criteria and ADAPT has no rules. Invest time here; it determines the quality of all adaptation decisions.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-body">
+            <h3 class="step-title">Execute and Immediately Observe</h3>
+            <p class="step-text">After each prompt exchange, immediately scan the output for signals before deciding the next action. Read the output not just for content but for what it reveals about the AI's state: confidence level, coverage completeness, quality of reasoning, and any topic drift from the established objective. This observational pause between steps is what makes the system adaptive.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-body">
+            <h3 class="step-title">Apply ADAPT Rules to the Observed Signals</h3>
+            <p class="step-text">Match observed signals to your ADAPT rules and determine the appropriate next action. Apply only the most relevant adaptation — don't stack too many modifications in a single step, as this creates a new complexity problem. One clear adaptation per signal set is the most effective approach. Document the signal-to-action mapping for future pipeline improvement.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-body">
+            <h3 class="step-title">Use INJECT for New Information</h3>
+            <p class="step-text">When new data becomes available mid-flow — new research, a stakeholder clarification, a new constraint — use INJECT to introduce it cleanly. Specify which previous steps are affected by the new data, what the implications are for the current trajectory, and how subsequent steps should integrate the new information. Injection done well maintains workflow coherence despite mid-flow context changes.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">05</div>
+          <div class="step-body">
+            <h3 class="step-title">AMPLIFY What Works, REFRAME What Doesn't</h3>
+            <p class="step-text">When you detect a genuinely valuable output pattern — an insightful angle, an effective analytical approach, a particularly clear framing — use AMPLIFY to reinforce and expand it explicitly. Conversely, when the AI is stuck in a low-quality pattern, use REFRAME to shift the entire approach rather than trying to nudge incrementally within a pattern that isn't working.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">06</div>
+          <div class="step-body">
+            <h3 class="step-title">Document the Adaptive History</h3>
+            <p class="step-text">Keep a running log of which signals fired, which adaptations were applied, and what effect they had. This adaptive history is both a quality control record and a future learning asset. Patterns in successful adaptations become refinements to your signal dictionary; patterns in failed adaptations become new REFRAME rules for future similar tasks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="when-to-use">
+      <div class="section-label">When to Use</div>
+      <h2 class="section-title">Ideal Use Cases</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Long-Running Complex Tasks</h4>
+            <p class="feature-text">Extended research, deep analysis, comprehensive report generation — any task spanning multiple sessions or exchanges where the ability to adapt based on cumulative output quality is essential for maintaining direction and quality throughout.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Research Requiring Multiple Iterations</h4>
+            <p class="feature-text">Open-ended research where the findings shape the research direction — you don't know exactly what you're looking for until early results start pointing in a direction. REACTIVE's AMPLIFY and REFRAME primitives are ideal for this iterative discovery process.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Creative Work Needing Dynamic Guidance</h4>
+            <p class="feature-text">Creative projects where the quality and direction of early output should guide subsequent creative decisions. AMPLIFY allows you to systematically build on what works; REFRAME allows you to break out of creative ruts without losing all established context.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Tasks Where AI Output Significantly Varies</h4>
+            <p class="feature-text">When working with inherently variable AI output — creative tasks, complex reasoning, open-ended analysis — REACTIVE's adaptive mechanism provides systematic quality management for unpredictable outputs rather than hoping for consistent results from a fixed prompt.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Real-Time Collaborative Intelligence</h4>
+            <p class="feature-text">Situations where new information arrives during the workflow and must be incorporated dynamically without restarting. Strategy sessions, live research, evolving briefs — REACTIVE's INJECT primitive handles mid-flow context updates with structural integrity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Frameworks</div>
+      <h2 class="section-title">Explore the SIRVATO OS Stack</h2>
+      <div class="related-grid">
+        <a href="../frameworks/auto-flow.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AUTO-FLOW Sequential</h4>
+          <p class="related-desc">The linear foundation — master Sequential before moving to the adaptive complexity of REACTIVE.</p>
+        </a>
+        <a href="../frameworks/auto-flow-pro.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AUTO-FLOW PRO</h4>
+          <p class="related-desc">Guided orchestration with checkpoints and branching — the intermediate step toward REACTIVE.</p>
+        </a>
+        <a href="../frameworks/micro.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">MICRO Rhythm Layer</h4>
+          <p class="related-desc">MICRO's Rhythm component pairs with REACTIVE's LISTEN to monitor and adapt tone signals.</p>
+        </a>
+        <a href="../frameworks/icdf.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">ICDF Engine</h4>
+          <p class="related-desc">Use ICDF to structure the INJECT and REFRAME prompts within REACTIVE flows for maximum clarity.</p>
+        </a>
+        <a href="../frameworks/unified-mode.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">Unified Mode</h4>
+          <p class="related-desc">The apex framework — deploy REACTIVE within the full 11-component Unified Mode for maximum power.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

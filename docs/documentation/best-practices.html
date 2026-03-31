@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Practices — SIRVATO OS Documentation</title>
+  <meta name="description" content="Expert techniques and best practices to maximize prompt engineering results with SIRVATO OS.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html" class="active">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="quick-start.html">Docs</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Best Practices</span>
+        </nav>
+        <span class="section-tag">DOCUMENTATION</span>
+        <h1 class="page-title">Best Practices</h1>
+        <p class="page-subtitle">Expert techniques to get maximum precision from every prompt</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Core Principles</h2>
+        <div class="cards-grid reveal-group">
+          <div class="card">
+            <div class="card-icon">🎯</div>
+            <h3 class="card-title">Specificity Over Brevity</h3>
+            <p class="card-text">Detailed, specific prompts consistently outperform short vague ones. Define every component clearly — the AI cannot infer what you did not write.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🏗️</div>
+            <h3 class="card-title">Structure First</h3>
+            <p class="card-text">Always apply a framework before writing prose. Structure forces you to identify gaps before they reach the AI.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔄</div>
+            <h3 class="card-title">Iterate Systematically</h3>
+            <p class="card-text">Change one component at a time when iterating. This makes improvements reproducible and traceable.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📋</div>
+            <h3 class="card-title">Template and Reuse</h3>
+            <p class="card-text">Successful prompts are templates. Save them, version them, and share them across your team for consistent results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Framework Selection Guide</h2>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-label">When To Use Each Framework</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <pre><code>USE ICDF WHEN:
+  ✓ Task is clearly structured (summarize, translate, classify)
+  ✓ Output format is well-defined (table, list, report)
+  ✓ Data is the primary driver of the output
+
+USE MICRO WHEN:
+  ✓ Tone, voice, or emotional impact matters
+  ✓ Communication is the end goal (email, pitch, speech)
+  ✓ Rhythm and energy need to be calibrated
+
+USE RCR-EOC WHEN:
+  ✓ Role-playing or persona is needed
+  ✓ Professional or business context
+  ✓ Hard constraints and expected outputs are critical
+
+USE AUTO-FLOW WHEN:
+  ✓ Multi-step process needs sequential execution
+  ✓ Each step depends on the previous output
+  ✓ Pipeline automation is the goal
+
+USE UNIFIED MODE WHEN:
+  ✓ High-stakes deliverables require maximum coverage
+  ✓ Multiple teams or stakeholders involved
+  ✓ Completeness is more important than speed</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Component Writing Tips</h2>
+        <div class="steps">
+
+          <div class="step reveal">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3 class="step-title">Write Instructions as Actions</h3>
+              <p class="step-desc">Use imperative verbs. Be specific about the action.</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-label">Instruction Examples</span>
+                  <button class="code-copy">Copy</button>
+                </div>
+                <pre><code>❌ WEAK:    "Something about quarterly results"
+✓ STRONG:  "Write a 300-word executive summary of Q3 revenue performance"
+
+❌ WEAK:    "Code stuff"
+✓ STRONG:  "Refactor this Python function to use list comprehension and add type hints"</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3 class="step-title">Context Should Eliminate Ambiguity</h3>
+              <p class="step-desc">Context tells the AI what world it's operating in. Include audience, environment, and constraints.</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-label">Context Examples</span>
+                  <button class="code-copy">Copy</button>
+                </div>
+                <pre><code>❌ WEAK:    "Business context"
+✓ STRONG:  "B2B SaaS startup, 50 employees, targeting enterprise finance teams, 
+            Series A funding round, audience = technical CFOs"</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3 class="step-title">Format Constrains, It Doesn't Suggest</h3>
+              <p class="step-desc">Don't say "in a nice format". Say exactly what you need.</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-label">Format Examples</span>
+                  <button class="code-copy">Copy</button>
+                </div>
+                <pre><code>❌ WEAK:    "Nice format"
+✓ STRONG:  "Markdown table with columns: Feature | Benefit | Priority (H/M/L). 
+            Max 8 rows. No introductory text."</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3 class="step-title">Use The AI Trigger Protocol as a Final Gate</h3>
+              <p class="step-desc">Before sending any prompt, run the 5-trigger check mentally or in writing.</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-label">Pre-send Checklist</span>
+                  <button class="code-copy">Copy</button>
+                </div>
+                <pre><code>PRE-SEND VALIDATION:
+[ ] T1 — Coherence  : All components aligned and non-contradictory
+[ ] T2 — Rhythm     : Tone defined and consistent throughout
+[ ] T3 — Data       : All referenced data is included or clearly referenced
+[ ] T4 — Output     : Desired format is precise and unambiguous
+[ ] T5 — Constraints: Exclusions, limits, and rules are explicit
+
+→ All 5 checked? SEND. Otherwise, revise.</code></pre>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Common Anti-Patterns</h2>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-label">What To Avoid</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <pre><code>ANTI-PATTERN 1 — THE VAGUE BRIEF
+  ❌ "Make it better"
+  ✓  "Improve clarity: shorten sentences to under 20 words and replace 
+      passive voice with active voice"
+
+ANTI-PATTERN 2 — MISSING FORMAT
+  ❌ "Explain quantum computing"
+  ✓  "Explain quantum computing in 5 bullet points, each under 20 words, 
+      targeting a business executive with no technical background"
+
+ANTI-PATTERN 3 — CONTEXT-FREE DATA
+  ❌ [paste raw data with no explanation]
+  ✓  "The following CSV represents monthly sales by region. 
+      Focus only on Q4 2023. [data]"
+
+ANTI-PATTERN 4 — CONTRADICTORY CONSTRAINTS
+  ❌ "Write a 500-word tweet"  (impossible)
+  ✓  "Write a tweet thread of 5 tweets, each under 280 characters"
+
+ANTI-PATTERN 5 — ROLE MISMATCH
+  ❌ "As a junior developer, write an enterprise architecture document"
+  ✓  "As a senior solutions architect with 10 years enterprise experience, 
+      write an architecture decision record"</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Advanced Techniques</h2>
+        <div class="cards-grid reveal-group">
+          <div class="card">
+            <div class="card-icon">🔗</div>
+            <h3 class="card-title">Chain Frameworks</h3>
+            <p class="card-text">Use ICDF to structure content, then pass its output through MICRO to calibrate tone. Each framework adds a precision layer.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📖</div>
+            <h3 class="card-title">Include Negative Examples</h3>
+            <p class="card-text">Show the AI what NOT to produce. Negative examples reduce the solution space and prevent common failure modes.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Progressive Activation</h3>
+            <p class="card-text">Start with the minimal framework and add components when quality is insufficient. Don't over-engineer from the start.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎭</div>
+            <h3 class="card-title">Role Precision</h3>
+            <p class="card-text">The more specific the role, the better the output. "Senior product manager at a fintech startup with 8 years experience" outperforms "product manager".</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="cta-block">
+          <h2>Apply These Practices Now</h2>
+          <p>Use the Live Demo to practice with real-time feedback on your prompt structure.</p>
+          <div class="cta-buttons">
+            <a href="../demo.html" class="btn-primary">Open Live Demo</a>
+            <a href="framework-comparison.html" class="btn-secondary">Compare Frameworks</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Docs</h4>
+        <ul>
+          <li><a href="quick-start.html">Quick Start</a></li>
+          <li><a href="framework-comparison.html">Comparison</a></li>
+          <li><a href="best-practices.html">Best Practices</a></li>
+          <li><a href="api-documentation.html">API Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

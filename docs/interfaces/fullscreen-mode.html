@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fullscreen Mode — Immersive Full-Viewport Prompt Environment for SIRVATO OS. Total focus, ambient background animation, keyboard-only navigation, and auto-save for deep work sessions.">
+  <title>Fullscreen Mode — SIRVATO OS Interfaces</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html" class="active">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Fullscreen Mode</span>
+      </nav>
+      <span class="hero-tag">INTERFACE</span>
+      <h1 class="hero-title">Fullscreen Mode</h1>
+      <p class="hero-tagline">Immersive Full-Viewport Prompt Environment</p>
+      <p class="hero-description">Total viewport takeover for maximum focus. Every pixel serves the prompt. Designed for deep work sessions where distraction is the enemy and the quality of your thinking is the only variable that matters.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is Fullscreen Mode?</h2>
+      <p class="section-text">Fullscreen Mode is the interface that removes the interface. When you activate Fullscreen Mode — press F11 or the fullscreen button — the browser chrome disappears, the navigation disappears, the status bar disappears. What remains is your prompt, your framework, and the blank expanse of the viewport. Nothing else competes for your attention. The entire screen is dedicated to the single prompt you are crafting.</p>
+      <p class="section-text">Behind the input area, a slow-moving ambient matrix animation provides subtle visual depth without inducing distraction — the motion is peripheral and calm, registering as texture rather than movement. The effect is closer to sitting in front of a starfield than watching a video. Users report that Fullscreen Mode induces a focused mental state similar to the distraction-free writing modes found in premium text editors. For long-form prompt crafting, complex multi-component structured prompts, or extended strategy sessions, Fullscreen Mode is the environment of choice.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Interface Visualization</div>
+      <h2 class="section-title">Fullscreen Mode Layout</h2>
+      <div class="ascii-block">
+<pre>
+╔═══════════════════════════════════════════════════════════════╗
+║                      ⬡ SIRVATO OS                            ║
+║                   FULLSCREEN MODE ACTIVE                      ║
+╠═══════════════════════════════════════════════════════════════╣
+║                                                               ║
+║          ┌─────────────────────────────────────────┐         ║
+║          │        ACTIVE FRAMEWORK: MICRO          │         ║
+║          │  ─────────────────────────────────────  │         ║
+║          │  M ──────────────────────────────────── │         ║
+║          │  I² ─────────────────────────────────── │         ║
+║          │  C ──────────────────────────────────── │         ║
+║          │  R ──────────────────────────────────── │         ║
+║          │  O ──────────────────────────────────── │         ║
+║          └─────────────────────────────────────────┘         ║
+║                                                               ║
+║  ESC to exit  │  ⌘G to generate  │  ⌘C to copy              ║
+╚═══════════════════════════════════════════════════════════════╝
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">True Fullscreen Activation</h4>
+            <p class="feature-text">Press F11 to enter true browser fullscreen — the title bar, tabs, and all browser chrome are completely hidden. Alternatively, click the fullscreen icon in the top-right corner of the interface for an in-page fullscreen that maximises the SIRVATO OS workspace without triggering browser fullscreen. Both modes eliminate visual distractions; true fullscreen eliminates OS chrome as well.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Ambient Matrix Background Animation</h4>
+            <p class="feature-text">A subtle, low-opacity matrix animation plays behind the prompt area in Fullscreen Mode. The animation uses characters from the SIRVATO OS symbol set at 15% opacity and animates at 0.5x the speed of conventional matrix effects. The result is a living background that enhances the sense of working within a system, without pulling attention away from your prompt content.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Large, Readable Input Areas</h4>
+            <p class="feature-text">In Fullscreen Mode, input fields expand to their maximum comfortable reading size — 18px base font, 1.8 line height, with generous field padding. The text is large enough to be read at arm's length on a large monitor. This size also slows the pace of reading, which research consistently shows correlates with higher quality writing and more considered prompt construction.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Minimal UI Chrome</h4>
+            <p class="feature-text">The only visible chrome elements in Fullscreen Mode are the active framework label (top-centre, small and dim), the keyboard shortcut legend (bottom-centre, visible on hover), and the focus timer (top-right, optional). The framework switcher, token counter, and status LED are all hidden by default and appear only when you hover near the edges of the screen.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Keyboard-Only Navigation</h4>
+            <p class="feature-text">Fullscreen Mode is designed for a zero-mouse workflow. ⌘G generates the prompt, ⌘C copies output, ⌘F cycles frameworks, ⌘S saves the session, ⌘Z undoes, and Escape exits fullscreen. Tab moves between framework component fields in the correct logical order. The entire experience is navigable without lifting your hands from the keyboard.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Auto-Save Every 30 Seconds</h4>
+            <p class="feature-text">Fullscreen Mode auto-saves your entire prompt state every 30 seconds to local storage. A brief, non-intrusive save indicator (a single dot that fades in and out over 1 second) appears in the top-right corner on each save cycle. If your browser closes unexpectedly, the recovery system restores your last saved state on next open — with a timestamp showing exactly when the last save occurred.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Focus Timer with Soft Alerts</h4>
+            <p class="feature-text">An optional Pomodoro-style focus timer counts down from a configurable duration (default 25 minutes). When the timer expires, a soft ambient sound plays and the background animation briefly brightens to signal the break. The alert is designed to be noticeable without being startling — you finish your current thought before responding to the timer, not the other way around.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">Fullscreen Mode in Action</h2>
+      <p class="section-text">Activate Fullscreen Mode from any other interface using F11 or the fullscreen icon. Your current prompt state is preserved and rendered in the fullscreen layout. The following shows the keyboard command reference visible on hover in Fullscreen Mode:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">Fullscreen Mode — Keyboard Reference</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>╔═══════════════════════════════════════════════════════════════╗
+║                 SIRVATO OS — FULLSCREEN MODE                  ║
+╠═══════════════════════════════════════════════════════════════╣
+║                                                               ║
+║  KEYBOARD SHORTCUTS                                           ║
+║  ─────────────────────────────────────────────────────────    ║
+║  ⌘G / Ctrl+G   →   Generate prompt output                    ║
+║  ⌘C / Ctrl+C   →   Copy formatted prompt to clipboard        ║
+║  ⌘F / Ctrl+F   →   Cycle through frameworks                  ║
+║  ⌘S / Ctrl+S   →   Save session manually                     ║
+║  ⌘Z / Ctrl+Z   →   Undo last edit                            ║
+║  Tab            →   Move to next framework component field    ║
+║  Shift+Tab      →   Move to previous component field          ║
+║  F11 / Esc      →   Exit fullscreen mode                      ║
+║                                                               ║
+║  ACTIVE: MICRO FRAMEWORK  │  TIMER: 24:33  │  AUTO-SAVE: ●   ║
+╚═══════════════════════════════════════════════════════════════╝</code></pre>
+      </div>
+      <p class="section-text" style="margin-top:1.5rem;"><strong>Best for:</strong> Deep work and extended concentration sessions, long-form prompt crafting for complex multi-component structured outputs, experienced SIRVATO OS users who no longer need framework scaffolding, and any session where distraction elimination is the primary environmental requirement.</p>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Interfaces</div>
+      <h2 class="section-title">Explore Other Interfaces</h2>
+      <div class="related-grid">
+        <a href="../interfaces/fullscreen-totality.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Fullscreen Totality</h4>
+          <p class="related-desc">All systems active in fullscreen — the apex of the immersive interface experience.</p>
+        </a>
+        <a href="../interfaces/hud-minimal.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">HUD Minimal</h4>
+          <p class="related-desc">Stripped HUD interface — the windowed sibling of Fullscreen Mode's minimalist philosophy.</p>
+        </a>
+        <a href="../interfaces/micro-sidebar.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">MICRO Sidebar</h4>
+          <p class="related-desc">5-panel MICRO framework sidebar — pairs well with Fullscreen for guided prompting.</p>
+        </a>
+        <a href="../interfaces/console-live.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Console Live</h4>
+          <p class="related-desc">Terminal-style keyboard-first interface for developers who think in command lines.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

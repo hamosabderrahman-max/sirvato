@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OS Window — Classic OS Multi-Pane Interface for SIRVATO OS. Draggable resizable panes, framework sidebar, live preview panel, and tabbed prompt history.">
+  <title>OS Window — SIRVATO OS Interfaces</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html" class="active">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">OS Window</span>
+      </nav>
+      <span class="hero-tag">INTERFACE</span>
+      <h1 class="hero-title">OS Window</h1>
+      <p class="hero-tagline">Classic OS Window Multi-Pane Interface</p>
+      <p class="hero-description">A familiar desktop OS-style window system. Multiple resizable panes for simultaneous framework display, output preview, and context management — all in a traditional windowed UI paradigm.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is OS Window?</h2>
+      <p class="section-text">OS Window bridges the familiar world of desktop software with the precision of SIRVATO OS prompt engineering. Users coming from traditional IDEs, document editors, or any application with a classic windowed interface will recognise the layout immediately: a menu bar at the top, a sidebar on the left, a main working area in the centre, and a status bar along the bottom. Everything works exactly as expected — and adds the full power of the SIRVATO OS framework stack on top.</p>
+      <p class="section-text">The pane system is fully draggable and resizable. You can dedicate the entire window to the prompt editor, or split the space to view your live output preview alongside your active framework structure. Tabbed history lets you maintain multiple in-progress prompts and switch between them without losing any work. For users who need a comfortable, low-surprise environment to learn SIRVATO OS, OS Window is the recommended starting point.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Interface Visualization</div>
+      <h2 class="section-title">OS Window Layout</h2>
+      <div class="ascii-block">
+<pre>
+┌── SIRVATO OS ─────────────────── ─  □  ✕ ┐
+│ File  Edit  View  Framework  Tools  Help   │
+├────────────┬──────────────────────────────┤
+│ FRAMEWORKS │   ACTIVE PROMPT              │
+│ ─────────  │   ─────────────────────────  │
+│ > ICDF     │   I: [instruction]           │
+│   MICRO    │   C: [context]               │
+│   RCR-EOC  │   D: [data]                  │
+│   AUTO     │   F: [format]                │
+├────────────┴──────────────────────────────┤
+│ STATUS: READY │ FRAMEWORK: ICDF │ v1.0    │
+└───────────────────────────────────────────┘
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Draggable and Resizable Panes</h4>
+            <p class="feature-text">Every pane boundary is a drag target. Drag the divider between the framework sidebar and the prompt editor to give yourself more editing space. Drag the horizontal divider to reveal or hide the output preview. All pane sizes are saved to local storage and restored on next session open.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Framework Selector Sidebar</h4>
+            <p class="feature-text">The left sidebar lists all eight SIRVATO OS frameworks with a single-click to activate. The active framework is highlighted and its component labels appear in the prompt editor area. Hover over any framework name for a tooltip summary. Click the pin icon to lock a framework for the session.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Live Output Preview Panel</h4>
+            <p class="feature-text">A collapsible bottom panel shows a live formatted preview of your assembled prompt as you type. The preview renders the framework structure with labels and separators, giving you a WYSIWYG view of what the AI will receive. Toggle the preview with Ctrl+P or use View → Preview from the menu bar.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Menu Bar with Keyboard Shortcuts</h4>
+            <p class="feature-text">A full menu bar mirrors the conventions of desktop software: File (new, open, save, export), Edit (undo, redo, copy, paste, select all), View (toggle panels, zoom), Framework (switch, configure), Tools (validate, generate, batch), and Help (docs, shortcuts). Every menu item displays its keyboard shortcut.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Status Bar with System Info</h4>
+            <p class="feature-text">The persistent status bar at the bottom displays the active framework, current token count, system ready state, last save time, and cursor position. The rightmost segment shows the SIRVATO OS version and a quick-access icon for settings. Double-click any status segment for detailed information about that metric.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Tabbed Prompt History</h4>
+            <p class="feature-text">Open prompts appear as tabs across the top of the editor area, just like browser tabs or IDE editor tabs. Ctrl+T opens a new prompt tab. Ctrl+W closes the current tab. Ctrl+Shift+T reopens the last closed tab. Each tab retains its framework state, content, and output independently.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">File Save and Load for Prompt Templates</h4>
+            <p class="feature-text">Save any prompt as a named template with File → Save Template. Templates are stored locally and appear in a template picker accessible from File → Open Template. Templates preserve the full SIRVATO OS structure — framework selection, all field values, and output configuration — ready to reuse or share with your team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">OS Window in Action</h2>
+      <p class="section-text">OS Window opens with a default ICDF prompt template. Click a framework in the sidebar to switch context. The editor fields update automatically to reflect the selected framework's component structure. Here is a typical RCR-EOC prompt in the OS Window editor:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">OS Window — RCR-EOC Prompt Template</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>╔═══════════════════════════════════════════╗
+║  SIRVATO OS │ OS WINDOW │ RCR-EOC Active  ║
+╠═════════════════╦═════════════════════════╣
+║  FRAMEWORKS     ║  ACTIVE PROMPT          ║
+║  ─────────────  ║  ─────────────────────  ║
+║    ICDF         ║  R:  Senior UX Designer ║
+║  > RCR-EOC ●   ║  C:  Mobile-first SaaS  ║
+║    AUTO-FLOW    ║  R2: Audit the onboard  ║
+║    UNIFIED      ║  E:  Reduce drop-off    ║
+╠═════════════════╬═════════════════════════╣
+║  STATUS: READY  ║  TOKENS: 64  │  ⌘Enter ║
+╚═════════════════╩═════════════════════════╝</code></pre>
+      </div>
+      <p class="section-text" style="margin-top:1.5rem;"><strong>Best for:</strong> Multi-tasking across several prompt projects, users migrating from traditional IDEs, side-by-side work comparing framework outputs, and anyone who prefers a well-organised spatial layout over a minimal or terminal approach.</p>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Interfaces</div>
+      <h2 class="section-title">Explore Other Interfaces</h2>
+      <div class="related-grid">
+        <a href="../interfaces/windows-edition.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Windows Edition</h4>
+          <p class="related-desc">Multi-window environment for running several simultaneous prompt workflows with comparison tools.</p>
+        </a>
+        <a href="../interfaces/master-block.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Master Block</h4>
+          <p class="related-desc">Block-based visual organisation for modular, reusable prompt component assembly.</p>
+        </a>
+        <a href="../interfaces/hud-minimal.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">HUD Minimal</h4>
+          <p class="related-desc">Stripped-down HUD interface for experienced users who need maximum speed.</p>
+        </a>
+        <a href="../interfaces/console-live.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Console Live</h4>
+          <p class="related-desc">Terminal-style interface with live streaming output and keyboard-first workflow.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

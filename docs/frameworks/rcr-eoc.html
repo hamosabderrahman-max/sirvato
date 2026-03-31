@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RCR-EOC Framework — A 6-component professional AI interaction framework separating Role, Context, Request, Expected Output, Constraints, and Communication Style.">
+  <title>RCR-EOC Framework — SIRVATO OS Frameworks</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html" class="active">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">RCR-EOC</span>
+      </nav>
+      <span class="hero-tag">FRAMEWORK</span>
+      <h1 class="hero-title">RCR-EOC Framework</h1>
+      <p class="hero-tagline">Role-Context-Request + Expected Output-Constraints-Communication Style</p>
+      <p class="hero-description">A 6-component professional framework for structured AI interaction. Separates the "who" from the "what" and "how" for maximum precision in complex, high-stakes prompt engineering.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is the RCR-EOC Framework?</h2>
+      <p class="section-text">RCR-EOC is a 6-component professional-grade framework designed for structured, high-precision AI interaction. It addresses a critical gap in basic prompt engineering: the failure to explicitly define who the AI should be before defining what it should do. By separating the Role assignment from the Content request, RCR-EOC activates a completely different mode of AI response — one grounded in domain expertise rather than generic helpfulness.</p>
+      <p class="section-text">The EOC suffix introduces the quality control layer: Expected Output defines success criteria, Constraints set operational boundaries, and Communication Style aligns the AI's voice with the specific professional context. Together, the 6 components create a comprehensive brief that is functionally equivalent to a professional creative or consulting brief — the kind that produces consistent, high-quality deliverables across multiple interactions.</p>
+      <p class="section-text">RCR-EOC is the go-to framework for professional, enterprise, and consulting use cases where output quality, consistency, and professional appropriateness are non-negotiable requirements.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Layer Architecture</div>
+      <h2 class="section-title">The 6 RCR-EOC Components</h2>
+      <div class="layer-tree">
+        <div class="layer-item">
+          <span class="layer-key">R</span>
+          <div class="layer-body">
+            <span class="layer-label">Role</span>
+            <span class="layer-desc">The persona, expertise, or professional position the AI should adopt. Role is the single highest-leverage component in prompt engineering. When you assign a specific, richly described Role, the AI activates domain-specific knowledge, uses appropriate professional vocabulary, applies field-standard frameworks, and calibrates its confidence level accordingly. Define the role with seniority level, area of specialization, and relevant professional context.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">C</span>
+          <div class="layer-body">
+            <span class="layer-label">Context</span>
+            <span class="layer-desc">The situational background and relevant environment. Context in RCR-EOC focuses on the professional and operational environment: the company size, the industry, the current phase of a project, the competitive situation, the team's capabilities and limitations, and the stakes involved. This operational context allows the Role to be applied with precision rather than in the abstract.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">R²</span>
+          <div class="layer-body">
+            <span class="layer-label">Request</span>
+            <span class="layer-desc">The specific action or task being requested. With Role established and Context provided, the Request can be precise and targeted. R² benefits from the preceding components — a vague request like "help with strategy" becomes a precise professional brief when delivered by a seasoned Senior Consultant (Role) operating in a specific enterprise environment (Context). State the Request with concrete deliverables and scope.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">E</span>
+          <div class="layer-body">
+            <span class="layer-label">Expected Output</span>
+            <span class="layer-desc">What a perfect response looks like. The Expected Output component is quality engineering at the prompt level. Describe the ideal response in enough detail that any senior professional in the defined Role could recognize whether the output meets the standard. Include structural expectations, content depth requirements, and quality criteria. This component eliminates the guesswork on both sides of the interaction.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">O</span>
+          <div class="layer-body">
+            <span class="layer-label">Constraints</span>
+            <span class="layer-desc">Limitations, rules, and boundaries. Constraints protect the output from exceeding scope, violating requirements, or producing unusable content. They include time constraints (presentation length), audience constraints (technical level), resource constraints (budget, team size), compliance requirements, confidentiality restrictions, and explicit exclusions. Constraints are not limitations on quality — they are the professional reality the AI must operate within.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">C²</span>
+          <div class="layer-body">
+            <span class="layer-label">Communication Style</span>
+            <span class="layer-desc">Voice, register, and delivery preferences. Communication Style specifies the professional register and interpersonal tone. In professional contexts, this means defining the level of formality, the degree of assertiveness, whether to lead with data or narrative, whether to include qualifications and caveats or project confidence, and whether the output should be prescriptive or exploratory. The right Communication Style turns correct content into persuasive, credible professional work.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="example">
+      <div class="section-label">Code Example</div>
+      <h2 class="section-title">RCR-EOC in Practice</h2>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-title">RCR-EOC Structure — Retention Strategy</span>
+          <button class="code-copy" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('pre').textContent)">Copy</button>
+        </div>
+        <pre>RCR-EOC STRUCTURE:
+R  — Role         : Senior Product Manager with SaaS experience
+C  — Context      : B2B platform, 200 enterprise clients, renewal season
+R² — Request      : Create a retention strategy presentation outline
+E  — Expected Out : 10-slide deck structure with key talking points
+O  — Constraints  : Max 30 min presentation, non-technical audience
+C² — Comm Style   : Executive-level, confident, data-driven
+
+─────────────────────────────────────────────────────
+ASSEMBLED PROMPT:
+
+Act as a Senior Product Manager with deep SaaS experience.
+Context: B2B platform with 200 enterprise clients currently 
+entering renewal season.
+
+Create a retention strategy presentation outline designed for 
+a 10-slide deck, including key talking points for each slide.
+
+The presentation must fit within 30 minutes and be accessible 
+to a non-technical executive audience. Use an executive-level 
+tone — confident, data-driven, and decisively prescriptive.
+─────────────────────────────────────────────────────</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="how-it-works">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">6-Step Execution Process</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-body">
+            <h3 class="step-title">Define the Role with Specificity</h3>
+            <p class="step-text">Don't just say "an expert" — define the professional profile. Senior level or junior? Which specialization? Which industry background? What kind of experience is most relevant? The more specific the Role, the more calibrated the AI's response. A "Senior B2B SaaS Product Manager with enterprise software background" will produce fundamentally different output than a generic "product expert".</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-body">
+            <h3 class="step-title">Provide Operational Context</h3>
+            <p class="step-text">Set the scene with professional specificity. Size of the organization, current phase, competitive position, relevant recent history, and any situational factors that would change the professional's approach. Think of this as the briefing a consultant receives on Day 1 — the essential context that makes generic expertise become specific, actionable advice.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-body">
+            <h3 class="step-title">Make a Precise Request</h3>
+            <p class="step-text">State the deliverable with concrete specificity. Name the format, the scope, and the purpose. The Request should be precise enough that a professional could quote a price and a timeline for it — that level of specificity is what separates a professional brief from a casual question.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-body">
+            <h3 class="step-title">Describe the Expected Output in Detail</h3>
+            <p class="step-text">Write the success criteria for the response. What does excellence look like? How many sections? What depth? What should a reader be able to do after reading it? Expected Output is the quality standard baked directly into the prompt — it pulls the AI toward the target rather than leaving it to interpret the Request ambiguously.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">05</div>
+          <div class="step-body">
+            <h3 class="step-title">Set Constraints as Professional Reality</h3>
+            <p class="step-text">List every real-world constraint that applies. Time limits, audience technical levels, budget parameters, compliance requirements, scope exclusions. Constraints are not penalties — they are the professional reality that transforms abstract advice into implementable recommendations. An AI that doesn't know your constraints will produce theoretically correct but practically useless output.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">06</div>
+          <div class="step-body">
+            <h3 class="step-title">Specify Communication Style for Professional Alignment</h3>
+            <p class="step-text">Choose the register, assertiveness level, and delivery approach. Should the AI lead with conclusions or build to them? Should it qualify its recommendations or deliver them with confidence? Should the tone be formal or collegial? Aligning Communication Style with the actual use context is what makes AI-generated professional content genuinely credible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="when-to-use">
+      <div class="section-label">When to Use</div>
+      <h2 class="section-title">Ideal Use Cases</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Professional and Enterprise Applications</h4>
+            <p class="feature-text">RCR-EOC was designed for the professional context. Strategy documents, executive presentations, consulting deliverables, business proposals — any output where professional credibility and domain expertise are non-negotiable.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">High-Stakes Deliverables</h4>
+            <p class="feature-text">When the output will be used in a board meeting, a client proposal, or a regulatory submission, RCR-EOC's structured quality control components (Expected Output + Constraints) ensure the AI operates within the required parameters at every level.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Consistent Cross-Team AI Usage</h4>
+            <p class="feature-text">RCR-EOC structures can be templated and shared across teams, ensuring that everyone interacting with AI for a given task type is using the same role definition, the same quality criteria, and the same communication standards — producing consistent, on-brand output at scale.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Consulting and Advisory Work</h4>
+            <p class="feature-text">Any AI usage in a client-facing advisory context where the AI must perform as a credible professional rather than a generic assistant. The Role component activates expert-level framing; the Communication Style component ensures client-appropriate delivery.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Compliance-Sensitive Outputs</h4>
+            <p class="feature-text">The Constraints component makes RCR-EOC ideal for regulated industries where outputs must comply with specific rules, stay within defined scope, or avoid certain content types. The constraints are explicit and verifiable in the framework structure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Frameworks</div>
+      <h2 class="section-title">Explore the SIRVATO OS Stack</h2>
+      <div class="related-grid">
+        <a href="../frameworks/icdf.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">ICDF Engine</h4>
+          <p class="related-desc">The foundational structural layer. The base framework underlying all SIRVATO OS prompt architectures.</p>
+        </a>
+        <a href="../frameworks/micro.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">MICRO Rhythm Layer</h4>
+          <p class="related-desc">Communication-focused framework for tone, rhythm, and message delivery quality control.</p>
+        </a>
+        <a href="../frameworks/auto-flow.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AUTO-FLOW Sequential</h4>
+          <p class="related-desc">Chain multiple RCR-EOC prompts into reliable sequential workflow pipelines.</p>
+        </a>
+        <a href="../frameworks/unified-mode.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">Unified Mode</h4>
+          <p class="related-desc">Integrates RCR-EOC components into the 11-component total framework for maximum completeness.</p>
+        </a>
+        <a href="../frameworks/ai-trigger-protocol.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AI Trigger Protocol</h4>
+          <p class="related-desc">Pre-activation validation that works hand-in-hand with RCR-EOC for quality-gated execution.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

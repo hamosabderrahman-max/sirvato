@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Master Block — Structured Block-Based Prompt Organisation Interface for SIRVATO OS. Drag-and-drop blocks, block library, JSON export, and modular component reuse.">
+  <title>Master Block — SIRVATO OS Interfaces</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html" class="active">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Master Block</span>
+      </nav>
+      <span class="hero-tag">INTERFACE</span>
+      <h1 class="hero-title">Master Block</h1>
+      <p class="hero-tagline">Structured Block-Based Prompt Organisation</p>
+      <p class="hero-description">An organised block system where each prompt component occupies a dedicated visual block. Build, reuse, and combine prompt modules with drag-and-drop simplicity — then assemble them into a Master Prompt Output.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is Master Block?</h2>
+      <p class="section-text">Master Block reimagines prompt engineering as a visual block composition exercise, inspired by modular synthesis and block-based coding environments. Rather than writing a prompt as a single text stream, you build it as a collection of typed, labelled blocks — each block holding exactly one component of your chosen framework. Role in one block. Context in another. Request in a third. The interface then assembles the blocks into a complete, correctly formatted prompt in the Master Prompt Output zone.</p>
+      <p class="section-text">The power of the block model becomes clear when you start building a block library. Save your best Role blocks, your standard Context blocks for recurring projects, your most effective Format specifications. Reuse them across dozens of prompts by dragging them in from the library. For teams, Master Block enables shared block libraries where prompt components become reusable IP — the same precision-crafted Role block can power hundreds of different prompts across the organisation.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Interface Visualization</div>
+      <h2 class="section-title">Master Block Layout</h2>
+      <div class="ascii-block">
+<pre>
+╔══════════════════╗  ╔══════════════════╗
+║   BLOCK: ROLE    ║  ║  BLOCK: CONTEXT  ║
+║ ──────────────── ║  ║ ──────────────── ║
+║ Senior PM @ SaaS ║  ║ B2B platform     ║
+╚══════════════════╝  ╚══════════════════╝
+╔══════════════════╗  ╔══════════════════╗
+║  BLOCK: REQUEST  ║  ║  BLOCK: OUTPUT   ║
+║ ──────────────── ║  ║ ──────────────── ║
+║ Create roadmap   ║  ║ Slide deck, 10p  ║
+╚══════════════════╝  ╚══════════════════╝
+         ↓ ASSEMBLE ↓
+╔══════════════════════════════════════════╗
+║          MASTER PROMPT OUTPUT            ║
+╚══════════════════════════════════════════╝
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Drag-and-Drop Block Reordering</h4>
+            <p class="feature-text">Grab any block and drag it to a new position in the composition grid. The Master Prompt Output updates instantly to reflect the new block order. Reordering blocks lets you experiment with the sequence of framework components — sometimes placing Context before Role produces measurably better outputs for particular task types.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Block Library for Saved Components</h4>
+            <p class="feature-text">The Block Library panel sits alongside your composition area and holds all your saved blocks organised by type. Search the library by keyword, filter by framework type or block category. Drag any library block into your active composition. Blocks can be marked as favourites, tagged, and organised into named collections for different project types.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Visual Block Connection Lines</h4>
+            <p class="feature-text">Enable Connection Mode to see visual lines showing how blocks relate to each other within the active framework. Context connects to Instruction. Role connects to Request. The connection lines clarify the logical dependencies between components, helping new users understand framework structure and helping experienced users identify missing connections in complex compositions.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Mix-and-Match from Different Frameworks</h4>
+            <p class="feature-text">Master Block allows you to combine blocks from different SIRVATO OS frameworks in a single composition. Use an ICDF Instruction block, a MICRO Rhythm block, and an RCR-EOC Constraints block together. The Assemble engine validates cross-framework combinations and warns when components are incompatible, while permitting powerful hybrid structures that standard single-framework use doesn't allow.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Export as JSON or Plain Text</h4>
+            <p class="feature-text">Export the complete block composition — including all block content, types, library references, and framework metadata — as a structured JSON file. This JSON format is readable by SIRVATO OS tools, compatible with API integrations, and version-controllable in git. Alternatively, export as clean plain text for direct pasting into any AI interface.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Block Templates for Common Patterns</h4>
+            <p class="feature-text">The Templates gallery provides ready-to-use block compositions for the most common prompt engineering scenarios: content creation, code review, strategic analysis, customer communication, data transformation, and more. Each template is a complete block set ready to customise. Templates can be cloned, modified, and saved as new library entries.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Colour-Coded Blocks by Framework Type</h4>
+            <p class="feature-text">Each SIRVATO OS framework has a unique colour signature applied to all its blocks. ICDF blocks use deep blue, MICRO blocks use violet, RCR-EOC blocks use teal, AUTO-FLOW blocks use amber. At a glance you can see the framework composition of any prompt — whether it is a pure single-framework composition or a hybrid mix of components from across the SIRVATO OS stack.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">Master Block in Action</h2>
+      <p class="section-text">Begin by selecting a framework from the top toolbar. The composition grid fills with empty blocks labelled with that framework's components. Fill each block, then click Assemble to generate the Master Prompt Output. The example below shows a four-block RCR-EOC composition and its assembled output:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">Master Block — RCR-EOC Composition → Assembled Output</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>BLOCK [ROLE]:        Senior Product Manager at a B2B SaaS company
+BLOCK [CONTEXT]:     12-month roadmap planning cycle, 3 engineering squads
+BLOCK [REQUEST]:     Build a prioritised roadmap for Q1–Q4 with milestones
+BLOCK [CONSTRAINTS]: Max 10 initiatives, must include customer retention focus
+BLOCK [EXAMPLES]:    Use OKR format for framing each initiative
+BLOCK [OUTPUT]:      Slide-ready deck structure, 10 slides, exec summary first
+
+── ASSEMBLE ──────────────────────────────────────
+
+You are a Senior Product Manager at a B2B SaaS company.
+Context: 12-month planning cycle, 3 engineering squads available.
+Request: Build a prioritised roadmap for Q1–Q4 with clear milestones.
+Constraints: Maximum 10 initiatives; must include customer retention focus.
+Examples: Frame each initiative in OKR format.
+Output: Slide-ready deck structure, 10 slides, executive summary first.</code></pre>
+      </div>
+      <p class="section-text" style="margin-top:1.5rem;"><strong>Best for:</strong> Reusable prompt components, team workflows where prompt components are shared assets, template building for standardised output quality, and users who prefer a visual spatial approach to prompt composition.</p>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Interfaces</div>
+      <h2 class="section-title">Explore Other Interfaces</h2>
+      <div class="related-grid">
+        <a href="../interfaces/os-window.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">OS Window</h4>
+          <p class="related-desc">Multi-pane windowed environment with framework sidebar and tabbed prompt history.</p>
+        </a>
+        <a href="../interfaces/windows-edition.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Windows Edition</h4>
+          <p class="related-desc">Multi-window environment for managing several prompt workflows simultaneously.</p>
+        </a>
+        <a href="../interfaces/micro-sidebar.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">MICRO Sidebar</h4>
+          <p class="related-desc">5-panel sidebar dedicated to the MICRO framework with real-time preview generation.</p>
+        </a>
+        <a href="../interfaces/fullscreen-totality.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Fullscreen Totality</h4>
+          <p class="related-desc">All systems active simultaneously — the apex interface for expert prompt engineering.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

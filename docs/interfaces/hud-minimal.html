@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HUD Minimal — Streamlined Heads-Up Display Interface for SIRVATO OS. Zero cognitive overhead, maximum throughput, distraction-free prompting.">
+  <title>HUD Minimal — SIRVATO OS Interfaces</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html" class="active">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">HUD Minimal</span>
+      </nav>
+      <span class="hero-tag">INTERFACE</span>
+      <h1 class="hero-title">HUD Minimal</h1>
+      <p class="hero-tagline">Streamlined Heads-Up Display Interface</p>
+      <p class="hero-description">The most efficient interface in SIRVATO OS. Stripped to essentials — only what you need, exactly when you need it. Zero cognitive overhead, maximum throughput.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is HUD Minimal?</h2>
+      <p class="section-text">HUD Minimal is the flagship stripped-down interface of SIRVATO OS, designed around a single philosophical principle: remove everything that does not serve the prompt. Inspired by aerospace Heads-Up Displays where pilots receive only the critical information they need at any given moment, HUD Minimal surfaces framework indicators, token counts, and status signals in a compact two-row chrome — then steps out of the way so you can work.</p>
+      <p class="section-text">The result is a sub-100ms cognitive load interface. Experienced prompt engineers report up to 40% faster iteration cycles when switching to HUD Minimal from richer UI environments. Every element earns its place through usefulness, and everything else is removed entirely.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Interface Visualization</div>
+      <h2 class="section-title">HUD Minimal Layout</h2>
+      <div class="ascii-block">
+<pre>
+┌─────────────────────────────────────────┐
+│ ⬡ SIRVATO OS │ HUD MINIMAL v1.0        │
+├─────────────────────────────────────────┤
+│ TASK ────────────────────────────────── │
+│  > [Active prompt placeholder]          │
+│                                         │
+│ STATUS: ● READY  │ MODE: MINIMAL        │
+│ FRAMEWORK: ICDF  │ TOKENS: 0            │
+└─────────────────────────────────────────┘
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Single-Task Focus</h4>
+            <p class="feature-text">The interface enforces one active prompt at a time. No tabs, no history panels, no sidebar distractions. Your current task occupies the entire interaction area, eliminating context-switching cost and keeping your attention locked on the work at hand.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Real-Time Token Counter</h4>
+            <p class="feature-text">A live token count updates with every keystroke. Always know your budget before you send. Colour coding shifts from green to amber to red as you approach model context limits, giving you an instant visual signal without interrupting your flow.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Framework Indicator Badge</h4>
+            <p class="feature-text">A compact badge in the lower chrome shows the active SIRVATO OS framework — ICDF, MICRO, RCR-EOC, AUTO-FLOW, or Unified. Switch frameworks with a single keystroke. The badge updates instantly, keeping you oriented without requiring a sidebar or menu.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Status LED</h4>
+            <p class="feature-text">Three states — Ready (green), Processing (amber pulse), Complete (solid blue) — communicate system state at a glance. The LED is designed to be readable in peripheral vision so you never need to look away from your prompt text to check system status.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">One-Click Prompt Copy</h4>
+            <p class="feature-text">A floating copy button appears on hover over the active prompt area. One click copies the complete, framework-formatted prompt to your clipboard in the correct structure for the active framework. No selection required, no formatting lost.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Keyboard Shortcut Support</h4>
+            <p class="feature-text">Full keyboard navigation. ⌘K activates the interface, ⌘Enter submits, ⌘C copies the formatted prompt, ⌘F cycles frameworks, and Escape clears the active task. Experienced users never touch a mouse while working in HUD Minimal.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Minimal 2-Line Input Area</h4>
+            <p class="feature-text">The input area starts at 2 lines and auto-expands as you type, never exceeding 12 lines before entering scroll mode. This keeps the interface compact for short prompts while gracefully accommodating longer structured inputs without layout shifts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">HUD Minimal in Action</h2>
+      <p class="section-text">Activate HUD Minimal with ⌘K. The interface initialises in under 200ms. Start typing immediately — the framework auto-detects structure and activates the appropriate SIRVATO OS engine. The following example shows an ICDF prompt in HUD Minimal mode:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">HUD Minimal — ICDF Mode</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>STATUS: ● READY  │  FRAMEWORK: ICDF  │  TOKENS: 0
+
+> I: Rewrite this product description for a technical audience
+  C: SaaS B2B platform, audience is CTOs and engineering leads
+  D: [paste your product description here]
+  F: 3 paragraphs, technical precision, no marketing fluff
+
+STATUS: ● PROCESSING  │  TOKENS: 87  │  ⌘C to copy</code></pre>
+      </div>
+      <p class="section-text" style="margin-top:1.5rem;"><strong>Best for:</strong> Quick iterations, high-volume prompting sessions, experienced users who have internalised framework structures and need minimal scaffolding to work at speed.</p>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Interfaces</div>
+      <h2 class="section-title">Explore Other Interfaces</h2>
+      <div class="related-grid">
+        <a href="../interfaces/console-live.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Console Live</h4>
+          <p class="related-desc">Real-time terminal-style interface with live streaming output and command history navigation.</p>
+        </a>
+        <a href="../interfaces/micro-sidebar.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">MICRO Sidebar</h4>
+          <p class="related-desc">5-panel expandable sidebar with one panel per MICRO component for guided structured prompting.</p>
+        </a>
+        <a href="../interfaces/fullscreen-mode.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Fullscreen Mode</h4>
+          <p class="related-desc">Total viewport takeover for deep work sessions where distraction elimination is critical.</p>
+        </a>
+        <a href="../interfaces/os-window.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">OS Window</h4>
+          <p class="related-desc">Classic multi-pane OS window with resizable panels for simultaneous framework management.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>
