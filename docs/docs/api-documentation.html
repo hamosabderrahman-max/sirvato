@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete reference for all SIRVATO OS components, fields, and configuration options." />
+  <title>API Reference — SIRVATO OS</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/dark-mode.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a href="../index.html" class="nav-brand">
+    <span class="os-dot" aria-hidden="true"></span>
+    SIRVATO OS
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../frameworks/icdf.html">Frameworks</a></li>
+    <li><a href="../interfaces/hud-minimal.html">Interfaces</a></li>
+    <li><a href="../docs/quick-start.html">Docs</a></li>
+    <li><a href="../demo.html">Demo</a></li>
+    <li><a href="https://github.com/hamosabderrahman-max/sirvato" target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-lang" aria-label="Switch language">IT</button>
+    <button class="btn-theme" aria-label="Toggle theme">☀</button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="../frameworks/icdf.html">Frameworks</a>
+  <a href="../interfaces/hud-minimal.html">Interfaces</a>
+  <a href="../docs/quick-start.html">Docs</a>
+  <a href="../demo.html">Demo</a>
+  <a href="https://github.com/hamosabderrahman-max/sirvato" target="_blank" rel="noopener">GitHub ↗</a>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <a href="../#documentation">Documentation</a>
+      <span>›</span>
+      <span>API Reference</span>
+    </nav>
+    <h1 class="page-title">API Reference</h1>
+    <p class="page-desc">Complete reference for all SIRVATO OS components, fields, and configuration options.</p>
+    <div class="page-meta">
+      <span class="meta-tag">📖 Documentation</span>
+    </div>
+  </div>
+</header>
+
+<main class="section" id="content">
+  <div class="container">
+    <div class="framework-block">
+      <h2>Universal Fields Reference</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Field</th><th>Key</th><th>Type</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Target</td><td><code>target</code></td><td>string</td><td>Ultimate goal, activates full cascade</td></tr>
+            <tr><td>Role</td><td><code>role</code></td><td>string</td><td>AI persona with expertise</td></tr>
+            <tr><td>Message</td><td><code>message</code></td><td>string</td><td>Core message (MICRO layer)</td></tr>
+            <tr><td>Intention</td><td><code>intention</code></td><td>string</td><td>Desired effect, double intention</td></tr>
+            <tr><td>Request</td><td><code>request</code></td><td>string</td><td>Precise deliverable</td></tr>
+            <tr><td>Context</td><td><code>context</code></td><td>text</td><td>Full situational context</td></tr>
+            <tr><td>Data</td><td><code>data</code></td><td>text</td><td>Source material</td></tr>
+            <tr><td>Examples</td><td><code>examples</code></td><td>text</td><td>Models and references</td></tr>
+            <tr><td>Rhythm</td><td><code>rhythm</code></td><td>string</td><td>Tone, pace, energy</td></tr>
+            <tr><td>Constraints</td><td><code>constraints</code></td><td>text</td><td>Limits and exclusions</td></tr>
+            <tr><td>Output</td><td><code>output</code></td><td>string</td><td>Format specification</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="framework-block">
+      <h2>Framework IDs</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Framework</th><th>ID</th><th>Fields Used</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Unified Mode</td><td><code>unified</code></td><td>All 11</td></tr>
+            <tr><td>ICDF Engine</td><td><code>icdf</code></td><td>role, context, data, output</td></tr>
+            <tr><td>MICRO Layer</td><td><code>micro</code></td><td>message, intention, context, rhythm, output</td></tr>
+            <tr><td>RCR-EOC</td><td><code>rcreoc</code></td><td>role, context, request, examples, output, constraints</td></tr>
+            <tr><td>Auto-Flow</td><td><code>autoflow</code></td><td>role, context, request, examples, output, constraints, target</td></tr>
+            <tr><td>HUD Minimal</td><td><code>hud</code></td><td>target, output</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="framework-block">
+      <h2>AI Trigger Protocol — Validation Rules</h2>
+      <ul class="field-list">
+        <li class="field-item"><span class="field-key">T1 Coherence</span><span class="field-desc">Role and Instruction must be semantically aligned. Expert role → expert-level instruction.</span></li>
+        <li class="field-item"><span class="field-key">T2 Rhythm</span><span class="field-desc">Rhythm field must be explicitly defined. "Normal" is not a valid rhythm specification.</span></li>
+        <li class="field-item"><span class="field-key">T3 Data</span><span class="field-desc">All referenced data must be present. No hanging references like "as mentioned above".</span></li>
+        <li class="field-item"><span class="field-key">T4 Output</span><span class="field-desc">Output format must be specific. "A document" fails; "500-word markdown article with H2 sections" passes.</span></li>
+        <li class="field-item"><span class="field-key">T5 Constraints</span><span class="field-desc">At least one explicit constraint must be present. Even "no constraints" must be stated.</span></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-bottom" style="max-width:1200px;margin:0 auto;padding:2rem;justify-content:space-between;">
+    <span>© 2025 SIRVATO OS. Open source.</span>
+    <div class="footer-status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>All Systems Operational</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/theme.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

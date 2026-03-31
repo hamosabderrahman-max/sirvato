@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tips, patterns and advanced techniques from real-world SIRVATO OS usage." />
+  <title>Best Practices — SIRVATO OS</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/dark-mode.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a href="../index.html" class="nav-brand">
+    <span class="os-dot" aria-hidden="true"></span>
+    SIRVATO OS
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../frameworks/icdf.html">Frameworks</a></li>
+    <li><a href="../interfaces/hud-minimal.html">Interfaces</a></li>
+    <li><a href="../docs/quick-start.html">Docs</a></li>
+    <li><a href="../demo.html">Demo</a></li>
+    <li><a href="https://github.com/hamosabderrahman-max/sirvato" target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-lang" aria-label="Switch language">IT</button>
+    <button class="btn-theme" aria-label="Toggle theme">☀</button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="../frameworks/icdf.html">Frameworks</a>
+  <a href="../interfaces/hud-minimal.html">Interfaces</a>
+  <a href="../docs/quick-start.html">Docs</a>
+  <a href="../demo.html">Demo</a>
+  <a href="https://github.com/hamosabderrahman-max/sirvato" target="_blank" rel="noopener">GitHub ↗</a>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <a href="../#documentation">Documentation</a>
+      <span>›</span>
+      <span>Best Practices</span>
+    </nav>
+    <h1 class="page-title">Best Practices</h1>
+    <p class="page-desc">Tips, patterns and advanced techniques from real-world SIRVATO OS usage.</p>
+    <div class="page-meta">
+      <span class="meta-tag">📖 Documentation</span>
+    </div>
+  </div>
+</header>
+
+<main class="section" id="content">
+  <div class="container">
+    <div class="framework-block">
+      <h2>The Golden Rules</h2>
+      <ul class="field-list">
+        <li class="field-item"><span class="field-key">Be Specific</span><span class="field-desc">Vague prompts get vague results. Every field should add precision, not approximation.</span></li>
+        <li class="field-item"><span class="field-key">Define Output First</span><span class="field-desc">Know exactly what you want to receive before filling in the other fields. Work backwards.</span></li>
+        <li class="field-item"><span class="field-key">Rhythm Matters</span><span class="field-desc">Tone, energy and pacing dramatically affect AI output quality. Never skip the RHYTHM field.</span></li>
+        <li class="field-item"><span class="field-key">Constraints Win</span><span class="field-desc">What to NOT do is as powerful as what to do. Always include explicit exclusions.</span></li>
+        <li class="field-item"><span class="field-key">Examples Anchor</span><span class="field-desc">Providing concrete examples reduces interpretation variance by 60-70%.</span></li>
+      </ul>
+    </div>
+
+    <div class="framework-block">
+      <h2>Advanced Techniques</h2>
+      <h3>Layered Prompting</h3>
+      <p>Start with HUD Minimal to explore, then graduate to ICDF for structure, then Unified Mode for final production output.</p>
+      
+      <h3>Trigger Validation</h3>
+      <p>Before running Unified Mode, mentally check all 5 AI Triggers. If any fail, refine that section first.</p>
+      
+      <h3>Rhythm as Multiplier</h3>
+      <p>The MICRO Rhythm field acts as a multiplier — even a simple "energetic and punchy" doubles output quality for content tasks.</p>
+      
+      <div class="callout callout-warning">
+        <strong>Common Mistake:</strong> Filling all 11 fields of Unified Mode with generic, vague text. It's better to use ICDF with 4 precise fields than Unified Mode with 11 fuzzy ones.
+      </div>
+    </div>
+
+    <div class="framework-block">
+      <h2>Framework Stacking</h2>
+      <p>Advanced users stack frameworks: first use RCR-EOC to validate the scenario, then feed the output into Auto-Flow PRO for refinement, then validate with AI Trigger Protocol before executing Unified Mode.</p>
+      <div class="copy-block">
+        <pre>Stack: RCR-EOC → Auto-Flow PRO → AI Triggers → Unified → Execute</pre>
+        <button class="copy-btn">📋 Copy</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-bottom" style="max-width:1200px;margin:0 auto;padding:2rem;justify-content:space-between;">
+    <span>© 2025 SIRVATO OS. Open source.</span>
+    <div class="footer-status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>All Systems Operational</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/theme.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
