@@ -1,0 +1,114 @@
+/* =====================================================
+   SIRVATO OS — Dark / Light Mode Overrides
+   ===================================================== */
+
+body.light-mode {
+  --bg:           #f8f9fa;
+  --bg-2:         #f0f2f5;
+  --bg-card:      #ffffff;
+  --bg-card-2:    #f4f6f8;
+  --border:       rgba(0, 100, 160, 0.18);
+  --border-2:     rgba(90, 30, 200, 0.15);
+  --cyan:         #0080b3;
+  --cyan-dim:     rgba(0, 128, 179, 0.08);
+  --cyan-glow:    rgba(0, 128, 179, 0.3);
+  --purple:       #6d28d9;
+  --purple-dim:   rgba(109, 40, 217, 0.08);
+  --magenta:      #cc00cc;
+  --green:        #00aa55;
+  --text:         #111111;
+  --text-dim:     rgba(17, 17, 17, 0.72);
+  --text-muted:   rgba(17, 17, 17, 0.45);
+}
+
+body.light-mode .navbar {
+  background: rgba(248, 249, 250, 0.95);
+  border-bottom-color: rgba(0, 128, 179, 0.15);
+}
+
+body.light-mode ::-webkit-scrollbar-track { background: #f0f2f5; }
+body.light-mode ::-webkit-scrollbar-thumb { background: #6d28d9; }
+
+body.light-mode .hero {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,128,179,0.06) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 40% at 80% 80%, rgba(109,40,217,0.06) 0%, transparent 60%),
+              var(--bg);
+}
+
+body.light-mode .page-hero {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,128,179,0.05) 0%, transparent 70%),
+              var(--bg);
+}
+
+body.light-mode .ascii-block {
+  background: #f0f6ff;
+  color: var(--cyan);
+}
+
+body.light-mode .code-block { background: #f4f6f8; }
+body.light-mode pre { background: #f4f6f8; }
+body.light-mode .output-area { background: #f4f6f8; color: var(--text-dim); }
+
+body.light-mode .hero-title {
+  background: linear-gradient(135deg, #111 0%, var(--cyan) 60%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.light-mode .page-hero-title {
+  background: linear-gradient(135deg, #111 30%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.light-mode .btn-primary {
+  background: var(--cyan);
+  color: #fff;
+}
+
+body.light-mode footer {
+  background: #eef0f4;
+  border-top-color: rgba(0,0,0,0.08);
+}
+
+body.light-mode .footer-bottom {
+  border-top-color: rgba(0,0,0,0.06);
+}
+
+body.light-mode .stats-bar {
+  background: #fff;
+  border-color: rgba(0,0,0,0.07);
+}
+
+body.light-mode .stat-item {
+  border-right-color: rgba(0,0,0,0.07);
+}
+
+body.light-mode .section-full {
+  background: #f0f2f5;
+  border-color: rgba(0,0,0,0.06);
+}
+
+body.light-mode .selector-card.selected,
+body.light-mode .selector-card:hover {
+  background: rgba(0,128,179,0.08);
+  border-color: var(--cyan);
+}
+
+body.light-mode .result-box {
+  background: #fff;
+  border-color: var(--cyan);
+  box-shadow: 0 0 30px rgba(0,128,179,0.1);
+}
+
+body.light-mode .faq-question { background: #fff; color: var(--text); }
+body.light-mode .faq-question:hover { background: rgba(0,128,179,0.05); }
+body.light-mode .faq-question.open { background: rgba(0,128,179,0.04); }
+body.light-mode .faq-answer { background: var(--bg); }
+
+body.light-mode .demo-panel { background: #fff; }
+body.light-mode .form-input,
+body.light-mode .form-textarea {
+  background: #f8f9fa;
+  color: var(--text);
+}

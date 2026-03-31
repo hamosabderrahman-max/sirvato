@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AUTO-FLOW PRO Guided — Advanced multi-stage prompt orchestration with checkpoints, validation gates, branching logic, and human-in-the-loop review points.">
+  <title>AUTO-FLOW PRO Guided — SIRVATO OS Frameworks</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html" class="active">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">AUTO-FLOW PRO</span>
+      </nav>
+      <span class="hero-tag">FRAMEWORK</span>
+      <h1 class="hero-title">AUTO-FLOW PRO Guided</h1>
+      <p class="hero-tagline">Advanced Guided Multi-Stage Prompt Orchestration System</p>
+      <p class="hero-description">The professional tier of AUTO-FLOW with checkpoints, validation gates, branching logic, and human-in-the-loop review points for enterprise-grade AI workflow management.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is AUTO-FLOW PRO?</h2>
+      <p class="section-text">AUTO-FLOW PRO is the professional-grade evolution of AUTO-FLOW Sequential. While Sequential provides a linear pipeline for straightforward multi-step tasks, PRO introduces the architectural sophistication required for complex, high-stakes workflows: mandatory checkpoint reviews, conditional branching based on output quality, automatic escalation when criteria aren't met, rollback capability, and a structured finalization stage.</p>
+      <p class="section-text">The defining feature of AUTO-FLOW PRO is its checkpoint architecture. Every significant stage transition is guarded by a CHECKPOINT — a defined set of pass/fail criteria that the output must meet before the workflow advances. This transforms the pipeline from a one-shot sequential execution into a quality-managed production process with built-in quality assurance at every gate.</p>
+      <p class="section-text">AUTO-FLOW PRO also introduces BRANCH logic: conditional routing based on what the AI actually produces. If a market analysis reveals a clear gap, the workflow branches to an opportunity blueprint. If it reveals saturation, it branches to a differentiation strategy. The pipeline adapts to reality rather than executing blindly toward a predetermined structure that may not fit the actual output.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Layer Architecture</div>
+      <h2 class="section-title">Advanced Pipeline Components</h2>
+      <div class="layer-tree">
+        <div class="layer-item">
+          <span class="layer-key">CHECK</span>
+          <div class="layer-body">
+            <span class="layer-label">Checkpoint</span>
+            <span class="layer-desc">Mandatory review points between stages. Each CHECKPOINT defines explicit, verifiable pass/fail criteria that the preceding stage's output must satisfy. Checkpoints are binary — the workflow either advances or returns to the current stage for revision. Checkpoints should be written as specific, observable assertions: "Each competitor analysis includes name, funding stage, pricing tier, and at least one identified weakness."</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">BRANCH</span>
+          <div class="layer-body">
+            <span class="layer-label">Conditional Logic</span>
+            <span class="layer-desc">Conditional routing based on output quality or content signals. BRANCH statements use IF/ELSE logic to route the workflow to different stages based on what the AI actually produced. This allows a single pipeline to handle multiple real-world scenarios that can't be predicted at design time — the workflow structure adapts to the actual data and analysis rather than forcing reality into a rigid predetermined path.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">ESCALATE</span>
+          <div class="layer-body">
+            <span class="layer-label">Alternative Path Trigger</span>
+            <span class="layer-desc">Activates an alternative processing path when criteria are not met and the standard branch cannot resolve the issue. ESCALATE is the safety valve of AUTO-FLOW PRO — when the normal workflow logic cannot produce an acceptable output, ESCALATE triggers a fundamentally different approach: a different prompt strategy, a different data source, a different framing of the problem entirely.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">VALIDATE</span>
+          <div class="layer-body">
+            <span class="layer-label">Quality Gate</span>
+            <span class="layer-desc">A formal quality assessment with specific pass/fail criteria applied at defined points. VALIDATE differs from CHECKPOINT in granularity — CHECKPOINT is a stage gate, VALIDATE is a content quality check that can be applied within a stage to specific output elements. Used to verify data completeness, factual consistency, format compliance, and coverage requirements before allowing the workflow to proceed.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">ROLLBACK</span>
+          <div class="layer-body">
+            <span class="layer-label">Step Reversion</span>
+            <span class="layer-desc">Returns the workflow to a previous step when downstream quality issues are traced to an upstream source. ROLLBACK is the error correction mechanism — when you discover at Stage 4 that the problem originated at Stage 2, ROLLBACK specifies the target step, the identified issue, and the corrective instruction to resolve it before re-executing the pipeline from that point.</span>
+          </div>
+        </div>
+        <div class="layer-item">
+          <span class="layer-key">FINALIZE</span>
+          <div class="layer-body">
+            <span class="layer-label">Structured Assembly</span>
+            <span class="layer-desc">Structured assembly of all stage outputs into the complete deliverable. FINALIZE in PRO goes beyond simple compilation — it applies a defined assembly schema, resolves any inconsistencies between stage outputs, applies the final formatting specification, and validates the assembled output against the criteria defined in INIT. The result is a coherent, professionally formatted final deliverable rather than a collection of stage outputs.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="example">
+      <div class="section-label">Code Example</div>
+      <h2 class="section-title">AUTO-FLOW PRO in Practice</h2>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-title">AUTO-FLOW PRO — Market Entry Analysis</span>
+          <button class="code-copy" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('pre').textContent)">Copy</button>
+        </div>
+        <pre>AUTO-FLOW PRO SEQUENCE:
+[INIT]       Project: Market entry analysis for new product
+             Goal: Go/no-go recommendation with supporting data
+             Quality bar: Each stage must be data-backed
+
+[STAGE 1]    Competitive landscape scan → 5 competitors
+[CHECK 1]    ✓ Each competitor has: name, size, pricing, weakness
+             ✗ FAIL → return to Stage 1 for missing data
+
+[STAGE 2]    SWOT analysis per competitor
+[CHECK 2]    ✓ Min 3 items per quadrant, data-backed assertions
+             ✗ FAIL → ESCALATE to alternative data sources
+
+[VALIDATE]   Cross-check: SWOT weaknesses align with Stage 1 data
+
+[BRANCH]     IF clear market gap identified:
+               → proceed to STAGE 3A (Opportunity Blueprint)
+             ELSE IF market is saturated:
+               → proceed to STAGE 3B (Differentiation Strategy)
+             ELSE IF data insufficient:
+               → ESCALATE to expanded research protocol
+
+[STAGE 3A]   Opportunity blueprint for identified gap
+             Output: Positioning, target segment, entry vector
+
+[STAGE 3B]   Differentiation strategy for saturated market
+             Output: Unique value props, moat strategy, pricing
+
+[ROLLBACK]   IF Stage 3 output reveals Stage 1 data gaps:
+               → return to Stage 1 with expanded scope
+
+[FINALIZE]   Executive summary + recommendation matrix
+             Format: 2-page brief, go/no-go decision, 3 scenarios
+─────────────────────────────────────────────────────</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="how-it-works">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">PRO Execution Process</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-body">
+            <h3 class="step-title">Design the Pipeline Architecture with All Branches</h3>
+            <p class="step-text">Before execution, design the complete pipeline architecture including all possible branches. Identify the decision points where branching can occur, define the criteria for each branch, and design both the primary path and all alternative paths to their respective FINALIZE outputs. A well-designed branch architecture prevents mid-execution confusion.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-body">
+            <h3 class="step-title">Write Checkpoints as Binary Assertions</h3>
+            <p class="step-text">Each CHECKPOINT must be a binary pass/fail test, not a quality judgment. "Output contains at least 3 competitive weaknesses per competitor" is binary. "The competitive analysis is good" is not. Binary checkpoints remove ambiguity from the quality gate and make pass/fail decisions deterministic and auditable.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-body">
+            <h3 class="step-title">Execute Stages with Checkpoint Gates Active</h3>
+            <p class="step-text">Run each stage and immediately apply its checkpoint before proceeding. Treat failed checkpoints as mandatory rework signals — do not override checkpoints to maintain momentum. The checkpoint system exists precisely because momentum without quality is the most common way complex AI workflows fail.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-body">
+            <h3 class="step-title">Evaluate Branch Conditions Objectively</h3>
+            <p class="step-text">When you reach a BRANCH decision point, evaluate the branch conditions against the actual stage output — not what you hoped the output would say. Branching to the "wrong" path based on accurate output data is far better than forcing the pipeline down a path the data doesn't support. Let the analysis guide the direction.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">05</div>
+          <div class="step-body">
+            <h3 class="step-title">Use ROLLBACK as a Quality Asset, Not a Failure</h3>
+            <p class="step-text">ROLLBACK is not a failure mode — it's a quality asset. When a downstream step reveals a problem in an upstream step, ROLLBACK ensures you fix it at the source. Document the rollback reason and the correction applied so the pipeline improves with each iteration. Rollback history is valuable process intelligence.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">06</div>
+          <div class="step-body">
+            <h3 class="step-title">Finalize with Schema-Based Assembly</h3>
+            <p class="step-text">Apply the FINALIZE assembly schema to compile all stage outputs into the complete deliverable. Validate the assembled output against the INIT criteria. The FINALIZE stage is where the compound quality of the entire pipeline becomes visible as a single, coherent, professionally structured deliverable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="when-to-use">
+      <div class="section-label">When to Use</div>
+      <h2 class="section-title">Ideal Use Cases</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">High-Stakes Strategic Analysis</h4>
+            <p class="feature-text">Market entry analysis, competitive intelligence reports, investment theses, strategic planning documents — any analysis where the quality of each component directly determines the quality of the final recommendation.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Complex Multi-Deliverable Projects</h4>
+            <p class="feature-text">Projects that produce multiple interconnected deliverables where each deliverable feeds into others. AUTO-FLOW PRO's checkpoint architecture ensures that each deliverable is complete and correct before the dependent work begins.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Workflows with Multiple Possible Outcomes</h4>
+            <p class="feature-text">Any analysis where the correct course of action depends on what the analysis actually reveals. BRANCH logic allows a single pipeline to produce situation-appropriate outputs across multiple real-world scenarios.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Enterprise AI Production Systems</h4>
+            <p class="feature-text">When AI workflow outputs are used in formal business processes — procurement decisions, board presentations, regulatory submissions, client deliverables — the quality gates and audit trail of AUTO-FLOW PRO provide the governance and consistency required.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Research Requiring Iterative Refinement</h4>
+            <p class="feature-text">Deep research projects where findings at later stages frequently require revisiting and refining earlier stages. The ROLLBACK mechanism makes this iterative refinement structured and traceable rather than ad hoc and confusing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Frameworks</div>
+      <h2 class="section-title">Explore the SIRVATO OS Stack</h2>
+      <div class="related-grid">
+        <a href="../frameworks/auto-flow.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AUTO-FLOW Sequential</h4>
+          <p class="related-desc">The foundational linear pipeline — the base that AUTO-FLOW PRO extends with advanced quality control.</p>
+        </a>
+        <a href="../frameworks/auto-flow-reactive.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AUTO-FLOW REACTIVE</h4>
+          <p class="related-desc">The adaptive evolution: dynamically modifies the pipeline based on real-time AI response signals.</p>
+        </a>
+        <a href="../frameworks/rcr-eoc.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">RCR-EOC</h4>
+          <p class="related-desc">Use RCR-EOC to define the professional role and expected output for each PRO pipeline stage.</p>
+        </a>
+        <a href="../frameworks/ai-trigger-protocol.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">AI Trigger Protocol</h4>
+          <p class="related-desc">Run the 5-trigger validation before initializing any AUTO-FLOW PRO pipeline for guaranteed readiness.</p>
+        </a>
+        <a href="../frameworks/unified-mode.html" class="related-link">
+          <span class="related-tag">FRAMEWORK</span>
+          <h4 class="related-title">Unified Mode</h4>
+          <p class="related-desc">The apex framework — integrate AUTO-FLOW PRO stages with all 11 SIRVATO OS components.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>
