@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | AUTO-FLOW</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="icdf.html" class="active">Frameworks</a>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="icdf.html">Frameworks</a>
+    <a href="../interfaces/hud-minimal.html">Interfaces</a>
+    <a href="../micro-supra/core.html">MICRO SUPRA</a>
+    <a href="../docs/quick-start.html">Docs</a>
+    <a href="../demo.html">Demo</a>
+    <a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Frameworks</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>AUTO-FLOW</span>
+    </div>
+    <div class="page-header-tag">FRAMEWORK · FLOW</div>
+    <h1><span class="text-purple">AUTO-FLOW</span></h1>
+    <p>8-step sequential prompt framework for structured, reproducible automation pipelines.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-purple">Flow Framework</span>
+      <span class="badge badge-green">Stable v3.1</span>
+      <span class="badge badge-cyan">8-Step Pipeline</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-purple">AUTO-FLOW</span>?</h2>
+          <p>AUTO-FLOW is SIRVATO OS's structured automation pipeline framework. Built on the principle that complex operations become reliable and reproducible when broken into clearly defined, validated steps, AUTO-FLOW provides an 8-step sequential execution model used across thousands of automation tasks daily.</p>
+          <p>Each step is independently validated before the next begins. If any step fails, AUTO-FLOW can roll back to a known-good checkpoint rather than leaving the system in a partial state. Every execution produces a complete audit trail for compliance and debugging.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Sequential Guarantee</h4>
+            <p style="margin:0;">AUTO-FLOW never skips steps or executes out of order. This sequential guarantee means you always know exactly where in a pipeline execution is — and exactly what happened if it stops.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">AUTO-FLOW · Pipeline Execution</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">auto-flow</span><span class="terminal-cmd"> run deploy-api --env=staging</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Step 1/8  [INTENT ANALYSIS]      ✓ 12ms</div>
+              <div class="terminal-output">Step 2/8  [CONTEXT GATHERING]    ✓ 34ms</div>
+              <div class="terminal-output">Step 3/8  [CONSTRAINT MAPPING]   ✓ 8ms</div>
+              <div class="terminal-output">Step 4/8  [RESOURCE PLANNING]    ✓ 22ms</div>
+              <div class="terminal-output">Step 5/8  [EXECUTION STRATEGY]   ✓ 15ms</div>
+              <div class="terminal-output">Step 6/8  [ACTION DISPATCH]      ● running...</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-cyan">Pipeline: 6/8 steps complete | ETA: ~18s</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin: 3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">The 8-Step Pipeline</h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag purple">Step 1</div>
+          <div class="card-icon">🎯</div>
+          <div class="card-title">Intent Analysis</div>
+          <p class="card-desc">Parses the automation goal into structured objectives, success criteria, and constraint boundaries before any action is taken.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag cyan">Step 2</div>
+          <div class="card-icon">🔍</div>
+          <div class="card-title">Context Gathering</div>
+          <p class="card-desc">Collects environment state, service topology, existing configurations, and historical execution data relevant to the task.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag magenta">Step 3</div>
+          <div class="card-icon">🗺️</div>
+          <div class="card-title">Constraint Mapping</div>
+          <p class="card-desc">Identifies limits, policies, SLAs, and dependencies that must be respected throughout execution.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag green">Step 4</div>
+          <div class="card-icon">📦</div>
+          <div class="card-title">Resource Planning</div>
+          <p class="card-desc">Allocates compute, memory, network, and storage resources required for the operation — reserving capacity before dispatch.</p>
+        </div>
+      </div>
+      <div class="grid grid-4" style="margin-top:1.5rem;">
+        <div class="card reveal">
+          <div class="card-tag purple">Step 5</div>
+          <div class="card-icon">🧭</div>
+          <div class="card-title">Execution Strategy</div>
+          <p class="card-desc">Selects the optimal execution path — blue/green, canary, rolling, or immediate — based on risk tolerance and constraints.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag cyan">Step 6</div>
+          <div class="card-icon">🚀</div>
+          <div class="card-title">Action Dispatch</div>
+          <p class="card-desc">Executes the planned actions against target systems, with real-time telemetry streaming back to the EOC console.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag magenta">Step 7</div>
+          <div class="card-icon">✅</div>
+          <div class="card-title">Result Validation</div>
+          <p class="card-desc">Verifies outcomes against success criteria — health checks, smoke tests, and metric assertions — before proceeding to commit.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag green">Step 8</div>
+          <div class="card-icon">💾</div>
+          <div class="card-title">State Commit</div>
+          <p class="card-desc">Persists the new system state, emits audit events, updates the topology map, and releases reserved resources.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin: 3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Configuration</h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — AUTO-FLOW Config</span>
+<span class="code-keyword">auto_flow</span>:
+  <span class="code-var">step_timeout</span>: <span class="code-string">"60s"</span>
+  <span class="code-var">rollback_on_fail</span>: <span class="code-value">true</span>
+  <span class="code-var">rollback_steps</span>: <span class="code-string">"all"</span>
+  <span class="code-var">audit_trail</span>: <span class="code-value">true</span>
+  <span class="code-var">parallel_steps</span>: <span class="code-value">false</span>
+  <span class="code-var">checkpoint_interval</span>: <span class="code-value">1</span>
+  <span class="code-var">retry_failed_steps</span>: <span class="code-value">2</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Key Features</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">🔢</div>
+              <div class="feature-text">
+                <h4>Sequential Execution</h4>
+                <p>Strict step ordering guarantees predictable, reproducible pipelines every time they run.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✅</div>
+              <div class="feature-text">
+                <h4>Step Validation</h4>
+                <p>Each step is independently validated before the next begins — no silent failures in multi-step operations.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">↩️</div>
+              <div class="feature-text">
+                <h4>Rollback Support</h4>
+                <p>Checkpoint-based rollback restores the system to a known-good state if any step fails validation.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📜</div>
+              <div class="feature-text">
+                <h4>Audit Trail</h4>
+                <p>Complete immutable audit log for every execution — step timings, decisions, outcomes, and actor identity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem; text-align:center;">
+        <a href="rcr-eoc.html" class="btn btn-ghost">← Previous: RCR-EOC</a>
+        <a href="auto-flow-pro.html" class="btn btn-primary" style="margin-left:1rem;">Next: AUTO-FLOW PRO →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+          <p>The AI-First Cloud Operating System. Autonomous. Secure. Infinite.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Frameworks</div>
+          <div class="footer-links">
+            <a href="icdf.html">ICDF Engine</a>
+            <a href="micro.html">MICRO Framework</a>
+            <a href="auto-flow.html">AUTO-FLOW</a>
+            <a href="auto-flow-pro.html">AUTO-FLOW PRO</a>
+            <a href="unified-mode.html">Unified Mode</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Resources</div>
+          <div class="footer-links">
+            <a href="../docs/framework-comparison.html">Compare Frameworks</a>
+            <a href="../docs/quick-start.html">Quick Start</a>
+            <a href="../demo.html">Demo</a>
+            <a href="../tools.html">Selector Tool</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Documentation</div>
+          <div class="footer-links">
+            <a href="../docs/api-documentation.html">API Reference</a>
+            <a href="../docs/best-practices.html">Best Practices</a>
+            <a href="../docs/faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 <span>SIRVATO OS</span>. All rights reserved.</span>
+        <span>v3.1.0 · AUTOPILOT ACTIVE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

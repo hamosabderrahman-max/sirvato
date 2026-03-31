@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | AUTO-FLOW REACTIVE</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="icdf.html" class="active">Frameworks</a>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="icdf.html">Frameworks</a>
+    <a href="../interfaces/hud-minimal.html">Interfaces</a>
+    <a href="../micro-supra/core.html">MICRO SUPRA</a>
+    <a href="../docs/quick-start.html">Docs</a>
+    <a href="../demo.html">Demo</a>
+    <a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Frameworks</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>AUTO-FLOW REACTIVE</span>
+    </div>
+    <div class="page-header-tag">FRAMEWORK · REACTIVE</div>
+    <h1><span class="text-magenta">AUTO-FLOW</span> REACTIVE</h1>
+    <p>Adaptive reactive framework that responds dynamically to changing system conditions and events.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-magenta">Reactive Framework</span>
+      <span class="badge badge-green">Stable v3.1</span>
+      <span class="badge badge-cyan">Event-Driven</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-magenta">AUTO-FLOW REACTIVE</span>?</h2>
+          <p>AUTO-FLOW REACTIVE is SIRVATO OS's event-driven, adaptive automation framework. Where AUTO-FLOW and PRO execute predetermined pipelines, REACTIVE continuously monitors system conditions and adapts its behavior in real-time — triggering targeted responses the moment conditions change.</p>
+          <p>Built on a four-stage reactive loop — Event Ingestion, Signal Processing, Adaptive Response, State Propagation — REACTIVE achieves sub-10ms response times to system events. It's the framework of choice for autoscaling, self-healing, and real-time anomaly remediation.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Reactive Principle</h4>
+            <p style="margin:0;">REACTIVE never polls. It subscribes to system event streams and responds the instant conditions change — making it 100x more efficient than timer-based or scheduled automation approaches.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">AUTO-FLOW REACTIVE · Event Stream</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">reactive</span><span class="terminal-cmd"> watch --streams=all --respond</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">INGEST   [14:22:01.003] cpu_spike   api-gateway p99=94%</div>
+              <div class="terminal-output">SIGNAL   [14:22:01.005] threshold exceeded | severity: HIGH</div>
+              <div class="terminal-output">ADAPT    [14:22:01.007] response: scale-out +3 replicas</div>
+              <div class="terminal-output">PROPAGATE[14:22:01.009] state updated | notified: 12 deps</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">INGEST   [14:22:19.441] cpu_normal  api-gateway p99=42%</div>
+              <div class="terminal-output">ADAPT    [14:22:19.449] response: scale-in schedule T+5m</div>
+              <div class="terminal-output text-green">✓ Reactive loop: 6ms avg | 2,847 events/min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin: 3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">Reactive Architecture</h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag magenta">Stage 1</div>
+          <div class="card-icon">📡</div>
+          <div class="card-title">Event Ingestion</div>
+          <p class="card-desc">Multi-source event streams from metrics, logs, traces, external webhooks, and MICRO Framework pulses are ingested into a unified event bus.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag cyan">Stage 2</div>
+          <div class="card-icon">⚡</div>
+          <div class="card-title">Signal Processing</div>
+          <p class="card-desc">Raw events are enriched, correlated, deduplicated, and classified by severity — producing actionable signals within 2ms of arrival.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag green">Stage 3</div>
+          <div class="card-icon">🎛️</div>
+          <div class="card-title">Adaptive Response</div>
+          <p class="card-desc">The response engine selects the optimal remediation action from a dynamic playbook, adapting its choice based on current system context and recent history.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag purple">Stage 4</div>
+          <div class="card-icon">🌊</div>
+          <div class="card-title">State Propagation</div>
+          <p class="card-desc">System state changes are propagated to all affected services, dashboards, and downstream frameworks — maintaining a globally consistent view.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin: 3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Configuration</h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — REACTIVE Config</span>
+<span class="code-keyword">auto_flow_reactive</span>:
+  <span class="code-var">event_sources</span>: <span class="code-string">["metrics", "logs", "micro"]</span>
+  <span class="code-var">response_timeout</span>: <span class="code-string">"10ms"</span>
+  <span class="code-var">dedup_window</span>: <span class="code-string">"500ms"</span>
+  <span class="code-var">playbook</span>: <span class="code-string">"adaptive"</span>
+  <span class="code-var">propagation_mode</span>: <span class="code-string">"broadcast"</span>
+  <span class="code-var">history_window</span>: <span class="code-string">"15m"</span>
+  <span class="code-var">max_events_per_min</span>: <span class="code-value">50000</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Key Features</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-text">
+                <h4>Event-Driven</h4>
+                <p>Subscribes to live event streams — no polling, no wasted cycles. Reacts only when conditions actually change.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🕐</div>
+              <div class="feature-text">
+                <h4>Sub-10ms Response</h4>
+                <p>From event arrival to adaptive response dispatch in under 10 milliseconds — faster than any human operator.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🎛️</div>
+              <div class="feature-text">
+                <h4>Dynamic Adaptation</h4>
+                <p>Response playbooks update in real-time based on system history — getting smarter with every event cycle.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🌊</div>
+              <div class="feature-text">
+                <h4>State Management</h4>
+                <p>Distributed state propagation ensures all framework components see a consistent, up-to-date system view.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem; text-align:center;">
+        <a href="auto-flow-pro.html" class="btn btn-ghost">← Previous: AUTO-FLOW PRO</a>
+        <a href="ai-trigger-protocol.html" class="btn btn-primary" style="margin-left:1rem;">Next: AI Trigger Protocol →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+          <p>The AI-First Cloud Operating System. Autonomous. Secure. Infinite.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Frameworks</div>
+          <div class="footer-links">
+            <a href="icdf.html">ICDF Engine</a>
+            <a href="micro.html">MICRO Framework</a>
+            <a href="auto-flow.html">AUTO-FLOW</a>
+            <a href="auto-flow-pro.html">AUTO-FLOW PRO</a>
+            <a href="unified-mode.html">Unified Mode</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Resources</div>
+          <div class="footer-links">
+            <a href="../docs/framework-comparison.html">Compare Frameworks</a>
+            <a href="../docs/quick-start.html">Quick Start</a>
+            <a href="../demo.html">Demo</a>
+            <a href="../tools.html">Selector Tool</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Documentation</div>
+          <div class="footer-links">
+            <a href="../docs/api-documentation.html">API Reference</a>
+            <a href="../docs/best-practices.html">Best Practices</a>
+            <a href="../docs/faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 <span>SIRVATO OS</span>. All rights reserved.</span>
+        <span>v3.1.0 · AUTOPILOT ACTIVE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

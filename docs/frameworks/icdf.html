@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | ICDF Engine</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="icdf.html" class="active">Frameworks</a>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="icdf.html">Frameworks</a>
+    <a href="../interfaces/hud-minimal.html">Interfaces</a>
+    <a href="../micro-supra/core.html">MICRO SUPRA</a>
+    <a href="../docs/quick-start.html">Docs</a>
+    <a href="../demo.html">Demo</a>
+    <a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Frameworks</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>ICDF Engine</span>
+    </div>
+    <div class="page-header-tag">FRAMEWORK · CORE</div>
+    <h1><span class="text-cyan">ICDF</span> Engine</h1>
+    <p>Intent-Context-Decision-Flow — The foundational cognitive engine driving all autonomous decisions in SIRVATO OS.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-cyan">Core Framework</span>
+      <span class="badge badge-green">Stable v3.1</span>
+      <span class="badge badge-purple">Low Complexity</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is the <span class="text-cyan">ICDF Engine</span>?</h2>
+          <p>The ICDF Engine is the foundational cognitive layer of SIRVATO OS. It processes every incoming signal — user commands, system events, API calls — through a four-stage pipeline that transforms raw input into precise, contextually-aware decisions.</p>
+          <p>Unlike traditional rule-based engines, ICDF uses intent modeling to understand <em>what</em> you want, not just <em>what</em> you said. It maintains rich context across sessions and produces decisions that account for system state, historical patterns, and predicted outcomes.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Core Principle</h4>
+            <p style="margin:0;">Every action in SIRVATO OS flows through ICDF. From a simple health check to a complex multi-region failover — the same four-stage pipeline ensures consistency, traceability, and correctness.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">ICDF Engine · Live Trace</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">icdf</span><span class="terminal-cmd"> trace --verbose</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">INTENT  → deploy application to production</div>
+              <div class="terminal-output">CONTEXT → region: us-east-1 | env: prod | scale: auto</div>
+              <div class="terminal-output">DECISION→ trigger AUTO-FLOW PRO deployment pipeline</div>
+              <div class="terminal-output">FLOW    → executing 9-step guided framework</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-green">✓ Decision made in 12ms | Confidence: 99.7%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin: 3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">The Four Stages</h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag cyan">Stage 1</div>
+          <div class="card-icon">🎯</div>
+          <div class="card-title">Intent</div>
+          <p class="card-desc">Natural language processing and semantic analysis to determine what the user or system truly intends — beyond literal commands.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag magenta">Stage 2</div>
+          <div class="card-icon">📋</div>
+          <div class="card-title">Context</div>
+          <p class="card-desc">Aggregates system state, history, environment variables, and operational constraints to build a complete situational picture.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag green">Stage 3</div>
+          <div class="card-icon">⚖️</div>
+          <div class="card-title">Decision</div>
+          <p class="card-desc">AI-powered decision engine evaluates options against constraints, risk models, and optimization objectives to select the optimal action.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag purple">Stage 4</div>
+          <div class="card-icon">🔄</div>
+          <div class="card-title">Flow</div>
+          <p class="card-desc">Orchestrates execution across the system, routing to the appropriate framework, monitoring progress, and handling exceptions.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin: 3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Configuration</h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — ICDF Engine Config</span>
+<span class="code-keyword">icdf</span>:
+  <span class="code-var">intent_model</span>: <span class="code-string">"gpt-4-turbo"</span>
+  <span class="code-var">context_window</span>: <span class="code-value">8192</span>
+  <span class="code-var">decision_threshold</span>: <span class="code-value">0.85</span>
+  <span class="code-var">flow_timeout</span>: <span class="code-string">"30s"</span>
+  <span class="code-var">trace_enabled</span>: <span class="code-value">true</span>
+  <span class="code-var">fallback_framework</span>: <span class="code-string">"auto-flow"</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Key Features</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">🧠</div>
+              <div class="feature-text">
+                <h4>Semantic Intent Modeling</h4>
+                <p>Understands natural language and infers intent beyond literal syntax.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📊</div>
+              <div class="feature-text">
+                <h4>Rich Context Aggregation</h4>
+                <p>Pulls from system state, history, env vars, and 50+ contextual signals.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-text">
+                <h4>Sub-20ms Decisions</h4>
+                <p>Optimized inference pipeline delivers decisions in under 20 milliseconds.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔍</div>
+              <div class="feature-text">
+                <h4>Full Traceability</h4>
+                <p>Every decision logged with reasoning chain for audit and debugging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem; text-align:center;">
+        <a href="../docs/framework-comparison.html" class="btn btn-ghost">Compare All Frameworks →</a>
+        <a href="micro.html" class="btn btn-primary" style="margin-left:1rem;">Next: MICRO Framework →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+          <p>The AI-First Cloud Operating System. Autonomous. Secure. Infinite.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Frameworks</div>
+          <div class="footer-links">
+            <a href="icdf.html">ICDF Engine</a>
+            <a href="micro.html">MICRO Framework</a>
+            <a href="auto-flow.html">AUTO-FLOW</a>
+            <a href="auto-flow-pro.html">AUTO-FLOW PRO</a>
+            <a href="unified-mode.html">Unified Mode</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Resources</div>
+          <div class="footer-links">
+            <a href="../docs/framework-comparison.html">Compare Frameworks</a>
+            <a href="../docs/quick-start.html">Quick Start</a>
+            <a href="../demo.html">Demo</a>
+            <a href="../tools.html">Selector Tool</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Documentation</div>
+          <div class="footer-links">
+            <a href="../docs/api-documentation.html">API Reference</a>
+            <a href="../docs/best-practices.html">Best Practices</a>
+            <a href="../docs/faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 <span>SIRVATO OS</span>. All rights reserved.</span>
+        <span>v3.1.0 · AUTOPILOT ACTIVE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

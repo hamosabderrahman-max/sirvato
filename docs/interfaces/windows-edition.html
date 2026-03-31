@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | Windows Edition Interface</title>
+  <meta name="description" content="Windows Edition — Familiar Windows-style interface bringing SIRVATO's power to desktop-paradigm users.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <a href="hud-minimal.html" class="active">Interfaces</a>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="../frameworks/icdf.html">Frameworks</a>
+    <a href="hud-minimal.html">Interfaces</a>
+    <a href="../micro-supra/core.html">MICRO SUPRA</a>
+    <a href="../docs/quick-start.html">Docs</a>
+    <a href="../demo.html">Demo</a>
+    <a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="hud-minimal.html">Interfaces</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Windows Edition</span>
+    </div>
+    <div class="page-header-tag">INTERFACE · WINDOWS</div>
+    <h1><span class="text-cyan">Windows</span> Edition</h1>
+    <p>Familiar Windows-style interface bringing SIRVATO's full power to desktop-paradigm users. All the capability of SIRVATO OS in a UI pattern you already know.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-cyan">Familiar UI</span>
+      <span class="badge badge-green">Taskbar Navigation</span>
+      <span class="badge badge-purple">Window Management</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-cyan">Windows Edition</span>?</h2>
+          <p>Windows Edition bridges the gap between SIRVATO OS's powerful cloud-native capabilities and the desktop computing paradigm that billions of people already know. It delivers the full SIRVATO feature set through a familiar windowed desktop experience — complete with taskbar, Start-style menu, and classic window chrome.</p>
+          <p>For teams transitioning from traditional IT management tools, Windows Edition dramatically reduces the learning curve without compromising on the depth and power of the underlying platform. Drag windows, pin shortcuts, right-click for context menus — it's all there.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Familiar Power</h4>
+            <p style="margin:0;">Windows Edition proves that user-friendly and enterprise-powerful are not opposites. New team members are productive within minutes; experienced administrators discover depth over weeks.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">sirvato-cli · Windows Edition</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">sirvato</span><span class="terminal-cmd"> interface activate windows-edition</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Initializing Windows Edition v3.1.0...</div>
+              <div class="terminal-output">  ✓ Desktop environment loaded</div>
+              <div class="terminal-output">  ✓ Taskbar rendered (12 shortcuts)</div>
+              <div class="terminal-output">  ✓ Window manager: classic mode</div>
+              <div class="terminal-output">  ✓ Start menu: categories indexed</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-cyan">◈ Windows Edition ACTIVE — Desktop ready</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <!-- Mock Interface Preview -->
+      <h2 style="text-align:center; margin-bottom:2rem;">Interface <span class="text-cyan">Preview</span></h2>
+      <div style="max-width:800px; margin:0 auto 3rem; background:#0d1117; border:1px solid #00eaff33; border-radius:10px; overflow:hidden; font-family:system-ui, sans-serif;">
+        <!-- Desktop area -->
+        <div style="background:linear-gradient(135deg, #0d1117 0%, #0a1628 100%); padding:1rem; min-height:220px; position:relative;">
+          <!-- Desktop icons -->
+          <div style="display:flex; gap:1.5rem; flex-wrap:wrap; padding:0.5rem;">
+            <div style="text-align:center; width:56px;">
+              <div style="font-size:1.6rem; margin-bottom:0.25rem;">📊</div>
+              <div style="color:#ffffffcc; font-size:0.55rem; text-align:center; text-shadow:0 1px 2px #000;">Metrics</div>
+            </div>
+            <div style="text-align:center; width:56px;">
+              <div style="font-size:1.6rem; margin-bottom:0.25rem;">🔒</div>
+              <div style="color:#ffffffcc; font-size:0.55rem; text-align:center; text-shadow:0 1px 2px #000;">Security</div>
+            </div>
+            <div style="text-align:center; width:56px;">
+              <div style="font-size:1.6rem; margin-bottom:0.25rem;">🚀</div>
+              <div style="color:#ffffffcc; font-size:0.55rem; text-align:center; text-shadow:0 1px 2px #000;">Deploy</div>
+            </div>
+            <div style="text-align:center; width:56px;">
+              <div style="font-size:1.6rem; margin-bottom:0.25rem;">📋</div>
+              <div style="color:#ffffffcc; font-size:0.55rem; text-align:center; text-shadow:0 1px 2px #000;">Logs</div>
+            </div>
+          </div>
+          <!-- Floating window -->
+          <div style="position:absolute; top:30px; right:20px; width:220px; background:#1a2030; border:1px solid #00eaff44; border-radius:6px; box-shadow:0 8px 24px #00000066;">
+            <div style="background:#00eaff22; padding:0.35rem 0.75rem; border-radius:6px 6px 0 0; display:flex; align-items:center; justify-content:space-between;">
+              <span style="color:#00eaff; font-size:0.65rem; font-weight:600;">System Status</span>
+              <div style="display:flex; gap:0.3rem;">
+                <span style="width:10px;height:10px;background:#febc2e44;border-radius:50%;display:inline-block;border:1px solid #febc2e88;"></span>
+                <span style="width:10px;height:10px;background:#00ff8844;border-radius:50%;display:inline-block;border:1px solid #00ff8888;"></span>
+                <span style="width:10px;height:10px;background:#ff5f5744;border-radius:50%;display:inline-block;border:1px solid #ff5f5788;"></span>
+              </div>
+            </div>
+            <div style="padding:0.75rem; font-size:0.65rem; color:#ffffff88; line-height:1.7;">
+              <div style="display:flex; justify-content:space-between;"><span>Uptime</span><span style="color:#00eaff;">99.99%</span></div>
+              <div style="display:flex; justify-content:space-between;"><span>Pods</span><span style="color:#00ff88;">48 / 48</span></div>
+              <div style="display:flex; justify-content:space-between;"><span>Alerts</span><span style="color:#febc2e;">1 warning</span></div>
+              <div style="display:flex; justify-content:space-between;"><span>Region</span><span style="color:#00eaff;">us-east-1</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Taskbar -->
+        <div style="background:#111827; border-top:1px solid #00eaff22; padding:0.4rem 0.75rem; display:flex; align-items:center; gap:0.5rem;">
+          <div style="background:#00eaff22; border:1px solid #00eaff44; border-radius:4px; padding:0.25rem 0.6rem; display:flex; align-items:center; gap:0.4rem; cursor:pointer;">
+            <span style="color:#00eaff; font-size:0.65rem; font-weight:700;">⊞ SIRVATO</span>
+          </div>
+          <div style="width:1px; height:16px; background:#ffffff22; margin:0 0.25rem;"></div>
+          <div style="background:#00eaff11; border:1px solid #00eaff22; border-radius:3px; padding:0.2rem 0.5rem;">
+            <span style="color:#00eaffaa; font-size:0.6rem;">📊 Metrics</span>
+          </div>
+          <div style="background:#00ff8811; border:1px solid #00ff8822; border-radius:3px; padding:0.2rem 0.5rem;">
+            <span style="color:#00ff88aa; font-size:0.6rem;">🚀 Deploy</span>
+          </div>
+          <span style="margin-left:auto; color:#ffffff44; font-size:0.6rem; font-family:'Courier New',monospace;">14:23 · AUTOPILOT ●</span>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">Core <span class="text-cyan">Features</span></h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag cyan">Feature 01</div>
+          <div class="card-icon">🖥️</div>
+          <div class="card-title">Familiar UI Paradigm</div>
+          <p class="card-desc">Desktop icons, window chrome, right-click menus, and taskbar navigation. Zero retraining required for your team.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag cyan">Feature 02</div>
+          <div class="card-icon">📌</div>
+          <div class="card-title">Taskbar Navigation</div>
+          <p class="card-desc">Pin your most-used tools to the taskbar for one-click access. Running apps show live status indicators.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag cyan">Feature 03</div>
+          <div class="card-icon">🪟</div>
+          <div class="card-title">Window Management</div>
+          <p class="card-desc">Minimize, maximize, resize, snap-to-half. Full window management including multi-monitor support and virtual desktops.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag cyan">Feature 04</div>
+          <div class="card-icon">🔗</div>
+          <div class="card-title">Desktop Shortcuts</div>
+          <p class="card-desc">Create desktop shortcuts to any SIRVATO view, dashboard, or action. Double-click to open instantly.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Configuration</h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — Windows Edition Interface</span>
+<span class="code-keyword">interfaces</span>:
+  <span class="code-var">windows_edition</span>:
+    <span class="code-var">enabled</span>: <span class="code-value">true</span>
+    <span class="code-var">desktop</span>:
+      <span class="code-var">wallpaper</span>: <span class="code-string">"sirvato-dark"</span>
+      <span class="code-var">icon_size</span>: <span class="code-string">"medium"</span>
+    <span class="code-var">taskbar</span>:
+      <span class="code-var">position</span>: <span class="code-string">"bottom"</span>
+      <span class="code-var">pinned</span>:
+        - <span class="code-string">"metrics"</span>
+        - <span class="code-string">"deployments"</span>
+        - <span class="code-string">"security"</span>
+        - <span class="code-string">"logs"</span>
+    <span class="code-var">windows</span>:
+      <span class="code-var">snap_enabled</span>: <span class="code-value">true</span>
+      <span class="code-var">virtual_desktops</span>: <span class="code-value">4</span>
+      <span class="code-var">multi_monitor</span>: <span class="code-value">true</span>
+    <span class="code-var">start_menu</span>:
+      <span class="code-var">enabled</span>: <span class="code-value">true</span>
+      <span class="code-var">search_enabled</span>: <span class="code-value">true</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Built-In Applications</h2>
+          <div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.5rem;">
+            <div style="padding:0.65rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color); display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:1.2rem;">📊</span>
+              <div><div style="color:var(--text-primary); font-size:0.85rem; font-weight:500;">Metrics Dashboard</div><div style="color:var(--text-secondary); font-size:0.72rem;">Real-time compute and network metrics</div></div>
+            </div>
+            <div style="padding:0.65rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color); display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:1.2rem;">🚀</span>
+              <div><div style="color:var(--text-primary); font-size:0.85rem; font-weight:500;">Deployment Studio</div><div style="color:var(--text-secondary); font-size:0.72rem;">Visual pipeline builder and manager</div></div>
+            </div>
+            <div style="padding:0.65rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color); display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:1.2rem;">🔒</span>
+              <div><div style="color:var(--text-primary); font-size:0.85rem; font-weight:500;">Security Console</div><div style="color:var(--text-secondary); font-size:0.72rem;">Zero-Trust management and audit logs</div></div>
+            </div>
+            <div style="padding:0.65rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color); display:flex; align-items:center; gap:0.75rem;">
+              <span style="font-size:1.2rem;">📋</span>
+              <div><div style="color:var(--text-primary); font-size:0.85rem; font-weight:500;">Log Viewer</div><div style="color:var(--text-secondary); font-size:0.72rem;">Streaming logs with search and filter</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <a href="master-block.html" class="btn btn-ghost">← Master Block</a>
+        <a href="fullscreen-mode.html" class="btn btn-primary">Next: Fullscreen Mode →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">Interfaces</div><div class="footer-links"><a href="hud-minimal.html">HUD Minimal</a><a href="console-live.html">Console Live</a><a href="master-block.html">Master Block</a><a href="fullscreen-totality.html">Fullscreen Totality</a></div></div><div><div class="footer-col-title">Resources</div><div class="footer-links"><a href="../docs/interface-showcase.html">Showcase</a><a href="../docs/quick-start.html">Quick Start</a><a href="../demo.html">Demo</a></div></div><div><div class="footer-col-title">Docs</div><div class="footer-links"><a href="../docs/api-documentation.html">API</a><a href="../docs/keyboard-shortcuts.html">Shortcuts</a><a href="../docs/faq.html">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

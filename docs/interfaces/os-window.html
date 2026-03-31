@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | OS Window Interface</title>
+  <meta name="description" content="OS Window — Multi-panel windowed interface for concurrent management of multiple system views.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <a href="hud-minimal.html" class="active">Interfaces</a>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="../frameworks/icdf.html">Frameworks</a>
+    <a href="hud-minimal.html">Interfaces</a>
+    <a href="../micro-supra/core.html">MICRO SUPRA</a>
+    <a href="../docs/quick-start.html">Docs</a>
+    <a href="../demo.html">Demo</a>
+    <a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="hud-minimal.html">Interfaces</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>OS Window</span>
+    </div>
+    <div class="page-header-tag">INTERFACE · WINDOW</div>
+    <h1><span class="text-magenta">OS</span> Window</h1>
+    <p>Multi-panel windowed interface for concurrent management of multiple system views. Run any combination of panels simultaneously with full drag, resize, and state persistence.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-magenta">Multi-Panel</span>
+      <span class="badge badge-cyan">Drag &amp; Drop</span>
+      <span class="badge badge-green">State Persistence</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-magenta">OS Window</span>?</h2>
+          <p>OS Window brings the productivity of a true windowed environment to SIRVATO OS management. Open multiple panels — logs, metrics, deployments, configs — arrange them freely, and have them all updating in real time simultaneously.</p>
+          <p>Each window is independently scrollable, filterable, and resizable. Window layouts are saved automatically per user session, so your preferred workspace is always ready when you return. Multi-monitor support lets you span panels across displays for maximum coverage.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Spatial Thinking</h4>
+            <p style="margin:0;">OS Window is designed for engineers who think spatially. By letting you arrange panels according to how you reason about your system, it dramatically reduces the cognitive load of managing complex, multi-layered infrastructure.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">sirvato-cli · OS Window</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">sirvato</span><span class="terminal-cmd"> interface activate os-window</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Launching OS Window v3.1.0...</div>
+              <div class="terminal-output">  ✓ Window manager initialized</div>
+              <div class="terminal-output">  ✓ Layout restored: "my-workspace" (4 panels)</div>
+              <div class="terminal-output">  ✓ Drag &amp; drop engine ready</div>
+              <div class="terminal-output">  ✓ State persistence: local + cloud sync</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-magenta">◈ OS Window ACTIVE — 4 panels open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <!-- Mock Interface Preview -->
+      <h2 style="text-align:center; margin-bottom:2rem;">Interface <span class="text-magenta">Preview</span></h2>
+      <div style="max-width:820px; margin:0 auto 3rem; background:#0e0818; border:1px solid #e040fb33; border-radius:10px; overflow:hidden; font-family:'Courier New',monospace;">
+        <!-- Titlebar -->
+        <div style="background:#160e20; padding:0.5rem 1rem; display:flex; align-items:center; gap:0.75rem; border-bottom:1px solid #e040fb20;">
+          <span style="color:#e040fb; font-size:0.65rem; letter-spacing:0.12em;">◈ OS WINDOW · 4 PANELS OPEN</span>
+          <span style="margin-left:auto; color:#ffffff33; font-size:0.6rem;">LAYOUT: my-workspace · AUTO-SAVED</span>
+        </div>
+        <!-- Panel grid -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:1px; background:#e040fb15;">
+          <!-- Panel 1: Metrics -->
+          <div style="background:#0e0818; padding:0.75rem 1rem;">
+            <div style="color:#e040fb; font-size:0.6rem; letter-spacing:0.1em; margin-bottom:0.6rem; border-bottom:1px solid #e040fb20; padding-bottom:0.4rem; display:flex; justify-content:space-between;">
+              <span>■ COMPUTE METRICS</span><span style="color:#ffffff33;">us-east-1</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:0.35rem;">
+              <div style="display:flex; justify-content:space-between;"><span style="color:#ffffff55; font-size:0.65rem;">CPU Usage</span><span style="color:#e040fb; font-size:0.65rem;">12.4%</span></div>
+              <div style="background:#ffffff11; border-radius:2px; height:3px;"><div style="background:#e040fb; width:12%; height:100%; border-radius:2px;"></div></div>
+              <div style="display:flex; justify-content:space-between;"><span style="color:#ffffff55; font-size:0.65rem;">Memory</span><span style="color:#e040fb; font-size:0.65rem;">3.1 / 16 GB</span></div>
+              <div style="background:#ffffff11; border-radius:2px; height:3px;"><div style="background:#e040fb; width:19%; height:100%; border-radius:2px;"></div></div>
+              <div style="display:flex; justify-content:space-between;"><span style="color:#ffffff55; font-size:0.65rem;">Network I/O</span><span style="color:#e040fb; font-size:0.65rem;">↑42 ↓18 MB/s</span></div>
+            </div>
+          </div>
+          <!-- Panel 2: Live Logs -->
+          <div style="background:#0e0818; padding:0.75rem 1rem;">
+            <div style="color:#00eaff; font-size:0.6rem; letter-spacing:0.1em; margin-bottom:0.6rem; border-bottom:1px solid #00eaff20; padding-bottom:0.4rem; display:flex; justify-content:space-between;">
+              <span>■ LIVE LOGS</span><span style="color:#ffffff33;">streaming</span>
+            </div>
+            <div style="font-size:0.6rem; line-height:1.6; color:#ffffff66;">
+              <div><span style="color:#00ff88;">[INFO]</span> api-gateway routed req (4ms)</div>
+              <div><span style="color:#febc2e;">[WARN]</span> latency spike: us-west-2</div>
+              <div><span style="color:#00ff88;">[INFO]</span> autopilot rerouted → east-1</div>
+              <div><span style="color:#00eaff;">[TRACE]</span> icdf resolved in 11ms</div>
+            </div>
+          </div>
+          <!-- Panel 3: Deployments -->
+          <div style="background:#0e0818; padding:0.75rem 1rem;">
+            <div style="color:#00ff88; font-size:0.6rem; letter-spacing:0.1em; margin-bottom:0.6rem; border-bottom:1px solid #00ff8820; padding-bottom:0.4rem; display:flex; justify-content:space-between;">
+              <span>■ DEPLOYMENTS</span><span style="color:#ffffff33;">4 active</span>
+            </div>
+            <div style="font-size:0.6rem; line-height:1.7; color:#ffffff66;">
+              <div style="display:flex; justify-content:space-between;"><span>api-service</span><span style="color:#00ff88;">● RUNNING</span></div>
+              <div style="display:flex; justify-content:space-between;"><span>data-processor</span><span style="color:#00ff88;">● RUNNING</span></div>
+              <div style="display:flex; justify-content:space-between;"><span>ml-inference</span><span style="color:#febc2e;">◐ UPDATING</span></div>
+              <div style="display:flex; justify-content:space-between;"><span>auth-service</span><span style="color:#00ff88;">● RUNNING</span></div>
+            </div>
+          </div>
+          <!-- Panel 4: Alerts -->
+          <div style="background:#0e0818; padding:0.75rem 1rem;">
+            <div style="color:#febc2e; font-size:0.6rem; letter-spacing:0.1em; margin-bottom:0.6rem; border-bottom:1px solid #febc2e20; padding-bottom:0.4rem; display:flex; justify-content:space-between;">
+              <span>■ ACTIVE ALERTS</span><span style="color:#ffffff33;">1 warning</span>
+            </div>
+            <div style="font-size:0.6rem; line-height:1.7; color:#ffffff66;">
+              <div><span style="color:#febc2e;">⚠</span> us-west-2 latency elevated (18ms)</div>
+              <div style="color:#ffffff33; font-size:0.58rem; margin-top:0.2rem;">Auto-rerouted by AUTOPILOT · 2s ago</div>
+              <div style="margin-top:0.5rem; color:#00ff8888;">✓ All other checks nominal</div>
+            </div>
+          </div>
+        </div>
+        <!-- Taskbar -->
+        <div style="background:#160e20; border-top:1px solid #e040fb20; padding:0.4rem 1rem; display:flex; gap:0.5rem; align-items:center;">
+          <span style="color:#ffffff33; font-size:0.58rem;">PANELS:</span>
+          <span style="background:#e040fb22; color:#e040fb; font-size:0.58rem; padding:0.15rem 0.5rem; border-radius:3px; border:1px solid #e040fb44;">Metrics</span>
+          <span style="background:#00eaff22; color:#00eaff; font-size:0.58rem; padding:0.15rem 0.5rem; border-radius:3px; border:1px solid #00eaff44;">Logs</span>
+          <span style="background:#00ff8822; color:#00ff88; font-size:0.58rem; padding:0.15rem 0.5rem; border-radius:3px; border:1px solid #00ff8844;">Deploy</span>
+          <span style="background:#febc2e22; color:#febc2e; font-size:0.58rem; padding:0.15rem 0.5rem; border-radius:3px; border:1px solid #febc2e44;">Alerts</span>
+          <span style="margin-left:auto; color:#e040fb; font-size:0.58rem;">+ New Panel</span>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">Core <span class="text-magenta">Features</span></h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag magenta">Feature 01</div>
+          <div class="card-icon">🪟</div>
+          <div class="card-title">Multi-Panel</div>
+          <p class="card-desc">Open unlimited panels simultaneously. Logs, metrics, deployments, configs — all visible and live-updating at once.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag magenta">Feature 02</div>
+          <div class="card-icon">✋</div>
+          <div class="card-title">Drag &amp; Drop</div>
+          <p class="card-desc">Freely reposition and rearrange panels by dragging. Snap-to-grid assistance makes layout management effortless.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag magenta">Feature 03</div>
+          <div class="card-icon">↔️</div>
+          <div class="card-title">Resizable Panes</div>
+          <p class="card-desc">Drag panel edges to resize. Panels flow and reflow in response to your preferred proportions with fluid animation.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag magenta">Feature 04</div>
+          <div class="card-icon">💾</div>
+          <div class="card-title">State Persistence</div>
+          <p class="card-desc">Layouts are auto-saved locally and synced to the cloud. Resume exactly where you left off on any device.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Configuration</h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — OS Window Interface</span>
+<span class="code-keyword">interfaces</span>:
+  <span class="code-var">os_window</span>:
+    <span class="code-var">enabled</span>: <span class="code-value">true</span>
+    <span class="code-var">default_layout</span>: <span class="code-string">"my-workspace"</span>
+    <span class="code-var">panels</span>:
+      - <span class="code-var">id</span>: <span class="code-string">"metrics"</span>
+        <span class="code-var">position</span>: <span class="code-string">"top-left"</span>
+        <span class="code-var">size</span>: <span class="code-string">"half"</span>
+      - <span class="code-var">id</span>: <span class="code-string">"logs"</span>
+        <span class="code-var">position</span>: <span class="code-string">"top-right"</span>
+        <span class="code-var">size</span>: <span class="code-string">"half"</span>
+      - <span class="code-var">id</span>: <span class="code-string">"deployments"</span>
+        <span class="code-var">position</span>: <span class="code-string">"bottom-left"</span>
+        <span class="code-var">size</span>: <span class="code-string">"half"</span>
+      - <span class="code-var">id</span>: <span class="code-string">"alerts"</span>
+        <span class="code-var">position</span>: <span class="code-string">"bottom-right"</span>
+        <span class="code-var">size</span>: <span class="code-string">"half"</span>
+    <span class="code-var">persistence</span>:
+      <span class="code-var">local</span>: <span class="code-value">true</span>
+      <span class="code-var">cloud_sync</span>: <span class="code-value">true</span>
+    <span class="code-var">snap_to_grid</span>: <span class="code-value">true</span>
+    <span class="code-var">multi_monitor</span>: <span class="code-value">true</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Available Panels</h2>
+          <div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.5rem;">
+            <div style="padding:0.6rem 1rem; background:var(--bg-secondary); border-radius:6px; border-left:3px solid #e040fb; border-right:1px solid var(--border-color); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+              <span style="color:#e040fb; font-size:0.8rem; font-weight:600;">Compute Metrics</span> <span style="color:var(--text-secondary); font-size:0.75rem;">· CPU, memory, network</span>
+            </div>
+            <div style="padding:0.6rem 1rem; background:var(--bg-secondary); border-radius:6px; border-left:3px solid #00eaff; border-right:1px solid var(--border-color); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+              <span style="color:#00eaff; font-size:0.8rem; font-weight:600;">Live Logs</span> <span style="color:var(--text-secondary); font-size:0.75rem;">· streaming with filters</span>
+            </div>
+            <div style="padding:0.6rem 1rem; background:var(--bg-secondary); border-radius:6px; border-left:3px solid #00ff88; border-right:1px solid var(--border-color); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+              <span style="color:#00ff88; font-size:0.8rem; font-weight:600;">Deployments</span> <span style="color:var(--text-secondary); font-size:0.75rem;">· status and controls</span>
+            </div>
+            <div style="padding:0.6rem 1rem; background:var(--bg-secondary); border-radius:6px; border-left:3px solid #febc2e; border-right:1px solid var(--border-color); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+              <span style="color:#febc2e; font-size:0.8rem; font-weight:600;">Alerts</span> <span style="color:var(--text-secondary); font-size:0.75rem;">· active incidents and warnings</span>
+            </div>
+            <div style="padding:0.6rem 1rem; background:var(--bg-secondary); border-radius:6px; border-left:3px solid #a855f7; border-right:1px solid var(--border-color); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+              <span style="color:#a855f7; font-size:0.8rem; font-weight:600;">Config Editor</span> <span style="color:var(--text-secondary); font-size:0.75rem;">· live YAML editing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <a href="console-live.html" class="btn btn-ghost">← Console Live</a>
+        <a href="master-block.html" class="btn btn-primary">Next: Master Block →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">Interfaces</div><div class="footer-links"><a href="hud-minimal.html">HUD Minimal</a><a href="console-live.html">Console Live</a><a href="master-block.html">Master Block</a><a href="fullscreen-totality.html">Fullscreen Totality</a></div></div><div><div class="footer-col-title">Resources</div><div class="footer-links"><a href="../docs/interface-showcase.html">Showcase</a><a href="../docs/quick-start.html">Quick Start</a><a href="../demo.html">Demo</a></div></div><div><div class="footer-col-title">Docs</div><div class="footer-links"><a href="../docs/api-documentation.html">API</a><a href="../docs/keyboard-shortcuts.html">Shortcuts</a><a href="../docs/faq.html">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

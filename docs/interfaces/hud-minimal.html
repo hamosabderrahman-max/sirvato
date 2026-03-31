@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | HUD Minimal Interface</title>
+  <meta name="description" content="HUD Minimal — Lightweight heads-up display with essential metrics. Maximum signal, minimum noise.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <a href="hud-minimal.html" class="active">Interfaces</a>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="../frameworks/icdf.html">Frameworks</a>
+    <a href="hud-minimal.html">Interfaces</a>
+    <a href="../micro-supra/core.html">MICRO SUPRA</a>
+    <a href="../docs/quick-start.html">Docs</a>
+    <a href="../demo.html">Demo</a>
+    <a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="hud-minimal.html">Interfaces</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>HUD Minimal</span>
+    </div>
+    <div class="page-header-tag">INTERFACE · HUD</div>
+    <h1><span class="text-cyan">HUD</span> Minimal</h1>
+    <p>Lightweight heads-up display with essential metrics. Maximum signal, minimum noise. Designed for engineers who need awareness without distraction.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-cyan">Minimal Footprint</span>
+      <span class="badge badge-green">Zero Config</span>
+      <span class="badge badge-purple">Keyboard-First</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-cyan">HUD Minimal</span>?</h2>
+          <p>HUD Minimal strips the interface down to its essence — a razor-thin overlay that surfaces the metrics that matter most without ever getting in your way. It was built for engineers running at full speed who need to stay aware of system health without switching context.</p>
+          <p>Activated with a single keybind, the HUD floats above your workspace, updating in real time with sub-second latency. Every element is deliberate. Nothing is decorative.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Design Philosophy</h4>
+            <p style="margin:0;">Every pixel in the HUD Minimal earns its place. If it doesn't inform a decision, it doesn't exist. The result is an interface that feels invisible until you need it — and indispensable once you do.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">sirvato-cli · HUD Minimal</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">sirvato</span><span class="terminal-cmd"> interface activate hud-minimal</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Loading HUD Minimal v3.1.0...</div>
+              <div class="terminal-output">  ✓ Metrics engine connected</div>
+              <div class="terminal-output">  ✓ Keyboard bindings registered</div>
+              <div class="terminal-output">  ✓ Overlay renderer initialized</div>
+              <div class="terminal-output">  ✓ Theme: dark · Opacity: 0.92</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-cyan">◈ HUD Minimal ACTIVE — Press H to toggle</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <!-- Mock Interface Preview -->
+      <h2 style="text-align:center; margin-bottom:2rem;">Interface <span class="text-cyan">Preview</span></h2>
+      <div style="max-width:700px; margin:0 auto 3rem; background:#0a0f14; border:1px solid #00eaff33; border-radius:10px; padding:1.5rem 2rem; font-family:'Courier New',monospace; position:relative;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; border-bottom:1px solid #00eaff22; padding-bottom:0.75rem;">
+          <span style="color:#00eaff; font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase;">◈ SIRVATO HUD MINIMAL · v3.1.0</span>
+          <span style="color:#ffffff44; font-size:0.65rem;" id="hud-clock">LIVE</span>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:1.25rem;">
+          <div>
+            <div style="color:#ffffff44; font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.3rem;">Uptime</div>
+            <div style="color:#00eaff; font-size:1.3rem; font-weight:700; letter-spacing:0.05em;">99.99<span style="font-size:0.7rem;">%</span></div>
+            <div style="color:#00ff8844; font-size:0.6rem; margin-top:0.2rem;">▲ NOMINAL</div>
+          </div>
+          <div>
+            <div style="color:#ffffff44; font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.3rem;">Latency</div>
+            <div style="color:#00eaff; font-size:1.3rem; font-weight:700; letter-spacing:0.05em;">4.2<span style="font-size:0.7rem;">ms</span></div>
+            <div style="color:#00ff8844; font-size:0.6rem; margin-top:0.2rem;">▲ FAST</div>
+          </div>
+          <div>
+            <div style="color:#ffffff44; font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.3rem;">Error Rate</div>
+            <div style="color:#00eaff; font-size:1.3rem; font-weight:700; letter-spacing:0.05em;">0.001<span style="font-size:0.7rem;">%</span></div>
+            <div style="color:#00ff8844; font-size:0.6rem; margin-top:0.2rem;">▲ CLEAN</div>
+          </div>
+          <div>
+            <div style="color:#ffffff44; font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.3rem;">Region</div>
+            <div style="color:#00eaff; font-size:1.3rem; font-weight:700; letter-spacing:0.05em;">US-E1</div>
+            <div style="color:#00ff8844; font-size:0.6rem; margin-top:0.2rem;">▲ PRIMARY</div>
+          </div>
+        </div>
+        <div style="margin-top:1.25rem; padding-top:0.75rem; border-top:1px solid #00eaff22; display:flex; gap:1.5rem;">
+          <span style="color:#ffffff33; font-size:0.6rem;">CPU <span style="color:#00eaff;">12%</span></span>
+          <span style="color:#ffffff33; font-size:0.6rem;">MEM <span style="color:#00eaff;">3.1GB</span></span>
+          <span style="color:#ffffff33; font-size:0.6rem;">NET <span style="color:#00eaff;">↑42MB ↓18MB</span></span>
+          <span style="color:#ffffff33; font-size:0.6rem;">PODS <span style="color:#00eaff;">48/48</span></span>
+          <span style="color:#ffffff33; font-size:0.6rem; margin-left:auto;">AUTOPILOT <span style="color:#00ff88;">ACTIVE</span></span>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">Core <span class="text-cyan">Features</span></h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag cyan">Feature 01</div>
+          <div class="card-icon">⚡</div>
+          <div class="card-title">Minimal Footprint</div>
+          <p class="card-desc">Under 2KB of DOM. Renders in under 8ms. Consumes &lt;0.1% CPU. The HUD exists without being felt.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag cyan">Feature 02</div>
+          <div class="card-icon">📊</div>
+          <div class="card-title">Essential Metrics Only</div>
+          <p class="card-desc">Uptime, latency, error rate, region — the four pillars of awareness. No clutter, no vanity metrics.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag cyan">Feature 03</div>
+          <div class="card-icon">⌨️</div>
+          <div class="card-title">Keyboard-First</div>
+          <p class="card-desc">Every action is a keybind. <code>H</code> to toggle, <code>R</code> to refresh, <code>M</code> to cycle metrics. No mouse required.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag cyan">Feature 04</div>
+          <div class="card-icon">🔧</div>
+          <div class="card-title">Zero Config</div>
+          <p class="card-desc">One command activates it. It auto-detects your environment, region, and metric endpoints with no setup.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Configuration</h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — HUD Minimal Interface</span>
+<span class="code-keyword">interfaces</span>:
+  <span class="code-var">hud_minimal</span>:
+    <span class="code-var">enabled</span>: <span class="code-value">true</span>
+    <span class="code-var">position</span>: <span class="code-string">"top-right"</span>
+    <span class="code-var">opacity</span>: <span class="code-value">0.92</span>
+    <span class="code-var">refresh_rate</span>: <span class="code-string">"500ms"</span>
+    <span class="code-var">metrics</span>:
+      - <span class="code-string">"uptime"</span>
+      - <span class="code-string">"latency"</span>
+      - <span class="code-string">"error_rate"</span>
+      - <span class="code-string">"region"</span>
+    <span class="code-var">keybinds</span>:
+      <span class="code-var">toggle</span>: <span class="code-string">"H"</span>
+      <span class="code-var">refresh</span>: <span class="code-string">"R"</span>
+      <span class="code-var">cycle_metrics</span>: <span class="code-string">"M"</span>
+    <span class="code-var">theme</span>: <span class="code-string">"dark"</span>
+    <span class="code-var">accent_color</span>: <span class="code-string">"#00eaff"</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Keyboard Shortcuts</h2>
+          <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:0.5rem;">
+            <div style="display:flex; align-items:center; gap:1rem; padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color);">
+              <kbd style="background:#00eaff22; color:#00eaff; border:1px solid #00eaff44; padding:0.2rem 0.6rem; border-radius:4px; font-family:monospace; font-size:0.85rem;">H</kbd>
+              <span style="color:var(--text-secondary); font-size:0.9rem;">Toggle HUD visibility</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:1rem; padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color);">
+              <kbd style="background:#00eaff22; color:#00eaff; border:1px solid #00eaff44; padding:0.2rem 0.6rem; border-radius:4px; font-family:monospace; font-size:0.85rem;">R</kbd>
+              <span style="color:var(--text-secondary); font-size:0.9rem;">Force metric refresh</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:1rem; padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color);">
+              <kbd style="background:#00eaff22; color:#00eaff; border:1px solid #00eaff44; padding:0.2rem 0.6rem; border-radius:4px; font-family:monospace; font-size:0.85rem;">M</kbd>
+              <span style="color:var(--text-secondary); font-size:0.9rem;">Cycle metric display</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:1rem; padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color);">
+              <kbd style="background:#00eaff22; color:#00eaff; border:1px solid #00eaff44; padding:0.2rem 0.6rem; border-radius:4px; font-family:monospace; font-size:0.85rem;">Esc</kbd>
+              <span style="color:var(--text-secondary); font-size:0.9rem;">Dismiss HUD overlay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div style="color:var(--text-secondary); font-size:0.9rem;">← Back to <a href="../docs/interface-showcase.html" style="color:var(--accent-cyan);">Interface Showcase</a></div>
+        <a href="console-live.html" class="btn btn-primary">Next: Console Live →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">Interfaces</div><div class="footer-links"><a href="hud-minimal.html">HUD Minimal</a><a href="console-live.html">Console Live</a><a href="master-block.html">Master Block</a><a href="fullscreen-totality.html">Fullscreen Totality</a></div></div><div><div class="footer-col-title">Resources</div><div class="footer-links"><a href="../docs/interface-showcase.html">Showcase</a><a href="../docs/quick-start.html">Quick Start</a><a href="../demo.html">Demo</a></div></div><div><div class="footer-col-title">Docs</div><div class="footer-links"><a href="../docs/api-documentation.html">API</a><a href="../docs/keyboard-shortcuts.html">Shortcuts</a><a href="../docs/faq.html">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | Console Live Interface</title>
+  <meta name="description" content="Console Live — Real-time live console with streaming output and interactive command execution.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <a href="hud-minimal.html" class="active">Interfaces</a>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="../frameworks/icdf.html">Frameworks</a>
+    <a href="hud-minimal.html">Interfaces</a>
+    <a href="../micro-supra/core.html">MICRO SUPRA</a>
+    <a href="../docs/quick-start.html">Docs</a>
+    <a href="../demo.html">Demo</a>
+    <a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="hud-minimal.html">Interfaces</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Console Live</span>
+    </div>
+    <div class="page-header-tag">INTERFACE · CONSOLE</div>
+    <h1><span class="text-green">Console</span> Live</h1>
+    <p>Real-time live console with streaming output and interactive command execution. The power-user interface for SIRVATO OS.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-green">Streaming Output</span>
+      <span class="badge badge-cyan">Command Execution</span>
+      <span class="badge badge-purple">Plugin Support</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-green">Console Live</span>?</h2>
+          <p>Console Live is the power-user command center for SIRVATO OS. It combines a full-featured interactive terminal with a live-streaming log viewer, command history, and intelligent autocompletion — all in one unified interface.</p>
+          <p>Unlike static consoles, Console Live maintains a persistent WebSocket connection to your cluster, delivering real-time log streams, event feeds, and system notifications as they happen. Commands execute directly against the SIRVATO runtime with immediate, visible feedback.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Power User Design</h4>
+            <p style="margin:0;">Console Live was designed for the engineers who live in their terminals. Every feature — from multi-stream splitting to inline grep filtering — is built around the assumption that you know exactly what you're doing.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">sirvato-cli · Console Live</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">sirvato</span><span class="terminal-cmd"> interface activate console-live</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Initializing Console Live v3.1.0...</div>
+              <div class="terminal-output">  ✓ WebSocket stream connected</div>
+              <div class="terminal-output">  ✓ Log aggregator ready (48 pods)</div>
+              <div class="terminal-output">  ✓ Command executor authenticated</div>
+              <div class="terminal-output">  ✓ Plugin registry loaded (12 plugins)</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-green">◈ Console Live ACTIVE — Streaming on :7700</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <!-- Mock Interface Preview -->
+      <h2 style="text-align:center; margin-bottom:2rem;">Interface <span class="text-green">Preview</span></h2>
+      <div style="max-width:800px; margin:0 auto 3rem; background:#050d0a; border:1px solid #00ff8833; border-radius:10px; overflow:hidden; font-family:'Courier New',monospace;">
+        <!-- Console toolbar -->
+        <div style="background:#0a1a12; padding:0.6rem 1rem; display:flex; align-items:center; gap:0.75rem; border-bottom:1px solid #00ff8820;">
+          <div style="display:flex; gap:0.4rem;">
+            <span style="width:10px;height:10px;background:#ff5f57;border-radius:50%;display:inline-block;"></span>
+            <span style="width:10px;height:10px;background:#febc2e;border-radius:50%;display:inline-block;"></span>
+            <span style="width:10px;height:10px;background:#28c840;border-radius:50%;display:inline-block;"></span>
+          </div>
+          <span style="color:#00ff88; font-size:0.65rem; letter-spacing:0.12em; margin-left:0.5rem;">◈ CONSOLE LIVE · STREAMING</span>
+          <span style="margin-left:auto; color:#ffffff33; font-size:0.6rem;">48 PODS · 3 STREAMS</span>
+        </div>
+        <!-- Stream output -->
+        <div style="padding:1rem 1.25rem; min-height:220px; max-height:220px; overflow:hidden;">
+          <div style="color:#ffffff33; font-size:0.65rem; margin-bottom:0.75rem;">── LIVE STREAM · all-pods ── filter: none ──</div>
+          <div style="font-size:0.68rem; line-height:1.7; color:#00ff88aa;">
+            <div><span style="color:#ffffff33;">2025-06-12 14:23:01.412</span> <span style="color:#00ff88;">[INFO ]</span> <span style="color:#ffffff88;">api-gateway-7d4f</span>  Request routed → compute-east-1a (4.2ms)</div>
+            <div><span style="color:#ffffff33;">2025-06-12 14:23:01.418</span> <span style="color:#00ff88;">[INFO ]</span> <span style="color:#ffffff88;">autopilot-engine</span>  Resource forecast updated: CPU 12% → 14%</div>
+            <div><span style="color:#ffffff33;">2025-06-12 14:23:01.431</span> <span style="color:#00eaff;">[TRACE]</span> <span style="color:#ffffff88;">icdf-core-001   </span>  Intent resolved in 11ms · confidence 99.7%</div>
+            <div><span style="color:#ffffff33;">2025-06-12 14:23:01.445</span> <span style="color:#00ff88;">[INFO ]</span> <span style="color:#ffffff88;">storage-node-3  </span>  Write confirmed: block-0xf4a2 (1.2ms)</div>
+            <div><span style="color:#ffffff33;">2025-06-12 14:23:01.460</span> <span style="color:#febc2e;">[WARN ]</span> <span style="color:#ffffff88;">net-monitor      </span>  Latency spike detected: us-west-2 (18ms)</div>
+            <div><span style="color:#ffffff33;">2025-06-12 14:23:01.462</span> <span style="color:#00ff88;">[INFO ]</span> <span style="color:#ffffff88;">autopilot-engine</span>  Auto-reroute triggered → us-east-1 failover</div>
+            <div><span style="color:#ffffff33;">2025-06-12 14:23:01.481</span> <span style="color:#00ff88;">[INFO ]</span> <span style="color:#ffffff88;">api-gateway-7d4f</span>  Failover complete (19ms total)</div>
+            <div><span style="color:#ffffff33;">2025-06-12 14:23:01.490</span> <span style="color:#00eaff;">[TRACE]</span> <span style="color:#ffffff88;">security-agent  </span>  Zero-Trust check passed: token valid</div>
+          </div>
+        </div>
+        <!-- Command input -->
+        <div style="background:#0a1a12; border-top:1px solid #00ff8820; padding:0.6rem 1.25rem; display:flex; align-items:center; gap:0.75rem;">
+          <span style="color:#00ff88; font-size:0.75rem;">$</span>
+          <span style="color:#ffffff88; font-size:0.72rem; font-family:'Courier New',monospace;">sirvato logs stream --pods all --filter WARN|ERROR<span style="animation:blink 1s step-end infinite; color:#00ff88;">█</span></span>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">Core <span class="text-green">Features</span></h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag green">Feature 01</div>
+          <div class="card-icon">📡</div>
+          <div class="card-title">Streaming Output</div>
+          <p class="card-desc">Persistent WebSocket connection delivers log lines, events, and alerts in real time with &lt;50ms end-to-end latency.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag green">Feature 02</div>
+          <div class="card-icon">⚙️</div>
+          <div class="card-title">Command Execution</div>
+          <p class="card-desc">Full SIRVATO CLI access directly in the console. Authenticated sessions with role-aware command resolution.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag green">Feature 03</div>
+          <div class="card-icon">🔍</div>
+          <div class="card-title">Log Filtering</div>
+          <p class="card-desc">Inline grep, regex filters, level filters (INFO/WARN/ERROR), and multi-pod stream splitting built into the UI.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag green">Feature 04</div>
+          <div class="card-icon">🔌</div>
+          <div class="card-title">Plugin Support</div>
+          <p class="card-desc">12 built-in plugins: metrics sidebar, AI assistant, alert rules editor, query builder, and more. Community plugins via registry.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Configuration</h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — Console Live Interface</span>
+<span class="code-keyword">interfaces</span>:
+  <span class="code-var">console_live</span>:
+    <span class="code-var">enabled</span>: <span class="code-value">true</span>
+    <span class="code-var">port</span>: <span class="code-value">7700</span>
+    <span class="code-var">stream</span>:
+      <span class="code-var">buffer_lines</span>: <span class="code-value">10000</span>
+      <span class="code-var">latency_target</span>: <span class="code-string">"50ms"</span>
+      <span class="code-var">reconnect_interval</span>: <span class="code-string">"2s"</span>
+    <span class="code-var">filters</span>:
+      <span class="code-var">default_level</span>: <span class="code-string">"INFO"</span>
+      <span class="code-var">highlight_errors</span>: <span class="code-value">true</span>
+    <span class="code-var">plugins</span>:
+      - <span class="code-string">"metrics-sidebar"</span>
+      - <span class="code-string">"ai-assistant"</span>
+      - <span class="code-string">"alert-rules"</span>
+    <span class="code-var">auth</span>:
+      <span class="code-var">require_token</span>: <span class="code-value">true</span>
+      <span class="code-var">rbac_enabled</span>: <span class="code-value">true</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Stream Commands</h2>
+          <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:0.5rem;">
+            <div style="padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color);">
+              <code style="color:#00ff88; font-size:0.8rem;">sirvato logs stream --all</code>
+              <p style="margin:0.3rem 0 0; color:var(--text-secondary); font-size:0.8rem;">Stream all pod logs in real time</p>
+            </div>
+            <div style="padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color);">
+              <code style="color:#00ff88; font-size:0.8rem;">sirvato logs stream --filter ERROR</code>
+              <p style="margin:0.3rem 0 0; color:var(--text-secondary); font-size:0.8rem;">Filter to error-level logs only</p>
+            </div>
+            <div style="padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color);">
+              <code style="color:#00ff88; font-size:0.8rem;">sirvato exec --pod &lt;name&gt; -- &lt;cmd&gt;</code>
+              <p style="margin:0.3rem 0 0; color:var(--text-secondary); font-size:0.8rem;">Execute command in a running pod</p>
+            </div>
+            <div style="padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color);">
+              <code style="color:#00ff88; font-size:0.8rem;">sirvato console split --streams 3</code>
+              <p style="margin:0.3rem 0 0; color:var(--text-secondary); font-size:0.8rem;">Split view into multiple streams</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <a href="hud-minimal.html" class="btn btn-ghost">← HUD Minimal</a>
+        <a href="os-window.html" class="btn btn-primary">Next: OS Window →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">Interfaces</div><div class="footer-links"><a href="hud-minimal.html">HUD Minimal</a><a href="console-live.html">Console Live</a><a href="master-block.html">Master Block</a><a href="fullscreen-totality.html">Fullscreen Totality</a></div></div><div><div class="footer-col-title">Resources</div><div class="footer-links"><a href="../docs/interface-showcase.html">Showcase</a><a href="../docs/quick-start.html">Quick Start</a><a href="../demo.html">Demo</a></div></div><div><div class="footer-col-title">Docs</div><div class="footer-links"><a href="../docs/api-documentation.html">API</a><a href="../docs/keyboard-shortcuts.html">Shortcuts</a><a href="../docs/faq.html">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

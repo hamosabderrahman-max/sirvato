@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | Quick Start Guide</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><div class="nav-links"><a href="../index.html">Home</a><a href="../frameworks/icdf.html">Frameworks</a><a href="../interfaces/hud-minimal.html">Interfaces</a><a href="../micro-supra/core.html">MICRO SUPRA</a><a href="quick-start.html" class="active">Docs</a><a href="../demo.html">Demo</a><a href="../tools.html">Tools</a></div><div class="nav-actions"><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon-dark">🌙</span><span class="theme-icon-light">☀️</span></button><button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+  <div class="nav-mobile" id="nav-mobile"><a href="../index.html">Home</a><a href="../frameworks/icdf.html">Frameworks</a><a href="../interfaces/hud-minimal.html">Interfaces</a><a href="../micro-supra/core.html">MICRO SUPRA</a><a href="quick-start.html">Docs</a><a href="../demo.html">Demo</a><a href="../tools.html">Tools</a></div>
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Docs</span><span class="breadcrumb-sep">›</span><span>Quick Start</span></div>
+    <div class="page-header-tag">DOCUMENTATION · GUIDE</div>
+    <h1><span class="text-cyan">Quick Start</span> Guide</h1>
+    <p>Get SIRVATO OS running in minutes. Follow these six steps to go from zero to fully autonomous cloud operations.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="sidebar-layout">
+        <aside class="sidebar">
+          <div class="sidebar-title">Documentation</div>
+          <div class="sidebar-links">
+            <a href="quick-start.html" class="active">Quick Start</a>
+            <a href="api-documentation.html">API Reference</a>
+            <a href="framework-comparison.html">Framework Comparison</a>
+            <a href="interface-showcase.html">Interface Showcase</a>
+            <a href="best-practices.html">Best Practices</a>
+            <a href="keyboard-shortcuts.html">Keyboard Shortcuts</a>
+            <a href="faq.html">FAQ</a>
+          </div>
+        </aside>
+        <main>
+          <h2>Getting Started with <span class="text-cyan">SIRVATO OS</span></h2>
+          <p>This guide walks you through installing SIRVATO OS, initializing your first environment, and deploying your first autonomous workload. The entire process takes under 10 minutes.</p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Installation</h4>
+                <p>Install the SIRVATO CLI using npm or the official install script.</p>
+                <div class="code-block"><span class="code-label">BASH</span><pre><span class="code-comment"># via npm</span>
+npm install -g @sirvato/cli
+
+<span class="code-comment"># or via install script</span>
+curl -fsSL https://install.sirvato.io | bash
+
+<span class="code-comment"># verify installation</span>
+sirvato --version
+<span class="code-comment"># SIRVATO OS CLI v3.1.0</span></pre></div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Initialize Your Environment</h4>
+                <p>Initialize a new SIRVATO project in AUTOPILOT mode — the recommended mode for all new deployments.</p>
+                <div class="code-block"><span class="code-label">BASH</span><pre>sirvato init --mode=autopilot
+
+<span class="code-comment"># Output:</span>
+<span class="code-comment"># ✓ Project initialized</span>
+<span class="code-comment"># ✓ sirvato.yaml created</span>
+<span class="code-comment"># ✓ AUTOPILOT mode enabled</span>
+<span class="code-comment"># ✓ AI framework selected: ICDF</span></pre></div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>Configure sirvato.yaml</h4>
+                <p>Edit the generated configuration file to match your infrastructure requirements.</p>
+                <div class="code-block"><span class="code-label">YAML</span><pre><span class="code-comment"># sirvato.yaml</span>
+<span class="code-keyword">project</span>:
+  <span class="code-var">name</span>: <span class="code-string">"my-app"</span>
+  <span class="code-var">mode</span>: <span class="code-string">"autopilot"</span>
+
+<span class="code-keyword">framework</span>: <span class="code-string">"icdf"</span>
+
+<span class="code-keyword">deploy</span>:
+  <span class="code-var">region</span>: <span class="code-string">"us-east-1"</span>
+  <span class="code-var">replicas</span>: <span class="code-value">3</span>
+  <span class="code-var">auto_scale</span>: <span class="code-value">true</span>
+
+<span class="code-keyword">security</span>:
+  <span class="code-var">zero_trust</span>: <span class="code-value">true</span>
+  <span class="code-var">encrypt_at_rest</span>: <span class="code-value">true</span></pre></div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>Deploy</h4>
+                <p>Run the deploy command. SIRVATO OS handles provisioning, configuration, and health checks automatically.</p>
+                <div class="code-block"><span class="code-label">BASH</span><pre>sirvato deploy
+
+<span class="code-comment"># ✓ Provisioning infrastructure...</span>
+<span class="code-comment"># ✓ Configuring networking...</span>
+<span class="code-comment"># ✓ Deploying application...</span>
+<span class="code-comment"># ✓ Running health checks...</span>
+<span class="code-comment"># ✓ Deployment complete in 47s</span>
+<span class="code-comment"># → https://my-app.sirvato.cloud</span></pre></div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <h4>Monitor</h4>
+                <p>Check the live status of your deployment including metrics, health, and AI decisions.</p>
+                <div class="code-block"><span class="code-label">BASH</span><pre>sirvato status
+
+<span class="code-comment"># Project:    my-app</span>
+<span class="code-comment"># Status:     HEALTHY</span>
+<span class="code-comment"># Uptime:     99.99%</span>
+<span class="code-comment"># Replicas:   3/3 running</span>
+<span class="code-comment"># Latency:    4.2ms p99</span>
+<span class="code-comment"># AUTOPILOT:  ACTIVE</span></pre></div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">6</div>
+              <div class="step-content">
+                <h4>Enable Auto-Scale</h4>
+                <p>Activate autonomous scaling so SIRVATO OS manages capacity without any manual intervention.</p>
+                <div class="code-block"><span class="code-label">BASH</span><pre>sirvato scale --auto
+
+<span class="code-comment"># ✓ Auto-scaling enabled</span>
+<span class="code-comment"># ✓ Min replicas: 2</span>
+<span class="code-comment"># ✓ Max replicas: 50</span>
+<span class="code-comment"># ✓ Scale trigger: CPU > 70%</span>
+<span class="code-comment"># ✓ AUTOPILOT managing scale</span></pre></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>What's Next?</h4>
+            <p style="margin:0;">Explore the <a href="api-documentation.html">API Reference</a> to integrate SIRVATO OS into your pipelines, or read <a href="best-practices.html">Best Practices</a> to get the most out of your deployment.</p>
+          </div>
+
+          <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="api-documentation.html" class="btn btn-primary">API Reference →</a>
+            <a href="framework-comparison.html" class="btn btn-ghost">Compare Frameworks →</a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">Documentation</div><div class="footer-links"><a href="quick-start.html">Quick Start</a><a href="api-documentation.html">API Reference</a><a href="framework-comparison.html">Comparison</a><a href="best-practices.html">Best Practices</a><a href="keyboard-shortcuts.html">Shortcuts</a><a href="faq.html">FAQ</a></div></div><div><div class="footer-col-title">Frameworks</div><div class="footer-links"><a href="../frameworks/icdf.html">ICDF Engine</a><a href="../frameworks/auto-flow-pro.html">AUTO-FLOW PRO</a><a href="../frameworks/unified-mode.html">Unified Mode</a></div></div><div><div class="footer-col-title">Tools</div><div class="footer-links"><a href="../demo.html">Demo</a><a href="../tools.html">Selector</a><a href="../micro-supra/supra-totality.html">SUPRA-TOTALITY++</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

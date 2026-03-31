@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | Interface Showcase</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><div class="nav-links"><a href="../index.html">Home</a><a href="../frameworks/icdf.html">Frameworks</a><a href="../interfaces/hud-minimal.html">Interfaces</a><a href="../micro-supra/core.html">MICRO SUPRA</a><a href="quick-start.html" class="active">Docs</a><a href="../demo.html">Demo</a><a href="../tools.html">Tools</a></div><div class="nav-actions"><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon-dark">🌙</span><span class="theme-icon-light">☀️</span></button><button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+  <div class="nav-mobile" id="nav-mobile"><a href="../index.html">Home</a><a href="../frameworks/icdf.html">Frameworks</a><a href="../interfaces/hud-minimal.html">Interfaces</a><a href="../micro-supra/core.html">MICRO SUPRA</a><a href="quick-start.html">Docs</a><a href="../demo.html">Demo</a><a href="../tools.html">Tools</a></div>
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Docs</span><span class="breadcrumb-sep">›</span><span>Interface Showcase</span></div>
+    <div class="page-header-tag">DOCUMENTATION · INTERFACES</div>
+    <h1>Interface <span class="text-cyan">Showcase</span></h1>
+    <p>Explore all 8 SIRVATO OS interfaces. From minimal HUDs to full-screen immersive environments.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="sidebar-layout">
+        <aside class="sidebar">
+          <div class="sidebar-title">Documentation</div>
+          <div class="sidebar-links">
+            <a href="quick-start.html">Quick Start</a>
+            <a href="api-documentation.html">API Reference</a>
+            <a href="framework-comparison.html">Framework Comparison</a>
+            <a href="interface-showcase.html" class="active">Interface Showcase</a>
+            <a href="best-practices.html">Best Practices</a>
+            <a href="keyboard-shortcuts.html">Keyboard Shortcuts</a>
+            <a href="faq.html">FAQ</a>
+          </div>
+        </aside>
+        <main>
+          <h2>All <span class="text-cyan">Interfaces</span></h2>
+          <p>SIRVATO OS ships with 8 purpose-built interfaces for different roles, workflows, and environments. Each is independently activatable and fully themeable.</p>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2rem;">
+
+            <div class="card reveal">
+              <div style="background:#0a0f14; border:1px solid #00eaff33; border-radius:8px; padding:1rem; margin-bottom:1rem; font-family:monospace; font-size:0.7rem;">
+                <div style="color:#00eaff; margin-bottom:0.5rem;">◈ HUD MINIMAL · LIVE</div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
+                  <div><div style="color:#ffffff44;">Uptime</div><div style="color:#00eaff;">99.99%</div></div>
+                  <div><div style="color:#ffffff44;">Latency</div><div style="color:#00eaff;">4.2ms</div></div>
+                </div>
+              </div>
+              <div class="card-tag cyan">Interface 1</div>
+              <div class="card-title">HUD Minimal</div>
+              <p class="card-desc">Lightweight heads-up display showing essential metrics. Maximum signal, minimum noise. Keyboard-first, zero-config overlay.</p>
+              <a href="../interfaces/hud-minimal.html" class="btn btn-ghost" style="font-size:0.85rem;">View Interface →</a>
+            </div>
+
+            <div class="card reveal delay-1">
+              <div style="background:#0a0f14; border:1px solid #ff00ff33; border-radius:8px; padding:1rem; margin-bottom:1rem; font-family:monospace; font-size:0.7rem;">
+                <div style="color:#ff00ff; margin-bottom:0.5rem;">▶ CONSOLE LIVE · STREAMING</div>
+                <div style="color:#ffffff88;">[14:22:01] Deploy started...</div>
+                <div style="color:#00ff88;">[14:22:04] ✓ All checks passed</div>
+              </div>
+              <div class="card-tag magenta">Interface 2</div>
+              <div class="card-title">Console Live</div>
+              <p class="card-desc">Real-time streaming console with live log tailing, AI-annotated events, and interactive command execution.</p>
+              <a href="../interfaces/console-live.html" class="btn btn-ghost" style="font-size:0.85rem;">View Interface →</a>
+            </div>
+
+            <div class="card reveal delay-2">
+              <div style="background:#0a0f14; border:1px solid #7b2fff33; border-radius:8px; padding:1rem; margin-bottom:1rem; font-family:monospace; font-size:0.7rem;">
+                <div style="color:#7b2fff; margin-bottom:0.5rem;">MASTER BLOCK · COMMAND</div>
+                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.3rem;">
+                  <div style="background:#1a1a2e; padding:0.3rem; text-align:center; color:#e8e8ff; border-radius:4px; font-size:0.65rem;">Deploy</div>
+                  <div style="background:#1a1a2e; padding:0.3rem; text-align:center; color:#e8e8ff; border-radius:4px; font-size:0.65rem;">Scale</div>
+                  <div style="background:#1a1a2e; padding:0.3rem; text-align:center; color:#e8e8ff; border-radius:4px; font-size:0.65rem;">Monitor</div>
+                </div>
+              </div>
+              <div class="card-tag purple">Interface 3</div>
+              <div class="card-title">Master Block</div>
+              <p class="card-desc">Command-block dashboard for rapid operational actions. One-click deploy, scale, rollback, and monitoring controls.</p>
+              <a href="../interfaces/master-block.html" class="btn btn-ghost" style="font-size:0.85rem;">View Interface →</a>
+            </div>
+
+            <div class="card reveal delay-3">
+              <div style="background:#0a0f14; border:1px solid #00ff8833; border-radius:8px; padding:1rem; margin-bottom:1rem; font-family:monospace; font-size:0.7rem;">
+                <div style="color:#00ff88; margin-bottom:0.5rem;">MICRO SIDEBAR · TOOLS</div>
+                <div style="display:flex; flex-direction:column; gap:0.2rem;">
+                  <div style="color:#ffffff88; font-size:0.65rem;">📊 Metrics</div>
+                  <div style="color:#ffffff88; font-size:0.65rem;">🚀 Deploy</div>
+                  <div style="color:#ffffff88; font-size:0.65rem;">⚙️ Config</div>
+                </div>
+              </div>
+              <div class="card-tag green">Interface 4</div>
+              <div class="card-title">Micro Sidebar</div>
+              <p class="card-desc">Compact side-panel interface that integrates with your existing workflow without taking over the full screen.</p>
+              <a href="../interfaces/micro-sidebar.html" class="btn btn-ghost" style="font-size:0.85rem;">View Interface →</a>
+            </div>
+
+            <div class="card reveal">
+              <div style="background:#0a0f14; border:1px solid #00eaff33; border-radius:8px; padding:1rem; margin-bottom:1rem; font-family:monospace; font-size:0.7rem; position:relative; overflow:hidden;">
+                <div style="color:#00eaff; margin-bottom:0.3rem; font-size:0.65rem; letter-spacing:0.1em;">OS WINDOW · DESKTOP</div>
+                <div style="background:#12121e; border-radius:4px; padding:0.4rem; border:1px solid #1e1e3a;">
+                  <div style="color:#ffffff88; font-size:0.6rem;">sirvato-app · Running</div>
+                </div>
+              </div>
+              <div class="card-tag cyan">Interface 5</div>
+              <div class="card-title">OS Window</div>
+              <p class="card-desc">Desktop-style windowed interface for managing multiple SIRVATO workloads simultaneously in a familiar window manager.</p>
+              <a href="../interfaces/os-window.html" class="btn btn-ghost" style="font-size:0.85rem;">View Interface →</a>
+            </div>
+
+            <div class="card reveal delay-1">
+              <div style="background:#0a0f14; border:1px solid #ffcc0033; border-radius:8px; padding:1rem; margin-bottom:1rem; font-family:monospace; font-size:0.7rem;">
+                <div style="color:#ffcc00; margin-bottom:0.5rem;">WINDOWS EDITION · PANEL</div>
+                <div style="display:flex; gap:0.5rem; align-items:center;">
+                  <div style="width:8px; height:8px; border-radius:50%; background:#00ff88;"></div>
+                  <span style="color:#ffffff88; font-size:0.65rem;">All services nominal</span>
+                </div>
+              </div>
+              <div class="card-tag" style="background:rgba(255,204,0,0.1); color:#ffcc00; border:1px solid rgba(255,204,0,0.2);">Interface 6</div>
+              <div class="card-title">Windows Edition</div>
+              <p class="card-desc">Familiar Windows-style panel layout for teams transitioning from traditional IT tooling to SIRVATO OS cloud operations.</p>
+              <a href="../interfaces/windows-edition.html" class="btn btn-ghost" style="font-size:0.85rem;">View Interface →</a>
+            </div>
+
+            <div class="card reveal delay-2">
+              <div style="background:#0a0f14; border:1px solid #ff00ff33; border-radius:8px; padding:1rem; margin-bottom:1rem; font-family:monospace; font-size:0.7rem; min-height:60px; display:flex; align-items:center; justify-content:center;">
+                <div style="text-align:center;">
+                  <div style="color:#ff00ff; font-size:0.9rem; font-weight:700; letter-spacing:0.2em;">FULLSCREEN</div>
+                  <div style="color:#ffffff44; font-size:0.6rem; margin-top:0.2rem;">IMMERSIVE MODE</div>
+                </div>
+              </div>
+              <div class="card-tag magenta">Interface 7</div>
+              <div class="card-title">Fullscreen Mode</div>
+              <p class="card-desc">Total immersive fullscreen environment for deep operations work. Maximizes every pixel for situational awareness and control.</p>
+              <a href="../interfaces/fullscreen-mode.html" class="btn btn-ghost" style="font-size:0.85rem;">View Interface →</a>
+            </div>
+
+            <div class="card reveal delay-3" style="border-color: rgba(0,245,255,0.3); background: linear-gradient(135deg, rgba(255,0,255,0.03), rgba(0,245,255,0.03));">
+              <div style="background:#0a0f14; border:1px solid #00eaff55; border-radius:8px; padding:1rem; margin-bottom:1rem; font-family:monospace; font-size:0.7rem; min-height:60px; display:flex; align-items:center; justify-content:center;">
+                <div style="text-align:center;">
+                  <div style="background: linear-gradient(90deg, #ff00ff, #00eaff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-size:0.85rem; font-weight:700; letter-spacing:0.15em;">FULLSCREEN TOTALITY</div>
+                  <div style="color:#ffffff44; font-size:0.6rem; margin-top:0.2rem;">TRANSCENDENT INTERFACE</div>
+                </div>
+              </div>
+              <div class="card-tag cyan">Interface 8</div>
+              <div class="card-title">Fullscreen Totality</div>
+              <p class="card-desc">The ultimate interface — combines all MICRO SUPRA systems into a single transcendent fullscreen operational environment.</p>
+              <a href="../interfaces/fullscreen-totality.html" class="btn btn-ghost" style="font-size:0.85rem;">View Interface →</a>
+            </div>
+
+          </div>
+
+          <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="../interfaces/hud-minimal.html" class="btn btn-primary">Browse Interfaces →</a>
+            <a href="keyboard-shortcuts.html" class="btn btn-ghost">Interface Shortcuts →</a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">Documentation</div><div class="footer-links"><a href="quick-start.html">Quick Start</a><a href="api-documentation.html">API Reference</a><a href="framework-comparison.html">Comparison</a><a href="best-practices.html">Best Practices</a><a href="keyboard-shortcuts.html">Shortcuts</a><a href="faq.html">FAQ</a></div></div><div><div class="footer-col-title">Frameworks</div><div class="footer-links"><a href="../frameworks/icdf.html">ICDF Engine</a><a href="../frameworks/auto-flow-pro.html">AUTO-FLOW PRO</a><a href="../frameworks/unified-mode.html">Unified Mode</a></div></div><div><div class="footer-col-title">Tools</div><div class="footer-links"><a href="../demo.html">Demo</a><a href="../tools.html">Selector</a><a href="../micro-supra/supra-totality.html">SUPRA-TOTALITY++</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

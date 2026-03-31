@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | Micro Sidebar Interface</title>
+  <meta name="description" content="Micro Sidebar — Compact sidebar navigation interface that maximizes workspace while maintaining full control access.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <a href="hud-minimal.html" class="active">Interfaces</a>
+        <a href="../micro-supra/core.html">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="../frameworks/icdf.html">Frameworks</a>
+    <a href="hud-minimal.html">Interfaces</a>
+    <a href="../micro-supra/core.html">MICRO SUPRA</a>
+    <a href="../docs/quick-start.html">Docs</a>
+    <a href="../demo.html">Demo</a>
+    <a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="hud-minimal.html">Interfaces</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Micro Sidebar</span>
+    </div>
+    <div class="page-header-tag">INTERFACE · SIDEBAR</div>
+    <h1><span class="text-purple">MICRO</span> SIDEBAR</h1>
+    <p>Compact sidebar navigation interface that maximizes workspace while maintaining full control access. The efficiency interface for high-density workflows.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-purple">Compact Design</span>
+      <span class="badge badge-cyan">Full Access</span>
+      <span class="badge badge-green">Collapsible</span>
+      <span class="badge badge-magenta">Context-Aware</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-purple">Micro Sidebar</span>?</h2>
+          <p>Micro Sidebar is the efficiency-maximizing interface layer for SIRVATO OS. It replaces wide navigation panels with a slender, icon-first sidebar that sits at the edge of your workspace — present but unobtrusive, providing access to every feature with a single click or hover expand.</p>
+          <p>The sidebar is context-aware: it recognizes what you're working on and surfaces relevant tools at the top of the stack. Editing a deployment config? The Deployment Manager, Config Editor, and Log Stream float to the top automatically. Responding to an alert? Alert Hub and Security Center lead.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Maximum Workspace, Full Control</h4>
+            <p style="margin:0;">Micro Sidebar was built for developers who work in dense, multi-pane environments — code editors, split terminals, dashboards — where every pixel of horizontal space is precious, but operational control must remain within arm's reach.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">sirvato-cli · Micro Sidebar</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">sirvato</span><span class="terminal-cmd"> interface activate micro-sidebar</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Activating Micro Sidebar v3.1.0...</div>
+              <div class="terminal-output">  ✓ Sidebar renderer initialized</div>
+              <div class="terminal-output">  ✓ Context engine connected</div>
+              <div class="terminal-output">  ✓ Icon set: compact-v3</div>
+              <div class="terminal-output">  ✓ Hover-expand: 200ms delay</div>
+              <div class="terminal-output">  ✓ Width: 48px collapsed · 220px expanded</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-purple">◈ Micro Sidebar ACTIVE — Pinned left</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <!-- Mock Interface Preview -->
+      <h2 style="text-align:center; margin-bottom:2rem;">Interface <span class="text-purple">Preview</span></h2>
+      <div style="max-width:800px; margin:0 auto 3rem; background:#0e0818; border:1px solid #a855f733; border-radius:10px; overflow:hidden; font-family:'Courier New',monospace; display:flex; min-height:280px;">
+        <!-- Micro Sidebar (collapsed) -->
+        <div style="width:48px; background:#0a0612; border-right:1px solid #a855f722; display:flex; flex-direction:column; align-items:center; padding:0.75rem 0; gap:0.5rem; flex-shrink:0;">
+          <div style="color:#a855f7; font-size:0.7rem; margin-bottom:0.5rem; font-weight:700;">⊞</div>
+          <div style="width:32px; height:32px; background:#a855f722; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; border:1px solid #a855f744;" title="Metrics">📊</div>
+          <div style="width:32px; height:32px; background:#a855f711; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; opacity:0.7;" title="Logs">📋</div>
+          <div style="width:32px; height:32px; background:#a855f711; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; opacity:0.7;" title="Deploy">🚀</div>
+          <div style="width:32px; height:32px; background:#a855f711; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; opacity:0.7;" title="Security">🔒</div>
+          <div style="width:32px; height:32px; background:#a855f711; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; opacity:0.7;" title="Alerts">🔔</div>
+          <div style="width:32px; height:32px; background:#a855f711; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; opacity:0.7;" title="Network">🗺️</div>
+          <div style="width:32px; height:32px; background:#a855f711; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.9rem; opacity:0.7;" title="AI">🧠</div>
+          <div style="margin-top:auto; width:32px; height:32px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:#a855f766;">⚙️</div>
+        </div>
+        <!-- Expanded sidebar (hover state) -->
+        <div style="width:180px; background:#120920; border-right:1px solid #a855f722; padding:0.75rem; flex-shrink:0;">
+          <div style="color:#a855f7; font-size:0.6rem; letter-spacing:0.1em; margin-bottom:0.75rem; padding-bottom:0.4rem; border-bottom:1px solid #a855f722;">CONTEXT: METRICS</div>
+          <div style="display:flex; align-items:center; gap:0.5rem; padding:0.4rem 0.5rem; background:#a855f722; border-radius:4px; margin-bottom:0.25rem; border:1px solid #a855f744;">
+            <span style="font-size:0.75rem;">📊</span>
+            <span style="color:#a855f7; font-size:0.7rem; font-weight:600;">Metrics Dashboard</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem; padding:0.4rem 0.5rem; border-radius:4px; margin-bottom:0.25rem;">
+            <span style="font-size:0.75rem; opacity:0.6;">📋</span>
+            <span style="color:#ffffff66; font-size:0.7rem;">Live Logs</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem; padding:0.4rem 0.5rem; border-radius:4px; margin-bottom:0.25rem;">
+            <span style="font-size:0.75rem; opacity:0.6;">🚀</span>
+            <span style="color:#ffffff66; font-size:0.7rem;">Deployments</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem; padding:0.4rem 0.5rem; border-radius:4px; margin-bottom:0.25rem;">
+            <span style="font-size:0.75rem; opacity:0.6;">🔒</span>
+            <span style="color:#ffffff66; font-size:0.7rem;">Security</span>
+          </div>
+          <div style="margin-top:0.75rem; padding-top:0.5rem; border-top:1px solid #a855f715;">
+            <div style="color:#a855f744; font-size:0.55rem; letter-spacing:0.1em; margin-bottom:0.4rem;">SUGGESTED</div>
+            <div style="display:flex; align-items:center; gap:0.5rem; padding:0.3rem 0.5rem; border-radius:4px;">
+              <span style="font-size:0.7rem;">📈</span>
+              <span style="color:#ffffff44; font-size:0.65rem;">Performance Analyzer</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.5rem; padding:0.3rem 0.5rem; border-radius:4px;">
+              <span style="font-size:0.7rem;">💰</span>
+              <span style="color:#ffffff44; font-size:0.65rem;">Cost Tracker</span>
+            </div>
+          </div>
+        </div>
+        <!-- Main workspace (maximized) -->
+        <div style="flex:1; background:#0e0818; padding:1rem; display:flex; flex-direction:column; gap:0.75rem;">
+          <div style="color:#a855f755; font-size:0.6rem; letter-spacing:0.1em;">MAIN WORKSPACE · MAXIMIZED</div>
+          <!-- Metric cards in workspace -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; flex:1;">
+            <div style="background:#120920; border:1px solid #a855f722; border-radius:6px; padding:0.75rem;">
+              <div style="color:#a855f766; font-size:0.55rem; margin-bottom:0.4rem;">CPU USAGE</div>
+              <div style="color:#a855f7; font-size:1.2rem; font-weight:700;">12.4<span style="font-size:0.65rem;">%</span></div>
+              <div style="background:#a855f722; border-radius:2px; height:3px; margin-top:0.4rem;"><div style="background:#a855f7; width:12%; height:100%; border-radius:2px;"></div></div>
+            </div>
+            <div style="background:#120920; border:1px solid #a855f722; border-radius:6px; padding:0.75rem;">
+              <div style="color:#00eaff66; font-size:0.55rem; margin-bottom:0.4rem;">LATENCY</div>
+              <div style="color:#00eaff; font-size:1.2rem; font-weight:700;">4.2<span style="font-size:0.65rem;">ms</span></div>
+              <div style="background:#00eaff22; border-radius:2px; height:3px; margin-top:0.4rem;"><div style="background:#00eaff; width:8%; height:100%; border-radius:2px;"></div></div>
+            </div>
+            <div style="background:#120920; border:1px solid #a855f722; border-radius:6px; padding:0.75rem;">
+              <div style="color:#00ff8866; font-size:0.55rem; margin-bottom:0.4rem;">UPTIME</div>
+              <div style="color:#00ff88; font-size:1.2rem; font-weight:700;">99.99<span style="font-size:0.65rem;">%</span></div>
+            </div>
+            <div style="background:#120920; border:1px solid #a855f722; border-radius:6px; padding:0.75rem;">
+              <div style="color:#febc2e66; font-size:0.55rem; margin-bottom:0.4rem;">PODS</div>
+              <div style="color:#febc2e; font-size:1.2rem; font-weight:700;">48<span style="font-size:0.65rem;">/48</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">Core <span class="text-purple">Features</span></h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag purple">Feature 01</div>
+          <div class="card-icon">📐</div>
+          <div class="card-title">Compact Design</div>
+          <p class="card-desc">48px collapsed width. Expands to 220px on hover with a 200ms delay to avoid accidental triggers. Reclaims maximum workspace.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag purple">Feature 02</div>
+          <div class="card-icon">🔑</div>
+          <div class="card-title">Full Access</div>
+          <p class="card-desc">All SIRVATO OS tools and modules remain one click away. Compact does not mean limited — every feature is reachable instantly.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag purple">Feature 03</div>
+          <div class="card-icon">🗂️</div>
+          <div class="card-title">Collapsible</div>
+          <p class="card-desc">Collapse entirely to an icon strip or fully expand to a rich nav panel. Pin the state you prefer, or let it auto-manage.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag purple">Feature 04</div>
+          <div class="card-icon">🎯</div>
+          <div class="card-title">Context-Aware</div>
+          <p class="card-desc">Intelligently surfaces the most relevant tools based on your current activity. The sidebar adapts to your workflow automatically.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Configuration</h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — Micro Sidebar Interface</span>
+<span class="code-keyword">interfaces</span>:
+  <span class="code-var">micro_sidebar</span>:
+    <span class="code-var">enabled</span>: <span class="code-value">true</span>
+    <span class="code-var">position</span>: <span class="code-string">"left"</span>
+    <span class="code-var">width</span>:
+      <span class="code-var">collapsed</span>: <span class="code-value">48</span>
+      <span class="code-var">expanded</span>: <span class="code-value">220</span>
+    <span class="code-var">expand_trigger</span>: <span class="code-string">"hover"</span>
+    <span class="code-var">expand_delay</span>: <span class="code-string">"200ms"</span>
+    <span class="code-var">context_aware</span>: <span class="code-value">true</span>
+    <span class="code-var">pinned_tools</span>:
+      - <span class="code-string">"metrics"</span>
+      - <span class="code-string">"logs"</span>
+      - <span class="code-string">"deployments"</span>
+      - <span class="code-string">"security"</span>
+      - <span class="code-string">"alerts"</span>
+    <span class="code-var">context_suggestions</span>: <span class="code-value">true</span>
+    <span class="code-var">max_suggestions</span>: <span class="code-value">3</span>
+    <span class="code-var">icon_set</span>: <span class="code-string">"compact-v3"</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Context Modes</h2>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1rem;">The sidebar adapts its top items based on detected activity context.</p>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color); display:flex; align-items:flex-start; gap:0.75rem;">
+              <span style="font-size:1.1rem; flex-shrink:0;">🔧</span>
+              <div>
+                <div style="color:var(--text-primary); font-size:0.82rem; font-weight:600;">Development Mode</div>
+                <div style="color:var(--text-secondary); font-size:0.75rem;">Surfaces: Deploy, Logs, Config Editor, API Explorer</div>
+              </div>
+            </div>
+            <div style="padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color); display:flex; align-items:flex-start; gap:0.75rem;">
+              <span style="font-size:1.1rem; flex-shrink:0;">🚨</span>
+              <div>
+                <div style="color:var(--text-primary); font-size:0.82rem; font-weight:600;">Incident Mode</div>
+                <div style="color:var(--text-secondary); font-size:0.75rem;">Surfaces: Alert Hub, Logs, Security, Metrics</div>
+              </div>
+            </div>
+            <div style="padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color); display:flex; align-items:flex-start; gap:0.75rem;">
+              <span style="font-size:1.1rem; flex-shrink:0;">📊</span>
+              <div>
+                <div style="color:var(--text-primary); font-size:0.82rem; font-weight:600;">Operations Mode</div>
+                <div style="color:var(--text-secondary); font-size:0.75rem;">Surfaces: Metrics, Network, Compute, Cost Tracker</div>
+              </div>
+            </div>
+            <div style="padding:0.75rem 1rem; background:var(--bg-secondary); border-radius:6px; border:1px solid var(--border-color); display:flex; align-items:flex-start; gap:0.75rem;">
+              <span style="font-size:1.1rem; flex-shrink:0;">🔒</span>
+              <div>
+                <div style="color:var(--text-primary); font-size:0.82rem; font-weight:600;">Security Mode</div>
+                <div style="color:var(--text-secondary); font-size:0.75rem;">Surfaces: Security Center, Audit Trail, User Manager</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <a href="fullscreen-totality.html" class="btn btn-ghost">← Fullscreen Totality</a>
+        <a href="../docs/interface-showcase.html" class="btn btn-primary">View All Interfaces →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">Interfaces</div><div class="footer-links"><a href="hud-minimal.html">HUD Minimal</a><a href="console-live.html">Console Live</a><a href="master-block.html">Master Block</a><a href="fullscreen-totality.html">Fullscreen Totality</a></div></div><div><div class="footer-col-title">Resources</div><div class="footer-links"><a href="../docs/interface-showcase.html">Showcase</a><a href="../docs/quick-start.html">Quick Start</a><a href="../demo.html">Demo</a></div></div><div><div class="footer-col-title">Docs</div><div class="footer-links"><a href="../docs/api-documentation.html">API</a><a href="../docs/keyboard-shortcuts.html">Shortcuts</a><a href="../docs/faq.html">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

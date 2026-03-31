@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | MICRO SUPRA-OS</title>
+  <meta name="description" content="Full AI-native operating system kernel with autonomous process scheduling and predictive memory management.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <a href="core.html" class="active">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon-dark">🌙</span><span class="theme-icon-light">☀️</span></button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a><a href="../frameworks/icdf.html">Frameworks</a><a href="../interfaces/hud-minimal.html">Interfaces</a><a href="core.html">MICRO SUPRA</a><a href="../docs/quick-start.html">Docs</a><a href="../demo.html">Demo</a><a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="core.html">MICRO SUPRA</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>SUPRA-OS</span>
+    </div>
+    <div class="page-header-tag">MICRO SUPRA · OS LAYER</div>
+    <h1><span class="text-magenta">MICRO</span> SUPRA-OS</h1>
+    <p>Full AI-native operating system kernel with autonomous process scheduling and predictive memory management.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-magenta">OS Layer</span>
+      <span class="badge badge-cyan">AI-Native</span>
+      <span class="badge badge-green">Predictive Memory</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-magenta">SUPRA-OS</span>?</h2>
+          <p>SUPRA-OS is SIRVATO's full AI-native operating system layer — the complete software stack that transforms bare metal or virtualized hardware into an intelligent, self-governing execution environment. Unlike traditional operating systems that require human configuration and reactive management, SUPRA-OS autonomously adapts to workload characteristics, predicts resource demands, and reallocates capacity before bottlenecks occur.</p>
+          <p>Built on top of MICRO Core, SUPRA-OS exposes a clean four-layer architecture that separates concerns from hardware abstraction up to user-space applications, with a rich AI-powered API layer in between.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>OS Design Principle</h4>
+            <p style="margin:0;">SUPRA-OS is not configured — it is trained. The OS learns the behavioral fingerprint of each workload and continuously tunes itself to match, delivering optimal performance without human intervention.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">SUPRA-OS · System Status</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">supra-os</span><span class="terminal-cmd"> status --full</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">SUPRA-OS v3.1.0 — Status Report</div>
+              <div class="terminal-output">  Layer 3 · User Space      [ACTIVE]</div>
+              <div class="terminal-output">  Layer 2 · API Layer       [ACTIVE]</div>
+              <div class="terminal-output">  Layer 1 · Kernel Space    [ACTIVE]</div>
+              <div class="terminal-output">  Layer 0 · HW Abstraction  [ACTIVE]</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Scheduler mode: AI-PREDICTIVE</div>
+              <div class="terminal-output">Memory model:   ADAPTIVE-PREFETCH</div>
+              <div class="terminal-output">Process count:  2,847 (isolated)</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-magenta">◈ SUPRA-OS NOMINAL — Uptime 99.999%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">OS <span class="text-magenta">Architecture Layers</span></h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag purple">Layer 3</div>
+          <div class="card-icon">👤</div>
+          <div class="card-title">User Space</div>
+          <p class="card-desc">Application runtime environment with full process isolation. Each workload runs in a capability-sandboxed namespace with dedicated memory arenas and CPU quotas.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag cyan">Layer 2</div>
+          <div class="card-icon">🔌</div>
+          <div class="card-title">API Layer</div>
+          <p class="card-desc">RESTful and gRPC system call interfaces enabling cross-language application access to OS primitives — scheduler hints, memory advice, and telemetry subscriptions.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag magenta">Layer 1</div>
+          <div class="card-icon">⚙️</div>
+          <div class="card-title">Kernel Space</div>
+          <p class="card-desc">AI-augmented kernel running all core OS functions: process management, virtual memory, IPC, file systems, and network stack — all instrumented for real-time telemetry.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag green">Layer 0</div>
+          <div class="card-icon">🖥️</div>
+          <div class="card-title">Hardware Abstraction</div>
+          <p class="card-desc">Unified driver model that presents a consistent interface to the layers above regardless of the underlying hardware platform — bare metal, VM, or containerized.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>OS <span class="text-magenta">Configuration</span></h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — SUPRA-OS Configuration</span>
+<span class="code-keyword">supra_os</span>:
+  <span class="code-var">scheduler</span>:
+    <span class="code-var">policy</span>: <span class="code-string">"ai-cfs"</span>
+    <span class="code-var">isolation</span>: <span class="code-string">"namespace"</span>
+  <span class="code-var">memory</span>:
+    <span class="code-var">model</span>: <span class="code-string">"adaptive-prefetch"</span>
+    <span class="code-var">swap</span>: <span class="code-string">"zram-compressed"</span>
+    <span class="code-var">overcommit</span>: <span class="code-value">false</span>
+  <span class="code-var">hw_abstraction</span>:
+    <span class="code-var">drivers</span>: <span class="code-string">"unified-v3"</span>
+    <span class="code-var">iommu</span>: <span class="code-value">true</span>
+  <span class="code-var">api_layer</span>:
+    <span class="code-var">grpc_port</span>: <span class="code-value">50051</span>
+    <span class="code-var">rest_port</span>: <span class="code-value">8080</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Key <span class="text-magenta">Features</span></h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">🧠</div>
+              <div class="feature-text">
+                <h4>AI-Native Scheduler</h4>
+                <p>CFS-derived scheduler augmented with workload-prediction models that dynamically adjust time slices and CPU affinity.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🗂️</div>
+              <div class="feature-text">
+                <h4>Predictive Memory</h4>
+                <p>Access-pattern learning allocator that pre-faults memory pages before first access, eliminating cold-start latency spikes.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🖥️</div>
+              <div class="feature-text">
+                <h4>Hardware Abstraction</h4>
+                <p>Unified driver model supporting x86-64, ARM64, RISC-V, and custom ASICs through a single capability-based interface.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔐</div>
+              <div class="feature-text">
+                <h4>Process Isolation</h4>
+                <p>Each process runs in a dedicated namespace with seccomp filters, capability bounding sets, and cgroup v2 resource controls.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem; text-align:center;">
+        <a href="core.html" class="btn btn-ghost">← Back: MICRO Core</a>
+        <a href="holofield.html" class="btn btn-primary" style="margin-left:1rem;">Next: HOLOFIELD →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">MICRO SUPRA</div><div class="footer-links"><a href="core.html">MICRO Core</a><a href="supra-os.html">SUPRA-OS</a><a href="holofield.html">HOLOFIELD</a><a href="omnimode.html">OMNIMODE</a><a href="auto-trigger.html">AUTO-TRIGGER</a><a href="supra-totality.html">SUPRA-TOTALITY++</a></div></div><div><div class="footer-col-title">Frameworks</div><div class="footer-links"><a href="../frameworks/icdf.html">ICDF Engine</a><a href="../frameworks/unified-mode.html">Unified Mode</a><a href="../demo.html">Demo</a></div></div><div><div class="footer-col-title">Docs</div><div class="footer-links"><a href="../docs/quick-start.html">Quick Start</a><a href="../docs/api-documentation.html">API</a><a href="../docs/faq.html">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

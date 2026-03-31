@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | Login</title>
+  <meta name="description" content="Sign in to SIRVATO OS — AI-First Cloud Provider console.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="js/theme.js"></script>
+  <style>
+    .login-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--nav-height) + 2rem) 1.5rem 2rem;
+      background: var(--bg-primary);
+      position: relative;
+    }
+    .login-wrapper::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 20% 50%, rgba(0, 245, 255, 0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 600px 400px at 80% 50%, rgba(123, 47, 255, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .login-card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 0.4s ease both;
+    }
+    .login-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(0,245,255,0.15), transparent 50%, rgba(123,47,255,0.15));
+      z-index: -1;
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .login-logo {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .login-logo span { color: var(--cyan); }
+    .login-header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .form-input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(0, 245, 255, 0.12);
+    }
+    .form-input::placeholder { color: var(--text-muted); }
+    .form-input.error {
+      border-color: var(--magenta);
+      box-shadow: 0 0 0 3px rgba(255, 0, 255, 0.12);
+    }
+    .form-input-wrapper { position: relative; }
+    .password-toggle {
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.25rem;
+      transition: color var(--transition);
+    }
+    .password-toggle:hover { color: var(--cyan); }
+    .form-error {
+      display: none;
+      font-size: 0.78rem;
+      color: var(--magenta);
+      margin-top: 0.4rem;
+      font-family: var(--font-mono);
+    }
+    .form-error.visible { display: block; }
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.83rem;
+    }
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+    .form-check input[type="checkbox"] { accent-color: var(--cyan); }
+    .form-link {
+      color: var(--cyan);
+      font-size: 0.83rem;
+    }
+    .form-link:hover { color: var(--magenta); }
+    .btn-submit {
+      width: 100%;
+      padding: 0.85rem;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      color: var(--bg-primary);
+      border: none;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      transition: all var(--transition);
+      box-shadow: 0 0 20px rgba(0, 245, 255, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-submit:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(0, 245, 255, 0.45);
+    }
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .btn-submit .spinner {
+      display: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(0,0,0,0.3);
+      border-top-color: var(--bg-primary);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin: 0 auto;
+    }
+    .btn-submit.loading .btn-text { display: none; }
+    .btn-submit.loading .spinner { display: block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .alert {
+      display: none;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius);
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+      margin-top: 1.25rem;
+      border: 1px solid;
+    }
+    .alert.visible { display: flex; align-items: flex-start; gap: 0.5rem; }
+    .alert-error {
+      background: rgba(255, 0, 255, 0.08);
+      border-color: rgba(255, 0, 255, 0.3);
+      color: var(--magenta);
+    }
+    .alert-success {
+      background: rgba(0, 255, 136, 0.08);
+      border-color: rgba(0, 255, 136, 0.3);
+      color: var(--green);
+    }
+    .login-divider {
+      text-align: center;
+      margin: 1.5rem 0;
+      position: relative;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    .login-divider::before, .login-divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 42%;
+      height: 1px;
+      background: var(--border-color);
+    }
+    .login-divider::before { left: 0; }
+    .login-divider::after { right: 0; }
+    .login-register {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .login-register a { color: var(--cyan); font-weight: 600; }
+    .login-footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="frameworks/icdf.html">Frameworks</a>
+        <a href="interfaces/hud-minimal.html">Interfaces</a>
+        <a href="micro-supra/core.html">MICRO SUPRA</a>
+        <a href="docs/quick-start.html">Docs</a>
+        <a href="demo.html">Demo</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm active">Login</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="frameworks/icdf.html">Frameworks</a>
+    <a href="interfaces/hud-minimal.html">Interfaces</a>
+    <a href="micro-supra/core.html">MICRO SUPRA</a>
+    <a href="docs/quick-start.html">Docs</a>
+    <a href="demo.html">Demo</a>
+    <a href="login.html" class="active">Login</a>
+  </div>
+
+  <!-- Login -->
+  <main class="login-wrapper" role="main">
+    <div class="login-card">
+      <div class="login-header">
+        <span class="login-logo">SIRVATO <span>OS</span></span>
+        <p>Sign in to your console</p>
+      </div>
+
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+          >
+          <span class="form-error" id="email-error" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <div class="form-input-wrapper">
+            <input
+              class="form-input"
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              placeholder="••••••••"
+              required
+            >
+            <button
+              type="button"
+              class="password-toggle"
+              id="password-toggle"
+              aria-label="Toggle password visibility"
+            >👁</button>
+          </div>
+          <span class="form-error" id="password-error" role="alert"></span>
+        </div>
+
+        <div class="form-options">
+          <label class="form-check">
+            <input type="checkbox" id="remember-me" name="remember">
+            Remember me
+          </label>
+          <a href="#" class="form-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submit-btn">
+          <span class="btn-text">Accedi</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+
+        <div class="alert alert-error" id="login-error" role="alert" aria-live="polite"></div>
+        <div class="alert alert-success" id="login-success" role="status" aria-live="polite"></div>
+      </form>
+
+      <div class="login-divider">or</div>
+
+      <div class="login-register">
+        Don't have an account? <a href="#">Request access</a>
+      </div>
+
+      <div class="login-footer">
+        SIRVATO OS v1.0 · Secure Connection · <span id="conn-status">●</span> Online
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    /**
+     * SIRVATO OS — Login Page
+     *
+     * API base URL is read from the global SIRVATO_CONFIG object (injected at
+     * build/deploy time, e.g. via a server-side template or a separate
+     * config.js).  Falls back to the VITE_API_URL / REACT_APP_API_URL env vars
+     * when the page is served from a Vite or CRA dev-server, and finally to a
+     * hard-coded default so the static demo always works.
+     */
+    const API =
+      (window.SIRVATO_CONFIG && window.SIRVATO_CONFIG.API_URL) ||
+      (typeof import_meta_env !== 'undefined' && import_meta_env.VITE_API_URL) ||
+      (typeof process !== 'undefined' && process.env && process.env.REACT_APP_API_URL) ||
+      'https://api.sirvato.io';
+
+    /* ── DOM refs ─────────────────────────────────────────────── */
+    const form        = document.getElementById('login-form');
+    const emailInput  = document.getElementById('email');
+    const pwdInput    = document.getElementById('password');
+    const pwdToggle   = document.getElementById('password-toggle');
+    const submitBtn   = document.getElementById('submit-btn');
+    const errorBox    = document.getElementById('login-error');
+    const successBox  = document.getElementById('login-success');
+    const emailErr    = document.getElementById('email-error');
+    const pwdErr      = document.getElementById('password-error');
+
+    /* ── Password visibility toggle ──────────────────────────── */
+    pwdToggle.addEventListener('click', () => {
+      const isText = pwdInput.type === 'text';
+      pwdInput.type = isText ? 'password' : 'text';
+      pwdToggle.textContent = isText ? '👁' : '🙈';
+      pwdToggle.setAttribute('aria-label', isText ? 'Show password' : 'Hide password');
+    });
+
+    /* ── Inline validation helpers ───────────────────────────── */
+    function setError(input, errEl, message) {
+      input.classList.add('error');
+      errEl.textContent = message;
+      errEl.classList.add('visible');
+    }
+
+    function clearError(input, errEl) {
+      input.classList.remove('error');
+      errEl.textContent = '';
+      errEl.classList.remove('visible');
+    }
+
+    function validateEmail(value) {
+      if (!value.trim()) return 'Email is required.';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) return 'Enter a valid email address.';
+      return null;
+    }
+
+    function validatePassword(value) {
+      if (!value) return 'Password is required.';
+      if (value.length < 6) return 'Password must be at least 6 characters.';
+      return null;
+    }
+
+    /* ── Live validation on blur ─────────────────────────────── */
+    emailInput.addEventListener('blur', () => {
+      const err = validateEmail(emailInput.value);
+      err ? setError(emailInput, emailErr, err) : clearError(emailInput, emailErr);
+    });
+
+    pwdInput.addEventListener('blur', () => {
+      const err = validatePassword(pwdInput.value);
+      err ? setError(pwdInput, pwdErr, err) : clearError(pwdInput, pwdErr);
+    });
+
+    /* ── Alert helpers ───────────────────────────────────────── */
+    function showError(message) {
+      errorBox.textContent = '⚠ ' + message;
+      errorBox.classList.add('visible');
+      successBox.classList.remove('visible');
+    }
+
+    function showSuccess(message) {
+      successBox.textContent = '✓ ' + message;
+      successBox.classList.add('visible');
+      errorBox.classList.remove('visible');
+    }
+
+    function clearAlerts() {
+      errorBox.classList.remove('visible');
+      successBox.classList.remove('visible');
+    }
+
+    /* ── Set loading state ───────────────────────────────────── */
+    function setLoading(loading) {
+      submitBtn.disabled = loading;
+      submitBtn.classList.toggle('loading', loading);
+    }
+
+    /* ── Form submit handler ─────────────────────────────────── */
+    const onSubmit = async (e) => {
+      // Prevent the default browser form submission (page reload / GET request)
+      e.preventDefault();
+
+      clearAlerts();
+
+      /* Client-side validation */
+      const emailVal = emailInput.value;
+      const pwdVal   = pwdInput.value;
+
+      const emailErrMsg = validateEmail(emailVal);
+      const pwdErrMsg   = validatePassword(pwdVal);
+
+      if (emailErrMsg) setError(emailInput, emailErr, emailErrMsg);
+      if (pwdErrMsg)   setError(pwdInput, pwdErr, pwdErrMsg);
+      if (emailErrMsg || pwdErrMsg) return;
+
+      /* Start loading */
+      setLoading(true);
+
+      try {
+        const res = await fetch(`${API}/auth/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',          // send / receive cookies (refresh-token)
+          body: JSON.stringify({
+            email:    emailVal.trim(),
+            password: pwdVal
+          })
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+          /* Map common HTTP status codes to user-friendly messages */
+          const messages = {
+            400: data.message || 'Invalid email or password format.',
+            401: 'Incorrect email or password.',
+            403: 'Account locked. Contact support.',
+            404: 'Account not found.',
+            429: 'Too many attempts. Please wait and try again.',
+            500: 'Server error. Please try again later.'
+          };
+          throw new Error(messages[res.status] || `Login failed (${res.status}).`);
+        }
+
+        /* Persist access token — use httpOnly cookie (via credentials:'include')
+           when available; fall back to localStorage for SPA usage. */
+        if (data.token) {
+          localStorage.setItem('sirvato_token', data.token);
+        }
+        if (data.user) {
+          localStorage.setItem('sirvato_user', JSON.stringify(data.user));
+        }
+
+        const rememberMe = document.getElementById('remember-me').checked;
+        if (!rememberMe) {
+          /* Store session-only flag so token is cleared on tab close */
+          sessionStorage.setItem('sirvato_session_only', '1');
+        }
+
+        showSuccess('Login successful — redirecting to console…');
+
+        /* Redirect without leaving a history entry (replace) to prevent
+           the back-button from returning to the login page after auth. */
+        setTimeout(() => {
+          window.location.replace(data.redirectUrl || 'demo.html');
+        }, 900);
+
+      } catch (err) {
+        showError(err.message || 'An unexpected error occurred.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    form.addEventListener('submit', onSubmit);
+  </script>
+</body>
+</html>
