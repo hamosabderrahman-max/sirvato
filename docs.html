@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SIRVATO OS Documentation — Quick Start, Framework Comparison, Best Practices, API, Keyboard Shortcuts, FAQ." />
+  <title>Documentation — SIRVATO OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">SIRVATO<span> OS</span></a>
+    <ul class="nav-links" role="list">
+      <li><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a class="nav-link" href="frameworks.html" data-i18n="nav.frameworks">Frameworks</a></li>
+      <li><a class="nav-link" href="interfaces.html" data-i18n="nav.interfaces">Interfaces</a></li>
+      <li><a class="nav-link active" href="docs.html" data-i18n="nav.docs">Docs</a></li>
+      <li><a class="nav-link" href="demo.html" data-i18n="nav.demo">Demo</a></li>
+    </ul>
+    <div class="nav-actions">
+      <select class="lang-select" aria-label="Language selector"><option value="en">EN</option><option value="it">IT</option></select>
+      <button class="btn-icon theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="btn-icon nav-mobile-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<div style="padding-top: 64px; background: var(--bg-2); border-bottom: 1px solid var(--border);">
+  <div class="container section-sm">
+    <span class="section-label">Documentation</span>
+    <h1 style="margin-bottom: 0.5rem;">SIRVATO OS Docs</h1>
+    <p style="max-width: 600px;">Complete reference for the SIRVATO OS ecosystem — quick start, framework comparison, best practices, integration guide, keyboard shortcuts, and FAQ.</p>
+  </div>
+</div>
+
+<main>
+  <div class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+    <div class="docs-layout">
+
+      <!-- Sidebar -->
+      <aside class="docs-sidebar" aria-label="Documentation navigation">
+        <h4>Getting Started</h4>
+        <a class="docs-nav-link active" href="#quickstart">Quick Start Guide</a>
+        <a class="docs-nav-link" href="#concepts">Core Concepts</a>
+
+        <h4>Frameworks</h4>
+        <a class="docs-nav-link" href="#comparison">Framework Comparison</a>
+        <a class="docs-nav-link" href="#icdf-ref">ICDF Engine</a>
+        <a class="docs-nav-link" href="#micro-ref">MICRO Rhythm</a>
+        <a class="docs-nav-link" href="#unified-ref">Unified Mode</a>
+
+        <h4>Guides</h4>
+        <a class="docs-nav-link" href="#best-practices">Best Practices</a>
+        <a class="docs-nav-link" href="#integration">Integration Guide</a>
+
+        <h4>Reference</h4>
+        <a class="docs-nav-link" href="#api">API Reference</a>
+        <a class="docs-nav-link" href="#shortcuts">Keyboard Shortcuts</a>
+
+        <h4>Help</h4>
+        <a class="docs-nav-link" href="#faq">FAQ</a>
+      </aside>
+
+      <!-- Content -->
+      <div class="docs-content">
+
+        <!-- Quick Start -->
+        <section id="quickstart">
+          <h2>Quick Start Guide</h2>
+          <p>Get SIRVATO OS running in three steps. The quickest path to a production-ready prompt is the <strong>FULLSCREEN TOTALITY</strong> interface.</p>
+
+          <h3>Step 1: Choose Your Interface</h3>
+          <p>Start with the interface that matches your experience level:</p>
+          <ul>
+            <li><strong>New to SIRVATO OS?</strong> → Start with <a href="interfaces.html#hud">HUD Minimal</a></li>
+            <li><strong>Familiar with prompt engineering?</strong> → Use <a href="interfaces.html#console">Console Live</a></li>
+            <li><strong>Want the full power?</strong> → Launch <a href="demo.html">FULLSCREEN TOTALITY</a></li>
+          </ul>
+
+          <h3>Step 2: Fill the Core Fields</h3>
+          <p>At minimum, complete these four fields for a functional prompt:</p>
+          <pre><code>⚡ TARGET    → What you want to achieve
+🟣 ROLE      → Who the AI should be
+🟡 REQUEST   → What precisely you want
+🔵 OUTPUT    → The format of the response</code></pre>
+
+          <h3>Step 3: Run Through AI Trigger Protocol</h3>
+          <p>Before executing, verify all 5 triggers are satisfied. The system shows a <span style="color: var(--green);">🟢 READY</span> state when all checks pass.</p>
+
+          <div style="background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; margin-top: 1rem;">
+            <p style="font-family: var(--font-mono); font-size: 0.85rem; margin: 0;">
+              <span style="color: var(--accent-2);">Tip:</span> <span style="color: var(--text-2);">Use the <a href="demo.html">interactive demo</a> to build your first prompt with live validation.</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- Core Concepts -->
+        <section id="concepts">
+          <h2>Core Concepts</h2>
+          <p>SIRVATO OS is built on three foundational layers that combine into the Unified Mode:</p>
+
+          <h3>The Three Layers</h3>
+          <ul>
+            <li><strong>ICDF Engine</strong> — Structural foundation: Instruction, Context, Data, Format</li>
+            <li><strong>MICRO Rhythm</strong> — Tonal calibration: Message, Intention, Context, Rhythm, Output</li>
+            <li><strong>RCR-EOC</strong> — Complete backbone: Role, Context, Request + Examples, Output, Constraints</li>
+          </ul>
+
+          <h3>The Trigger System</h3>
+          <p>Every prompt flows through the <strong>AI Trigger Protocol</strong> — a 5-point validation gate that ensures quality before execution. Think of it as automated prompt quality assurance.</p>
+
+          <h3>AUTO-FLOW Philosophy</h3>
+          <p>SIRVATO OS is designed around progressive disclosure: each completed field <em>triggers</em> the next. This creates a natural, guided flow from intent to execution — the AUTO-FLOW principle.</p>
+        </section>
+
+        <!-- Framework Comparison -->
+        <section id="comparison">
+          <h2>Framework Comparison</h2>
+          <p>A comprehensive comparison of all SIRVATO OS frameworks to help you choose the right tool.</p>
+
+          <div style="overflow-x: auto; margin-top: 1.5rem;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border);">
+                  <th style="text-align: left; padding: 0.65rem 0.75rem; color: var(--text-3); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Framework</th>
+                  <th style="text-align: center; padding: 0.65rem 0.5rem; color: var(--text-3); font-size: 0.75rem;">Components</th>
+                  <th style="text-align: center; padding: 0.65rem 0.5rem; color: var(--text-3); font-size: 0.75rem;">Complexity</th>
+                  <th style="text-align: left; padding: 0.65rem 0.75rem; color: var(--text-3); font-size: 0.75rem;">Use Case</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 0.65rem 0.75rem; font-weight: 600;">ICDF Engine</td>
+                  <td style="text-align: center; padding: 0.5rem;">4</td>
+                  <td style="text-align: center; padding: 0.5rem;"><span class="tag tag-green">Low</span></td>
+                  <td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Structured, factual tasks</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 0.65rem 0.75rem; font-weight: 600;">MICRO Rhythm</td>
+                  <td style="text-align: center; padding: 0.5rem;">5</td>
+                  <td style="text-align: center; padding: 0.5rem;"><span class="tag tag-green">Low</span></td>
+                  <td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Tone-sensitive content</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 0.65rem 0.75rem; font-weight: 600;">RCR-EOC</td>
+                  <td style="text-align: center; padding: 0.5rem;">6</td>
+                  <td style="text-align: center; padding: 0.5rem;"><span class="tag tag-cyan">Medium</span></td>
+                  <td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Complete prompt structure</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 0.65rem 0.75rem; font-weight: 600;">AUTO-FLOW</td>
+                  <td style="text-align: center; padding: 0.5rem;">8</td>
+                  <td style="text-align: center; padding: 0.5rem;"><span class="tag tag-cyan">Medium</span></td>
+                  <td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Automated sequential flow</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 0.65rem 0.75rem; font-weight: 600;">AUTO-FLOW PRO</td>
+                  <td style="text-align: center; padding: 0.5rem;">9+</td>
+                  <td style="text-align: center; padding: 0.5rem;"><span class="tag tag-gold">High</span></td>
+                  <td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Professional, nuanced prompts</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                  <td style="padding: 0.65rem 0.75rem; font-weight: 600;">AUTO-FLOW REACTIVE</td>
+                  <td style="text-align: center; padding: 0.5rem;">Adaptive</td>
+                  <td style="text-align: center; padding: 0.5rem;"><span class="tag tag-gold">High</span></td>
+                  <td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Dynamic, context-sensitive tasks</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0.65rem 0.75rem; font-weight: 600; color: var(--accent-2);">Unified Mode ✦</td>
+                  <td style="text-align: center; padding: 0.5rem; color: var(--accent-2);">11</td>
+                  <td style="text-align: center; padding: 0.5rem;"><span class="tag tag-purple">Expert</span></td>
+                  <td style="padding: 0.5rem 0.75rem; color: var(--accent-2);">Maximum power, complex prompts</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ICDF Reference -->
+        <section id="icdf-ref">
+          <h2>ICDF Engine Reference</h2>
+          <p>The foundational 4-component engine. Every SIRVATO OS prompt begins here.</p>
+          <h3>Components</h3>
+          <ul>
+            <li><code>I — Instruction</code>: Action verb + specific task (e.g., "Write a persuasive email that...")</li>
+            <li><code>C — Context</code>: Background, audience, scenario, constraints</li>
+            <li><code>D — Data</code>: Material, facts, input content the AI should use</li>
+            <li><code>F — Format</code>: Output specification: length, structure, style</li>
+          </ul>
+          <pre><code># ICDF Template
+I → [Action verb] + [specific task]
+C → [Scenario], [audience], [background]
+D → [Material], [facts], [content]
+F → [Format], [length], [style]</code></pre>
+        </section>
+
+        <!-- MICRO Reference -->
+        <section id="micro-ref">
+          <h2>MICRO Rhythm Reference</h2>
+          <p>The 5-component layer for tone and emotional calibration.</p>
+          <h3>Components</h3>
+          <ul>
+            <li><code>M — Message</code>: Core message or communication focus</li>
+            <li><code>I — Intention (I²)</code>: The desired effect in the reader/user</li>
+            <li><code>C — Context</code>: Situational nuance and audience awareness</li>
+            <li><code>R — Rhythm</code>: Tone, energy, pace, emotional texture</li>
+            <li><code>O — Output</code>: Final delivery form</li>
+          </ul>
+          <pre><code># MICRO Template
+M → [Core message]
+I → [Desired effect]
+C → [Context + audience]
+R → [Tone: confident/urgent/calm] · [Energy: high/medium/low]
+O → [Format + length]</code></pre>
+        </section>
+
+        <!-- Unified Mode Reference -->
+        <section id="unified-ref">
+          <h2>Unified Mode Reference</h2>
+          <p>The complete 11-component system. All frameworks fused into one.</p>
+          <pre><code># SIRVATO OS — UNIFIED MODE TEMPLATE
+ 1. Role        → [Who the AI is]
+ 2. Instruction → [What to do]
+ 3. Message     → [Core focus]
+ 4. Intention   → [Desired effect]
+ 5. Request     → [Precise ask]
+ 6. Context     → [Full scenario]
+ 7. Data        → [All material]
+ 8. Examples    → [References]
+ 9. Rhythm      → [Tone + energy]
+10. Constraints → [Limits + rules]
+11. Output      → [Final form]</code></pre>
+        </section>
+
+        <!-- Best Practices -->
+        <section id="best-practices">
+          <h2>Best Practices</h2>
+          <p>Principles for getting the most out of SIRVATO OS.</p>
+
+          <div class="accordion mt-2">
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Start specific, not broad</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  The more specific your TARGET, the more precise the output. Instead of "write a marketing email," try "write a 200-word B2B cold email for a SaaS project management tool targeting CTOs of 50-200 person companies."
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Always define RHYTHM</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  Rhythm is the most under-used component. Define at minimum: tone (professional/casual/urgent), energy (high/medium/low), and perspective (first-person/third-person). This single field transforms generic AI output into crafted communication.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Use CONSTRAINTS actively</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  Constraints are not limitations — they're precision tools. Include: what to avoid (no jargon, no passive voice), style rules (Oxford comma, American English), and hard limits (max 150 words, no bullet points).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Leverage EXAMPLES</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  Provide 1-3 examples in the EXAMPLES field. Counter-examples are especially powerful — showing what you DON'T want calibrates the AI as effectively as positive examples.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Always pass the AI Trigger Protocol</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  Never execute a prompt that hasn't passed all 5 triggers. A prompt that fails Trigger 3 (Data incomplete) will produce hallucinated content. A prompt that fails Trigger 4 (Output ambiguous) will produce something you can't use. The protocol is your quality gate.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Integration Guide -->
+        <section id="integration">
+          <h2>Integration Guide</h2>
+          <p>SIRVATO OS frameworks work with any AI model. Here's how to integrate:</p>
+
+          <h3>Paste-and-Go Method</h3>
+          <p>Use the <a href="demo.html">demo canvas</a> to build your prompt, then click <strong>Copy to Clipboard</strong> and paste directly into your AI interface (ChatGPT, Claude, Gemini, etc.).</p>
+
+          <h3>Template Files</h3>
+          <p>The repository contains Markdown templates for each framework. Copy the template that matches your workflow and fill in the fields.</p>
+          <pre><code># Available templates in /repo:
+- ICDF-ENGINE.md
+- MICRO-RHYTHM.md
+- RCR-EOC.md
+- AUTO-FLOW.md
+- AUTO-FLOW-PRO.md
+- AUTO-FLOW-REACTIVE.md
+- FULLSCREEN-TOTALITY.md
+- MASTER-BLOCK.md</code></pre>
+
+          <h3>Custom Workflows</h3>
+          <p>Mix and match components. The Unified Mode template is the most flexible starting point — delete components you don't need rather than building from scratch.</p>
+        </section>
+
+        <!-- API Reference -->
+        <section id="api">
+          <h2>API Reference</h2>
+          <p>SIRVATO OS is a static website. The "API" is the prompt template system.</p>
+
+          <h3>Component Reference</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border);">
+                  <th style="text-align: left; padding: 0.6rem 0.75rem; color: var(--text-3); font-size: 0.75rem; text-transform: uppercase;">Component</th>
+                  <th style="text-align: left; padding: 0.6rem 0.75rem; color: var(--text-3); font-size: 0.75rem; text-transform: uppercase;">Key</th>
+                  <th style="text-align: left; padding: 0.6rem 0.75rem; color: var(--text-3); font-size: 0.75rem; text-transform: uppercase;">Required</th>
+                  <th style="text-align: left; padding: 0.6rem 0.75rem; color: var(--text-3); font-size: 0.75rem; text-transform: uppercase;">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>target</code></td><td style="padding: 0.5rem;"><code>T</code></td><td style="padding: 0.5rem; color: var(--gold);">Required</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Immediate objective</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>role</code></td><td style="padding: 0.5rem;"><code>R</code></td><td style="padding: 0.5rem; color: var(--gold);">Required</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">AI role definition</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>instruction</code></td><td style="padding: 0.5rem;"><code>I</code></td><td style="padding: 0.5rem; color: var(--gold);">Required</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Action verb + task</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>context</code></td><td style="padding: 0.5rem;"><code>C</code></td><td style="padding: 0.5rem; color: var(--gold);">Required</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Full scenario</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>message</code></td><td style="padding: 0.5rem;"><code>M</code></td><td style="padding: 0.5rem; color: var(--text-3);">Optional</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Core message</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>intention</code></td><td style="padding: 0.5rem;"><code>I²</code></td><td style="padding: 0.5rem; color: var(--text-3);">Optional</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Desired effect</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>request</code></td><td style="padding: 0.5rem;"><code>R</code></td><td style="padding: 0.5rem; color: var(--gold);">Required</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Precise ask</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>data</code></td><td style="padding: 0.5rem;"><code>D</code></td><td style="padding: 0.5rem; color: var(--text-3);">Recommended</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Material + content</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>examples</code></td><td style="padding: 0.5rem;"><code>E</code></td><td style="padding: 0.5rem; color: var(--text-3);">Optional</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">References</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>rhythm</code></td><td style="padding: 0.5rem;"><code>R</code></td><td style="padding: 0.5rem; color: var(--gold);">Required</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Tone + energy</td></tr>
+                <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0.75rem;"><code>constraints</code></td><td style="padding: 0.5rem;"><code>C</code></td><td style="padding: 0.5rem; color: var(--gold);">Required</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Limits + rules</td></tr>
+                <tr><td style="padding: 0.5rem 0.75rem;"><code>output</code></td><td style="padding: 0.5rem;"><code>O/F</code></td><td style="padding: 0.5rem; color: var(--gold);">Required</td><td style="padding: 0.5rem 0.75rem; color: var(--text-2);">Format specification</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Keyboard Shortcuts -->
+        <section id="shortcuts">
+          <h2>Keyboard Shortcuts</h2>
+          <p>Use these shortcuts in the <a href="demo.html">interactive demo</a> to work faster.</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.75rem; margin-top: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: var(--bg-3); border-radius: 6px;">
+              <span style="font-size: 0.875rem; color: var(--text-2);">Generate prompt</span>
+              <div style="display: flex; gap: 0.25rem;"><kbd>Ctrl</kbd> <kbd>Enter</kbd></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: var(--bg-3); border-radius: 6px;">
+              <span style="font-size: 0.875rem; color: var(--text-2);">Copy output</span>
+              <div style="display: flex; gap: 0.25rem;"><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>C</kbd></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: var(--bg-3); border-radius: 6px;">
+              <span style="font-size: 0.875rem; color: var(--text-2);">Reset all fields</span>
+              <div style="display: flex; gap: 0.25rem;"><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: var(--bg-3); border-radius: 6px;">
+              <span style="font-size: 0.875rem; color: var(--text-2);">Toggle dark mode</span>
+              <div style="display: flex; gap: 0.25rem;"><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>D</kbd></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: var(--bg-3); border-radius: 6px;">
+              <span style="font-size: 0.875rem; color: var(--text-2);">Next field</span>
+              <div style="display: flex; gap: 0.25rem;"><kbd>Tab</kbd></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.75rem; background: var(--bg-3); border-radius: 6px;">
+              <span style="font-size: 0.875rem; color: var(--text-2);">Previous field</span>
+              <div style="display: flex; gap: 0.25rem;"><kbd>Shift</kbd> <kbd>Tab</kbd></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>FAQ</h2>
+
+          <div class="accordion mt-2">
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>What is SIRVATO OS?</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  SIRVATO OS is a complete prompt engineering operating system — a collection of frameworks, interfaces, and protocols that unify the most effective prompt engineering methodologies into a single, coherent ecosystem. It's not software you install; it's a methodology you adopt.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Which AI models does it work with?</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  All of them. SIRVATO OS produces structured text prompts that work with any large language model: GPT-4/4o, Claude 3.5/3, Gemini, Llama, Mistral, and any other model that accepts natural language input.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Do I need to use all 11 components?</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  No. For simple tasks, the ICDF Engine (4 components) or MICRO Rhythm (5 components) are often sufficient. The Unified Mode with all 11 components is for complex, high-stakes prompts where maximum precision is required. Start simple, escalate as needed.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>What is FULLSCREEN TOTALITY?</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  FULLSCREEN TOTALITY is the ultimate interface mode — an immersive, distraction-free canvas where the complete Unified Mode lives. Zero chrome, no panels, no windows — just the complete 11-component system in pure flow state. It's both an interface and a philosophy: total presence, total system.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Is there a mobile version?</span>
+                <span class="acc-icon">▼</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  Yes. The SIRVATO OS website is fully responsive and works on mobile devices. The demo canvas is optimized for touch input. However, for complex prompt building, a larger screen is recommended.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <a class="nav-logo" href="index.html">SIRVATO<span> OS</span></a>
+      <div class="flex gap-2">
+        <a href="frameworks.html" style="font-size: 0.85rem; color: var(--text-3);">Frameworks</a>
+        <a href="interfaces.html" style="font-size: 0.85rem; color: var(--text-3);">Interfaces</a>
+        <a href="demo.html" style="font-size: 0.85rem; color: var(--text-3);">Demo</a>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-3);" data-i18n="footer.copy">© 2025 SIRVATO OS.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

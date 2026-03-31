@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SIRVATO OS Interfaces — HUD Minimal, Console Live, OS Window, Master Block, Windows Edition, FULLSCREEN MODE, FULLSCREEN TOTALITY." />
+  <title>Interfaces — SIRVATO OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .mode-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+    .mode-card:hover { border-color: var(--accent); box-shadow: 0 0 30px var(--accent-glow); transform: translateY(-2px); }
+    .mode-card-preview {
+      background: #050508;
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem;
+      min-height: 180px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.7;
+    }
+    .mode-card-info { padding: 1.25rem; }
+    .mode-card-info h3 { margin-bottom: 0.4rem; }
+    .mode-card-info p { font-size: 0.875rem; margin-bottom: 0.75rem; }
+
+    .big-preview {
+      background: #050508;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.75;
+    }
+    .window-bar {
+      background: #1a1a28;
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .window-bar-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .window-bar-dot.r { background: #ff5f57; }
+    .window-bar-dot.y { background: #febc2e; }
+    .window-bar-dot.g { background: #28c840; }
+    .window-bar-title { flex: 1; text-align: center; color: var(--text-3); font-size: 0.75rem; }
+    .window-body { display: flex; min-height: 320px; }
+    .window-sidebar { width: 180px; background: #0e0e18; border-right: 1px solid var(--border); padding: 1rem 0.75rem; flex-shrink: 0; }
+    .window-sidebar-item { padding: 0.35rem 0.5rem; border-radius: 5px; color: var(--text-3); cursor: pointer; font-size: 0.75rem; margin-bottom: 0.15rem; }
+    .window-sidebar-item.active { background: var(--accent-glow); color: var(--accent-2); }
+    .window-main { flex: 1; padding: 1.25rem; }
+    .window-panel-label { color: var(--accent-2); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .window-field { margin-bottom: 0.75rem; }
+    .window-field-key { color: var(--text-3); }
+    .window-field-arrow { color: var(--gold); }
+    .window-field-val { color: var(--text-2); }
+
+    .hud-preview {
+      background: #050508;
+      padding: 1rem 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.7;
+    }
+    .hud-bar { display: flex; gap: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+    .hud-stat { color: var(--text-3); }
+    .hud-stat span { color: var(--cyan); }
+    .hud-field { display: flex; gap: 0.75rem; margin-bottom: 0.3rem; }
+    .hud-key { color: var(--accent-2); min-width: 100px; }
+    .hud-val { color: var(--text-2); }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">SIRVATO<span> OS</span></a>
+    <ul class="nav-links" role="list">
+      <li><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a class="nav-link" href="frameworks.html" data-i18n="nav.frameworks">Frameworks</a></li>
+      <li><a class="nav-link active" href="interfaces.html" data-i18n="nav.interfaces">Interfaces</a></li>
+      <li><a class="nav-link" href="docs.html" data-i18n="nav.docs">Docs</a></li>
+      <li><a class="nav-link" href="demo.html" data-i18n="nav.demo">Demo</a></li>
+    </ul>
+    <div class="nav-actions">
+      <select class="lang-select" aria-label="Language selector"><option value="en">EN</option><option value="it">IT</option></select>
+      <button class="btn-icon theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="btn-icon nav-mobile-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<div style="padding-top: 64px; background: var(--bg-2); border-bottom: 1px solid var(--border);">
+  <div class="container section-sm">
+    <span class="section-label">Interface Modes</span>
+    <h1 style="margin-bottom: 0.5rem;">SIRVATO OS Interfaces</h1>
+    <p style="max-width: 600px;">Seven distinct interface modes — from minimal HUD to complete FULLSCREEN TOTALITY. Choose the environment that matches your workflow and context.</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- Interface Grid Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-3 animate-on-scroll">
+
+        <!-- HUD Minimal -->
+        <div class="mode-card" id="hud">
+          <div class="mode-card-preview">
+            <div class="hud-preview" style="background: transparent; padding: 0; min-height: auto;">
+              <div class="hud-bar">
+                <span class="hud-stat">MODE: <span>HUD</span></span>
+                <span class="hud-stat">ENGINE: <span>ICDF</span></span>
+                <span class="hud-stat">STATUS: <span>ACTIVE</span></span>
+              </div>
+              <div class="hud-field"><span class="hud-key">TARGET →</span><span class="hud-val">[ Goal ]</span></div>
+              <div class="hud-field"><span class="hud-key">ROLE →</span><span class="hud-val">[ AI Role ]</span></div>
+              <div class="hud-field"><span class="hud-key">OUTPUT →</span><span class="hud-val">[ Final form ]</span></div>
+              <span style="color: var(--green);">✓ HUD ACTIVE · Minimal · Fast</span>
+            </div>
+          </div>
+          <div class="mode-card-info">
+            <div class="flex gap-1 mb-1" style="align-items: center; flex-wrap: wrap;">
+              <h3>HUD Minimal</h3>
+              <span class="tag tag-cyan">MINIMAL</span>
+            </div>
+            <p>Heads-up display for speed. Only essential fields visible. Maximum focus, zero distraction.</p>
+            <a href="demo.html" class="btn btn-sm btn-secondary">Try in Demo →</a>
+          </div>
+        </div>
+
+        <!-- Console Live -->
+        <div class="mode-card" id="console">
+          <div class="mode-card-preview">
+            <span style="color: var(--text-3);">sirvato@os:~$ </span><span style="color: var(--text);">run --mode=reactive</span><br>
+            <span style="color: var(--cyan);">▶ Loading ICDF Engine...</span><br>
+            <span style="color: var(--cyan);">▶ MICRO Rhythm Layer active</span><br>
+            <span style="color: var(--cyan);">▶ RCR-EOC Framework loaded</span><br>
+            <span style="color: var(--cyan);">▶ AI Trigger Protocol: LIVE</span><br>
+            <br>
+            <span style="color: var(--green);">✓ All systems operational</span><br>
+            <span style="color: var(--text-3);">sirvato@os:~$ </span><span style="animation: blink 1s step-end infinite; display: inline-block; width: 8px; height: 1em; background: var(--accent-2); vertical-align: text-bottom;"></span>
+          </div>
+          <div class="mode-card-info">
+            <div class="flex gap-1 mb-1" style="align-items: center; flex-wrap: wrap;">
+              <h3>Console Live</h3>
+              <span class="tag tag-purple">TERMINAL</span>
+            </div>
+            <p>Terminal-style interface for power users. Full command-line aesthetic with live feedback.</p>
+            <a href="demo.html" class="btn btn-sm btn-secondary">Try in Demo →</a>
+          </div>
+        </div>
+
+        <!-- OS Window -->
+        <div class="mode-card" id="oswindow">
+          <div class="mode-card-preview" style="padding: 0;">
+            <div class="window-bar" style="padding: 0.4rem 0.75rem;">
+              <div class="window-bar-dot r"></div>
+              <div class="window-bar-dot y"></div>
+              <div class="window-bar-dot g"></div>
+              <div class="window-bar-title">SIRVATO OS — Auto-Flow Reactive</div>
+            </div>
+            <div class="window-body" style="min-height: 130px;">
+              <div class="window-sidebar" style="width: 120px; font-size: 0.7rem;">
+                <div class="window-sidebar-item active">⚡ Target</div>
+                <div class="window-sidebar-item">🟣 Role</div>
+                <div class="window-sidebar-item">🔵 Context</div>
+                <div class="window-sidebar-item">🟡 Request</div>
+                <div class="window-sidebar-item">🚀 Execute</div>
+              </div>
+              <div class="window-main" style="padding: 0.75rem; font-size: 0.73rem;">
+                <div class="window-panel-label">PANEL 1 — TARGET</div>
+                <div class="window-field">
+                  <span class="window-field-arrow">→ </span>
+                  <span class="window-field-val">[ Immediate objective ]</span>
+                </div>
+                <div style="color: var(--text-3); font-size: 0.67rem;">Trigger: activates ROLE + MESSAGE</div>
+              </div>
+            </div>
+          </div>
+          <div class="mode-card-info">
+            <div class="flex gap-1 mb-1" style="align-items: center; flex-wrap: wrap;">
+              <h3>OS Window</h3>
+              <span class="tag tag-purple">10 PANELS</span>
+            </div>
+            <p>Windowed multi-panel interface. 10 panels with sidebar navigation and auto-progression.</p>
+            <a href="demo.html" class="btn btn-sm btn-secondary">Try in Demo →</a>
+          </div>
+        </div>
+
+        <!-- Master Block -->
+        <div class="mode-card" id="masterblock">
+          <div class="mode-card-preview" style="padding: 0;">
+            <div class="window-bar" style="padding: 0.4rem 0.75rem;">
+              <div class="window-bar-dot r"></div>
+              <div class="window-bar-dot y"></div>
+              <div class="window-bar-dot g"></div>
+              <div class="window-bar-title">SIRVATO OS — MASTER BLOCK</div>
+            </div>
+            <div style="padding: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; line-height: 1.6;">
+              <span style="color: var(--text-3);">SYSTEM MODULES (15)</span><br>
+              <span style="color: var(--accent-2);">01</span> <span style="color: var(--text-2);">Prompt Console</span><br>
+              <span style="color: var(--accent-2);">02</span> <span style="color: var(--text-2);">ICDF Engine</span><br>
+              <span style="color: var(--accent-2);">03</span> <span style="color: var(--text-2);">MICRO Layer</span><br>
+              <span style="color: var(--text-3);">… 12 more modules</span><br>
+              <span style="color: var(--green);">✓ All 15 modules active</span>
+            </div>
+          </div>
+          <div class="mode-card-info">
+            <div class="flex gap-1 mb-1" style="align-items: center; flex-wrap: wrap;">
+              <h3>Master Block</h3>
+              <span class="tag tag-gold">15 MODULES</span>
+            </div>
+            <p>The ultimate system block. 15 integrated modules in a single unified interface. Maximum power.</p>
+            <a href="demo.html" class="btn btn-sm btn-secondary">Try in Demo →</a>
+          </div>
+        </div>
+
+        <!-- Windows Edition -->
+        <div class="mode-card" id="windows">
+          <div class="mode-card-preview" style="padding: 0;">
+            <div style="background: #1a1a2e; padding: 0.4rem 0.75rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.72rem;">
+              <span style="color: var(--text-3);">🪟</span>
+              <span style="flex:1; text-align: center; color: var(--text-3);">SIRVATO OS — Windows Edition</span>
+              <span style="color: var(--text-3);">─  □  ✕</span>
+            </div>
+            <div style="padding: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; line-height: 1.7;">
+              <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                <span style="background: var(--accent-glow); color: var(--accent-2); border: 1px solid var(--accent); padding: 0.15rem 0.5rem; border-radius: 4px;">File</span>
+                <span style="color: var(--text-3);">Edit</span>
+                <span style="color: var(--text-3);">View</span>
+                <span style="color: var(--text-3);">Engine</span>
+              </div>
+              <span style="color: var(--text-2);">→ Windows-style OS interface</span><br>
+              <span style="color: var(--text-3);">Taskbar · Menu Bar · Panel System</span>
+            </div>
+          </div>
+          <div class="mode-card-info">
+            <div class="flex gap-1 mb-1" style="align-items: center; flex-wrap: wrap;">
+              <h3>Windows Edition</h3>
+              <span class="tag tag-cyan">DESKTOP OS</span>
+            </div>
+            <p>Desktop OS-style interface with menu bar, taskbar, and windowed panels for familiar navigation.</p>
+            <a href="demo.html" class="btn btn-sm btn-secondary">Try in Demo →</a>
+          </div>
+        </div>
+
+        <!-- FULLSCREEN MODE -->
+        <div class="mode-card" id="fullscreen">
+          <div class="mode-card-preview">
+            <div style="border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 0.75rem; font-size: 0.72rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+              <span style="color: var(--text-3);">MODE: <span style="color: var(--cyan);">FULLSCREEN</span></span>
+              <span style="color: var(--text-3);">ENGINE: <span style="color: var(--cyan);">ICDF+MICRO</span></span>
+            </div>
+            <span style="color: var(--accent-2);">⚡ TARGET →</span> <span style="color: var(--text-3);">[ Immediate objective ]</span><br>
+            <span style="color: var(--accent-2);">🟣 ROLE →</span> <span style="color: var(--text-3);">[ AI Role ]</span><br>
+            <span style="color: var(--accent-2);">🔵 CONTEXT →</span> <span style="color: var(--text-3);">[ Scenario ]</span><br>
+            <br>
+            <span style="color: var(--green);">→ READY · Immersive · Distraction-free</span>
+          </div>
+          <div class="mode-card-info">
+            <div class="flex gap-1 mb-1" style="align-items: center; flex-wrap: wrap;">
+              <h3>FULLSCREEN MODE</h3>
+              <span class="tag tag-purple">IMMERSIVE</span>
+            </div>
+            <p>Immersive distraction-free canvas. No panels, no windows — pure flow state with all components.</p>
+            <a href="demo.html" class="btn btn-sm btn-secondary">Try in Demo →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FULLSCREEN TOTALITY — Hero Feature -->
+  <section class="section" id="totality" style="background: var(--bg-2);">
+    <div class="container">
+      <div class="section-header center animate-on-scroll">
+        <span class="section-label">Ultimate Interface</span>
+        <h2 class="section-title">FULLSCREEN TOTALITY</h2>
+        <p class="section-subtitle">The pinnacle of SIRVATO OS. Total immersion, zero chrome — just the complete 11-component system in a pure, distraction-free environment.</p>
+      </div>
+      <div class="animate-on-scroll" style="max-width: 860px; margin: 0 auto;">
+        <div class="big-preview">
+          <div class="window-bar">
+            <div class="window-bar-dot r"></div>
+            <div class="window-bar-dot y"></div>
+            <div class="window-bar-dot g"></div>
+            <div class="window-bar-title">🌑 SIRVATO OS — FULLSCREEN TOTALITY · Modalità: Totale · Immersiva · Unificata · Reattiva</div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <div style="border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 1.5rem;">
+              <span style="color: var(--text-3);">Engine: <span style="color: var(--cyan);">ICDF + MICRO + RCR-EOC</span></span>
+              <span style="color: var(--text-3);">Protocol: <span style="color: var(--cyan);">AI Trigger Active</span></span>
+              <span style="color: var(--text-3);">Mode: <span style="color: var(--cyan);">Auto-Flow Reactive PRO</span></span>
+              <span style="color: var(--text-3);">State: <span style="color: var(--green);">FULLSCREEN</span></span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div style="border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem;">
+                <div style="color: var(--accent-2); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem;">⚡ TARGET</div>
+                <div style="color: var(--text-3);">→ [ What you want now ]</div>
+                <div style="color: var(--text-3); font-size: 0.67rem; margin-top: 0.25rem;">Trigger: <span style="color: var(--gold);">activates entire system</span></div>
+              </div>
+              <div style="border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem;">
+                <div style="color: var(--accent-2); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem;">🟣 ROLE + MESSAGE</div>
+                <div style="color: var(--text-3);">→ [ Role ] / [ Message ]</div>
+              </div>
+              <div style="border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem;">
+                <div style="color: var(--accent-2); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem;">🟣 ICDF ENGINE</div>
+                <div style="color: var(--text-3);">I · C · D · F → unified</div>
+              </div>
+              <div style="border: 1px solid var(--accent); border-radius: 6px; padding: 0.75rem; background: rgba(123,94,167,0.08);">
+                <div style="color: var(--accent-2); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem;">🚀 EXECUTE</div>
+                <div style="color: var(--cyan);">→ Final prompt · Sistema Unico</div>
+              </div>
+            </div>
+            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="color: var(--text-3); font-size: 0.72rem;">████████████████ S I R V A T O   O S ████████████████</span>
+              <span class="tag tag-green">🟢 READY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3 animate-on-scroll">
+        <a href="demo.html" class="btn btn-primary btn-lg">Launch FULLSCREEN TOTALITY →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center animate-on-scroll">
+        <span class="section-label">Interface Comparison</span>
+        <h2 class="section-title">Choose Your Interface</h2>
+      </div>
+      <div class="animate-on-scroll" style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--border);">
+              <th style="text-align: left; padding: 0.75rem 1rem; color: var(--text-3); font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Interface</th>
+              <th style="text-align: center; padding: 0.75rem; color: var(--text-3); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.05em;">Panels</th>
+              <th style="text-align: center; padding: 0.75rem; color: var(--text-3); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.05em;">MICRO</th>
+              <th style="text-align: center; padding: 0.75rem; color: var(--text-3); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.05em;">AI Protocol</th>
+              <th style="text-align: center; padding: 0.75rem; color: var(--text-3); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.05em;">Unified</th>
+              <th style="text-align: left; padding: 0.75rem; color: var(--text-3); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.05em;">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.75rem 1rem; font-weight: 600;">HUD Minimal</td>
+              <td style="text-align: center; padding: 0.75rem;">1</td>
+              <td style="text-align: center; padding: 0.75rem;">—</td>
+              <td style="text-align: center; padding: 0.75rem;">—</td>
+              <td style="text-align: center; padding: 0.75rem;">—</td>
+              <td style="padding: 0.75rem; color: var(--text-2);">Quick drafts, speed</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.75rem 1rem; font-weight: 600;">Console Live</td>
+              <td style="text-align: center; padding: 0.75rem;">1</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem;">—</td>
+              <td style="padding: 0.75rem; color: var(--text-2);">Power users, terminal</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.75rem 1rem; font-weight: 600;">OS Window</td>
+              <td style="text-align: center; padding: 0.75rem;">10</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem;">—</td>
+              <td style="padding: 0.75rem; color: var(--text-2);">Structured workflows</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.75rem 1rem; font-weight: 600;">Master Block</td>
+              <td style="text-align: center; padding: 0.75rem;">15</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="padding: 0.75rem; color: var(--text-2);">Full system control</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.75rem 1rem; font-weight: 600;">Windows Edition</td>
+              <td style="text-align: center; padding: 0.75rem;">Multi</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem;">—</td>
+              <td style="padding: 0.75rem; color: var(--text-2);">Desktop-familiar users</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.75rem 1rem; font-weight: 600;">FULLSCREEN MODE</td>
+              <td style="text-align: center; padding: 0.75rem;">1</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="padding: 0.75rem; color: var(--text-2);">Focus, flow state</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 1rem; font-weight: 600; color: var(--accent-2);">FULLSCREEN TOTALITY ✦</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--accent-2);">∞</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="text-align: center; padding: 0.75rem; color: var(--green);">✓</td>
+              <td style="padding: 0.75rem; color: var(--accent-2);">Ultimate immersive experience</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <a class="nav-logo" href="index.html">SIRVATO<span> OS</span></a>
+      <div class="flex gap-2">
+        <a href="frameworks.html" style="font-size: 0.85rem; color: var(--text-3);">Frameworks</a>
+        <a href="docs.html" style="font-size: 0.85rem; color: var(--text-3);">Docs</a>
+        <a href="demo.html" style="font-size: 0.85rem; color: var(--text-3);">Demo</a>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-3);" data-i18n="footer.copy">© 2025 SIRVATO OS.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
