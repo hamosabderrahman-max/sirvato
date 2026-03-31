@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Console Live — Real-Time Terminal-Style Prompt Interface for SIRVATO OS. Hacker aesthetic, live streaming output, command history and keyboard-first workflow.">
+  <title>Console Live — SIRVATO OS Interfaces</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html" class="active">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Console Live</span>
+      </nav>
+      <span class="hero-tag">INTERFACE</span>
+      <h1 class="hero-title">Console Live</h1>
+      <p class="hero-tagline">Real-Time Terminal-Style Prompt Interface</p>
+      <p class="hero-description">A fully featured terminal interface inspired by Unix consoles and hacker aesthetics. Type, execute, and see responses in a live stream format with full command history and auto-complete.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is Console Live?</h2>
+      <p class="section-text">Console Live brings the power and familiarity of the Unix terminal to prompt engineering. Every interaction flows through a scrolling output stream, timestamped and colour-coded by message type. Framework commands follow CLI conventions — developers and power users feel at home immediately. There is no GUI chrome to learn, no mouse required, and no menus to navigate. Everything is a command.</p>
+      <p class="section-text">The live streaming output simulation mirrors how modern AI APIs deliver tokens — you see the response build character by character, giving you the ability to interrupt, redirect, or build on partial outputs before they complete. Console Live is the interface of choice for developers integrating SIRVATO OS prompts into automated pipelines and for engineers who think in terminals.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Interface Visualization</div>
+      <h2 class="section-title">Console Live Layout</h2>
+      <div class="ascii-block">
+<pre>
+╔═══════════════════════════════════════════╗
+║  SIRVATO OS  │  CONSOLE LIVE  │  v1.0    ║
+╠═══════════════════════════════════════════╣
+║  [14:23:01] > System initialized          ║
+║  [14:23:02] > Framework: MICRO loaded     ║
+║  [14:23:03] > Awaiting input...           ║
+║                                           ║
+║  sirvato@os:~$ █                          ║
+╚═══════════════════════════════════════════╝
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Live Streaming Output Simulation</h4>
+            <p class="feature-text">Output renders token by token as it arrives from the AI, exactly mirroring real API streaming. Watch your prompt response build in real time. At any point you can interrupt output with Ctrl+C, capture what has appeared so far, or redirect the generation with a follow-up command without waiting for completion.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Command History Navigation</h4>
+            <p class="feature-text">Arrow Up / Arrow Down cycles through your full session history, exactly like a Unix shell. The history persists across browser sessions using local storage. Ctrl+R activates reverse history search — type a fragment of any previous command and the console finds the most recent match instantly.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Auto-Complete for Framework Commands</h4>
+            <p class="feature-text">Tab completion works for all SIRVATO OS commands: framework names, interface switches, configuration flags, and built-in operators. Double-Tab shows all available completions. The auto-complete engine is aware of your current framework context and surfaces only the commands relevant to your active mode.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Colour-Coded Output by Message Type</h4>
+            <p class="feature-text">System messages appear in cyan, prompt input echoes in white, AI output renders in green, warnings in amber, and errors in red. The colour coding is consistent across all message types and applies to both interactive sessions and exported logs, making session review fast and scannable.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Export Full Session as Text</h4>
+            <p class="feature-text">At any time, run <code>export session</code> to generate a complete plain-text log of the entire session — every input, every output, every timestamp. Export formats include raw text, markdown, JSON (with metadata), and ANSI colour-preserved terminal format for embedding in documentation.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Keyboard-First Workflow</h4>
+            <p class="feature-text">Console Live is designed to be operated entirely without a mouse. Every action has a keyboard shortcut. Ctrl+L clears the screen, Ctrl+K kills the current line, Ctrl+A moves to line start, Ctrl+E to line end. Power users build muscle memory that makes prompt engineering as fast as coding in a terminal.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Timestamp on Every Output Line</h4>
+            <p class="feature-text">Each line in the output stream carries a precise timestamp in [HH:MM:SS] format. This allows you to measure response latency, trace the exact sequence of events in complex multi-step sessions, and synchronise Console Live output with external system logs when integrating with automated workflows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">Console Live in Action</h2>
+      <p class="section-text">Open Console Live and begin typing immediately. The <code>use</code> command loads a framework, <code>run</code> executes the active prompt, and <code>set</code> configures output parameters. The following session demonstrates a complete MICRO framework interaction:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">Console Live — MICRO Framework Session</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>[14:23:01] > System initialized. SIRVATO OS Console Live v1.0
+[14:23:01] > Type 'help' for available commands.
+
+sirvato@os:~$ use micro
+[14:23:04] > Framework: MICRO loaded. M-I²-C-R-O active.
+
+sirvato@os:~$ set M "Launch announcement for our new developer API"
+sirvato@os:~$ set I2 "Excite developers, drive early adoption"
+sirvato@os:~$ set C "Tech audience, Hacker News and dev Twitter"
+sirvato@os:~$ set R "High energy, peer-to-peer tone, no corporate speak"
+sirvato@os:~$ set O "Tweet thread, 5 tweets, max 280 chars each"
+
+sirvato@os:~$ run
+[14:23:47] > Generating... ████████░░ 80%
+[14:23:49] > Output stream:
+
+Tweet 1: We just opened public access to the Sirvato API...
+█</code></pre>
+      </div>
+      <p class="section-text" style="margin-top:1.5rem;"><strong>Best for:</strong> Power users, developers integrating prompts into pipelines, debugging multi-step prompt chains, and batch processing sessions where command-line speed is essential.</p>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Interfaces</div>
+      <h2 class="section-title">Explore Other Interfaces</h2>
+      <div class="related-grid">
+        <a href="../interfaces/hud-minimal.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">HUD Minimal</h4>
+          <p class="related-desc">Stripped-down heads-up display for maximum speed and minimum cognitive overhead.</p>
+        </a>
+        <a href="../interfaces/os-window.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">OS Window</h4>
+          <p class="related-desc">Multi-pane OS-style window system with resizable panels and framework sidebar.</p>
+        </a>
+        <a href="../interfaces/fullscreen-mode.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Fullscreen Mode</h4>
+          <p class="related-desc">Total viewport immersion for deep work with ambient background and focus timer.</p>
+        </a>
+        <a href="../interfaces/windows-edition.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Windows Edition</h4>
+          <p class="related-desc">Multi-window environment for running several prompt workflows simultaneously.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

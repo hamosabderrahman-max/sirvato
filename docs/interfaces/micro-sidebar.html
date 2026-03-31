@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MICRO Sidebar — 5-Panel Expandable MICRO Sidebar System for SIRVATO OS. One panel per MICRO component, real-time prompt preview, smooth animations, and JSON export.">
+  <title>MICRO Sidebar — SIRVATO OS Interfaces</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="../frameworks/icdf.html">Frameworks</a>
+      <a href="../interfaces/hud-minimal.html" class="active">Interfaces</a>
+      <a href="../micro-supra/core.html">MICRO SUPRA</a>
+      <a href="../documentation/quick-start.html">Docs</a>
+      <a href="../demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">MICRO Sidebar</span>
+      </nav>
+      <span class="hero-tag">INTERFACE</span>
+      <h1 class="hero-title">MICRO Sidebar</h1>
+      <p class="hero-tagline">5-Panel Expandable MICRO Sidebar System</p>
+      <p class="hero-description">An expandable sidebar system with 5 dedicated panels — one for each MICRO component. Real-time prompt generation as you fill each panel. The definitive interface for the MICRO framework specialist.</p>
+    </div>
+  </section>
+
+  <main style="max-width:900px;margin:0 auto;padding:4rem 2rem;">
+
+    <section class="section reveal" id="overview">
+      <div class="section-label">Overview</div>
+      <h2 class="section-title">What is MICRO Sidebar?</h2>
+      <p class="section-text">MICRO Sidebar is the purpose-built interface for the MICRO framework — M-I²-C-R-O — the communication architecture at the heart of SIRVATO OS. Instead of a general-purpose prompt editor, MICRO Sidebar presents exactly five panels, one for each MICRO component. Message. Intention². Context. Rhythm. Output. Each panel is labelled, described, and guided with contextual hints. As you fill each panel, the live preview area below assembles the complete MICRO prompt in real time.</p>
+      <p class="section-text">The sidebar metaphor is intentional. MICRO Sidebar is designed to live alongside your primary work — whatever that work may be. Collapse it to a slim 5-button vertical strip when you need screen space. Expand any single panel to full width when you need to think deeply about that component. The workflow is: open the Message panel, articulate your core message, close it, open Intention², define your dual-layer intent, and proceed through the components until the preview shows a complete, valid MICRO structure ready to deploy.</p>
+    </section>
+
+    <section class="section reveal" id="architecture">
+      <div class="section-label">Interface Visualization</div>
+      <h2 class="section-title">MICRO Sidebar Layout</h2>
+      <div class="ascii-block">
+<pre>
+┌──┬──────────────────────────────────────────────┐
+│M │  ╔══════════════════════════════════════════╗ │
+│──│  ║  MESSAGE PANEL                           ║ │
+│I²│  ║  What is the core message? ─────────────  ║ │
+│──│  ║  [                                      ] ║ │
+│C │  ╚══════════════════════════════════════════╝ │
+│──│                                              │
+│R │  PREVIEW ───────────────────────────────────  │
+│──│  M: [message]                               │
+│O │  I²: [intention]                            │
+└──┴──────────────────────────────────────────────┘
+</pre>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Core Capabilities</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">5 Expandable Panels (M, I², C, R, O)</h4>
+            <p class="feature-text">Each MICRO component occupies its own dedicated panel. The panel header shows the component letter, full name, and a one-line description of what belongs in that component. Click the header to expand the panel to an editable text area. Click again to collapse it back to the single-letter tab. Multiple panels can be open simultaneously for cross-referencing as you write.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Real-Time Prompt Preview as You Type</h4>
+            <p class="feature-text">The preview area at the bottom of the sidebar updates keystroke-by-keystroke as you type in any panel. The preview renders the complete MICRO structure with proper labels and formatting — exactly what will be sent to the AI. Completeness indicators (●●●○○ dots) show which components have been filled and which are still empty, giving you an at-a-glance prompt quality signal.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Smooth Panel Expand/Collapse Animations</h4>
+            <p class="feature-text">Panel transitions use CSS spring animations at 300ms — fast enough to feel responsive, slow enough to communicate spatial position clearly. The animation preserves orientation so you always know which component you are looking at relative to the full M-I²-C-R-O stack. The animation can be reduced-motion disabled for accessibility compliance.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Collapsible to Single-Letter Tabs</h4>
+            <p class="feature-text">When you need the full screen for other work, collapse the entire sidebar to a slim strip of 5 single-letter tabs: M, I², C, R, O. Each tab is colour-coded — filled tabs appear in the active accent colour, empty tabs in muted grey. The entire sidebar width in collapsed mode is 32px, taking up less than 2% of a standard 1920px monitor width.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Panel Linking — Context Flows Between Panels</h4>
+            <p class="feature-text">Enable Panel Linking mode and the sidebar automatically propagates context. If you specify an audience in the Context panel, the Rhythm panel surfaces tone suggestions calibrated to that audience. If your Message contains a specific topic, the Intention² panel suggests strategic objectives aligned with that topic. Panel Linking transforms the sidebar from a form into a guided composition system.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Auto-Complete Suggestions Per Panel</h4>
+            <p class="feature-text">Each panel has a context-aware auto-complete system trained on MICRO framework best practices. The Message panel suggests clarifying the core proposition. Intention² auto-complete proposes dual-layer intent framings. Context suggests relevant environmental variables. Rhythm offers tone and cadence descriptors. Output proposes format specifications. Accept any suggestion with Tab; reject and keep typing to dismiss.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-bullet">✦</span>
+          <div class="feature-body">
+            <h4 class="feature-title">Export Complete MICRO Structure as JSON</h4>
+            <p class="feature-text">Click Export in the preview panel to generate a structured JSON representation of your complete MICRO prompt. The JSON includes all five component values, metadata (timestamp, completion status, word counts per component), and a formatted_prompt key containing the complete assembled prompt as a string. The JSON format integrates directly with SIRVATO OS API endpoints and Master Block import.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="usage">
+      <div class="section-label">Usage Example</div>
+      <h2 class="section-title">MICRO Sidebar in Action</h2>
+      <p class="section-text">Open MICRO Sidebar and expand the M (Message) panel first. Articulate the single core message you want to communicate. Move through I², C, R, and O in sequence. The preview builds as you go. The following shows a complete MICRO structure built in the sidebar for a product launch announcement:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-label">MICRO Sidebar — Complete Structure Export</span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText)">Copy</button>
+        </div>
+        <pre><code>{
+  "framework": "MICRO",
+  "components": {
+    "M": "Our new developer API is now in public beta — it is ready to use today.",
+    "I2": {
+      "stated": "Inform developers that the API is available",
+      "strategic": "Create urgency and excitement to drive immediate sign-ups and early adoption momentum"
+    },
+    "C": "Tech developer community, primarily backend engineers, active on Hacker News and GitHub",
+    "R": "High energy, peer-to-peer tone — developer to developer, not company to customer. Direct, no fluff.",
+    "O": "Tweet thread: 5 tweets, max 280 characters each, first tweet must hook in < 10 words"
+  },
+  "metadata": {
+    "timestamp": "2024-01-15T14:23:01Z",
+    "completion": "5/5",
+    "total_words": 94
+  },
+  "formatted_prompt": "M: Our new developer API is now in public beta — ready to use today.\nI²: [stated] Inform developers API is available / [strategic] Drive urgency and early adoption\nC: Tech developers, backend engineers, Hacker News + GitHub community\nR: High energy, peer-to-peer, developer to developer, direct, no fluff\nO: Tweet thread, 5 tweets, max 280 chars, first tweet hooks in under 10 words"
+}</code></pre>
+      </div>
+      <p class="section-text" style="margin-top:1.5rem;"><strong>Best for:</strong> MICRO framework specialists, structured communication work across marketing, strategy, and product domains, mobile-friendly prompting where screen space is limited, and users who prefer a guided component-by-component workflow over an open freeform editor.</p>
+    </section>
+
+    <section class="section reveal" id="related">
+      <div class="section-label">Related Interfaces</div>
+      <h2 class="section-title">Explore Other Interfaces</h2>
+      <div class="related-grid">
+        <a href="../micro-supra/core.html" class="related-link">
+          <span class="related-tag">MICRO SUPRA</span>
+          <h4 class="related-title">MICRO Core</h4>
+          <p class="related-desc">The M-I²-C-R-O foundation architecture that powers the MICRO Sidebar framework engine.</p>
+        </a>
+        <a href="../interfaces/hud-minimal.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">HUD Minimal</h4>
+          <p class="related-desc">Stripped HUD for experienced MICRO users who no longer need the guided panel scaffolding.</p>
+        </a>
+        <a href="../interfaces/fullscreen-mode.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Fullscreen Mode</h4>
+          <p class="related-desc">Deep work environment — combine with MICRO Sidebar for guided immersive prompting.</p>
+        </a>
+        <a href="../interfaces/master-block.html" class="related-link">
+          <span class="related-tag">INTERFACE</span>
+          <h4 class="related-title">Master Block</h4>
+          <p class="related-desc">Block-based composition that accepts MICRO Sidebar JSON exports for visual prompt building.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="../frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="../frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="../frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="../frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="../frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="../interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="../interfaces/console-live.html">Console Live</a></li>
+          <li><a href="../interfaces/os-window.html">OS Window</a></li>
+          <li><a href="../interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="../interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="../documentation/faq.html">FAQ</a></li>
+          <li><a href="../demo.html">Live Demo</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="../documentation/quick-start.html">Get Started</a>
+        <a href="../demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>
