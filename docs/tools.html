@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Framework Selector Tool — SIRVATO OS. Find the perfect framework for your use case.">
+  <title>Framework Selector — SIRVATO OS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">⬡ SIRVATO OS</a>
+    <div class="nav-links" id="nav-links">
+      <a href="frameworks/icdf.html">Frameworks</a>
+      <a href="interfaces/hud-minimal.html">Interfaces</a>
+      <a href="micro-supra/core.html">MICRO SUPRA</a>
+      <a href="documentation/quick-start.html">Docs</a>
+      <a href="demo.html">Demo</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Toggle theme">🌙</button>
+      <button class="btn-lang" id="lang-toggle">IT</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Framework Selector</span>
+      </div>
+      <div class="page-hero-tag">TOOL</div>
+      <h1 class="page-hero-title">Framework Selector</h1>
+      <p class="page-hero-tagline">Find the perfect framework for your use case</p>
+      <p class="page-hero-desc">Answer 3 questions and get a personalized framework recommendation.</p>
+    </div>
+  </div>
+
+  <div style="max-width:900px;margin:0 auto;padding:4rem 2rem;" id="selector-app">
+
+    <!-- Step 1 -->
+    <div class="question-block reveal" id="q1-block">
+      <h3><span class="text-cyan">01 /</span> What is your primary goal?</h3>
+      <div class="grid-auto reveal-group" id="q1-options">
+        <div class="selector-card" data-q="1" data-val="structure">
+          <span class="selector-card-icon">📐</span>
+          <span class="selector-card-label">Structure a complex prompt</span>
+        </div>
+        <div class="selector-card" data-q="1" data-val="communicate">
+          <span class="selector-card-icon">💬</span>
+          <span class="selector-card-label">Communicate tone &amp; intention</span>
+        </div>
+        <div class="selector-card" data-q="1" data-val="automate">
+          <span class="selector-card-icon">⚡</span>
+          <span class="selector-card-label">Automate a multi-step workflow</span>
+        </div>
+        <div class="selector-card" data-q="1" data-val="unified">
+          <span class="selector-card-icon">🌐</span>
+          <span class="selector-card-label">Everything at once</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="question-block reveal hidden" id="q2-block">
+      <h3><span class="text-cyan">02 /</span> How complex is your use case?</h3>
+      <div class="grid-auto" id="q2-options">
+        <div class="selector-card" data-q="2" data-val="simple">
+          <span class="selector-card-icon">🟢</span>
+          <span class="selector-card-label">Simple — single task</span>
+        </div>
+        <div class="selector-card" data-q="2" data-val="medium">
+          <span class="selector-card-icon">🟡</span>
+          <span class="selector-card-label">Medium — multi-part</span>
+        </div>
+        <div class="selector-card" data-q="2" data-val="complex">
+          <span class="selector-card-icon">🔴</span>
+          <span class="selector-card-label">Complex — full system</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="question-block reveal hidden" id="q3-block">
+      <h3><span class="text-cyan">03 /</span> What type of output do you need?</h3>
+      <div class="grid-auto" id="q3-options">
+        <div class="selector-card" data-q="3" data-val="text">
+          <span class="selector-card-icon">📝</span>
+          <span class="selector-card-label">Text / Content</span>
+        </div>
+        <div class="selector-card" data-q="3" data-val="code">
+          <span class="selector-card-icon">💻</span>
+          <span class="selector-card-label">Code / Technical</span>
+        </div>
+        <div class="selector-card" data-q="3" data-val="analysis">
+          <span class="selector-card-icon">📊</span>
+          <span class="selector-card-label">Analysis / Report</span>
+        </div>
+        <div class="selector-card" data-q="3" data-val="creative">
+          <span class="selector-card-icon">🎨</span>
+          <span class="selector-card-label">Creative / Design</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="selector-result" class="hidden reveal"></div>
+
+    <div style="text-align:center;margin-top:2rem;">
+      <button id="btn-reset" class="btn btn-secondary hidden">Start Over</button>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">⬡ SIRVATO OS</a>
+        <p>The complete prompt engineering operating system. Built for precision, speed, and total AI control.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><a href="frameworks/icdf.html">ICDF Engine</a></li>
+          <li><a href="frameworks/micro.html">MICRO Layer</a></li>
+          <li><a href="frameworks/rcr-eoc.html">RCR-EOC</a></li>
+          <li><a href="frameworks/auto-flow.html">AUTO-FLOW</a></li>
+          <li><a href="frameworks/unified-mode.html">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul>
+          <li><a href="interfaces/hud-minimal.html">HUD Minimal</a></li>
+          <li><a href="interfaces/console-live.html">Console Live</a></li>
+          <li><a href="interfaces/os-window.html">OS Window</a></li>
+          <li><a href="interfaces/fullscreen-mode.html">Fullscreen</a></li>
+          <li><a href="interfaces/micro-sidebar.html">MICRO Sidebar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documentation/quick-start.html">Quick Start</a></li>
+          <li><a href="documentation/faq.html">FAQ</a></li>
+          <li><a href="documentation/api-documentation.html">API Docs</a></li>
+          <li><a href="demo.html">Live Demo</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 SIRVATO OS — All rights reserved</span>
+      <div class="footer-links">
+        <a href="documentation/quick-start.html">Get Started</a>
+        <a href="documentation/faq.html">FAQ</a>
+        <a href="demo.html">Demo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
+  <script>
+  // Framework Selector Logic
+  const answers = {};
+  const RECOMMENDATIONS = {
+    structure: {
+      simple:  { name: 'ICDF Engine',       path: 'frameworks/icdf.html',         desc: 'Perfect for clean, 4-layer structural decomposition of straightforward prompts.' },
+      medium:  { name: 'RCR-EOC Framework', path: 'frameworks/rcr-eoc.html',      desc: 'Ideal for multi-component prompts that need role, context, and output control.' },
+      complex: { name: 'Unified Mode',       path: 'frameworks/unified-mode.html', desc: 'The full 11-component system for complex, high-stakes prompt engineering.' },
+    },
+    communicate: {
+      simple:  { name: 'MICRO Layer',    path: 'frameworks/micro.html',      desc: 'The MICRO rhythm system excels at tuning tone, intention, and communication style.' },
+      medium:  { name: 'MICRO Layer',    path: 'frameworks/micro.html',      desc: 'MICRO with full M-I²-C-R-O components for nuanced multi-part communication.' },
+      complex: { name: 'MICRO SUPRA-OS', path: 'micro-supra/supra-os.html',  desc: 'Kernel-level MICRO integration for enterprise-grade communication systems.' },
+    },
+    automate: {
+      simple:  { name: 'AUTO-FLOW',          path: 'frameworks/auto-flow.html',          desc: 'Sequential step-by-step execution for straightforward automation chains.' },
+      medium:  { name: 'AUTO-FLOW PRO',      path: 'frameworks/auto-flow-pro.html',      desc: 'Guided multi-stage orchestration with checkpoints and validation.' },
+      complex: { name: 'AUTO-FLOW REACTIVE', path: 'frameworks/auto-flow-reactive.html', desc: 'Fully adaptive reactive system that adjusts to context in real-time.' },
+    },
+    unified: {
+      simple:  { name: 'Unified Mode',          path: 'frameworks/unified-mode.html',      desc: 'Start with the 11-component unified system for comprehensive coverage.' },
+      medium:  { name: 'MICRO OMNIMODE',         path: 'micro-supra/omnimode.html',         desc: 'All MICRO modes simultaneously activated for maximum output quality.' },
+      complex: { name: 'MICRO SUPRA-TOTALITY',   path: 'micro-supra/supra-totality.html',   desc: 'The apex system — complete integration of all frameworks and interfaces.' },
+    },
+  };
+
+  document.querySelectorAll('.selector-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const q = card.getAttribute('data-q');
+      const val = card.getAttribute('data-val');
+      answers[q] = val;
+
+      card.closest('.question-block').querySelectorAll('.selector-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+
+      if (q === '1') {
+        setTimeout(() => {
+          document.getElementById('q2-block').classList.remove('hidden');
+          document.getElementById('q2-block').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 350);
+      } else if (q === '2') {
+        setTimeout(() => {
+          document.getElementById('q3-block').classList.remove('hidden');
+          document.getElementById('q3-block').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 350);
+      } else if (q === '3') {
+        setTimeout(() => showResult(), 350);
+      }
+    });
+  });
+
+  function showResult() {
+    const goal = answers['1'] || 'structure';
+    const complexity = answers['2'] || 'simple';
+    const rec = (RECOMMENDATIONS[goal] || RECOMMENDATIONS.structure)[complexity] || RECOMMENDATIONS.structure.simple;
+    const resultEl = document.getElementById('selector-result');
+    resultEl.innerHTML = `
+      <div class="result-box">
+        <span class="section-tag">Recommendation</span>
+        <h3>✓ ${rec.name}</h3>
+        <p style="margin-top:0.5rem;margin-bottom:1.5rem;">${rec.desc}</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="${rec.path}" class="btn btn-primary">Explore ${rec.name} →</a>
+          <a href="demo.html" class="btn btn-secondary">Try in Demo</a>
+        </div>
+      </div>
+    `;
+    resultEl.classList.remove('hidden');
+    document.getElementById('btn-reset').classList.remove('hidden');
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  document.getElementById('btn-reset').addEventListener('click', () => {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    document.querySelectorAll('.selector-card').forEach(c => c.classList.remove('selected'));
+    document.getElementById('q2-block').classList.add('hidden');
+    document.getElementById('q3-block').classList.add('hidden');
+    document.getElementById('selector-result').classList.add('hidden');
+    document.getElementById('btn-reset').classList.add('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  </script>
+</body>
+</html>
