@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | Interactive Demo</title>
+  <meta name="description" content="Experience SIRVATO OS AUTOPILOT mode in an interactive terminal demo.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="js/theme.js"></script>
+  <style>
+    .demo-canvas {
+      background: #050508;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+    .demo-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .demo-bar-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #terminal-body {
+      padding: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      line-height: 1.9;
+      min-height: 460px;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+    .matrix-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 200px;
+    }
+    #matrix-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="frameworks/icdf.html">Frameworks</a>
+        <a href="interfaces/hud-minimal.html">Interfaces</a>
+        <a href="micro-supra/core.html">MICRO SUPRA</a>
+        <a href="docs/quick-start.html">Docs</a>
+        <a href="demo.html" class="active">Demo</a>
+        <a href="tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="frameworks/icdf.html">Frameworks</a>
+    <a href="interfaces/hud-minimal.html">Interfaces</a>
+    <a href="micro-supra/core.html">MICRO SUPRA</a>
+    <a href="docs/quick-start.html">Docs</a>
+    <a href="demo.html">Demo</a>
+    <a href="tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="page-header-tag">INTERACTIVE DEMO</div>
+    <h1>SIRVATO OS <span class="text-cyan">Terminal</span></h1>
+    <p>Watch AUTOPILOT mode execute real-time autonomous operations. The demo loops through initialization, deployment, status checks, and MICRO SUPRA activation.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start; gap:2rem;">
+        <div>
+          <h3 style="margin-bottom:1rem;">Live Terminal</h3>
+          <div class="demo-canvas scan-overlay">
+            <div class="demo-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="demo-bar-title">SIRVATO OS — AUTOPILOT TERMINAL v3.1.0</span>
+            </div>
+            <div id="terminal-body"></div>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:1rem;">What You're Seeing</h3>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-text">
+                <h4>System Initialization</h4>
+                <p>AUTOPILOT mode activates, configuring multi-region routing and Zero-Trust policies automatically.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📦</div>
+              <div class="feature-text">
+                <h4>AUTO-FLOW PRO Deployment</h4>
+                <p>9-step guided deployment framework executes each stage with validation and rollback readiness.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📊</div>
+              <div class="feature-text">
+                <h4>Real-Time Status</h4>
+                <p>Full system telemetry: uptime, latency, error rates, AI decision counts, and security posture.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">💫</div>
+              <div class="feature-text">
+                <h4>MICRO SUPRA-TOTALITY++</h4>
+                <p>Activation of the ultimate unified mode integrating all frameworks and interfaces simultaneously.</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:2rem;">
+            <h3 style="margin-bottom:1rem;">Matrix Visualization</h3>
+            <div class="matrix-wrap">
+              <canvas id="matrix-canvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem;">
+        <h3 style="margin-bottom:1.5rem; text-align:center;">Try These Commands</h3>
+        <div class="grid grid-3">
+          <div class="code-block">
+            <span class="code-label">INIT</span>
+            <pre><span class="code-keyword">sirvato</span> init \
+  <span class="code-value">--mode=autopilot</span> \
+  <span class="code-value">--region=multi</span> \
+  <span class="code-value">--security=zero-trust</span></pre>
+          </div>
+          <div class="code-block">
+            <span class="code-label">DEPLOY</span>
+            <pre><span class="code-keyword">sirvato</span> deploy \
+  <span class="code-value">--framework=auto-flow-pro</span> \
+  <span class="code-value">--scale=auto</span> \
+  <span class="code-value">--observe=full</span></pre>
+          </div>
+          <div class="code-block">
+            <span class="code-label">SUPRA</span>
+            <pre><span class="code-keyword">sirvato</span> micro-supra \
+  <span class="code-value">--mode=totality</span> \
+  <span class="code-value">--activate</span> \
+  <span class="code-value">--unified=true</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <a href="index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+        <span>© 2025 SIRVATO OS. All rights reserved.</span>
+        <span>v3.1.0 · AUTOPILOT ACTIVE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

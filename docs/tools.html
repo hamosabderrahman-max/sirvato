@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | Framework Selector Tool</title>
+  <meta name="description" content="Interactive tool to help you choose the right SIRVATO OS framework and interface for your use case.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="js/theme.js"></script>
+  <style>
+    .tool-card {
+      cursor: pointer;
+      border: 2px solid var(--border-color);
+      transition: all 0.2s;
+    }
+    .tool-card:hover, .tool-card.selected {
+      border-color: var(--cyan);
+      background: rgba(0, 245, 255, 0.05);
+    }
+    .tool-card.selected { box-shadow: var(--shadow-glow-cyan); }
+    .result-card {
+      background: linear-gradient(135deg, rgba(0,245,255,0.05), rgba(123,47,255,0.05));
+      border: 1px solid rgba(0,245,255,0.2);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+    .question-step { display: none; }
+    .question-step.active { display: block; }
+    .step-indicator {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+    .step-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border-color);
+      transition: all 0.2s;
+    }
+    .step-dot.active { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+    .step-dot.done { background: var(--green); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="frameworks/icdf.html">Frameworks</a>
+        <a href="interfaces/hud-minimal.html">Interfaces</a>
+        <a href="micro-supra/core.html">MICRO SUPRA</a>
+        <a href="docs/quick-start.html">Docs</a>
+        <a href="demo.html">Demo</a>
+        <a href="tools.html" class="active">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="frameworks/icdf.html">Frameworks</a>
+    <a href="interfaces/hud-minimal.html">Interfaces</a>
+    <a href="micro-supra/core.html">MICRO SUPRA</a>
+    <a href="docs/quick-start.html">Docs</a>
+    <a href="demo.html">Demo</a>
+    <a href="tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="page-header-tag">INTERACTIVE TOOL</div>
+    <h1>Framework <span class="text-cyan">Selector</span></h1>
+    <p>Answer a few questions and we'll recommend the perfect SIRVATO OS framework and interface for your use case.</p>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+      <div class="step-indicator" id="step-indicator">
+        <div class="step-dot active" id="dot-0"></div>
+        <div class="step-dot" id="dot-1"></div>
+        <div class="step-dot" id="dot-2"></div>
+        <div class="step-dot" id="dot-3"></div>
+      </div>
+
+      <!-- Step 0: Use case -->
+      <div class="question-step active" id="step-0">
+        <h3 style="text-align:center; margin-bottom:2rem;">What is your primary use case?</h3>
+        <div class="grid grid-2">
+          <div class="card tool-card" onclick="selectAnswer(0,'automation')">
+            <div class="card-icon">🤖</div>
+            <div class="card-title">Automation</div>
+            <p class="card-desc">Automate repetitive tasks, deployments, and workflows without manual intervention.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(0,'realtime')">
+            <div class="card-icon">⚡</div>
+            <div class="card-title">Real-Time Systems</div>
+            <p class="card-desc">Low-latency event processing, reactive systems, and live data pipelines.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(0,'orchestration')">
+            <div class="card-icon">🌐</div>
+            <div class="card-title">Multi-Region Orchestration</div>
+            <p class="card-desc">Coordinate services across regions with automatic failover and routing.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(0,'ai')">
+            <div class="card-icon">🧠</div>
+            <div class="card-title">AI/ML Workloads</div>
+            <p class="card-desc">Train models, run inference, and manage AI pipelines at scale.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 1: Team size -->
+      <div class="question-step" id="step-1">
+        <h3 style="text-align:center; margin-bottom:2rem;">What is your team size?</h3>
+        <div class="grid grid-3">
+          <div class="card tool-card" onclick="selectAnswer(1,'solo')">
+            <div class="card-icon">👤</div>
+            <div class="card-title">Solo / Small</div>
+            <p class="card-desc">1–5 engineers. Need simplicity and speed.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(1,'medium')">
+            <div class="card-icon">👥</div>
+            <div class="card-title">Medium Team</div>
+            <p class="card-desc">6–50 engineers. Need coordination and structure.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(1,'enterprise')">
+            <div class="card-icon">🏢</div>
+            <div class="card-title">Enterprise</div>
+            <p class="card-desc">50+ engineers. Need governance and scalability.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Complexity -->
+      <div class="question-step" id="step-2">
+        <h3 style="text-align:center; margin-bottom:2rem;">What level of system complexity?</h3>
+        <div class="grid grid-3">
+          <div class="card tool-card" onclick="selectAnswer(2,'simple')">
+            <div class="card-icon">🟢</div>
+            <div class="card-title">Simple</div>
+            <p class="card-desc">Single service, minimal dependencies.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(2,'moderate')">
+            <div class="card-icon">🟡</div>
+            <div class="card-title">Moderate</div>
+            <p class="card-desc">Multiple services, some integrations.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(2,'complex')">
+            <div class="card-icon">🔴</div>
+            <div class="card-title">Complex / Critical</div>
+            <p class="card-desc">Distributed systems, strict SLAs, high availability.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Interface preference -->
+      <div class="question-step" id="step-3">
+        <h3 style="text-align:center; margin-bottom:2rem;">Preferred interface style?</h3>
+        <div class="grid grid-2">
+          <div class="card tool-card" onclick="selectAnswer(3,'minimal')">
+            <div class="card-icon">📟</div>
+            <div class="card-title">Minimal / HUD</div>
+            <p class="card-desc">Focus on key metrics only.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(3,'console')">
+            <div class="card-icon">💻</div>
+            <div class="card-title">Console / Terminal</div>
+            <p class="card-desc">Command-driven, power user style.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(3,'dashboard')">
+            <div class="card-icon">🎛️</div>
+            <div class="card-title">Full Dashboard</div>
+            <p class="card-desc">Comprehensive overview with all panels.</p>
+          </div>
+          <div class="card tool-card" onclick="selectAnswer(3,'fullscreen')">
+            <div class="card-icon">🔲</div>
+            <div class="card-title">Fullscreen Immersive</div>
+            <p class="card-desc">Total immersion, no distractions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="question-step" id="step-result">
+        <h3 style="text-align:center; margin-bottom:2rem; color: var(--green);">✅ Your Recommendation</h3>
+        <div class="result-card" id="recommendation">
+          <p>Calculating recommendation...</p>
+        </div>
+        <div style="text-align:center; margin-top:2rem;">
+          <button class="btn btn-ghost" onclick="resetTool()">Start Over</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All frameworks reference -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">REFERENCE</span>
+        <h2>All Frameworks at a Glance</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Framework</th>
+              <th>Best For</th>
+              <th>Complexity</th>
+              <th>Steps</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>ICDF Engine</td><td>Core intent processing</td><td><span class="badge badge-cyan">Low</span></td><td>4</td><td><a href="frameworks/icdf.html">→</a></td></tr>
+            <tr><td>MICRO Framework</td><td>Service communication</td><td><span class="badge badge-cyan">Low</span></td><td>5</td><td><a href="frameworks/micro.html">→</a></td></tr>
+            <tr><td>RCR-EOC</td><td>Request processing</td><td><span class="badge badge-green">Medium</span></td><td>3</td><td><a href="frameworks/rcr-eoc.html">→</a></td></tr>
+            <tr><td>AUTO-FLOW</td><td>Sequential automation</td><td><span class="badge badge-green">Medium</span></td><td>8</td><td><a href="frameworks/auto-flow.html">→</a></td></tr>
+            <tr><td>AUTO-FLOW PRO</td><td>Enterprise deployments</td><td><span class="badge badge-magenta">High</span></td><td>9</td><td><a href="frameworks/auto-flow-pro.html">→</a></td></tr>
+            <tr><td>AUTO-FLOW REACTIVE</td><td>Event-driven systems</td><td><span class="badge badge-magenta">High</span></td><td>Dynamic</td><td><a href="frameworks/auto-flow-reactive.html">→</a></td></tr>
+            <tr><td>AI Trigger Protocol</td><td>Predictive activation</td><td><span class="badge badge-purple">Expert</span></td><td>Auto</td><td><a href="frameworks/ai-trigger-protocol.html">→</a></td></tr>
+            <tr><td>Unified Mode</td><td>Complete integration</td><td><span class="badge badge-purple">Expert</span></td><td>13</td><td><a href="frameworks/unified-mode.html">→</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <a href="index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+        <span>© 2025 SIRVATO OS. All rights reserved.</span>
+        <span>v3.1.0 · AUTOPILOT ACTIVE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+  const answers = {};
+  let currentStep = 0;
+  const totalSteps = 4;
+
+  const RECOMMENDATIONS = {
+    automation: {
+      framework: 'AUTO-FLOW PRO',
+      frameworkLink: 'frameworks/auto-flow-pro.html',
+      interface: 'Console Live',
+      interfaceLink: 'interfaces/console-live.html',
+      reason: 'AUTO-FLOW PRO\'s 9-step guided framework excels at structured automation pipelines with built-in validation and rollback. Console Live gives you real-time feedback during execution.'
+    },
+    realtime: {
+      framework: 'AUTO-FLOW REACTIVE',
+      frameworkLink: 'frameworks/auto-flow-reactive.html',
+      interface: 'HUD Minimal',
+      interfaceLink: 'interfaces/hud-minimal.html',
+      reason: 'AUTO-FLOW REACTIVE\'s adaptive engine is purpose-built for event-driven, low-latency systems. HUD Minimal keeps essential metrics in view without distraction.'
+    },
+    orchestration: {
+      framework: 'Unified Mode',
+      frameworkLink: 'frameworks/unified-mode.html',
+      interface: 'FULLSCREEN TOTALITY',
+      interfaceLink: 'interfaces/fullscreen-totality.html',
+      reason: 'Unified Mode\'s 13-component architecture handles the complexity of multi-region orchestration. FULLSCREEN TOTALITY gives you complete visibility across all regions.'
+    },
+    ai: {
+      framework: 'ICDF Engine',
+      frameworkLink: 'frameworks/icdf.html',
+      interface: 'Master Block',
+      interfaceLink: 'interfaces/master-block.html',
+      reason: 'ICDF Engine\'s Intent-Context-Decision-Flow architecture aligns perfectly with AI/ML workflows. Master Block\'s 15 modules provide comprehensive model and pipeline management.'
+    }
+  };
+
+  function selectAnswer(step, value) {
+    answers[step] = value;
+    // Mark selected
+    document.querySelectorAll(`#step-${step} .tool-card`).forEach(c => c.classList.remove('selected'));
+    event.currentTarget.classList.add('selected');
+    setTimeout(() => goToStep(step + 1), 400);
+  }
+
+  function goToStep(step) {
+    document.querySelectorAll('.question-step').forEach(s => s.classList.remove('active'));
+    const dots = document.querySelectorAll('.step-dot');
+    if (step >= totalSteps) {
+      showResult();
+      document.getElementById('step-result').classList.add('active');
+      dots.forEach((d, i) => { d.classList.toggle('done', i < totalSteps); d.classList.remove('active'); });
+    } else {
+      document.getElementById(`step-${step}`).classList.add('active');
+      dots.forEach((d, i) => {
+        d.classList.toggle('done', i < step);
+        d.classList.toggle('active', i === step);
+      });
+    }
+    currentStep = step;
+  }
+
+  function showResult() {
+    const useCase = answers[0] || 'automation';
+    const rec = RECOMMENDATIONS[useCase];
+    const el = document.getElementById('recommendation');
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+        <div>
+          <div class="section-tag" style="margin-bottom:0.5rem;">Recommended Framework</div>
+          <h3 class="text-cyan">${rec.framework}</h3>
+          <a href="${rec.frameworkLink}" class="btn btn-primary btn-sm" style="margin-top:0.75rem;">Learn More →</a>
+        </div>
+        <div>
+          <div class="section-tag" style="margin-bottom:0.5rem;">Recommended Interface</div>
+          <h3 class="text-magenta">${rec.interface}</h3>
+          <a href="${rec.interfaceLink}" class="btn btn-ghost btn-sm" style="margin-top:0.75rem;">View Interface →</a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <p style="margin:1rem 0 0;">${rec.reason}</p>
+    `;
+  }
+
+  function resetTool() {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    goToStep(0);
+  }
+  </script>
+</body>
+</html>

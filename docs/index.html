@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | AI-First Cloud Provider</title>
+  <meta name="description" content="SIRVATO OS — AI-First Cloud Provider with AUTOPILOT Mode. Autonomous resource allocation, multi-region routing, Zero-Trust security, and real-time observability.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="frameworks/icdf.html">Frameworks</a>
+        <a href="interfaces/hud-minimal.html">Interfaces</a>
+        <a href="micro-supra/core.html">MICRO SUPRA</a>
+        <a href="docs/quick-start.html">Docs</a>
+        <a href="demo.html">Demo</a>
+        <a href="tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        <a href="demo.html" class="btn btn-primary btn-sm">Launch Demo</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="frameworks/icdf.html">Frameworks</a>
+    <a href="interfaces/hud-minimal.html">Interfaces</a>
+    <a href="micro-supra/core.html">MICRO SUPRA</a>
+    <a href="docs/quick-start.html">Docs</a>
+    <a href="demo.html">Demo</a>
+    <a href="tools.html">Tools</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">AUTOPILOT MODE ACTIVE</div>
+      <h1 class="hero-title">
+        <span class="brand">SIRVATO</span> <span class="accent">OS</span><br>
+        AI-First Cloud Provider
+      </h1>
+      <p class="hero-subtitle">The operating system that thinks for itself.</p>
+      <p class="hero-tagline">AUTOPILOT Mode · Zero Configuration · Real-Time Decisions · Infinite Scale</p>
+      <div class="hero-actions">
+        <a href="docs/quick-start.html" class="btn btn-primary btn-lg">Get Started →</a>
+        <a href="demo.html" class="btn btn-ghost btn-lg">▶ Interactive Demo</a>
+        <a href="docs/api-documentation.html" class="btn btn-ghost btn-lg">API Docs</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value" data-count="99.99" data-suffix="%" data-decimals="2">99.99%</span>
+          <span class="hero-stat-label">Uptime SLA</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">&lt;5s</span>
+          <span class="hero-stat-label">RTO Target</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value" data-count="3">3</span>
+          <span class="hero-stat-label">Global Regions</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value" data-count="8">8</span>
+          <span class="hero-stat-label">Frameworks</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">∞</span>
+          <span class="hero-stat-label">Scale Potential</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Status Bar -->
+  <div style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 0.75rem 0;">
+    <div class="container">
+      <div class="status-bar" style="background: none; border: none;">
+        <div class="status-item"><span class="status-dot green"></span><span>Status: <span class="status-value">All Systems Nominal</span></span></div>
+        <div class="status-item"><span class="status-dot cyan"></span><span>Uptime: <span class="status-value">99.99%</span></span></div>
+        <div class="status-item"><span class="status-dot green"></span><span>RTO: <span class="status-value">&lt;5s</span></span></div>
+        <div class="status-item"><span class="status-dot cyan"></span><span>Security: <span class="status-value">Zero-Trust ACTIVE</span></span></div>
+        <div class="status-item"><span class="status-dot green"></span><span>Time: <span class="status-value" id="status-time">--</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTOPILOT Features -->
+  <section class="section" id="autopilot">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">AUTOPILOT</span>
+        <h2>Autonomous Intelligence at Every Layer</h2>
+        <p>SIRVATO OS makes real-time decisions on your behalf — from resource allocation to security enforcement — without requiring manual intervention.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag cyan">Compute</div>
+          <div class="card-icon">⚡</div>
+          <div class="card-title">Autonomous Resource Allocation</div>
+          <p class="card-desc">AI-driven scaling responds to workload patterns in milliseconds. Zero-touch provisioning for compute, memory, and storage.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag magenta">Network</div>
+          <div class="card-icon">🌐</div>
+          <div class="card-title">Multi-Region Routing</div>
+          <p class="card-desc">Automatic failover across us-east-1, eu-west-1, and ap-south-1. Intelligent traffic routing with sub-5s RTO.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag purple">Security</div>
+          <div class="card-icon">🛡️</div>
+          <div class="card-title">Zero-Trust Enforcement</div>
+          <p class="card-desc">Every request verified. Every connection authenticated. Continuous posture assessment with automated threat response.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag green">Observability</div>
+          <div class="card-icon">📊</div>
+          <div class="card-title">Real-Time Telemetry</div>
+          <p class="card-desc">End-to-end distributed tracing, metrics aggregation, and AI-powered anomaly detection across your entire stack.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frameworks -->
+  <section class="section" id="frameworks" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FRAMEWORKS</span>
+        <h2>Eight Intelligent Frameworks</h2>
+        <p>Purpose-built cognitive frameworks that power every decision SIRVATO OS makes — from simple requests to complex multi-region orchestration.</p>
+      </div>
+      <div class="grid grid-4">
+        <a href="frameworks/icdf.html" class="card reveal" style="text-decoration:none">
+          <div class="card-tag cyan">Core</div>
+          <div class="card-icon">🧠</div>
+          <div class="card-title">ICDF Engine</div>
+          <p class="card-desc">Intent-Context-Decision-Flow — the foundational cognitive engine driving all autonomous decisions.</p>
+        </a>
+        <a href="frameworks/micro.html" class="card reveal delay-1" style="text-decoration:none">
+          <div class="card-tag magenta">Protocol</div>
+          <div class="card-icon">🎵</div>
+          <div class="card-title">MICRO Framework</div>
+          <p class="card-desc">Rhythm-based communication layer enabling fluid inter-service coordination at scale.</p>
+        </a>
+        <a href="frameworks/rcr-eoc.html" class="card reveal delay-2" style="text-decoration:none">
+          <div class="card-tag green">Engine</div>
+          <div class="card-icon">⚙️</div>
+          <div class="card-title">RCR-EOC</div>
+          <p class="card-desc">Request-Context-Response Engine Output Console for precise command execution and feedback.</p>
+        </a>
+        <a href="frameworks/auto-flow.html" class="card reveal delay-3" style="text-decoration:none">
+          <div class="card-tag purple">Flow</div>
+          <div class="card-icon">🔄</div>
+          <div class="card-title">AUTO-FLOW</div>
+          <p class="card-desc">8-step sequential prompt framework for structured, reproducible automation pipelines.</p>
+        </a>
+        <a href="frameworks/auto-flow-pro.html" class="card reveal" style="text-decoration:none">
+          <div class="card-tag cyan">Flow+</div>
+          <div class="card-icon">🚀</div>
+          <div class="card-title">AUTO-FLOW PRO</div>
+          <p class="card-desc">9-step guided framework with enhanced context management and rollback capabilities.</p>
+        </a>
+        <a href="frameworks/auto-flow-reactive.html" class="card reveal delay-1" style="text-decoration:none">
+          <div class="card-tag magenta">Reactive</div>
+          <div class="card-icon">⚡</div>
+          <div class="card-title">AUTO-FLOW REACTIVE</div>
+          <p class="card-desc">Adaptive reactive framework that responds dynamically to changing system conditions.</p>
+        </a>
+        <a href="frameworks/ai-trigger-protocol.html" class="card reveal delay-2" style="text-decoration:none">
+          <div class="card-tag green">Trigger</div>
+          <div class="card-icon">🎯</div>
+          <div class="card-title">AI Trigger Protocol</div>
+          <p class="card-desc">Automated activation system that intelligently triggers actions based on predictive models.</p>
+        </a>
+        <a href="frameworks/unified-mode.html" class="card reveal delay-3" style="text-decoration:none">
+          <div class="card-tag purple">Unified</div>
+          <div class="card-icon">🌌</div>
+          <div class="card-title">Unified Mode</div>
+          <p class="card-desc">13-component unified system that harmonizes all frameworks into a single coherent execution context.</p>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="docs/framework-comparison.html" class="btn btn-ghost">Compare All Frameworks →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interfaces -->
+  <section class="section" id="interfaces">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">INTERFACES</span>
+        <h2>Eight Powerful Interfaces</h2>
+        <p>From minimal HUD overlays to full-screen immersive consoles — choose the interface that matches your workflow.</p>
+      </div>
+      <div class="grid grid-4">
+        <a href="interfaces/hud-minimal.html" class="card reveal" style="text-decoration:none">
+          <div class="card-tag cyan">HUD</div>
+          <div class="card-icon">📟</div>
+          <div class="card-title">HUD Minimal</div>
+          <p class="card-desc">Lightweight heads-up display with essential metrics. Maximum signal, minimum noise.</p>
+        </a>
+        <a href="interfaces/console-live.html" class="card reveal delay-1" style="text-decoration:none">
+          <div class="card-tag green">Console</div>
+          <div class="card-icon">💻</div>
+          <div class="card-title">Console Live</div>
+          <p class="card-desc">Real-time live console with streaming output and interactive command execution.</p>
+        </a>
+        <a href="interfaces/os-window.html" class="card reveal delay-2" style="text-decoration:none">
+          <div class="card-tag magenta">Window</div>
+          <div class="card-icon">🖥️</div>
+          <div class="card-title">OS Window</div>
+          <p class="card-desc">Multi-panel windowed interface for concurrent management of multiple system views.</p>
+        </a>
+        <a href="interfaces/master-block.html" class="card reveal delay-3" style="text-decoration:none">
+          <div class="card-tag purple">Master</div>
+          <div class="card-icon">🎛️</div>
+          <div class="card-title">Master Block</div>
+          <p class="card-desc">Master control interface with 15 integrated modules for total system oversight.</p>
+        </a>
+        <a href="interfaces/windows-edition.html" class="card reveal" style="text-decoration:none">
+          <div class="card-tag cyan">Windows</div>
+          <div class="card-icon">🪟</div>
+          <div class="card-title">Windows Edition</div>
+          <p class="card-desc">Familiar Windows-style interface bringing SIRVATO's power to desktop paradigms.</p>
+        </a>
+        <a href="interfaces/fullscreen-mode.html" class="card reveal delay-1" style="text-decoration:none">
+          <div class="card-tag green">Full</div>
+          <div class="card-icon">🔲</div>
+          <div class="card-title">FULLSCREEN MODE</div>
+          <p class="card-desc">Immersive full-canvas interface for deep-focus operations and system visualization.</p>
+        </a>
+        <a href="interfaces/fullscreen-totality.html" class="card reveal delay-2" style="text-decoration:none">
+          <div class="card-tag magenta">Totality</div>
+          <div class="card-icon">🌐</div>
+          <div class="card-title">FULLSCREEN TOTALITY</div>
+          <p class="card-desc">The ultimate unified interface merging all panels, feeds, and controls in one view.</p>
+        </a>
+        <a href="interfaces/micro-sidebar.html" class="card reveal delay-3" style="text-decoration:none">
+          <div class="card-tag purple">Sidebar</div>
+          <div class="card-icon">📋</div>
+          <div class="card-title">MICRO SIDEBAR</div>
+          <p class="card-desc">Compact sidebar navigation interface that maximizes workspace while maintaining control.</p>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="docs/interface-showcase.html" class="btn btn-ghost">Interface Showcase Gallery →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MICRO SUPRA -->
+  <section class="section" id="micro-supra" style="background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--magenta); border-color: rgba(255,0,255,0.3);">MICRO SUPRA</span>
+        <h2>MICRO <span class="text-magenta">SUPRA-TOTALITY++</span></h2>
+        <p>The pinnacle of SIRVATO OS architecture — a complete integration of all systems, frameworks, and interfaces into one unified cognitive operating layer.</p>
+      </div>
+      <div class="grid grid-3">
+        <a href="micro-supra/core.html" class="card reveal" style="text-decoration:none; border-color: rgba(255,0,255,0.15);">
+          <div class="card-tag magenta">Kernel</div>
+          <div class="card-icon">⚛️</div>
+          <div class="card-title">MICRO Core</div>
+          <p class="card-desc">The foundational kernel that powers all MICRO SUPRA components.</p>
+        </a>
+        <a href="micro-supra/supra-os.html" class="card reveal delay-1" style="text-decoration:none; border-color: rgba(255,0,255,0.15);">
+          <div class="card-tag magenta">OS Layer</div>
+          <div class="card-icon">🖥️</div>
+          <div class="card-title">MICRO SUPRA-OS</div>
+          <p class="card-desc">Full operating system kernel with AI-native process scheduling and memory management.</p>
+        </a>
+        <a href="micro-supra/holofield.html" class="card reveal delay-2" style="text-decoration:none; border-color: rgba(255,0,255,0.15);">
+          <div class="card-tag magenta">5-Layer</div>
+          <div class="card-icon">🌊</div>
+          <div class="card-title">MICRO HOLOFIELD</div>
+          <p class="card-desc">Five-layer holographic architecture providing unprecedented depth of system visibility.</p>
+        </a>
+        <a href="micro-supra/omnimode.html" class="card reveal" style="text-decoration:none; border-color: rgba(255,0,255,0.15);">
+          <div class="card-tag purple">Omni</div>
+          <div class="card-icon">🔮</div>
+          <div class="card-title">MICRO OMNIMODE</div>
+          <p class="card-desc">All-modes integration layer enabling simultaneous multi-paradigm execution.</p>
+        </a>
+        <a href="micro-supra/auto-trigger.html" class="card reveal delay-1" style="text-decoration:none; border-color: rgba(255,0,255,0.15);">
+          <div class="card-tag purple">Trigger</div>
+          <div class="card-icon">⚡</div>
+          <div class="card-title">MICRO AUTO-TRIGGER</div>
+          <p class="card-desc">Self-activating system that autonomously responds to contextual cues and state changes.</p>
+        </a>
+        <a href="micro-supra/supra-totality.html" class="card neon-border reveal delay-2" style="text-decoration:none; border-color: rgba(255,0,255,0.3);">
+          <div class="card-tag magenta">Ultimate</div>
+          <div class="card-icon">💫</div>
+          <div class="card-title">MICRO SUPRA-TOTALITY++</div>
+          <p class="card-desc">The complete integration of all SIRVATO OS components into a singular, transcendent execution environment.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section">
+        <span class="section-tag">START NOW</span>
+        <h2>Ready to Activate <span class="text-cyan">AUTOPILOT</span>?</h2>
+        <p>Deploy SIRVATO OS in minutes. No configuration required. The AI takes care of everything.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="docs/quick-start.html" class="btn btn-primary btn-lg">Quick Start Guide →</a>
+          <a href="demo.html" class="btn btn-ghost btn-lg">Try Interactive Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+          <p>The AI-First Cloud Operating System. Autonomous. Secure. Infinite.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Frameworks</div>
+          <div class="footer-links">
+            <a href="frameworks/icdf.html">ICDF Engine</a>
+            <a href="frameworks/micro.html">MICRO Framework</a>
+            <a href="frameworks/auto-flow.html">AUTO-FLOW</a>
+            <a href="frameworks/auto-flow-pro.html">AUTO-FLOW PRO</a>
+            <a href="frameworks/unified-mode.html">Unified Mode</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Interfaces</div>
+          <div class="footer-links">
+            <a href="interfaces/hud-minimal.html">HUD Minimal</a>
+            <a href="interfaces/console-live.html">Console Live</a>
+            <a href="interfaces/master-block.html">Master Block</a>
+            <a href="interfaces/fullscreen-totality.html">FULLSCREEN TOTALITY</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Documentation</div>
+          <div class="footer-links">
+            <a href="docs/quick-start.html">Quick Start</a>
+            <a href="docs/api-documentation.html">API Reference</a>
+            <a href="docs/framework-comparison.html">Comparison</a>
+            <a href="docs/faq.html">FAQ</a>
+            <a href="demo.html">Demo</a>
+            <a href="tools.html">Tools</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 <span>SIRVATO OS</span>. All rights reserved.</span>
+        <span>Built with <span>♥</span> for the AI-First era</span>
+        <span>v3.1.0 · AUTOPILOT ACTIVE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | MICRO Core</title>
+  <meta name="description" content="The foundational kernel that powers all MICRO SUPRA components. The heartbeat of the SIRVATO OS intelligence layer.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <a href="core.html" class="active">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon-dark">🌙</span><span class="theme-icon-light">☀️</span></button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a><a href="../frameworks/icdf.html">Frameworks</a><a href="../interfaces/hud-minimal.html">Interfaces</a><a href="core.html">MICRO SUPRA</a><a href="../docs/quick-start.html">Docs</a><a href="../demo.html">Demo</a><a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>MICRO SUPRA</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>MICRO Core</span>
+    </div>
+    <div class="page-header-tag">MICRO SUPRA · KERNEL</div>
+    <h1><span class="text-magenta">MICRO</span> Core</h1>
+    <p>The foundational kernel that powers all MICRO SUPRA components. The heartbeat of the SIRVATO OS intelligence layer.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-magenta">Kernel Layer</span>
+      <span class="badge badge-green">Stable v3.1</span>
+      <span class="badge badge-cyan">Zero Overhead</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-magenta">MICRO Core</span>?</h2>
+          <p>MICRO Core is the foundational kernel that underpins every operation in the SIRVATO OS ecosystem. It sits at the lowest software layer, directly above the hardware abstraction boundary, orchestrating every process, signal, memory allocation, and security check with sub-millisecond precision.</p>
+          <p>Designed from the ground up with AI-native architecture, MICRO Core exposes a signal-based IPC bus that allows every MICRO SUPRA component — from HOLOFIELD to SUPRA-TOTALITY++ — to communicate with zero-copy messaging and deterministic latency guarantees.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Kernel Philosophy</h4>
+            <p style="margin:0;">MICRO Core treats every operation as a first-class intelligence event. There is no "background" process — every thread is observable, every signal is traceable, and every memory region is accounted for.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">MICRO Core · Kernel Boot</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">kernel</span><span class="terminal-cmd"> boot --verbose --ai-mode</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">MICRO Core v3.1.0 — Initializing...</div>
+              <div class="terminal-output">  ✓ Process Scheduler     [AI-MODE]</div>
+              <div class="terminal-output">  ✓ Memory Manager        [PREDICTIVE]</div>
+              <div class="terminal-output">  ✓ Signal Bus            [ZERO-COPY]</div>
+              <div class="terminal-output">  ✓ Security Gate         [ZERO-TRUST]</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Kernel entropy seeded: 256-bit</div>
+              <div class="terminal-output">AI scheduler latency:  0.4ms</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-magenta">◈ MICRO Core LIVE — All systems nominal</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">Core <span class="text-magenta">Components</span></h2>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-tag magenta">Subsystem 1</div>
+          <div class="card-icon">⚙️</div>
+          <div class="card-title">Process Scheduler</div>
+          <p class="card-desc">AI-powered scheduler that predicts workload patterns and pre-allocates CPU time slices before tasks are even queued, eliminating scheduling jitter.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag cyan">Subsystem 2</div>
+          <div class="card-icon">🧩</div>
+          <div class="card-title">Memory Manager</div>
+          <p class="card-desc">Predictive memory allocator that learns access patterns and pre-faults pages into cache, delivering near-zero page-fault latency across all workloads.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag green">Subsystem 3</div>
+          <div class="card-icon">📡</div>
+          <div class="card-title">Signal Bus</div>
+          <p class="card-desc">Zero-copy, lock-free inter-process communication bus built on ring buffers. Delivers signals between MICRO SUPRA components with deterministic sub-millisecond latency.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag purple">Subsystem 4</div>
+          <div class="card-icon">🔒</div>
+          <div class="card-title">Security Gate</div>
+          <p class="card-desc">Hardware-backed security boundary enforcing zero-trust at the kernel level. Every system call is authenticated, every memory region is capability-protected.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>Kernel <span class="text-magenta">Configuration</span></h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — MICRO Core Kernel Config</span>
+<span class="code-keyword">micro_core</span>:
+  <span class="code-var">scheduler</span>:
+    <span class="code-var">mode</span>: <span class="code-string">"ai-predictive"</span>
+    <span class="code-var">time_slice_us</span>: <span class="code-value">100</span>
+    <span class="code-var">preemption</span>: <span class="code-value">true</span>
+  <span class="code-var">memory</span>:
+    <span class="code-var">allocator</span>: <span class="code-string">"jemalloc-ai"</span>
+    <span class="code-var">prefetch</span>: <span class="code-value">true</span>
+    <span class="code-var">huge_pages</span>: <span class="code-value">true</span>
+  <span class="code-var">signal_bus</span>:
+    <span class="code-var">mode</span>: <span class="code-string">"zero-copy"</span>
+    <span class="code-var">ring_size</span>: <span class="code-value">65536</span>
+  <span class="code-var">security</span>:
+    <span class="code-var">mode</span>: <span class="code-string">"zero-trust"</span>
+    <span class="code-var">hw_backed</span>: <span class="code-value">true</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Key <span class="text-magenta">Features</span></h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">🧠</div>
+              <div class="feature-text">
+                <h4>Kernel-Level AI</h4>
+                <p>Inference runs inside the kernel ring with dedicated memory pages — no context switch required for AI decisions.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-text">
+                <h4>Zero-Overhead Scheduling</h4>
+                <p>Predictive scheduling eliminates run-queue contention and delivers consistent sub-0.5ms scheduling latency.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📡</div>
+              <div class="feature-text">
+                <h4>Signal-Based IPC</h4>
+                <p>Lock-free ring-buffer signaling between all MICRO SUPRA subsystems with guaranteed delivery ordering.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔒</div>
+              <div class="feature-text">
+                <h4>Hardened Security</h4>
+                <p>Every syscall verified via capability tokens. Hardware attestation ensures kernel integrity at boot and runtime.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem; text-align:center;">
+        <a href="../docs/quick-start.html" class="btn btn-ghost">View Documentation →</a>
+        <a href="supra-os.html" class="btn btn-primary" style="margin-left:1rem;">Next: SUPRA-OS →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">MICRO SUPRA</div><div class="footer-links"><a href="core.html">MICRO Core</a><a href="supra-os.html">SUPRA-OS</a><a href="holofield.html">HOLOFIELD</a><a href="omnimode.html">OMNIMODE</a><a href="auto-trigger.html">AUTO-TRIGGER</a><a href="supra-totality.html">SUPRA-TOTALITY++</a></div></div><div><div class="footer-col-title">Frameworks</div><div class="footer-links"><a href="../frameworks/icdf.html">ICDF Engine</a><a href="../frameworks/unified-mode.html">Unified Mode</a><a href="../demo.html">Demo</a></div></div><div><div class="footer-col-title">Docs</div><div class="footer-links"><a href="../docs/quick-start.html">Quick Start</a><a href="../docs/api-documentation.html">API</a><a href="../docs/faq.html">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

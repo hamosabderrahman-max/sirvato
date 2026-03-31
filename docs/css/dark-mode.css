@@ -1,0 +1,43 @@
+/* SIRVATO OS - Dark/Light Mode Overrides */
+[data-theme="light"] {
+  --bg-primary: #f0f0f8;
+  --bg-secondary: #e8e8f0;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5f5ff;
+  --border-color: #d0d0e8;
+  --text-primary: #0a0a2e;
+  --text-secondary: #3a3a5c;
+  --text-muted: #8080a0;
+}
+[data-theme="light"] .hero-bg { opacity: 0.3; }
+[data-theme="light"] .hero-grid { opacity: 0.05; }
+[data-theme="light"] .nav { background: rgba(240, 240, 248, 0.92); }
+[data-theme="light"] .terminal { background: #1a1a2e; }
+[data-theme="light"] .code-block { background: #1a1a2e; border-color: #2a2a4e; }
+[data-theme="light"] .code-comment { color: #6a6a9a; }
+
+/* Theme toggle button */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: var(--shadow-glow-cyan);
+}
+.theme-icon-dark, .theme-icon-light { transition: opacity 0.2s; }
+[data-theme="light"] .theme-icon-dark { display: none; }
+[data-theme="dark"] .theme-icon-light,
+:root:not([data-theme="light"]) .theme-icon-light { display: none; }
+[data-theme="light"] .theme-icon-light { display: block; }

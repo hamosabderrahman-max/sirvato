@@ -1,0 +1,63 @@
+/* SIRVATO OS - Responsive Styles */
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .container { max-width: 1320px; }
+  .hero-title { font-size: 5.5rem; }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .sidebar-layout { grid-template-columns: 220px 1fr; }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .content-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .content-grid.reverse { direction: ltr; }
+  .sidebar-layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .hero-stats { gap: 1.5rem; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .btn { width: 100%; justify-content: center; }
+  .status-bar { flex-direction: column; gap: 0.75rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .page-header { padding-top: calc(var(--nav-height) + 2rem); }
+  .section { padding: 3rem 0; }
+  .cta-section { padding: 2.5rem 1.5rem; }
+  .hero-stats { gap: 1rem; }
+  .hero-stat-value { font-size: 1.2rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .nav-actions .btn { display: none; }
+  .table-wrap { font-size: 0.8rem; }
+  th, td { padding: 0.6rem 0.75rem; }
+}
+
+/* Very small */
+@media (max-width: 360px) {
+  .container { padding: 0 1rem; }
+  .hero { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* Print */
+@media print {
+  .nav, .footer, .hero-bg, .hero-grid { display: none; }
+  body { background: white; color: black; }
+  .card { border: 1px solid #ccc; }
+}

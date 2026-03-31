@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIRVATO OS | MICRO OMNIMODE</title>
+  <meta name="description" content="All-modes integration layer enabling simultaneous multi-paradigm execution across SIRVATO OS.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../frameworks/icdf.html">Frameworks</a>
+        <a href="../interfaces/hud-minimal.html">Interfaces</a>
+        <a href="core.html" class="active">MICRO SUPRA</a>
+        <a href="../docs/quick-start.html">Docs</a>
+        <a href="../demo.html">Demo</a>
+        <a href="../tools.html">Tools</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon-dark">🌙</span><span class="theme-icon-light">☀️</span></button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">Home</a><a href="../frameworks/icdf.html">Frameworks</a><a href="../interfaces/hud-minimal.html">Interfaces</a><a href="core.html">MICRO SUPRA</a><a href="../docs/quick-start.html">Docs</a><a href="../demo.html">Demo</a><a href="../tools.html">Tools</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="core.html">MICRO SUPRA</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>OMNIMODE</span>
+    </div>
+    <div class="page-header-tag">MICRO SUPRA · OMNI</div>
+    <h1><span class="text-purple">MICRO</span> OMNIMODE</h1>
+    <p>All-modes integration layer enabling simultaneous multi-paradigm execution across SIRVATO OS.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <span class="badge badge-purple">Multi-Paradigm</span>
+      <span class="badge badge-cyan">Simultaneous Exec</span>
+      <span class="badge badge-magenta">Mode Blending</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>What is <span class="text-purple">OMNIMODE</span>?</h2>
+          <p>OMNIMODE is the all-modes integration layer of SIRVATO OS — a revolutionary execution paradigm that allows the system to operate in multiple modes simultaneously rather than switching between them. Traditional systems force you to choose between batch processing, stream processing, or interactive operation. OMNIMODE eliminates that constraint entirely.</p>
+          <p>By abstracting execution modes into composable primitives, OMNIMODE allows any workload to blend characteristics from any combination of modes. A single pipeline can simultaneously process historical batches, react to live streams, respond to interactive queries, and autonomously trigger new operations — all without developer configuration.</p>
+          <div class="highlight-box" style="margin-top:2rem;">
+            <h4>Paradigm Shift</h4>
+            <p style="margin:0;">OMNIMODE doesn't ask "which mode?" — it asks "why not all modes?" The system dynamically weights mode contributions based on workload characteristics and resource availability, achieving optimal performance across every dimension simultaneously.</p>
+          </div>
+        </div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">OMNIMODE · Activation</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="terminal-prompt">omnimode</span><span class="terminal-cmd"> activate --all</span></div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">OMNIMODE v3.1.0 — Initializing modes</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">  ✓ Batch Mode        [READY · 12 workers]</div>
+              <div class="terminal-output">  ✓ Stream Mode       [READY · 8 partitions]</div>
+              <div class="terminal-output">  ✓ Interactive Mode  [READY · 4ms p99]</div>
+              <div class="terminal-output">  ✓ Autonomous Mode   [READY · AI governor]</div>
+              <div class="terminal-output">  ✓ Hybrid Mode       [READY · blend: AUTO]</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output">Mode arbitration: DYNAMIC</div>
+              <div class="terminal-output">Context switch latency: 0.8ms</div>
+              <div class="terminal-output">&nbsp;</div>
+              <div class="terminal-output text-purple">◈ OMNIMODE ACTIVE — All 5 modes running</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <h2 style="text-align:center; margin-bottom:2rem;">Execution <span class="text-purple">Modes</span></h2>
+      <div class="grid grid-4" style="grid-template-columns: repeat(5, 1fr);">
+        <div class="card reveal">
+          <div class="card-tag cyan">Mode 1</div>
+          <div class="card-icon">📦</div>
+          <div class="card-title">Batch Mode</div>
+          <p class="card-desc">High-throughput bulk processing for large datasets. AI scheduler dynamically reallocates CPU headroom from idle systems to maximize batch throughput without impacting latency-sensitive workloads.</p>
+        </div>
+        <div class="card reveal delay-1">
+          <div class="card-tag green">Mode 2</div>
+          <div class="card-icon">🌊</div>
+          <div class="card-title">Stream Mode</div>
+          <p class="card-desc">Low-latency event-stream processing with exactly-once semantics. Handles millions of events per second with automatic backpressure and intelligent partition rebalancing.</p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-tag magenta">Mode 3</div>
+          <div class="card-icon">💬</div>
+          <div class="card-title">Interactive Mode</div>
+          <p class="card-desc">Sub-5ms response guarantee for human-facing workloads. Priority queuing ensures interactive requests always preempt batch and stream tasks to maintain UI/API responsiveness.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag purple">Mode 4</div>
+          <div class="card-icon">🤖</div>
+          <div class="card-title">Autonomous Mode</div>
+          <p class="card-desc">Self-governing AI execution that operates without human input. The system monitors its own objectives, spawns new tasks, and adjusts resource allocation to meet targets autonomously.</p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-tag cyan">Mode 5</div>
+          <div class="card-icon">🔀</div>
+          <div class="card-title">Hybrid Mode</div>
+          <p class="card-desc">Dynamic blending of all four primary modes. AI governor continuously measures workload characteristics and adjusts the mode weights in real time for globally optimal throughput and latency.</p>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:3rem 0;"></div>
+
+      <div class="content-grid">
+        <div>
+          <h2>OMNIMODE <span class="text-purple">Configuration</span></h2>
+          <div class="code-block">
+            <span class="code-label">YAML</span>
+            <pre><span class="code-comment"># sirvato.yaml — OMNIMODE Configuration</span>
+<span class="code-keyword">omnimode</span>:
+  <span class="code-var">default_blend</span>: <span class="code-string">"auto"</span>
+  <span class="code-var">modes</span>:
+    <span class="code-var">batch</span>:
+      <span class="code-var">workers</span>: <span class="code-value">12</span>
+      <span class="code-var">priority</span>: <span class="code-string">"low"</span>
+    <span class="code-var">stream</span>:
+      <span class="code-var">partitions</span>: <span class="code-value">8</span>
+      <span class="code-var">semantics</span>: <span class="code-string">"exactly-once"</span>
+    <span class="code-var">interactive</span>:
+      <span class="code-var">sla_ms</span>: <span class="code-value">5</span>
+      <span class="code-var">priority</span>: <span class="code-string">"critical"</span>
+    <span class="code-var">autonomous</span>:
+      <span class="code-var">governor</span>: <span class="code-string">"ai-v3"</span>
+      <span class="code-var">objectives</span>: <span class="code-string">"throughput,latency"</span>
+  <span class="code-var">context_switch_us</span>: <span class="code-value">800</span></pre>
+          </div>
+        </div>
+        <div>
+          <h2>Key <span class="text-purple">Features</span></h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">🔀</div>
+              <div class="feature-text">
+                <h4>Multi-Paradigm Execution</h4>
+                <p>Run batch, stream, interactive, and autonomous workloads concurrently within the same execution context — no partitioning required.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-text">
+                <h4>Simultaneous Execution</h4>
+                <p>All modes run in parallel with intelligent resource arbitration ensuring no mode starves another under contention.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🎛️</div>
+              <div class="feature-text">
+                <h4>Mode Blending</h4>
+                <p>AI governor continuously adjusts mode weights in real time based on observed workload characteristics and SLA compliance.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔄</div>
+              <div class="feature-text">
+                <h4>Context Switching</h4>
+                <p>Sub-millisecond mode context switching with state preservation ensures zero data loss during mode transitions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem; text-align:center;">
+        <a href="holofield.html" class="btn btn-ghost">← Back: HOLOFIELD</a>
+        <a href="auto-trigger.html" class="btn btn-primary" style="margin-left:1rem;">Next: AUTO-TRIGGER →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="nav-logo">SIRVATO<span> OS</span></a><p>The AI-First Cloud Operating System.</p></div><div><div class="footer-col-title">MICRO SUPRA</div><div class="footer-links"><a href="core.html">MICRO Core</a><a href="supra-os.html">SUPRA-OS</a><a href="holofield.html">HOLOFIELD</a><a href="omnimode.html">OMNIMODE</a><a href="auto-trigger.html">AUTO-TRIGGER</a><a href="supra-totality.html">SUPRA-TOTALITY++</a></div></div><div><div class="footer-col-title">Frameworks</div><div class="footer-links"><a href="../frameworks/icdf.html">ICDF Engine</a><a href="../frameworks/unified-mode.html">Unified Mode</a><a href="../demo.html">Demo</a></div></div><div><div class="footer-col-title">Docs</div><div class="footer-links"><a href="../docs/quick-start.html">Quick Start</a><a href="../docs/api-documentation.html">API</a><a href="../docs/faq.html">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2025 <span>SIRVATO OS</span></span><span>v3.1.0 · AUTOPILOT ACTIVE</span></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>
