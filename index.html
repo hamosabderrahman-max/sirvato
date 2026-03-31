@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SIRVATO OS — Official Website. All frameworks, interfaces, and capabilities of the SIRVATO OS ecosystem." />
+  <title>SIRVATO OS — Official Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">SIRVATO<span> OS</span></a>
+    <ul class="nav-links" role="list">
+      <li><a class="nav-link active" href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a class="nav-link" href="frameworks.html" data-i18n="nav.frameworks">Frameworks</a></li>
+      <li><a class="nav-link" href="interfaces.html" data-i18n="nav.interfaces">Interfaces</a></li>
+      <li><a class="nav-link" href="docs.html" data-i18n="nav.docs">Docs</a></li>
+      <li><a class="nav-link" href="demo.html" data-i18n="nav.demo">Demo</a></li>
+    </ul>
+    <div class="nav-actions">
+      <select class="lang-select" aria-label="Language selector">
+        <option value="en">EN</option>
+        <option value="it">IT</option>
+      </select>
+      <button class="btn-icon theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+      <button class="btn-icon nav-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge fade-in" data-i18n="hero.badge">SIRVATO OS · v8.0 FINAL</div>
+      <h1 class="fade-in fade-in-delay-1">
+        The <span class="highlight">Complete AI</span><br>
+        <span class="os-text">Prompt Operating System</span>
+      </h1>
+      <p class="hero-desc fade-in fade-in-delay-2">
+        SIRVATO OS unifies all prompt frameworks into a single, reactive ecosystem.
+        ICDF Engine · MICRO Rhythm · RCR-EOC · AUTO-FLOW · AI Trigger Protocol — fused into one.
+      </p>
+      <div class="hero-actions fade-in fade-in-delay-3">
+        <a href="demo.html" class="btn btn-primary btn-lg" data-i18n="hero.cta.primary">🚀 Launch Demo</a>
+        <a href="docs.html" class="btn btn-secondary btn-lg" data-i18n="hero.cta.secondary">📚 Read Docs</a>
+        <a href="frameworks.html" class="btn btn-ghost">Explore Frameworks →</a>
+      </div>
+      <div class="hero-stats fade-in fade-in-delay-4">
+        <div class="stat-item">
+          <span class="stat-num">28+</span>
+          <span class="stat-label">Production Files</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">11</span>
+          <span class="stat-label">Unified Components</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">7</span>
+          <span class="stat-label">Interface Modes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">v8.0</span>
+          <span class="stat-label">Current Version</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>SCROLL</span>
+    <span>↓</span>
+  </div>
+</section>
+
+<!-- ── Quick Overview ── -->
+<section class="section" id="overview" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-header center animate-on-scroll">
+      <span class="section-label">Core Mission</span>
+      <h2 class="section-title">One OS. All Frameworks. Zero Friction.</h2>
+      <p class="section-subtitle">SIRVATO OS transforms how you interact with AI by providing a complete, structured operating system for prompt engineering.</p>
+    </div>
+    <div class="grid-3 animate-on-scroll">
+      <div class="card">
+        <div class="card-icon">🧩</div>
+        <h3>Unified Architecture</h3>
+        <p>All frameworks — ICDF, MICRO, RCR-EOC — fused into a single, coherent system that eliminates context switching.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Reactive Flow</h3>
+        <p>AUTO-FLOW REACTIVE adapts dynamically. Each step triggers the next automatically, keeping your workflow in motion.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔥</div>
+        <h3>AI Trigger Protocol</h3>
+        <p>5-point validation system ensures every prompt is coherent, complete, and ready before execution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Framework Showcase ── -->
+<section class="section" id="frameworks">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">Framework Suite</span>
+      <h2 class="section-title">Every Framework. One Ecosystem.</h2>
+      <p class="section-subtitle">From foundational engines to advanced adaptive flows — SIRVATO OS has the tool for every prompt challenge.</p>
+    </div>
+    <div class="grid-4 animate-on-scroll">
+      <a href="frameworks.html#icdf" class="framework-card">
+        <div class="fc-icon">🟣</div>
+        <div class="fc-tag">CORE ENGINE</div>
+        <h3>ICDF Engine</h3>
+        <p>Instruction · Context · Data · Format — the foundational structure for every prompt.</p>
+      </a>
+      <a href="frameworks.html#micro" class="framework-card">
+        <div class="fc-icon">🔵</div>
+        <div class="fc-tag">RHYTHM LAYER</div>
+        <h3>MICRO Rhythm</h3>
+        <p>Message · Intention · Context · Rhythm · Output — the micro-layer that tunes AI tone.</p>
+      </a>
+      <a href="frameworks.html#rcreoc" class="framework-card">
+        <div class="fc-icon">🟡</div>
+        <div class="fc-tag">FRAMEWORK</div>
+        <h3>RCR-EOC</h3>
+        <p>Role · Context · Request — Examples · Output · Constraints. The complete structural backbone.</p>
+      </a>
+      <a href="frameworks.html#autoflow" class="framework-card">
+        <div class="fc-icon">⚡</div>
+        <div class="fc-tag">8 STEPS</div>
+        <h3>AUTO-FLOW</h3>
+        <p>8-step automated prompt flow. Each stage builds on the last for maximum precision.</p>
+      </a>
+      <a href="frameworks.html#autoflow-pro" class="framework-card">
+        <div class="fc-icon">🚀</div>
+        <div class="fc-tag">9 STEPS + MICRO</div>
+        <h3>AUTO-FLOW PRO</h3>
+        <p>Enhanced 9-step flow with integrated micro-azioni for fine-grained control.</p>
+      </a>
+      <a href="frameworks.html#autoflow-reactive" class="framework-card">
+        <div class="fc-icon">🔄</div>
+        <div class="fc-tag">ADAPTIVE</div>
+        <h3>AUTO-FLOW REACTIVE</h3>
+        <p>Adaptive cascade that responds to context changes in real-time.</p>
+      </a>
+      <a href="frameworks.html#ai-trigger" class="framework-card">
+        <div class="fc-icon">🔥</div>
+        <div class="fc-tag">PROTOCOL</div>
+        <h3>AI Trigger Protocol</h3>
+        <p>5-trigger validation: Coherence · Rhythm · Data · Output · Constraints — all must pass.</p>
+      </a>
+      <a href="frameworks.html#unified" class="framework-card">
+        <div class="fc-icon">🧩</div>
+        <div class="fc-tag">UNIFIED · 11 COMPONENTS</div>
+        <h3>Unified Mode</h3>
+        <p>All frameworks fused. 11 components, one prompt. The ultimate SIRVATO experience.</p>
+      </a>
+    </div>
+    <div class="text-center mt-3 animate-on-scroll">
+      <a href="frameworks.html" class="btn btn-secondary">View All Frameworks →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Live Terminal Demo ── -->
+<section class="section" id="live-preview" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="grid-2" style="gap: 3rem; align-items: center;">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Live Preview</span>
+        <h2 class="section-title">FULLSCREEN TOTALITY</h2>
+        <p class="section-subtitle">Experience SIRVATO OS in its most immersive form — zero chrome, pure flow. The complete 11-component unified prompt system at your fingertips.</p>
+        <div class="flex gap-2 mt-3" style="flex-wrap: wrap;">
+          <a href="demo.html" class="btn btn-primary">Launch Interactive Demo</a>
+          <a href="interfaces.html#fullscreen" class="btn btn-secondary">View Interfaces</a>
+        </div>
+        <div class="mt-3" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <div class="flex gap-2 align-items-center" style="align-items: center; gap: 0.75rem;">
+            <span class="tag tag-green">LIVE</span>
+            <span style="font-size: 0.85rem; color: var(--text-2);">Auto-Flow Reactive · MICRO + AI Trigger Protocol</span>
+          </div>
+          <div class="flex gap-2 align-items-center" style="align-items: center; gap: 0.75rem;">
+            <span class="tag tag-cyan">11 COMPONENTS</span>
+            <span style="font-size: 0.85rem; color: var(--text-2);">Role · Instruction · Message · Intention · Request…</span>
+          </div>
+          <div class="flex gap-2 align-items-center" style="align-items: center; gap: 0.75rem;">
+            <span class="tag tag-purple">REACTIVE</span>
+            <span style="font-size: 0.85rem; color: var(--text-2);">Each field triggers the next automatically</span>
+          </div>
+        </div>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="fullscreen-mockup">
+          <div class="fsm-topbar">
+            <div class="fsm-status">
+              <span class="fsm-stat">Engine: <span>ICDF + MICRO + RCR-EOC</span></span>
+              <span class="fsm-stat">Protocol: <span>AI Trigger Active</span></span>
+              <span class="fsm-stat">Mode: <span>REACTIVE</span></span>
+            </div>
+            <span class="tag tag-green">READY</span>
+          </div>
+          <div class="fsm-canvas">
+            <div class="fsm-field">
+              <div class="fsm-field-label">⚡ TARGET — OBIETTIVO IMMEDIATO</div>
+              <div class="fsm-field-value">→ [ What you want to achieve right now ]</div>
+              <div class="fsm-trigger">Trigger: <span>activates entire system</span></div>
+            </div>
+            <div class="fsm-field">
+              <div class="fsm-field-label">🟣 ROLE (R)</div>
+              <div class="fsm-field-value">→ [ AI Role ]</div>
+            </div>
+            <div class="fsm-field">
+              <div class="fsm-field-label">🔵 MESSAGE (M)</div>
+              <div class="fsm-field-value">→ [ Core Message ]</div>
+            </div>
+            <div class="fsm-field">
+              <div class="fsm-field-label">🟣 ICDF ENGINE — STRUTTURA</div>
+              <div class="fsm-field-value">I · C · D · F → unified output</div>
+            </div>
+            <div class="fsm-field" style="border-color: var(--accent);">
+              <div class="fsm-field-label">🚀 EXECUTE — OUTPUT FINALE</div>
+              <div class="fsm-field-value" style="color: var(--cyan);">→ Final prompt generated by Sistema Unico</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Interface Modes ── -->
+<section class="section" id="interfaces">
+  <div class="container">
+    <div class="section-header center animate-on-scroll">
+      <span class="section-label">Interface Modes</span>
+      <h2 class="section-title">Every Context Has Its Interface</h2>
+      <p class="section-subtitle">From minimal HUD to complete FULLSCREEN TOTALITY — choose the interface that matches your workflow.</p>
+    </div>
+    <div class="grid-3 animate-on-scroll">
+      <a href="interfaces.html#hud" class="interface-preview">
+        <div class="ip-header">
+          <div class="ip-dot r"></div><div class="ip-dot y"></div><div class="ip-dot g"></div>
+          <div class="ip-title">HUD MINIMAL</div>
+        </div>
+        <div class="ip-body">
+          <span class="ip-label">MODE:</span> <span class="ip-value">HUD · Minimal · Fast</span><br>
+          <span class="ip-label">STATUS:</span> <span class="ip-value ip-badge">ACTIVE</span><br>
+          <span class="ip-label">ENGINE:</span> <span class="ip-value">ICDF + MICRO</span>
+        </div>
+        <div class="ip-info">
+          <h4>HUD Minimal</h4>
+          <p>Heads-up display. Minimal chrome, maximum focus.</p>
+        </div>
+      </a>
+      <a href="interfaces.html#console" class="interface-preview">
+        <div class="ip-header">
+          <div class="ip-dot r"></div><div class="ip-dot y"></div><div class="ip-dot g"></div>
+          <div class="ip-title">CONSOLE LIVE</div>
+        </div>
+        <div class="ip-body" style="font-size: 0.75rem;">
+          <span class="t-prompt">sirvato@os:~$</span> <span class="t-cmd">run --mode=reactive</span><br>
+          <span class="t-output">▶ Engine loaded: ICDF + MICRO</span><br>
+          <span class="t-success">✓ System ready</span>
+        </div>
+        <div class="ip-info">
+          <h4>Console Live</h4>
+          <p>Terminal-style interface for power users.</p>
+        </div>
+      </a>
+      <a href="interfaces.html#fullscreen" class="interface-preview">
+        <div class="ip-header">
+          <div class="ip-dot r"></div><div class="ip-dot y"></div><div class="ip-dot g"></div>
+          <div class="ip-title">FULLSCREEN TOTALITY</div>
+        </div>
+        <div class="ip-body">
+          <span style="color: var(--accent-2);">████ S I R V A T O   O S ████</span><br>
+          <span class="ip-value">Modalità: Totale · Immersiva</span><br>
+          <span style="color: var(--cyan);">→ Sistema Unico · READY</span>
+        </div>
+        <div class="ip-info">
+          <h4>FULLSCREEN TOTALITY</h4>
+          <p>Ultimate immersive mode. Zero chrome. Pure SIRVATO.</p>
+        </div>
+      </a>
+    </div>
+    <div class="text-center mt-3 animate-on-scroll">
+      <a href="interfaces.html" class="btn btn-secondary">View All Interfaces →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Getting Started CTA ── -->
+<section class="section" style="background: var(--bg-2);" id="get-started">
+  <div class="container text-center animate-on-scroll">
+    <span class="section-label">Get Started</span>
+    <h2 class="section-title" style="margin: 0.75rem auto 1rem;">Ready to operate at full power?</h2>
+    <p class="section-subtitle" style="margin: 0 auto 2.5rem;">Start with the interactive demo, explore the frameworks, or dive straight into the documentation.</p>
+    <div class="flex flex-center gap-2" style="flex-wrap: wrap;">
+      <a href="demo.html" class="btn btn-primary btn-lg">🚀 Launch FULLSCREEN TOTALITY</a>
+      <a href="docs.html" class="btn btn-secondary btn-lg">📚 Documentation</a>
+    </div>
+    <div class="mt-3" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-3);">
+      SIRVATO OS · v8.0 FINAL · 28+ Production Files · 100% Complete Ecosystem
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo">SIRVATO<span> OS</span></span>
+        <p>The complete AI prompt operating system. All frameworks, interfaces, and capabilities unified into one ecosystem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Frameworks</h4>
+        <ul class="footer-links">
+          <li><a href="frameworks.html#icdf">ICDF Engine</a></li>
+          <li><a href="frameworks.html#micro">MICRO Rhythm</a></li>
+          <li><a href="frameworks.html#rcreoc">RCR-EOC</a></li>
+          <li><a href="frameworks.html#autoflow">AUTO-FLOW</a></li>
+          <li><a href="frameworks.html#unified">Unified Mode</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Interfaces</h4>
+        <ul class="footer-links">
+          <li><a href="interfaces.html#hud">HUD Minimal</a></li>
+          <li><a href="interfaces.html#console">Console Live</a></li>
+          <li><a href="interfaces.html#oswindow">OS Window</a></li>
+          <li><a href="interfaces.html#fullscreen">FULLSCREEN</a></li>
+          <li><a href="interfaces.html#totality">TOTALITY</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="docs.html#quickstart">Quick Start</a></li>
+          <li><a href="docs.html#comparison">Comparison</a></li>
+          <li><a href="docs.html#shortcuts">Shortcuts</a></li>
+          <li><a href="docs.html#faq">FAQ</a></li>
+          <li><a href="demo.html">Live Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copy">© 2025 SIRVATO OS. All rights reserved.</p>
+      <div class="flex gap-2">
+        <span class="tag tag-green">v8.0 FINAL</span>
+        <span class="tag tag-purple">100% Complete</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
