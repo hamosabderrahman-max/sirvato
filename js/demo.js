@@ -64,7 +64,7 @@
     if (v.instruction || v.data || v.format) {
       lines.push('🟣 ICDF ENGINE — STRUTTURA');
       if (v.instruction) lines.push(`I — Instruction → ${v.instruction}`);
-      if (v.context)     lines.push(`C — Context → ${v.context}`);
+      if (v.context)     lines.push(`C — Context → (see above)`);
       if (v.data)        lines.push(`D — Data → ${v.data}`);
       if (v.format)      lines.push(`F — Format → ${v.format}`);
       lines.push('');
