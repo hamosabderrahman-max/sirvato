@@ -1,47 +1,47 @@
 ---
-title: Sirvato
+title: SIRVATO
 lang: it
+description: "SIRVATO — Sistema Unico Operativo: il sistema che unifica, struttura e attiva."
 ---
 
-# Sirvato
+# SIRVATO — Sistema Unico Operativo
 
-**AI-First Cloud Provider**
+**Il sistema che unifica, struttura e attiva.**
 
-Infrastruttura autonoma, zero configurazione, decisioni critiche prese in real-time dal sistema.
+SIRVATO è il sistema operativo per la tua infrastruttura cloud. Un solo cervello — l'AI-Brain — governa scaling, routing, sicurezza e recovery in autonomia totale, 24/7, senza interventi manuali.
 
 ---
 
 ## Come funziona
 
-Sirvato opera in modalità **AUTOPILOT**. Non servono interventi manuali per:
+SIRVATO opera in modalità **AUTOPILOT**. Il sistema non aspetta istruzioni:
 
-- **Allocazione risorse**: Il sistema monitora carico e latenza, scala istantaneamente
-- **Routing**: Multi-region ottimizzato, failover automatico senza downtime
-- **Sicurezza**: Zero-Trust enforcement a ogni layer, crittografia end-to-end
-- **Observability**: Telemetria continua, anomalie rilevate e mitigate autonomamente
-
-Ogni decisione è tracciata e reversibile. Audit log immutabile per compliance.
+- **Unifica** — un control plane centrale con visibilità su ogni componente, ogni region, ogni workload
+- **Struttura** — tre layer coordinati (Core, Edge, Governance) con responsabilità separate e chiare
+- **Attiva** — azioni correttive in tempo reale, prima che il problema impatti gli utenti
 
 ---
 
-## Cosa fa
+## Capacità del sistema
 
-**Compute**: Distribuzione automatica di workload su infrastruttura multi-region ottimizzata.
+**Compute** — distribuzione automatica dei workload su infrastruttura multi-region ottimizzata per latenza e costo.
 
-**Storage**: Replicazione geografica trasparente, consistenza forte, recovery istantaneo.
+**Storage** — replicazione geografica trasparente, consistenza forte, recovery in < 1 secondo.
 
-**Networking**: Mesh zero-trust, crittografia end-to-end, latenza minimizzata via geographic proximity.
+**Networking** — mesh zero-trust, cifratura end-to-end mTLS, routing intelligente per latenza minima.
 
-**AI/ML**: Ambiente containerizzato pronto per training e inference distribuiti.
+**AI/ML** — ambiente containerizzato ottimizzato per training distribuito e inference a bassa latenza.
+
+**Observability** — metriche, log e trace correlati automaticamente. Anomalie rilevate prima dell'impatto.
 
 ---
 
 ## Stato del sistema
 
-[Vai al status →](status.md)
+[Vai allo Status →](status/index.html)
 
-Uptime SLA: 99.99% per region. RTO < 5 secondi.
+- **Uptime SLA:** 99.99% per region · **RTO:** < 5 secondi · **Config manuali:** 0
 
 ---
 
-[Service Map](service-map.md) | [Documentation](README.md)
+[Service Map](service-map.html) | [Documentazione](docs/index.html) | [Console](console/index.html)

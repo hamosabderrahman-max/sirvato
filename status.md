@@ -1,20 +1,22 @@
 ---
 title: System Status
+lang: it
+description: "Stato in tempo reale dell'infrastruttura SIRVATO — Sistema Unico Operativo."
 ---
 
-# System Status
+# Stato del Sistema
 
-## Operational Status
-- **Current Status:** Operational
+Monitoraggio in tempo reale dell'infrastruttura SIRVATO. Per il pannello completo con storico degli eventi vai a [Status →](status/index.html).
 
-## Regional Health
-- **Region 1:** Operational  
-- **Region 2:** Degraded Performance
+## Stato attuale
 
-## SLO Metrics
-- **Uptime:** 99.95%  
-- **Response Time:** 200ms
+- **AI-Brain Control Plane:** ✅ Operativo
+- **Edge Runtime EU-West-1:** ✅ Operativo
+- **Edge Runtime US-East-1:** ⚠ Performance Ridotta
+- **Edge Runtime AP-South-1:** ✅ Operativo
+- **Networking & Mesh:** ✅ Operativo
+- **Storage & Replication:** ✅ Operativo
 
-## Recent Autonomous System Events
-- **2026-03-31 16:00:00 UTC:** System maintenance completed.  
-- **2026-03-31 15:30:00 UTC:** Network issue resolved.
+## SLA
+
+- **Uptime:** 99.99% · **RTO:** < 5s · **RPO:** < 1s
