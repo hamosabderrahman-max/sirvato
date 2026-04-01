@@ -1,3 +1,10 @@
+title: Sirvato
+description: AI-First Cloud Provider — infrastruttura autonoma, zero configurazione.
 markdown: kramdown
 theme: null
 plugins: []
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

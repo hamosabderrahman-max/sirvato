@@ -1,3 +1,7 @@
+---
+title: Console
+---
+
 # Operational Dashboard
 
 ## Real-Time Monitoring Interface

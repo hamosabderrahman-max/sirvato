@@ -1,3 +1,7 @@
+---
+title: Governance
+---
+
 # Governance Documentation for Sirvato
 
 ## Audit

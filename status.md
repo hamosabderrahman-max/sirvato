@@ -1,3 +1,7 @@
+---
+title: System Status
+---
+
 # System Status
 
 ## Operational Status

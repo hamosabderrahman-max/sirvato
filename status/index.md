@@ -1,3 +1,7 @@
+---
+title: System Status
+---
+
 # System Status
 
 ## Regional Health

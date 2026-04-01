@@ -1,3 +1,7 @@
+---
+title: Architecture
+---
+
 # Sirvato Architecture Layers
 
 The Sirvato architecture is designed to facilitate the integration and operation of various components, ensuring effective governance and control. The architecture can be divided into three main layers:
