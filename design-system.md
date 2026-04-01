@@ -1,3 +1,7 @@
+---
+title: Design System
+---
+
 # Design System
 
 ## AI-First Architecture

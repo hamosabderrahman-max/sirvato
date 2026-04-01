@@ -3,6 +3,8 @@ description: AI-First Cloud Provider — infrastruttura autonoma, zero configura
 markdown: kramdown
 theme: null
 plugins: []
+exclude:
+  - README.md
 defaults:
   - scope:
       path: ""
