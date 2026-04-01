@@ -1,3 +1,12 @@
+title: SIRVATO — Sistema Unico Operativo
+description: Il sistema che unifica, struttura e attiva. Infrastruttura AI-First autonoma, zero configurazione.
 markdown: kramdown
 theme: null
 plugins: []
+exclude:
+  - README.md
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

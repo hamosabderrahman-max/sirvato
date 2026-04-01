@@ -1,35 +1,58 @@
-# Service Map Architecture
+---
+title: Service Map
+lang: it
+description: "Mappa completa dei servizi e dell'architettura SIRVATO — Sistema Unico Operativo."
+---
 
-## AI-Ops  
-AI-Ops is a practice that utilizes artificial intelligence and machine learning to enhance and automate IT operations. It helps in predicting issues, improving system reliability, and driving operational efficiencies. The key aspects include:
-- Automation of repetitive tasks
-- Real-time monitoring and incident response
-- Predictive analytics for capacity planning
+# Service Map
 
-## Global Control Plane  
-The Global Control Plane acts as the central management framework that oversees and coordinates resources across geographies. Its features include:
-- Unified policy management
-- Visibility across the entire operational landscape
-- Centralized logging and monitoring
+Mappa completa dei layer e microservizi che compongono il Sistema Unico Operativo SIRVATO. Ogni componente è autonomo, orchestrato dall'AI-Brain e collegato al Governance Framework.
 
-## Edge Runtime  
-Edge Runtime refers to the execution environment located at the edge of the network. It enhances performance and reduces latency by processing data closer to the source. Key points include:
-- Local processing capabilities
-- Reduced bandwidth requirements
-- Enhanced privacy and security
+## AI-Brain Control Plane
 
-## Network & Distribution  
-This section focuses on the infrastructure and methodologies used to manage data distribution and network efficiency. Critical considerations include:
-- Multi-cloud connectivity
-- Load balancing and traffic management
-- Content delivery networks (CDNs)
+Il cervello centrale del sistema. Coordina ogni decisione operativa in tempo reale.
 
-## Governance  
-Governance involves the policies and frameworks that ensure compliance, security, and risk management within the service architecture. Essential aspects include:
-- Policy enforcement mechanisms
-- Risk assessment frameworks
-- Compliance monitoring and reporting
+- **Decision Engine** — Valuta continuamente lo stato globale del sistema e genera azioni correttive ottimali
+- **Orchestrator** — Gestisce il ciclo di vita dei workload: deploy, scaling, draining e rollback
+- **Anomaly Detector** — Modello ML che correla segnali di telemetria per identificare deviazioni prima dell'impatto
+- **Capacity Planner** — Previsione autonoma del fabbisogno di risorse su orizzonte 24h / 7 giorni
+
+## Edge Runtime
+
+Compute distribuito autonomo. Elabora i dati vicino alla sorgente, riduce la latenza e aumenta la resilienza.
+
+- **EU-West-1** (Francoforte) — Nodo primario per traffico europeo
+- **US-East-1** (Virginia) — Nodo primario per traffico nordamericano
+- **AP-South-1** (Singapore) — Nodo primario per traffico Asia-Pacifico
+- **Edge Sync Protocol** — Sincronizzazione bidirezionale < 50 ms tra ogni nodo e il Core
+
+## Networking & Mesh
+
+Infrastruttura di rete zero-trust che collega ogni componente.
+
+- **Service Mesh** — Comunicazione cifrata mTLS tra ogni microservizio
+- **Global Load Balancer** — Distribuisce il traffico in base a latenza, capacità e health check real-time
+- **CDN Layer** — Caching al bordo per asset statici e API ad alta frequenza
+- **DDoS Mitigation** — Filtro autonomo del traffico anomalo prima che raggiunga l'infrastruttura applicativa
+
+## Storage & Replication
+
+Persistenza dei dati con consistenza forte e recovery istantaneo.
+
+- **Object Store** — Storage distribuito multi-region con replica sincrona tra AZ
+- **Block Store** — Volumi ad alta performance per workload stateful
+- **Snapshot Engine** — Snapshot incrementali automatici ogni 15 minuti; retention configurabile
+- **Geo-Replication** — Replica asincrona verso region secondaria per disaster recovery cross-region
+
+## Governance Framework
+
+Layer trasversale di policy, audit e compliance. Opera su tutti gli altri componenti.
+
+- **Audit Log** — Registro immutabile e firmato di ogni azione autonoma del sistema
+- **Policy Engine** — Applica i vincoli operativi definiti (RBAC, quote, SLA) a ogni componente
+- **Compliance Monitor** — Verifica continua della conformità a SOC 2, ISO 27001 e GDPR
+- **Secrets Manager** — Rotazione automatica di credenziali, certificati e chiavi crittografiche
 
 ---
 
-*Document created on 2026-03-31 at 16:32:37 UTC.*
+*Architettura SIRVATO v2.0 · Sistema Unico Operativo · Ogni componente è governato, auditabile e reversibile*
