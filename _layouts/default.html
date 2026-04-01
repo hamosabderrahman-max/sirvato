@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ '/' | relative_url }}" class="logo">
+        <span class="logo-mark">▲</span> Sirvato
+      </a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/service-map' | relative_url }}">Service Map</a>
+        <a href="{{ '/status' | relative_url }}">Status</a>
+        <a href="{{ '/console' | relative_url }}">Console</a>
+        <a href="{{ '/docs/architecture' | relative_url }}">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Sirvato · AI-First Cloud Provider · <span class="uptime">Uptime SLA: 99.99%</span></p>
+    </div>
+  </footer>
+</body>
+</html>

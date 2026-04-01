@@ -1,3 +1,8 @@
+---
+layout: default
+title: AI-Ops
+---
+
 # Sirvato AI-Ops Operational Intelligence
 
 ## Overview

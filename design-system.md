@@ -1,4 +1,8 @@
-# Design System
+---
+layout: default
+title: Design System
+---
+
 
 ## AI-First Architecture
 An AI-First architecture prioritizes the integration of artificial intelligence techniques and capabilities at the core of the systems and processes. This approach ensures that decision-making and operations are enhanced through machine learning algorithms, predictive analytics, and automated insights.
