@@ -1,3 +1,15 @@
+<!--
+SUPRA-OS
+D: Documentare le capacità di intelligenza operativa AI-Ops di Sirvato
+F: docs/ai-ops.md
+P: STEADY
+S(ICDF):
+  I: Descrivere anomaly detection, self-healing, analytics, observability
+  C: Restare nel perimetro AI-Ops — non sovrapporre con Core o Edge
+  D: Feature: Anomaly Detection, Self-Healing, Predictive Analytics, Observability
+  F: Comprensione completa del layer operativo intelligente
+-->
+
 # Sirvato AI-Ops Operational Intelligence
 
 ## Overview

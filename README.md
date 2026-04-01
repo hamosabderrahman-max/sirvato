@@ -1,3 +1,15 @@
+<!--
+SUPRA-OS
+D: Fornire overview del progetto Sirvato e guida alla configurazione
+F: README.md
+P: STEADY
+S(ICDF):
+  I: Descrivere architettura, deployment, SLA e feature core
+  C: Documento di ingresso — non entrare nei dettagli tecnici interni
+  D: Modello microservizi, SLA 99.9%, feature principali
+  F: Nuovo contributore o utente capisce il progetto in 2 minuti
+-->
+
 # Sirvato
 
 ## Overview
@@ -25,3 +37,12 @@ Configuration can be managed through environment variables or configuration file
 - Feature toggles
 
 For detailed configuration options, please refer to the respective modules in the documentation.
+
+---
+
+## SUPRA-OS Integration
+
+Sirvato adotta **SUPRA-OS** come strato decisionale trasversale.
+Ogni attività, modifica o rilascio segue il ciclo Directive → Manifest.
+
+→ [Guida SUPRA-OS](docs/supra-os.md)

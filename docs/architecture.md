@@ -1,3 +1,15 @@
+<!--
+SUPRA-OS
+D: Documentare i tre layer architetturali di Sirvato
+F: docs/architecture.md
+P: DEEP
+S(ICDF):
+  I: Descrivere Core, Edge e Governance Framework come strati distinti
+  C: Non duplicare dettagli già in core.md, edge.md, governance.md
+  D: Tre layer: AI-Brain Control Plane, Edge, Governance
+  F: Architettura comprensibile, navigabile verso i doc di dettaglio
+-->
+
 # Sirvato Architecture Layers
 
 The Sirvato architecture is designed to facilitate the integration and operation of various components, ensuring effective governance and control. The architecture can be divided into three main layers:

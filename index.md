@@ -1,3 +1,15 @@
+<!--
+SUPRA-OS
+D: Presentare Sirvato come AI-First Cloud Provider con modalità AUTOPILOT
+F: index.md
+P: STEADY
+S(ICDF):
+  I: Pagina principale del sito — overview del prodotto e navigazione
+  C: Tono chiaro, diretto, senza jargon superfluo
+  D: Funzionalità core: compute, storage, networking, AI/ML
+  F: Utente comprende la proposta di valore e trova i link principali
+-->
+
 # Sirvato
 
 **AI-First Cloud Provider**
