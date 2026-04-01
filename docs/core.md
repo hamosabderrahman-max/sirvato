@@ -1,3 +1,15 @@
+<!--
+SUPRA-OS
+D: Documentare il Core Control Plane orchestrato dall'AI-Brain
+F: docs/core.md
+P: DEEP
+S(ICDF):
+  I: Descrivere ruoli, componenti e modalità AUTOPILOT del Core
+  C: Focalizzarsi sul layer Core — non sconfinare in Edge o Governance
+  D: Ruoli: AI-Brain, Control Interfaces, Monitors, Adaptors
+  F: Comprensione chiara del funzionamento autonomo del sistema centrale
+-->
+
 # Sirvato Core Control Plane Orchestrated by AI-Brain
 
 ## Overview

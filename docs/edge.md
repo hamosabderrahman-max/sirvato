@@ -1,3 +1,15 @@
+<!--
+SUPRA-OS
+D: Documentare l'architettura Edge distribuita e autonoma di Sirvato
+F: docs/edge.md
+P: DEEP
+S(ICDF):
+  I: Descrivere decentralizzazione, nodi autonomi, scalabilità, resilienza
+  C: Non sovrapporre con il Core Control Plane
+  D: Feature: Decentralization, Autonomous Nodes, Scalability, Resilience
+  F: Comprensione del paradigma Edge e dei casi d'uso applicativi
+-->
+
 # Sirvato Edge Distributed Autonomous Compute Architecture
 
 The Sirvato Edge architecture represents a paradigm shift in distributed computing, focusing on autonomy and scalability.

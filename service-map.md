@@ -1,3 +1,15 @@
+<!--
+SUPRA-OS
+D: Mappare i macro-servizi dell'architettura Sirvato
+F: service-map.md
+P: STEADY
+S(ICDF):
+  I: Descrivere AI-Ops, Control Plane, Edge, Network, Governance
+  C: Vista di alto livello — non duplicare i doc di dettaglio
+  D: Servizi: AI-Ops, Global Control Plane, Edge Runtime, Network, Governance
+  F: Mappa navigabile dell'intera architettura di servizio
+-->
+
 # Service Map Architecture
 
 ## AI-Ops  

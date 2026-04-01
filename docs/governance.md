@@ -1,3 +1,15 @@
+<!--
+SUPRA-OS
+D: Documentare il framework di governance di Sirvato
+F: docs/governance.md
+P: STEADY
+S(ICDF):
+  I: Descrivere audit, compliance, reversibilità e logging immutabile
+  C: Limitarsi ai meccanismi di governance — non entrare nei layer tecnici
+  D: Pilastri: Audit, Compliance, Reversibility, Immutable Logging
+  F: Fiducia operativa e tracciabilità garantite dal framework
+-->
+
 # Governance Documentation for Sirvato
 
 ## Audit
