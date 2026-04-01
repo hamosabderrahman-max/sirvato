@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Sirvato Documentation"
+description: "Comprehensive documentation for Sirvato — a robust service designed to streamline user experience through a microservices architecture with high availability and real-time analytics."
+keywords: "Sirvato, documentation, microservices, cloud, API integration, SLA, deployment"
+---
+
 # Sirvato
 
 ## Overview

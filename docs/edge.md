@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Edge Architecture — Sirvato Docs"
+description: "Sirvato Edge distributed autonomous compute architecture: decentralized nodes, scalable design, and resilient infrastructure for IoT, data centers, and autonomous systems."
+keywords: "Sirvato, edge, distributed computing, autonomous nodes, IoT, scalability, resilience"
+---
+
 # Sirvato Edge Distributed Autonomous Compute Architecture
 
 The Sirvato Edge architecture represents a paradigm shift in distributed computing, focusing on autonomy and scalability.

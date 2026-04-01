@@ -1,3 +1,10 @@
+---
+layout: default
+title: "System Status — Sirvato"
+description: "Real-time operational status, regional health, and SLO metrics for Sirvato's autonomous cloud infrastructure."
+keywords: "Sirvato, system status, uptime, SLO, regional health, operational metrics"
+---
+
 # System Status
 
 ## Operational Status

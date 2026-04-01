@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Architecture Layers — Sirvato Docs"
+description: "Sirvato's three-layer architecture: the AI-Brain Governing Control Plane, Edge distributed compute, and the Governance Framework for compliance and security."
+keywords: "Sirvato, architecture, AI-Brain, control plane, edge, governance, cloud infrastructure"
+---
+
 # Sirvato Architecture Layers
 
 The Sirvato architecture is designed to facilitate the integration and operation of various components, ensuring effective governance and control. The architecture can be divided into three main layers:

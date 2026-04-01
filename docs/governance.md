@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Governance — Sirvato Docs"
+description: "Sirvato governance framework: comprehensive audit logging, regulatory compliance, reversibility of transactions, and immutable logging systems."
+keywords: "Sirvato, governance, audit, compliance, immutable logging, reversibility, data integrity"
+---
+
 # Governance Documentation for Sirvato
 
 ## Audit
