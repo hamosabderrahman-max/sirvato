@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIRVATO — Sistema Unico Operativo</title>
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0c10;
+      --bg-2:      #0f1117;
+      --bg-3:      #151820;
+      --border:    #1e2330;
+      --accent:    #3b82f6;
+      --accent-2:  #60a5fa;
+      --text:      #e2e8f0;
+      --text-muted:#8892a4;
+      --text-dim:  #4a5568;
+      --green:     #22c55e;
+      --yellow:    #f59e0b;
+      --mono:      'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      --sans:      -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --radius:    8px;
+      --radius-lg: 16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent-2); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #fff; }
+
+    /* ── Typography ───────────────────────────────────────────── */
+    h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
+    h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 600; letter-spacing: -0.02em; }
+    h3 { font-size: 1.1rem; font-weight: 600; }
+    p  { color: var(--text-muted); line-height: 1.75; }
+
+    /* ── Layout helpers ───────────────────────────────────────── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .section { padding: 6rem 0; }
+    .section + .section { border-top: 1px solid var(--border); }
+
+    /* ── NAV ──────────────────────────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 12, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      height: 64px;
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      margin-right: auto;
+    }
+    .nav-brand-name {
+      font-family: var(--mono);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.08em;
+    }
+    .nav-brand-sub {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent-2); }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--accent-2); color: #fff; }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent-2); }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      padding: 5rem 0 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent-2);
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 999px;
+      padding: 0.25rem 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-content h1 { margin-bottom: 1.25rem; }
+    .hero-content > p { font-size: 1.1rem; margin-bottom: 2rem; }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+    .hero-meta-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    /* Console block */
+    .console-block {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .console-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--border);
+    }
+    .console-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .console-dot-r { background: #ef4444; }
+    .console-dot-y { background: var(--yellow); }
+    .console-dot-g { background: var(--green); }
+    .console-title {
+      margin-left: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+    .console-body {
+      padding: 1.5rem;
+    }
+    .console-body pre {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .console-body pre .kw  { color: var(--accent-2); }
+    .console-body pre .str { color: #86efac; }
+    .console-body pre .key { color: #f9a8d4; }
+
+    /* ── SECTION HEADER ───────────────────────────────────────── */
+    .section-header { text-align: center; max-width: 640px; margin: 0 auto 3.5rem; }
+    .section-header p { margin-top: 0.75rem; font-size: 1.05rem; }
+
+    /* ── CARDS GRID ───────────────────────────────────────────── */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+    .card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }
+
+    .card-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--accent-2);
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 4px;
+      padding: 0.2rem 0.55rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 { color: var(--text); margin-bottom: 0.6rem; }
+    .card p  { font-size: 0.9rem; margin-bottom: 1rem; }
+
+    .card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .card ul li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+    .card ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── DOCS SECTION ─────────────────────────────────────────── */
+    .docs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+
+    .doc-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .doc-card:hover { border-color: rgba(59, 130, 246, 0.4); }
+    .doc-card h3 { font-size: 0.95rem; color: var(--text); margin-bottom: 0.75rem; }
+    .doc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .doc-card ul li { font-size: 0.82rem; color: var(--text-muted); }
+    .doc-card ul li::before { content: '— '; color: var(--text-dim); }
+
+    /* ── ACCESS ───────────────────────────────────────────────── */
+    .access-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+    /* ── CONTACTS ─────────────────────────────────────────────── */
+    .contacts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Responsive ───────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .docs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; gap: 2.5rem; }
+      .grid-2, .grid-3, .access-grid, .contacts-grid { grid-template-columns: 1fr; }
+      .docs-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 480px) {
+      .docs-grid { grid-template-columns: 1fr; }
+      .nav-actions .btn-ghost { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ────────────────────────────────────────── -->
+  <header>
+    <nav class="container">
+      <div class="nav-brand">
+        <span class="nav-brand-name">SIRVATO OS</span>
+        <span class="nav-brand-sub">Sistema Unico Operativo</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">Cos'è</a></li>
+        <li><a href="#features">Funzionalità</a></li>
+        <li><a href="#docs">Documentazione</a></li>
+        <li><a href="#access">Accesso</a></li>
+        <li><a href="#contacts">Contatti</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#docs" class="btn btn-ghost">Docs</a>
+        <a href="#access" class="btn btn-primary">Apri Sistema</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── Main ──────────────────────────────────────────────── -->
+  <main>
+
+    <!-- Hero -->
+    <section id="hero" class="section">
+      <div class="container hero">
+        <div class="hero-content">
+          <span class="hero-tag">Sistema Unico · SUPRA&#8209;OS</span>
+          <h1>SIRVATO — Sistema Unico Operativo</h1>
+          <p>
+            Un principio operativo che unifica, struttura e attiva: prompt, flussi,
+            documentazione e sistemi diventano un unico campo operativo coerente.
+          </p>
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-primary">Inizia ora</a>
+            <a href="#features" class="btn btn-outline">Esplora la struttura</a>
+          </div>
+          <div class="hero-meta">
+            <span class="hero-meta-item">SUPRA&#8209;OS livello superiore del sistema</span>
+            <span class="hero-meta-item">CEO: Abderrahman · Operatore: SIRVATO</span>
+          </div>
+        </div>
+
+        <div class="console-block">
+          <div class="console-titlebar">
+            <span class="console-dot console-dot-r"></span>
+            <span class="console-dot console-dot-y"></span>
+            <span class="console-dot console-dot-g"></span>
+            <span class="console-title">SUPRA&#8209;OS · Prompt Console</span>
+          </div>
+          <div class="console-body">
+            <pre><span class="kw">SIRVATO_SUPRA_OS</span> {
+  <span class="key">Directive</span>: <span class="str">"Rendi il sistema unico, leggibile e operativo"</span>;
+  <span class="key">Field</span>:     <span class="str">"Sito web · Documentazione · Prompt"</span>;
+  <span class="key">Pulse</span>:     <span class="str">"Calmo · Tecnico · Ritmico"</span>;
+  <span class="key">Structure</span>: <span class="kw">ICDF</span> {
+    <span class="key">Instruction</span>: <span class="str">"Spiega, struttura, manifesta"</span>;
+    <span class="key">Context</span>:     <span class="str">"SIRVATO come Sistema Unico"</span>;
+    <span class="key">Data</span>:        <span class="str">"Framework: MICRO, ICDF, RCR&#8209;EOC, Auto&#8209;Flow"</span>;
+    <span class="key">Format</span>:      <span class="str">"Sito web + blocchi operativi"</span>;
+  };
+  <span class="key">Manifest</span>: <span class="str">"Interfaccia web pronta all'uso"</span>;
+}</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cos'è SIRVATO -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Cos'è SIRVATO</h2>
+          <p>
+            SIRVATO è un Sistema Unico Operativo: non solo un framework di prompt, ma un principio
+            che unifica ruoli, contesti, strutture e output in un'unica forma coerente.
+          </p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <span class="card-tag">Sistema Unico</span>
+            <h3>Visione</h3>
+            <p>
+              Un solo sistema, molte forme: console, dashboard, terminale, fullscreen.
+              Tutto riconducibile a una logica unica e leggibile.
+            </p>
+            <ul>
+              <li>Riduce frammentazione e ridondanza</li>
+              <li>Rende i flussi operativi leggibili</li>
+              <li>Permette di evolvere senza perdere coerenza</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="card-tag">SUPRA&#8209;OS Kernel</span>
+            <h3>Architettura</h3>
+            <p>
+              Al centro: SUPRA&#8209;OS. Intorno: MICRO, ICDF, RCR&#8209;EOC, Auto&#8209;Flow,
+              Trigger Protocol. Tutto orchestrato come un unico organismo.
+            </p>
+            <ul>
+              <li>Strato superiore di orchestrazione</li>
+              <li>Framework integrati, non separati</li>
+              <li>Output sempre strutturato e coerente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funzionalità -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Funzionalità principali</h2>
+          <p>
+            Ogni modulo è una forma diversa dello stesso principio: SIRVATO come operatore
+            del sistema, capace di adattarsi al contesto e al ritmo richiesto.
+          </p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Sistema Unico</h3>
+            <p>Un solo linguaggio operativo per prompt, documentazione, flussi e interfacce.</p>
+            <ul>
+              <li>Riduzione del rumore</li>
+              <li>Strutture ripetibili</li>
+              <li>Coerenza tra strumenti</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Operatore Intelligente</h3>
+            <p>SIRVATO agisce come operatore: riceve direttive, struttura, esegue, manifesta.</p>
+            <ul>
+              <li>CEO → Direttiva</li>
+              <li>SIRVATO → Esecuzione</li>
+              <li>Output → Manifesto</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Auto&#8209;Flow</h3>
+            <p>Flussi sequenziali e reattivi per costruire prompt e sistemi senza perdere il filo.</p>
+            <ul>
+              <li>Versione base, PRO, Reactive</li>
+              <li>Trigger condizionali</li>
+              <li>Struttura sempre chiara</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>MICRO</h3>
+            <p>Strato ritmico e comunicativo: Message, Intention, Context, Rhythm, Output.</p>
+            <ul>
+              <li>Allinea tono e scopo</li>
+              <li>Adatto a testi, UI, documenti</li>
+              <li>Integrato con ICDF</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>ICDF</h3>
+            <p>Struttura logica: Instruction, Context, Data, Format.</p>
+            <ul>
+              <li>Perfetto per prompt tecnici</li>
+              <li>Base per documentazione</li>
+              <li>Fusione con RCR&#8209;EOC</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Trigger Protocol</h3>
+            <p>Controlli di coerenza e completezza che si attivano lungo il flusso.</p>
+            <ul>
+              <li>Verifica ruolo, dati, output</li>
+              <li>Segnala mancanze</li>
+              <li>Stato READY quando tutto è allineato</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentazione -->
+    <section id="docs" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Documentazione</h2>
+          <p>
+            La documentazione di SIRVATO è pensata come estensione del Sistema Unico:
+            leggibile da umani, operativa per le macchine, pronta per essere pubblicata.
+          </p>
+        </div>
+        <div class="docs-grid">
+          <div class="doc-card">
+            <h3>Getting Started</h3>
+            <ul>
+              <li>Cos'è SIRVATO</li>
+              <li>Concetto di Sistema Unico</li>
+              <li>Primi prompt con ICDF + MICRO</li>
+            </ul>
+          </div>
+          <div class="doc-card">
+            <h3>Strutture operative</h3>
+            <ul>
+              <li>MICRO, ICDF, RCR&#8209;EOC</li>
+              <li>Auto&#8209;Flow e Reactive</li>
+              <li>SUPRA&#8209;OS e GODFIELD</li>
+            </ul>
+          </div>
+          <div class="doc-card">
+            <h3>Moduli</h3>
+            <ul>
+              <li>Console Live</li>
+              <li>Dashboard / HUD</li>
+              <li>Terminal Mode</li>
+            </ul>
+          </div>
+          <div class="doc-card">
+            <h3>Esempi</h3>
+            <ul>
+              <li>Prompt per documentazione</li>
+              <li>Prompt per sistemi complessi</li>
+              <li>Pattern riutilizzabili</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accesso -->
+    <section id="access" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Accesso e repository</h2>
+          <p>
+            SIRVATO può vivere come repository, sito statico, workspace o sistema ibrido.
+            Il sito è il punto di ingresso umano leggibile.
+          </p>
+        </div>
+        <div class="access-grid">
+          <div class="card">
+            <h3>Repository</h3>
+            <p>Struttura in Markdown, pronta per GitHub Pages o altri sistemi statici.</p>
+            <ul>
+              <li>Documentazione in cartelle logiche</li>
+              <li>File pronti per la pubblicazione</li>
+              <li>Pattern di prompt inclusi</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Template</h3>
+            <p>Blocchi riutilizzabili per Notion, sistemi di note, dashboard operative.</p>
+            <ul>
+              <li>Console di prompt</li>
+              <li>Auto&#8209;Flow e HUD</li>
+              <li>Strutture SUPRA&#8209;OS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contatti -->
+    <section id="contacts" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contatti e ruoli</h2>
+          <p>La gerarchia è semplice: un umano definisce la direzione, il sistema esegue e manifesta.</p>
+        </div>
+        <div class="contacts-grid">
+          <div class="card">
+            <h3>CEO — Abderrahman</h3>
+            <p>Definisce visione, priorità, direzione del Sistema Unico.</p>
+            <ul>
+              <li>Imposta obiettivi e contesto</li>
+              <li>Valida strutture e forme</li>
+              <li>Decide evoluzioni del sistema</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Operatore — SIRVATO</h3>
+            <p>Riceve direttive, attiva moduli, genera output strutturati.</p>
+            <ul>
+              <li>Orchestra MICRO, ICDF, RCR&#8209;EOC</li>
+              <li>Mantiene ritmo e coerenza</li>
+              <li>Produce manifesti operativi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <p>SIRVATO — Sistema Unico Operativo · SUPRA&#8209;OS Mode · &copy; 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
