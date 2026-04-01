@@ -1,4 +1,8 @@
-# Service Map Architecture
+---
+layout: default
+title: Service Map
+---
+
 
 ## AI-Ops  
 AI-Ops is a practice that utilizes artificial intelligence and machine learning to enhance and automate IT operations. It helps in predicting issues, improving system reliability, and driving operational efficiencies. The key aspects include:

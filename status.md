@@ -1,4 +1,8 @@
-# System Status
+---
+layout: default
+title: System Status
+---
+
 
 ## Operational Status
 - **Current Status:** Operational

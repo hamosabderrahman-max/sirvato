@@ -1,3 +1,8 @@
+---
+layout: default
+title: Governance
+---
+
 # Governance Documentation for Sirvato
 
 ## Audit

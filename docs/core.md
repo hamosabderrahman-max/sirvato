@@ -1,3 +1,8 @@
+---
+layout: default
+title: Core Control Plane
+---
+
 # Sirvato Core Control Plane Orchestrated by AI-Brain
 
 ## Overview

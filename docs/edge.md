@@ -1,3 +1,8 @@
+---
+layout: default
+title: Edge
+---
+
 # Sirvato Edge Distributed Autonomous Compute Architecture
 
 The Sirvato Edge architecture represents a paradigm shift in distributed computing, focusing on autonomy and scalability.
