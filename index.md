@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Sirvato — AI-First Cloud Provider"
+description: "Sirvato is an AI-First cloud provider delivering autonomous infrastructure, zero configuration, and real-time critical decisions powered by AI."
+keywords: "Sirvato, AI cloud, autonomous infrastructure, zero configuration, AUTOPILOT, multi-region, zero-trust"
+---
+
 # Sirvato
 
 **AI-First Cloud Provider**

@@ -1,3 +1,10 @@
+---
+layout: default
+title: "AI-Ops — Sirvato Docs"
+description: "Sirvato AI-Ops operational intelligence: anomaly detection, self-healing automation, predictive analytics, and seamless observability integration."
+keywords: "Sirvato, AI-Ops, anomaly detection, self-healing, predictive analytics, observability, operational intelligence"
+---
+
 # Sirvato AI-Ops Operational Intelligence
 
 ## Overview

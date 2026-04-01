@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Operational Dashboard — Sirvato Console"
+description: "Sirvato's real-time operational dashboard for monitoring system health, performance metrics, live alerts, and platform settings."
+keywords: "Sirvato, console, dashboard, operational monitoring, system health, metrics, alerts"
+---
+
 # Operational Dashboard
 
 ## Real-Time Monitoring Interface

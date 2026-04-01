@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Service Map — Sirvato"
+description: "Explore Sirvato's full service map architecture: AI-Ops, Global Control Plane, Edge Runtime, Network and Distribution, and Governance."
+keywords: "Sirvato, service map, AI-Ops, control plane, edge runtime, network, governance"
+---
+
 # Service Map Architecture
 
 ## AI-Ops  

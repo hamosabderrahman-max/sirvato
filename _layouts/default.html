@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% seo %}
+    <meta name="robots" content="index, follow">
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>

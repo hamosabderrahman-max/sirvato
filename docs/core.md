@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Core Control Plane — Sirvato Docs"
+description: "Sirvato Core Control Plane orchestrated by AI-Brain: AUTOPILOT mode, autonomous decision-making, dynamic resource allocation, and self-monitoring."
+keywords: "Sirvato, core, control plane, AI-Brain, AUTOPILOT, orchestration, autonomous"
+---
+
 # Sirvato Core Control Plane Orchestrated by AI-Brain
 
 ## Overview

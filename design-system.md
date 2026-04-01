@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Design System — Sirvato"
+description: "Sirvato's design system principles: AI-First Architecture, Zero-Trust security, Self-Governing operations, and AUTOPILOT Operational Mode."
+keywords: "Sirvato, design system, AI-first, zero-trust, self-governing, AUTOPILOT"
+---
+
 # Design System
 
 ## AI-First Architecture

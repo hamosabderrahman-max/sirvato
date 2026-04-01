@@ -1,3 +1,10 @@
+---
+layout: default
+title: "System Status — Sirvato"
+description: "Live system status for Sirvato: regional health indicators, component-level status, and current SLA availability and response time metrics."
+keywords: "Sirvato, system status, regional health, SLA, availability, response time, component status"
+---
+
 # System Status
 
 ## Regional Health
