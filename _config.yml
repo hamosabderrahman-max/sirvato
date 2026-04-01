@@ -1,3 +1,5 @@
 markdown: kramdown
 theme: null
 plugins: []
+exclude:
+  - README.md
